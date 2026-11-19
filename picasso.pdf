@@ -1,0 +1,29 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\IfFileExists{italian.ldf}{\usepackage[italian]{babel}}{}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\dive}{div}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\grad}{grad}
+\newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
+
+% figure riprese dalla scansione
+\newcommand{\fig}[2]{\begin{center}\includegraphics[scale=1.2]{fig/#1}\\[2pt] {\small fig.~#2}\end{center}}
+
+\setlength{\emergencystretch}{2em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4\baselineskip}
+
+\begin{document}
+
+\input{frontmatter}
+\pagenumbering{arabic}
+\input{cap01}
+
+\end{document}
