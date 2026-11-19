@@ -1,0 +1,489 @@
+\section{ELETTROSTATICA DEI CONDUTTORI}
+
+\subsection{I conduttori}
+
+In fisica le distinzioni non sono mai nette: come, per esempio, non è netta la distinzione fra solido e liquido, così non lo è quella fra conduttore ed isolante. Siccome la conduzione elettrica è dovuta alla mobilità dei portatori di carica, si può solo parlare di maggiore o minore mobilità dei portatori di carica di una data sostanza, ed inoltre questa mobilità può in taluni casi dipendere fortemente dalla temperatura, dal trattamento subìto dal corpo, eccetera. La distinzione che noi amiamo fare in conduttori ed isolanti è quindi una delle tante schematizzazioni che si fanno in fisica, una schematizzazione, però, che è ampiamente giustificata dai numeri: le mobilità dei portatori di carica in quelli che noi chiamiamo ``buoni conduttori'' e quella nei ``buoni isolanti'' possono differire di molti, molti, ordini di grandezza. Questo, in termini concreti, significa che in una scala di tempi ragionevole, i tempi necessari alle cariche per portarsi in condizioni di equilibrio possono essere considerati trascurabili nei buoni conduttori, mentre sono ``infiniti'' nei buoni isolanti.\\
+In questo capitolo ci occuperemo solo di conduttori solidi, cioè metallici; i metalli hanno una struttura cristallina costituita dagli ioni degli atomi che la compongono, ed in questo reticolo gli elettroni, tipicamente uno o due per atomo, possono muoversi liberamente: un metallo è sostanzialmente una grossa molecola in cui molti atomi uguali si aggregano mettendo a disposizione dell'intera struttura alcuni dei loro elettroni, così come in una molecola di idrogeno gli elettroni non appartengono più ai singoli nuclei da cui provengono, ma all'intera molecola. Possiamo quindi immaginare un conduttore come un gas di elettroni liberi, liberi in quanto la reciproca repulsione coulombiana è in larga misura schermata dalla carica positiva del reticolo in cui si muovono.\\
+Nella maggior parte dei casi i portatori di carica (o \emph{cariche libere}) in un conduttore sono -- come ci si aspetta -- gli elettroni, ma vedremo che ci sono eccezioni: nello zinco, per esempio, i portatori di carica sono positivi (!?), come in molti semiconduttori.
+
+Ci occuperemo -- come dice il titolo di questo capitolo -- dell'elettrostatica macroscopica dei conduttori: \emph{elettrostatica}, perchè ci interessano le situazioni in cui i portatori di carica sono in quiete nel conduttore, e quindi in condizioni di equilibrio; \emph{macroscopica}, perchè sia all'interno che all'esterno dei conduttori siamo interessati al campo macroscopico (o medio), e quindi anche le densità di carica nel conduttore alle quali faremo riferimento, sono le densità medie (o macroscopiche).\\
+La condizione di equilibrio significa che se sui portatori di carica non si esercitano altre forze, all'interno di un conduttore il campo elettrico deve essere nullo, altrimenti le cariche libere non sarebbero in quiete. In generale questo non è vero: lasciamo perdere la forza di gravità, oppure la forza centrifuga che si esercita sugli elettroni di un conduttore in rotazione, perchè queste forze sono insignificanti, ma se il conduttore non è omogeneo (per esempio è composto da metalli diversi, come rame e zinco) esistono forze sugli elettroni che sbrigativamente classifichiamo di origine chimica, ma che in realtà derivano prevalentemente da effetti quantistici. Quindi supporremo che i conduttori siano omogenei. Oppure il conduttore potrebbe essere in moto immerso in un campo
+magnetico: il campo magnetico esercita sulle cariche in moto una forza (forza di Lorentz) data da $q(\vec v/c)\wedge\vec B$ che, in condizioni stazionarie, deve essere compensata dalla presenza di un campo elettrico. Quindi, se non specifichiamo il contrario, i conduttori saranno supposti in quiete.\\
+Per la stessa ragione per cui il campo elettrico deve essere nullo dentro il conduttore, esso può essere non nullo sulla superficie, ma deve essere ortogonale alla superficie: gli elettroni, per i motivi che spiegheremo tra poco, non possono spontaneamente uscire dal conduttore. Quindi
+\begin{itemize}
+\item[i)] un conduttore è una regione equipotenziale e la sua superficie è una superficie equipotenziale;
+\item[ii)] in ogni punto interno al conduttore
+\begin{equation}
+\vec E=0\Rightarrow\ \dive\vec E=0\quad\Rightarrow\quad\rho=0
+\tag{2.1}
+\end{equation}
+quindi in un conduttore, sia esso carico o no, ed eventualmente in presenza di cariche esterne, le cariche si dispongono esclusivamente sulla superficie;
+\item[iii)] per la (1.87), siccome dentro il conduttore il campo elettrico è nullo, se $\hat n$ è la normale alla superficie del conduttore nel punto $P$ orientata verso l'esterno, si ha
+\begin{equation}
+\vec E(P)=E_n(P)\hat n\,;\quad E_n(P)=4\pi\sigma(P)
+\tag{2.2}
+\end{equation}
+quindi le linee di forza sono uscenti dal conduttore nei punti in cui $\sigma(P)>0$, entranti dove $\sigma(P)<0$. Anche se la (2.2) lega il campo elettrico in un punto alla densità di carica nello stesso punto, il campo elettrico è determinato da \underline{tutta} la distribuzione di carica e, eventualmente, anche dalle cariche esterne.
+\end{itemize}
+Le linee di forza in presenza di conduttori hanno particolari proprietà derivanti dal fatto che il campo elettrico è conservativo. Per esempio non è possibile che fra due conduttori ci siano linee di forza che li connettono in entrambi i versi, oppure che una stessa linea di forza esca da un conduttore (dove $\sigma>0$) e ritorni sullo stesso conduttore (in un punto in cui $\sigma<0$): infatti lungo una linea di forza il potenziale decresce, quindi le linee di forza vanno sempre da un conduttore a potenziale maggiore ad uno a potenziale minore. Anche il teorema di Gauss vuole la sua parte: un tubo di flusso uscente da una porzione di un conduttore sulla quale è presente una carica $q$, se termina su un altro conduttore (o anche su più conduttori: basta che non vada, anche in parte, all'infinito), la porzione di conduttore su cui arriva deve contenere la carica $-q$: basta applicare il teorema di Gauss al tubo di flusso prolungato sia all'interno del conduttore di partenza che di quello di arrivo e chiuso da basi interne ai conduttori, dove il campo elettrico è nullo.
+
+\paragraph{Esempi}
+\begin{enumerate}
+\item Consideriamo una lastra piana conduttrice infinita, scarica e in assenza di sorgenti esterne. A causa della struttura cristallina di un conduttore, a livello microscopico la densità di carica sulla superficie ($x=0$) della lastra ha una struttura periodica bidimensionale che schematizziamo nel modo seguente: $\sigma(y,z)=\sigma_0\cos\kappa y\cos\kappa z$, dove $2\pi/\kappa$ è il periodo, cioè il passo reticolare, e quindi dell'ordine di $10^{-8}$\,cm (in
+realtà un conduttore è costituito da microcristalli disposti in modo disordinato). Si noti che la media di $\sigma(y,z)$ su regioni di dimensioni grandi rispetto al passo reticolare è nulla. Vogliamo calcolare il campo elettrico all'esterno del conduttore ($x>0$), per vedere l'effetto della struttura microscopica della distribuzione di carica.\\
+Data la somiglianza con il problema dell'esempio 1 alla fine del capitolo 1.10, possiamo sperare che un potenziale della forma
+\[
+\varphi(x,y,z)=\varphi_0e^{-\alpha x}\cos\kappa y\cos\kappa z\quad\ (x\ge0)
+\]
+risolva il problema: si ha
+\[
+\left\{\begin{aligned}
+E_x&=\alpha\varphi_0e^{-\alpha x}\cos\kappa y\cos\kappa z\\
+E_y&=\kappa\varphi_0e^{-\alpha x}\sen\kappa y\cos\kappa z\\
+E_z&=\kappa\varphi_0e^{-\alpha x}\cos\kappa y\sen\kappa z
+\end{aligned}\right.
+\]
+e (per $x>0$) \ $\dive\vec E=0$ \ se \ $\alpha=\sqrt2\kappa$, quindi
+\[
+\begin{aligned}
+4\pi\sigma=E_x(0^+)-E_x(0^-)&=2E_x(0^+)=2\sqrt2\kappa\varphi_0\cos\kappa y\cos\kappa z\\
+\Rightarrow\quad\varphi_0&=\sqrt2\pi\sigma_0/\kappa
+\end{aligned}
+\]
+Il campo elettrico sulla superficie vale $2\pi\sigma_0\cos\kappa y\cos\kappa z$ e siccome
+\[
+\sigma_0\approx e/(2\pi/\kappa)^2\simeq4.8\times10^{-10}/10^{-16}=4.8\times10^6\,\mathrm{ues}
+\]
+raggiunge valori molto elevati: tuttavia, come per la densità di carica, la sua media è nulla ed inoltre, a causa del fattore esponenziale, a distanza di pochi passi reticolari si è già ridotto praticamente a zero.
+\item Un disco conduttore di raggio $R$ ruota con velocità angolare costante $\omega$ attorno al proprio asse.\\
+Vogliamo calcolare il campo elettrico e la densità di carica dentro il conduttore.\\
+In condizioni stazionarie:
+\[
+-e\vec E+m\omega^2\vec r=0\quad\Rightarrow\quad\vec E=\frac me\,\omega^2\vec r\,;\qquad4\pi\rho=\dive\vec E\quad\Rightarrow\quad\rho=\frac{m\omega^2}{2\pi e}\,\cdot
+\]
+Siccome il disco è neutro, deve essere presente anche una densità superficiale $\sigma$, che però non è possibile calcolare in modo elementare. Supponiamo che il disco compia 100 giri/s; calcoliamo il campo elettrico alla distanza di 10\,cm dall'asse (la massa dell'elettrone è $m_e=0.9\times10^{-27}$\,g):
+\[
+E=\frac{0.9\times10^{-27}}{4.8\times10^{-10}}\cdot(2\pi)^2\cdot10^4\cdot10\approx10^{-11}\,\mathrm{ues}\,.
+\]
+\end{enumerate}
+Prima di concludere questo paragrafo, cerchiamo di capire -- almeno qualitativamente -- perchè gli elettroni non scappano dal conduttore. All'interno del conduttore ogni elettrone, circondato sia da cariche positive che negative, risente in media di una forza nulla; ciò non è più vero quando si avvicina alla superficie: arrivando dall'interno incontra l'ultimo strato di cariche positive (gli ioni), circondati da una ``nuvola'' di cariche negative. Quindi il conduttore ``termina'' con uno strato di carica positiva seguìto da uno di carica negativa: questa distribuzione può essere schematizzata come
+due piani con cariche superficiali opposte $\sigma$ e $-\sigma$, (detta, appunto, \emph{doppio strato}) a distanza dell'ordine del passo reticolare $d$, con il piano negativo verso l'esterno del conduttore, e quindi con una differenza di potenziale negativa fra il piano più esterno e quello più interno. Siccome gli elettroni sono negativi, il doppio strato costituisce per essi una barriera di energia potenziale che possiamo stimare dell'ordine di
+\[
+\Delta U=e\,\sigma d\approx e\cdot\frac{e}{d^2}\cdot d=\frac{e^2}{d}\approx\frac{(4.8\times10^{-10})^2}{10^{-8}}\approx2\times10^{-11}\,\mathrm{erg}\approx10\,\mathrm{eV}
+\]
+(in realtà è più piccola per circa un ordine di grandezza).\\
+Inoltre, quando un elettrone ha attraversato la superficie, risente da parte del conduttore di una forza attrattiva dovuta sia al fatto che il conduttore -- con un elettrone in meno -- è carico positivamente, ma soprattutto perchè l'elettrone esterno induce sulla superficie del conduttore prossima all'elettrone una carica positiva. Complessivamente, l'energia che occorre fornire all'elettrone per estrarlo dal conduttore è detta \emph{lavoro di estrazione}, ed è dell'ordine dell'elettronvolt.\\
+L'estrazione degli elettroni si può realizzare, per esempio, riscaldando il metallo (\emph{effetto termoionico}), oppure inviando su di esso luce di lunghezza d'onda opportuna (cioè minore di un certo valore di \emph{soglia}) (\emph{effetto fotoelettrico}).\\
+Allora si capisce anche che se accostiamo due metalli diversi, che quindi hanno diversi potenziali di estrazione, i due conduttori non sono allo stesso potenziale, ma fra essi c'è una differenza di potenziale uguale alla differenza dei potenziali di estrazione, e di conseguenza un forte campo elettrico nella regione (di qualche $10^{-8}$\,cm) di contatto fra i due. La citata natura quantistica di questo fatto, anche se apparentemente lo abbiamo spiegato in termini puramente classici, sta molto a monte: è la stessa struttura cristallina del conduttore, e poi il fatto che nel fenomeno di aggregazione degli atomi si liberino degli elettroni, che richiede la Meccanica Quantistica per essere spiegata.\\
+Il problema può essere visto -- formalmente -- come un problema di analisi dimensionale: supponiamo che le equazioni della Fisica Classica (i principi della Meccanica più le equazioni dell'elettromagnetismo) siano in grado di spiegare che se mettiamo insieme molti atomi, p.es.\ di rame, questi si devono organizzare in un cristallo con un ben preciso passo reticolare. Quindi le equazioni devono determinare anche questo passo reticolare in termini delle costanti che entrano nelle suddette equazioni (massa e carica dell'elettrone, massa dei nuclei e velocità della luce $c$): l'unica grandezza con le dimensioni di una lunghezza che può essere costruita con le costanti fondamentali è il cosiddetto ``raggio classico dell'elettrone'' \ $r_e\equiv e^2/m_ec^2\simeq2.8\times10^{-13}$\,cm, troppo piccolo per poter essere di qualche utilità per spiegare passi reticolari 5 ordini di grandezza maggiori. In generale, si può dire che alla Fisica Classica manca una lunghezza fondamentale dell'ordine di $10^{-8}$\,cm per spiegare la struttura della materia, cioè le dimensioni degli atomi, delle molecole, i passi reticolari\dots. In meccanica quantistica interviene un'altra costante fondamentale, la costante di Planck $\hbar$ che ha le dimensioni di una quantità di moto per una lunghezza (o di un'energia per un tempo), e con essa è possibile costruire una lunghezza fondamentale, chiamata ``raggio di Bohr'' \ $a_0\equiv\hbar^2/m_ee^2=0.53\times10^{-8}$\,cm, ed è proprio la grandezza che determina dimensioni degli atomi, energie di ionizzazione, lavori di estrazione, eccetera.
+
+\subsection{Il fenomeno dell'induzione ed il problema dell'elettrostatica dei conduttori}
+
+Se avviciniamo una carica ad un conduttore scarico, sulla sua superficie si manifesta una distribuzione di cariche: di segno opposto in prossimità della carica esterna, e quindi (il conduttore è scarico) dello stesso segno più o meno dalla parte opposta. Questo è il fenomeno dell'\emph{induzione elettrostatica}; intuitivamente si capisce che esso è dovuto alle forze coulombiane che la carica esterna esercita sulle cariche libere nel conduttore, ma non dimentichiamoci che esistono anche le forze coulombiane fra le cariche libere. Per questo motivo è più suggestivo, e soprattutto più utile, vedere la cosa in termini diversi: le cariche si devono ridistribuire sulla superficie del conduttore in modo tale che la somma del campo elettrico da esse prodotto e quello prodotto dalla carica esterna sia nullo all'interno del conduttore, e quindi il conduttore sia equipotenziale.\\
+Questo ci fa capire che il problema dell'elettrostatica in presenza di conduttori è tutt'altro che banale: si pensi ad esempio ad una carica puntiforme in prossimità di una sfera conduttrice; come si fa a sapere quale deve essere la distribuzione superficiale sulla sfera in grado di garantire campo nullo dentro tutta la sfera? (Più avanti saremo in grado di risolvere questo problema).
+
+Un problema che invece siamo in grado di risolvere subito è quello di determinare la distribuzione di carica indotta sulla superficie di una lastra conduttrice piana ``infinita'' da una carica puntiforme $q$: il campo è ovunque la sovrapposizione del campo della carica $q$ e di quello della distribuzione (non uniforme) incognita $\sigma$ sulla superficie della lastra affacciata alla carica $q$; supponiamo (ma più avanti vedremo che questa ipotesi non è necessaria) che lo spessore della lastra sia infinito (per la precisione, ``più infinito'' della larghezza della lastra), per cui se eventualmente ci fossero delle cariche distribuite anche sulla superficie ``lontana'' queste non contribuirebbero. Dentro la lastra il campo è nullo e quindi quello prodotto dalla distribuzione $\sigma$ è opposto a quello della carica $q$ (figura 2.1); nell'attraversare la distribuzione cambia segno la componente normale alla superficie del campo prodotto da $\sigma$ (invarianza per riflessioni), mentre resta inalterata la componente parallela, quindi il campo prodotto da $\sigma$ sulla superficie esterna della lastra è uguale a quello di una carica $-q$, immagine speculare di $q$ rispetto alla superficie della lastra: noto il campo sulla superficie della lastra (che è due volte la componente normale di quello dovuto alla carica $q$), per la (2.2) è nota la densità $\sigma$.
+\fig{fig2_1}{2.1}
+Vedremo più avanti che in tutti i punti esterni alla lastra (dalla parte di $q$), e non solo sulla superficie della lastra, il campo è uguale a quello delle due cariche $q$ e $-q$: questo, come pure quello relativo allo spessore della lastra, sono due problemi che finché non abbiamo le idee chiare su come si pone il problema dell'elettrostatica in presenza di conduttori, dobbiamo lasciare in sospeso.
+
+Vediamo allora come si formula il problema dell'elettrostatica in presenza di conduttori, cioè quali sono i dati e quali le incognite. Contrariamente al caso delle cariche fisse, qui noi non abbiamo nessun controllo sulla distribuzione delle cariche sui conduttori:
+ciò che noi possiamo decidere è solo quant'è il potenziale di un conduttore, in quanto con opportune batterie possiamo portarlo al potenziale che ci pare; oppure la carica che gli cediamo, poi come questa si distribuisce non dipende da noi. Quindi, dati $n$ conduttori di forma nota e in posizioni note (figura 2.2), il problema dell'elettrostatica dei conduttori si può presentare nelle seguenti forme:
+\begin{itemize}
+\item[i)] \textbf{Problema di Dirichlet:} sono dati i potenziali $\varphi_i$\,, $i=1\cdots n$ \ di tutti i conduttori. Il problema è quello di determinare il campo elettrico (o il potenziale) in tutto lo spazio, la carica totale su ciascun conduttore e come è distribuita.\\
+In effetti l'unico problema è quello della determinazione del potenziale, in quanto noto il potenziale è noto il campo elettrico, quindi -- per la (2.2) -- le distribuzioni $\sigma_i(x,y,z)$ su tutti i conduttori e quindi le loro cariche $Q_i=\int_{S_i}\sigma_i(x,y,z)\,dS_i$.
+\item[ii)] \textbf{Problema di Neumann:} sono date le cariche $Q_i$\,, $i=1\cdots n$ \ di tutti i conduttori. Il problema è sempre quello di determinare il potenziale in tutto lo spazio, sapendo che assume valori costanti (incogniti) sui conduttori.
+\item[iii)] \textbf{Problema misto:} di alcuni conduttori sono noti i potenziali, di altri le cariche.
+\end{itemize}
+Vedremo che sia il problema di Neumann che quello misto sono riconducibili al problema di Dirichlet, per cui cominciamo con questo.\\
+Siano dati $n$ conduttori $c_i$, siano $S_i$ le loro superfici esterne e $S_0$ una superficie che li racchiude (figura 2.2), che può essere la superficie interna di un conduttore cavo, oppure la superficie all'infinito (che possiamo pensare come la superficie sferica interna di un grande conduttore cavo). Se non esistono cariche (fisse) esterne ai conduttori, nella regione $\mathcal R$ di spazio delimitata dalle superfici $S_i$ dei conduttori e da $S_0$ il potenziale deve soddisfare l'equazione di Laplace \ $\Delta\,\varphi(x,y,z)=0$ \ con assegnate condizioni al contorno: \ $\varphi(x,y,z)=\varphi_i$ \ sull'i--esimo conduttore, \ $\varphi(x,y,z)=\varphi_0$ \ sulla superficie $S_0$; di solito, dato che il potenziale è definito a meno di una costante, $\varphi_0$ viene preso uguale a zero, specialmente se $S_0$ è la superficie all'infinito: sovente $S_0$ viene indicata come la \textbf{terra} o la \textbf{massa} del sistema; ``mettere a terra'' (o ``a massa'') un conduttore significa portarlo al potenziale di $S_0$ stabilendo tra i due il contatto tramite un filo conduttore.
+\fig{fig2_2}{2.2}
+Date queste condizioni al contorno, è noto che il problema ammette soluzione: non possiamo dimostrarlo, ma sappiamo che allora la soluzione è unica.\\
+Se ci sono anche delle cariche fisse, per fissare le idee diciamo una distribuzione $\rho$, il potenziale deve soddisfare (in $\mathcal R$) l'equazione di Poisson \ $\Delta\,\varphi(x,y,z)=-4\pi\rho(x,y,z)$ \ con le condizioni al contorno $\varphi(x,y,z)=\varphi_i$ \quad $(i=0\cdots n)$: mediante la (1.59) calcoliamo il potenziale $\tilde\varphi(x,y,z)$ dovuto solo alle cariche fisse, e sia $\tilde\varphi_i(x,y,z)$ il valore che assume su $S_i$ \quad $(i=0\cdots n)$. Quindi risolviamo l'equazione di Laplace $\Delta\,\chi(x,y,z)=0$ in $\mathcal R$, con le condizioni al contorno sulle superfici $S_i$ \quad $\chi_i(x,y,z)=\varphi_i-\tilde\varphi_i(x,y,z)$: anche in questo caso la soluzione esiste ed è unica, e \ $\varphi(x,y,z)=\chi(x,y,z)+\tilde\varphi(x,y,z)$ \ risolve il problema.
+
+Quindi il problema di Dirichlet è un problema prettamente matematico: la soluzione
+sappiamo che esiste, ma trovarla è tutto un altro discorso; non esiste una formula risolutiva (come la (1.59) per il caso delle cariche fisse), per cui i problemi risolubili sono pochi, e acquistano particolare importanza metodi di soluzione applicabili in casi particolari (come il metodo delle immagini), e anche metodi generali di approssimazione (come il metodo del rilassamento e il calcolo delle variazioni).
+
+Come già nel caso delle cariche fisse, le chances di risolvere un problema aumentano moltissimo in presenza di simmetrie (conduttori sferici, cilindrici, piani conduttori infiniti\dots); però è chiaro che non possiamo fare riferimento alla discussione del capitolo 1.6, in quanto presuppone la conoscenza della distribuzione di carica: dobbiamo riformulare il teorema relativo alle leggi di trasformazione del campo elettrico ed il corollario sul campo delle distribuzioni simmetriche in termini del potenziale (anzichè di campo elettrico) e delle condizioni al contorno (anzichè della distribuzione di carica). Per semplicità enunciamo il teorema nell'ipotesi che non esistano cariche fisse esterne ai conduttori: la formulazione generale è possibile ed è immediata.
+
+\textbf{\textit{Teorema.}} \textit{Sia $\varphi(x)$ \ $\big(x=(x_1,x_2,x_3)\big)$ la soluzione del problema di Dirichlet nella regione $\mathcal R$ delimitata dalle superfici $S_i$ dei conduttori a potenziali $\varphi_i$, e dalla superficie $S_0$ a potenziale $\varphi_0$, e sia $\psi(x)=Rx+a$ una isometria dello spazio \big(v.\ 1.37)\big). Allora $\varphi'(x)=\varphi\big(\psi^{-1}(x)\big)$ è la soluzione del problema di Dirichlet nella regione $\mathcal R'=\psi(\mathcal R)$ delimitata dalle superfici $S_i'=\psi(S_i)$ di conduttori a potenziali $\varphi_i$, e dalla superficie $S_0'=\psi(S_0)$ a potenziale $\varphi_0$. (Se $S_0$ è la superficie all'infinito, $S_0'\equiv S_0$).}
+
+Segue allora dal teorema, ma solo a posteriori, che $\sigma_i'(x)=\sigma_i\big(\psi^{-1}(x)\big)$.
+
+Basta dimostrare che $\varphi'(x)$ è una funzione armonica nella regione $\mathcal R'$, dopodichè il teorema è dimostrato in quanto, siccome $\varphi'\big(\psi(x)\big)=\varphi(x)$, è ovvio che $\varphi'(x)$ assume i valori $\varphi_i$ su $S_i'$ e $\varphi_0$ su $S_0'$, quindi è una soluzione del problema di Dirichlet in $\mathcal R'$, e per l'unicità della soluzione è \underline{la} soluzione. Per quanto riguarda la dimostrazione che se $\Delta\,\varphi(x)=0$, allora $\Delta\,\varphi'(x)=0$, si può fare in modo elementare applicando le regole di derivazione (parziale) delle funzioni composte. Ma è meno laborioso e più istruttivo ragionare come segue: $\Delta\,\varphi'(x)$ è, per la (1.83), il flusso per unità di volume del campo vettoriale $\grad\varphi'(x)$ nel punto $x\in\mathcal R'$, ma questo è uguale al flusso per unità di volume (i volumi sono invarianti per isometrie) del campo vettoriale $\grad\varphi(x)$ nel punto $\psi^{-1}(x)\in\mathcal R$, che è nullo per ipotesi, quindi è nullo anche il primo.\\
+Segue allora immediatamente il
+
+\textbf{\textit{Corollario.}} \textit{Se $S_i'=S_i$, \ $i=0\cdots n$\,, \ allora $\varphi(x)=\varphi\big(\psi^{-1}(x)\big)$.}
+
+Cioè: se una isometria lascia invariate le superfici equipotenziali $S_i$, anche il potenziale resta invariato. (Per maggiore generalità $S_i$ è l'insieme delle superfici su cui $\varphi=\varphi_i$: possono esistere più conduttori identici allo stesso potenziale, mandati l'uno nell'altro dalla trasformazione).
+
+\paragraph{Esempio}
+\begin{quote}
+Sfera conduttrice di raggio $R$ a potenziale $\overline\varphi$. Vogliamo determinare il potenziale in tutto lo spazio esterno alla sfera.\\
+Possiamo ragionare in due modi: la funzione
+\begin{equation}
+\varphi(x,y,z)=\overline\varphi\,\frac Rr
+\tag{2.3}
+\end{equation}
+soddisfa l'equazione di Laplace per $r>R$ e la corretta condizione al contorno, quindi -- per l'unicità della soluzione -- è la soluzione. Questo metodo funziona quando è facile indovinare la soluzione.\\
+Oppure: siccome il conduttore è invariante per rotazioni, per il corollario tale deve essere anche il potenziale, quindi il campo elettrico è un campo centrale e di conseguenza la densità di carica $\sigma$ è costante sulla superficie della sfera. Allora per la (1.69)
+\begin{equation}
+\varphi(r)=\frac{4\pi\sigma R^2}{r}\quad\ r\ge R\qquad\quad\varphi(R)=\overline\varphi\ \Rightarrow\ Q=4\pi\sigma R^2=\overline\varphi R
+\tag{2.4}
+\end{equation}
+in accordo con la (2.3).
+\end{quote}
+
+\subsection{Le gabbie di Faraday}
+
+In questo paragrafo utilizzeremo l'equivalenza fra il problema di Dirichlet, il problema di Neumann e quello misto, equivalenza che dimostreremo nel prossimo paragrafo.\\
+Sia dato un conduttore cavo, sia $S_\mathrm{i}$ la sua superficie interna ed $S_\mathrm{e}$ quella esterna. Consideriamo diversi casi.
+\begin{enumerate}
+\item \emph{All'interno della cavità non sono presenti cariche.}\\
+Il potenziale è costante ($\varphi_0$) sul conduttore, e quindi su $S_\mathrm{i}$, e soddisfa l'equazione di Laplace in tutti i punti interni: $\varphi(x,y,z)=\varphi_0$ soddisfa l'equazione e la condizione al contorno e quindi è la soluzione. Quindi il campo elettrico è nullo dentro la cavità e, per la (2.2), non ci sono cariche sulla superficie interna, indipendentemente dal fatto che il conduttore sia carico o no, e dal fatto che all'esterno ci sia o meno un campo elettrico. Se il conduttore è carico, tutta la carica si trova sulla superficie esterna.\\
+Se la sfera dell'esempio alla fine del paragrafo precedente è cava, qualunque sia la forma della sua superficie interna, la carica della sfera è solo quella sulla superficie esterna data dalla (2.4), ed il potenziale dentro la cavità è $\overline\varphi$.
+\item \emph{All'interno della cavità sono presenti delle cariche: il problema interno.}\\
+Se $Q_\mathrm{i}$ è la carica totale contenuta dentro la cavità, questa induce su $S_\mathrm{i}$ una carica uguale ed opposta: infatti presa come superficie di Gauss una qualsiasi superficie $S$ (figura 2.3) compresa fra $S_\mathrm{i}$ ed $S_\mathrm{e}$, e quindi tutta interna al conduttore, siccome $\vec E=0$ dentro il conduttore il flusso attraverso $S$ è nullo, e quindi la carica totale racchiusa da $S$, $Q_\mathrm{i}$ più la carica su $S_\mathrm{i}$, è nulla. Se il conduttore è scarico, una carica pari a $Q_\mathrm{i}$ si ritrova distribuita sulla superficie esterna; se il conduttore ha una carica $Q$, su $S_\mathrm{e}$ è presente la carica $Q^{tot}=Q+Q_\mathrm{i}$. Quindi sulla superficie esterna è sempre presente tutta la carica contenuta dal conduttore.
+\fig{fig2_3}{2.3}
+Anche in questo caso il potenziale è completamente determinato dalle condizioni assegnate all'interno (posizione delle cariche fisse, potenziali o cariche degli eventuali conduttori) e dal valore (costante) che il potenziale assume su $S_\mathrm{i}$. Il potenziale del conduttore, cioè della ``gabbia di Faraday'' \underline{dipende} dalle condizioni esterne (se si richiede
+che $\varphi(\infty)=0$), per cui se cambiano le condizioni esterne il potenziale all'interno cambia per una costante (additiva), ma questo è irrilevante perchè ciò che conta sono sempre le differenze di potenziale, ovvero il campo elettrico. Quindi all'interno della gabbia campo elettrico, differenze di potenziale e distribuzioni di carica sugli eventuali conduttori sono indipendenti dalle condizioni esterne e dalla carica del conduttore. Quindi, in particolare, siccome all'esterno il campo potrebbe anche essere nullo, le cariche sulla superficie interna $S_\mathrm{i}$ si distribuiscono in modo tale da garantire che il campo prodotto da esse e dalle cariche interne è nullo nella regione occupata dal conduttore.
+\item \emph{All'interno della cavità sono presenti delle cariche: il problema esterno.}\\
+La carica totale sulla superficie esterna del conduttore dipende (anche) dalla carica interna alla cavità ($Q^\mathrm{tot}=Q+Q_\mathrm{i}$), ma la sua distribuzione $\sigma_\mathrm{e}$ su $S_\mathrm{e}$ non dipende da come la carica interna $Q_\mathrm{i}$ è distribuita all'interno, cioè dalle posizioni delle cariche fisse e dalle distribuzioni sugli eventuali conduttori. Infatti, siccome la carica totale di un conduttore ne determina il potenziale (equivalenza del problema di Neumann e di Dirichlet), la soluzione all'esterno del conduttore, e quindi anche la distribuzione $\sigma_\mathrm{e}$, è determinata, e unica, indipendentemente da come le cariche sono distribuite all'interno. In particolare, le cariche interne possono venire rimosse, ed una carica uguale fornita al conduttore (in modo da mantenere inalterata la carica totale), e all'esterno non cambia nulla. Quindi anche le cariche sulla superficie esterna insieme alle cariche esterne generano un campo nullo nella regione occupata dal conduttore: ciò significa che il problema interno e quello esterno sono indipendenti.
+\end{enumerate}
+
+\paragraph{Esempio}
+\begin{quote}
+Una carica puntiforme $q$ è posta al centro di una corona sferica conduttrice di raggi $R_\mathrm{i}$ e $R_\mathrm{e}$.\\
+L'interno: per ``ovvie ragioni di simmetria'' il campo all'interno è centrale; per il teorema di Gauss è il campo della sola carica $q$. Sulla superficie interna $\sigma_\mathrm{i}$ è costante e $4\pi R_\mathrm{i}^2\sigma_\mathrm{i}=-q$, oppure dalla (2.2) $4\pi\sigma_\mathrm{i}=-q/R_\mathrm{i}^2$. Si noti che $\sigma_\mathrm{i}$, per la (1.47), produce campo nullo per $r<R_\mathrm{i}$ (e quindi, in questo caso, il campo interno è, come sapevamo, solo quello generato da $q$), e che $\sigma_\mathrm{i}$ insieme a $q$ generano campo nullo per $r>R_\mathrm{i}$.\\
+L'esterno: ci si riconduce facilmente al problema già discusso di una sfera conduttrice con potenziale assegnato.\\
+In definitiva:
+\begin{equation}
+\vec E=\begin{cases}\dfrac{q}{r^2}\,\hat r&0<r<R_\mathrm{i}\\[6pt] 0&R_\mathrm{i}<r<R_\mathrm{e}\\[2pt] \dfrac{q}{r^2}\,\hat r&r>R_\mathrm{e}\end{cases}
+\qquad\quad
+\varphi(r)=\begin{cases}\dfrac qr&r>R_\mathrm{e}\\[6pt] \dfrac{q}{R_\mathrm{e}}&R_\mathrm{i}<r<R_\mathrm{e}\\[6pt] \dfrac qr+\dfrac{q}{R_\mathrm{e}}-\dfrac{q}{R_\mathrm{i}}&0<r<R_\mathrm{i}\,.\end{cases}
+\tag{2.5}
+\end{equation}
+Si noti che avendo richiesto $\varphi(\infty)=0$, la determinazione del potenziale ci è convenuto farla dall'esterno verso l'interno.\\
+Se la carica $q$ è spostata rispetto al centro, cambia il campo all'interno (che non è più solo quello generato dalla carica $q$) e la distribuzione $\sigma_\mathrm{i}$ non è più uniforme e contribuisce a determinare il campo all'interno; campo e distribuzione $\sigma_\mathrm{i}$ non
+possono essere calcolati in modo semplice (però impareremo a farlo), mentre all'esterno non cambia nulla.
+\end{quote}
+
+\subsection{I coefficienti di capacità e di potenziale}
+
+Sono dati $n$ conduttori $c_i$ nella regione $\mathcal R$, racchiusi dalla superficie $S_0$: per dimostrare che il problema di Neumann è equivalente al problema di Dirichlet basta stabilire che i potenziali $\varphi_i$ dei conduttori e le loro cariche $Q_i$ sono legati da una relazione lineare e invertibile. Poniamo uguale a zero il potenziale di $S_0$.\\
+Sia $\varphi'(x,y,z)$ la soluzione del problema di Dirichlet con le condizioni al contorno $\varphi'(x,y,z)=\varphi_i'$ \ su $c_i$ e siano $Q_i'$ le cariche dei vari conduttori:
+\begin{equation}
+\begin{split}
+Q_i'&=\int_{S_i}\sigma_i'(x,y,z)\,dS_i=\frac{1}{4\pi}\int_{S_i}E_n'(x,y,z)\,dS_i\\
+&=-\frac{1}{4\pi}\int_{S_i}\grad\varphi'(x,y,z)\cdot d\vec S_i
+\end{split}
+\tag{2.6}
+\end{equation}
+che quindi dipendono linearmente da $\varphi'(x,y,z)$.\\
+Sia ora $\varphi''(x,y,z)$ la soluzione del problema di Dirichlet con le condizioni al contorno $\varphi''(x,y,z)=\varphi_i''$ \ su $c_i$ e siano $Q_i''$ le cariche dei conduttori: siccome l'equazione di Laplace è lineare ed omogenea,
+\[
+\varphi(x,y,z)=\alpha\varphi'(x,y,z)+\beta\varphi''(x,y,z)
+\]
+è anch'essa soluzione dell'equazione di Laplace, con le condizioni al contorno \ $\varphi_i=\alpha\varphi_i'+\beta\varphi_i''$, e per la (2.6) le cariche dei conduttori sono $Q_i=\alpha Q_i'+\beta Q_i''$.\\
+Quindi l'applicazione $\{\varphi_i\}\to\{Q_i\}$ \ è una applicazione lineare:
+\begin{equation}
+Q_i\,=\sum_{j=1}^nC_{ij}\,\varphi_j\,;\qquad\qquad i=1\cdots n.
+\tag{2.7}
+\end{equation}
+I coefficienti $C_{ij}$ nella (2.7) sono detti \textbf{coefficienti di capacità} del sistema: ciascuno di essi dipende (solo) dalla forma e dalla disposizione di \underline{tutti} i conduttori e quindi costituiscono una caratteristica esclusivamente geometrica (non elettrica) del sistema.\\
+La matrice $C$ è invertibile: infatti, per la (1.92), la (2.7) e la (1.94) si ha
+\begin{equation}
+U=\frac12\sum_{i=1}^n\varphi_iQ_i=\frac12\sum_{i,j}\varphi_iC_{ij}\varphi_j=\frac{1}{8\pi}\int\vec E^2(\vec r\,)\,dV>0
+\tag{2.8}
+\end{equation}
+cioè la forma quadratica associata alla matrice $C$ è definita positiva. Quindi, posto $P\equiv C^{-1}$, si ha
+\begin{equation}
+\varphi_i\,=\sum_{j=1}^nP_{ij}\,Q_j\,;\qquad\qquad i=1\cdots n.
+\tag{2.9}
+\end{equation}
+I coefficienti $P_{ij}$ nella (2.9) sono detti \textbf{coefficienti di potenziale} del sistema: come i coefficienti di capacità (da cui dipendono) sono una caratteristica esclusivamente geometrica del sistema.\\
+La (2.9) mostra che il problema di Neumann è sempre riconducibile al problema del
+Dirichlet, e la stessa cosa vale per il problema misto, in quanto la (2.7) può essere risolta rispetto ai soli potenziali incogniti.
+
+Similmente alla (2.8) abbiamo
+\begin{equation}
+U=\frac12\sum_{i=1}^nQ_i\varphi_i=\frac12\sum_{i,j}Q_iP_{ij}Q_j.
+\tag{2.10}
+\end{equation}
+Vediamo alcune delle proprietà dei coefficienti $C_{ij}$ e $P_{ij}$:
+\begin{itemize}
+\item[i)] La matrice $C$, e quindi anche $P$ è simmetrica: $C_{ij}=C_{ji}$;\quad $P_{ij}=P_{ji}$.\\
+La dimostrazione si basa sul fatto che l'energia elettrostatica di una configurazione di cariche è indipendente dal modo in cui la configurazione viene realizzata. Per semplicità consideriamo il caso di due soli conduttori a potenziali $\varphi_1$ e $\varphi_2$. Riscriviamo per questo caso la (2.7):
+\begin{equation}
+\begin{aligned}
+Q_1&=C_{11}\varphi_1+C_{12}\varphi_2\\
+Q_2&=C_{21}\varphi_1+C_{22}\varphi_2\,.
+\end{aligned}
+\tag{2.11}
+\end{equation}
+Per realizzare questa configurazione procediamo nel modo seguente: mettiamo a massa il conduttore $c_2$ (cioè a potenziale zero), e portiamo $c_1$ al potenziale $\varphi_1$ (figura 2.4a); dette $Q_1'$ e $Q_2'$ le cariche sui due conduttori, per la (2.11) si ha \ $Q_1'=C_{11}\,\varphi_1$; \ $Q_2'=C_{21}\,\varphi_1$. Si noti che, per il fenomeno dell'induzione elettrostatica, il conduttore $c_2$, anche se a potenziale zero, ha una carica non nulla. Per la (2.8) l'energia $U_1$ della configurazione è \ $U_1=\frac12C_{11}\varphi_1^2$ \ ed è il lavoro fatto per prelevare dalla massa ($S_0$) la carica $Q_1'$ e portarla su $c_1$. Non si compie lavoro per portare $Q_2'$ su $c_2$ perché $c_2$ è allo stesso potenziale della massa. Ora teniamo $c_1$ al potenziale $\varphi_1$ (p.es.\ con una batteria: figura 2.4b) e portiamo $c_2$ al potenziale $\varphi_2$: sempre per la (2.11) al conduttore $c_1$ viene trasferita una carica \ $Q_1''=C_{12}\varphi_2$ \ compiendo il lavoro \ $Q_1''\varphi_1=\varphi_1C_{12}\varphi_2$ \ (senza il fattore $1/2$: il potenziale è costantemente $\varphi_1$), mentre al conduttore $c_2$ occorre trasferire la carica \ $Q_2''=C_{22}\,\varphi_2$ \ compiendo il lavoro \ $\frac12Q_2''\varphi_2=\frac12C_{22}\varphi_2^2$. Mettendo tutto insieme, il lavoro fatto è
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[scale=1.2]{fig/fig2_4a} & \includegraphics[scale=1.2]{fig/fig2_4b}\\
+{\small fig.~2.4a} & {\small fig.~2.4b}
+\end{tabular}
+\end{center}
+\begin{equation}
+U=\frac12C_{11}\varphi_1^2+\varphi_1C_{12}\varphi_2+\frac12C_{22}\varphi_2^2
+\tag{2.12}
+\end{equation}
+e confrontando con la (2.8) si ottiene $C_{12}=C_{21}$, e quindi anche \ $P_{12}=P_{21}$.\\
+La simmetria dei coefficienti di capacità esprime un fatto tutt'altro che ovvio: per esempio nel caso di due conduttori $C_{12}$ è la carica del conduttore $c_1$ quando il suo potenziale è nullo (conduttore a massa) e quello del conduttore $c_2$ è $\varphi_2=1$, ed è uguale alla carica $C_{21}$ del conduttore $c_2$ se invece quest'ultimo è a potenziale zero e $\varphi_1=1$, una situazione tutt'altro che simmetrica della precedente, data l'arbitrarietà delle posizioni e delle forme dei due conduttori.
+\item[ii)] \begin{equation}
+C_{ii}>0,\ P_{ii}>0;\quad\ C_{ij}<0,\ P_{ij}>0\quad\ (i\neq j).
+\tag{2.13}
+\end{equation}
+La 1$^{\rm a}$ segue immediatamente dalla positività della matrice $C$; la 2$^{\rm a}$ dal fatto che anche $P\equiv C^{-1}$ è positiva. Per dimostrare che $C_{ij}<0$, notiamo che $C_{ij}$, per la (2.7), è la carica del conduttore $c_i$ quando il conduttore $c_j$ è a potenziale $\varphi_j=1$, e tutti gli altri conduttori (compreso $c_i$) sono a massa. Siccome $C_{jj}>0$, la carica di $c_j$ è positiva, e per il fenomeno dell'induzione sugli altri conduttori viene indotta una carica negativa. Quindi $C_{ij}<0$. Oppure: sia $\varphi_j>0$ e tutti gli altri conduttori siano a terra. Siccome $\varphi(x,y,z)$ può essere minimo solo sui conduttori, $\varphi(x,y,z)\ge0$ ed è minimo su tutti i conduttori a terra, sui quali quindi il campo elettrico è ovunque diretto verso l'interno, da cui $Q_i<0$\quad$i\neq j$.\\
+In modo analogo si dimostra la positività dei $P_{ij}$.
+\end{itemize}
+
+\paragraph{Esempio}
+\begin{quote}
+Una sfera conduttrice (conduttore $c_1$) di raggio $a$ al centro di una corona sferica conduttrice (conduttore $c_2$), raggio interno $b$ e raggio esterno $c$. Calcoliamo i coefficienti di capacità e di potenziale del sistema.\\
+Cominciamo con i coefficienti di potenziale, perché è più semplice: infatti, se $Q_1$ è la carica sulla sfera interna e $Q_2$ quella sulla corona, dalle (2.5) si ha
+\fig{fig2_5}{2.5}
+\begin{equation}
+\varphi(r)=\begin{cases}\dfrac{Q_1+Q_2}{r}&\text{per }r\ge c\\[10pt] \dfrac{Q_1}{r}-\dfrac{Q_1}{b}+\dfrac{Q_1+Q_2}{c}&\text{per }a\le r\le b\end{cases}
+\tag{2.14}
+\end{equation}
+da cui
+\begin{equation}
+\begin{gathered}
+\varphi_1=\Big(\frac1a+\frac1c-\frac1b\Big)Q_1+\frac{Q_2}{c}\,;\quad\ \varphi_2=\frac{Q_1+Q_2}{c}\qquad\Rightarrow\\
+P_{11}=\frac1a+\frac1c-\frac1b\,;\quad\ P_{12}=P_{21}=P_{22}=\frac1c\,\cdot
+\end{gathered}
+\tag{2.15}
+\end{equation}
+Anche i coefficienti di capacità si possono calcolare direttamente, ma a questo punto è più facile invertire la matrice $P_{ij}$ e si ottiene
+\begin{equation}
+C_{11}=\frac{ab}{b-a}\,;\quad\ C_{21}=C_{12}=\frac{ab}{a-b}\,;\quad\ C_{22}=c+\frac{ab}{b-a}\,\cdot
+\tag{2.16}
+\end{equation}
+Vale la pena di osservare che $C_{11}$ e $C_{22}$ (stesso discorso per $P_{11}$ e $P_{22}$) non dipendono solo dalle caratteristiche geometriche del conduttore al quale si riferiscono, ma da quelle di tutto il sistema.\\
+Un'altra cosa da notare sono le uguaglianze (una conseguenza dell'altra) \ $C_{12}=-C_{11}$, \ $P_{21}=P_{22}$: come vedremo nel prossimo paragrafo esse valgono in generale tutte le volte che un conduttore ($c_2$) costituisce una gabbia di Faraday per l'altro.
+\end{quote}
+
+\subsection{Capacità e condensatori}
+
+Cominciamo con il caso in cui il sistema di conduttori \ $c_1\cdots c_n$ \ è costituito da un solo conduttore: in questo caso la (2.7) si riduce a
+\begin{equation}
+Q=C\,\varphi\quad\Rightarrow\quad C=\frac Q\varphi
+\tag{2.17}
+\end{equation}
+e $C$, il rapporto fra carica del conduttore ed il suo potenziale rispetto alla terra, è detta la \textbf{capacità} del conduttore. Nel sistema di Gauss la capacità si misura in centimetri: 1\,cm è la capacità di un conduttore al quale occorre fornire la carica di 1 franklin perchè il suo potenziale (rispetto alla terra) sia 1 statvolt. Nel SI l'unità di capacità è il farad (F):
+\begin{equation}
+1\,\mathrm F=1\,\mathrm C/1\,\mathrm V=(3\times10^9\cdot300)\,\mathrm{ues}=9\times10^{11}\,\mathrm{ues}\approx10^{12}\,\mathrm{ues}\,.
+\tag{2.18}
+\end{equation}
+Consideriamo ad esempio un conduttore sferico di raggio $a$. La massa ($\varphi_0=0$) sia una sfera cava conduttrice di raggio interno $R$ concentrica con la sfera.\\
+Siccome $\varphi(r)=Q_1/r-Q_1/R$ \quad $(a\le r\le R)$, si ha
+\begin{equation}
+\varphi=Q\Big(\frac1a-\frac1R\Big)\quad\Rightarrow\quad C=\frac{aR}{R-a}
+\tag{2.19}
+\end{equation}
+$C$ \ è la capacità della sfera rispetto alla massa (cioè la superficie $S_0$). Se $R\to\infty$, $C\to a$: quindi nel sistema di Gauss 1\,ues è la capacità rispetto all'infinito di una sfera conduttrice di raggio 1\,cm. Nel SI i coefficienti di capacità sono tutti moltiplicati per $4\pi\epsilon_0$, per cui la capacità della sfera è $C=4\pi\epsilon_0a$ e il farad è la capacità di una sfera di raggio $9\times10^{11}$\,cm: è una unità decisamente troppo grossa, per cui di solito si usano i suoi sottomultipli: il microfarad \ $(1\,\mu\mathrm F=10^{-6}\,\mathrm F)$, il nanofarad \ $(1\,\mathrm{nF}=10^{-9}\,\mathrm F)$ ed il picofarad \ $(1\,\mathrm{pF}=10^{-12}\,\mathrm F)$, che è praticamente uguale all'unità elettrostatica: $1\,\mathrm{cm}=1.1\,\mathrm{pF}$.
+
+Siccome il numero di elettroni di conduzione in un conduttore non è illimitato, potrebbe venirci il dubbio che non sia possibile caricare più che tanto un conduttore: facciamo due conti all'ingrosso. Supponiamo di voler portare una sferetta di 1\,cm di raggio al potenziale di $10^6$\,V, certamente un valore spropositato. Siccome la capacità è di 1\,pF, occorre la carica di $10^{-6}$\,C, cioè occorre rimuovere dalla sferetta circa $10^{13}$ elettroni. Quanti ce ne sono a disposizione? Contiamo solo quelli (di conduzione) vicino alla superficie, perchè altrimenti la sferetta non si comporterebbe più come un conduttore. Diciamo che la superficie ha uno spessore di $10^{-7}$\,cm, allora, siccome in un metallo ci sono circa $10^{23}$ elettroni/cm$^3$, il numero di elettroni a disposizione è \ $4\pi\cdot10^{-7}\cdot10^{23}\simeq10^{17}$, quindi ci basta portarne via 1 ogni 10'000\,!
+
+Consideriamo ora un sistema costituito da due conduttori: la relazione fra cariche e potenziali comporta tre coefficienti di capacità (o di potenziale), tuttavia anche in questo caso è possibile, e soprattutto si rende necessario, definire un'unica grandezza, detta capacità del sistema. Supponiamo che i due conduttori siano inizialmente scarichi, quindi, non essendoci altre cariche intorno, sono entrambi a potenziale nullo. Se ora trasferiamo la carica $Q$ da un conduttore all'altro, diciamo da $c_2$ a $c_1$, fra i due conduttori si instaura una differenza di potenziale: la (2.9), che riscriviamo per il caso di due conduttori, lega in generale le cariche ai potenziali
+\begin{equation}
+\begin{aligned}
+\varphi_1&=P_{11}Q_1+P_{12}Q_2\\
+\varphi_2&=P_{21}Q_1+P_{22}Q_2
+\end{aligned}
+\tag{2.20}
+\end{equation}
+e, posto $V\equiv\varphi_1-\varphi_2$ (è la notazione più comunemente usata in questo contesto),
+\begin{equation}
+V=(P_{11}-P_{21})Q_1+(P_{12}-P_{22})Q_2
+\tag{2.21}
+\end{equation}
+per cui se $Q_1=Q$, \ $Q_2=-Q$
+\begin{equation}
+V=(P_{11}+P_{22}-2P_{12})Q
+\tag{2.22}
+\end{equation}
+quindi, in queste condizioni, la differenza di potenziale fra i due conduttori è proporzionale alla carica trasferita, per cui è possibile definire la \textbf{capacità del sistema}
+\begin{equation}
+C\defeq\frac QV=(P_{11}+P_{22}-2P_{12})^{-1}\qquad(Q\equiv Q_1,\ V\equiv\varphi_1-\varphi_2)
+\tag{2.23}
+\end{equation}
+come il rapporto fra la carica trasferita e la differenza di potenziale.\\
+Il sistema costituito dai due conduttori è detto \textbf{condensatore} (o anche \textbf{capacitore}), in quanto -- quando $Q_2=-Q_1$ -- ``condensa il campo elettrico'' nelle vicinanze del sistema (il campo lontano è un campo di dipolo), cioè le linee di forza vanno da $c_1$ a $c_2$ senza disperdersi all'infinito; i due conduttori sono detti le \textbf{armature} del condensatore.\\
+In termini dei coefficienti di capacità
+\begin{equation}
+C\,=\,\frac{C_{11}C_{22}-C_{12}^2}{C_{11}+C_{22}+2C_{12}}\,\cdot
+\tag{2.24}
+\end{equation}
+Se uno dei due conduttori è un conduttore cavo e l'altro, diciamo $c_1$, è contenuto all'interno della cavità, dalla discussione sulle gabbie di Faraday sappiamo che la differenza di potenziale fra i due conduttori è indipendente dalla carica $Q_2$ di $c_2$; quindi dalla (2.21) si ha
+\begin{equation}
+P_{12}=P_{22}\quad\Rightarrow\quad C_{21}=-C_{11}
+\tag{2.25}
+\end{equation}
+ed in questo caso, che chiamiamo il caso del ``buon condensatore'', la capacità è data da
+\begin{equation}
+C\,=\,(P_{11}-P_{21})^{-1}\,=\,C_{11}.
+\tag{2.26}
+\end{equation}
+Perchè ``buon condensatore''? Perchè la sua capacità è ben definita e resta invariata anche se il sistema si trova in presenza di altri conduttori o cariche esterne, cosa che non succede per un condensatore le cui linee di forza ``escono allo scoperto'', e possono quindi venire modificate dalla presenza di altri oggetti carichi.\\
+Il condensatore costituito da una sfera al centro di una corona sferica (``condensatore sferico''), che abbiamo discusso nell'ultimo paragrafo, è un buon condensatore, e dalla (2.15) o dalla (2.16) la sua capacità è data da
+\begin{equation}
+C\,=\,\frac{ab}{b-a}
+\tag{2.27}
+\end{equation}
+da cui si vede che non dipende dal raggio esterno della corona.\\
+Nelle applicazioni è importante disporre di condensatori di grande capacità e piccolo ingombro: accenneremo poi alla tecnica costruttiva; per ora notiamo che dalla (2.27) risulta che la capacità aumenta se diminuiamo la distanza fra la sfera interna e la corona: se $\delta\equiv(b-a)\ll a$, dalla (2.27) si ottiene
+\begin{equation}
+C\,=\,\frac{a^2}{\delta}=\frac{S}{4\pi\delta}
+\tag{2.28}
+\end{equation}
+dove $S=4\pi a^2$ è la superficie del condensatore; la (2.28) è maggiore per il fattore $a/\delta$ della capacità di una sfera di raggio $a$ rispetto all'infinito.\\
+Consideriamo ora il condensatore costituito da due conduttori piani e paralleli di area $S$, a distanza $\delta$ (``condensatore piano''). Supponiamo che $\delta\ll\sqrt S$, in modo da poter approssimare il campo elettrico fra i due piani come il campo elettrico (1.54) fra due distribuzioni piane infinite: si dice che stiamo trascurando gli ``effetti di bordo'', un problema sul quale torneremo più avanti. La differenza di potenziale fra le armature del condensatore è data dalla (1.71), per cui dalla (2.23) si ha
+\begin{equation}
+C=\frac{\sigma S}{4\pi\sigma\delta}=\frac{S}{4\pi\delta}
+\tag{2.29}
+\end{equation}
+cioè la stessa espressione del condensatore sferico.
+
+La tecnologia per la costruzione di condensatori si evolve continuamente per venire incontro alle sempre crescenti esigenze di miniaturizzazione dei circuiti: l'idea di base è sostanzialmente quella di interporre fra due strati conduttori sottili (anticamente fogli di alluminio), uno strato di ossido (o altro isolante) quasi monomolecolare; in questo modo si ottiene un sistema che ha una capacità di almeno $10^{-2}\,\mathrm F/\mathrm m^2$. (Anticamente si usava come strato isolante la carta che, per quanto fosse sottile, certamente non era monomolecolare: questo ``sandwich'' veniva ripiegato e impacchettato strettamente in un piccolo volume).
+
+Nella figura 2.6 viene riportato il simbolo usato nei circuiti elettrici per rappresentare un condensatore e il collegamento in serie e in parallelo di due condensatori. Due condensatori sono collegati in serie quando una armatura dell'uno è elettricamente collegata ad una armatura dell'altro: il collegamento elettrico fra due elementi di un circuito viene rappresentata da una linea sottile, in quanto normalmente è realizzata con fili conduttori. Il collegamento in parallelo si realizza collegando ogni armatura di un condensatore ad una armatura dell'altro.
+\fig{fig2_6}{2.6}
+Supponiamo che i due condensatori, di capacità $C_1$ e $C_2$, siano ``buoni condensatori'', per cui la presenza dell'uno non modifica la capacità dell'altro; quando essi vengono collegati in serie il sistema che ne risulta è equivalente ad un condensatore di capacità
+\begin{equation}
+C=\Big(\frac{1}{C_1}+\frac{1}{C_2}\Big)^{-1}.
+\tag{2.30}
+\end{equation}
+Infatti, quando la carica $Q$ viene trasferita da una delle armature libere all'altra, sulle armature collegate vengono indotte rispettivamente le cariche $-Q$ e $Q$ (buoni condensatori!), e siccome
+\[
+V=V_1+V_2=Q/C_1+Q/C_2
+\]
+ne segue la (2.30).
+\fig{fig2_7}{2.7}
+Se i due ``buoni'' condensatori vengono collegati in parallelo, la capacità del sistema è la somma delle capacità:
+\begin{equation}
+C=C_1+C_2
+\tag{2.31}
+\end{equation}
+in quanto la differenza di potenziale fra le armature di ciascun condensatore è la stessa, e la carica è la somma delle cariche: $Q=Q_1+Q_2=VC_1+VC_2$, da cui la (2.31).
+
+Concludiamo questo paragrafo con l'espressione dell'energia di un condensatore carico, cioè del lavoro che occorre fare per trasferire la carica $Q$ da una armatura all'altra: dalla (1.92), usando la (2.23) si ottengono le seguenti espressioni equivalenti
+\begin{equation}
+U\equiv\frac12(Q_1\varphi_1+Q_2\varphi_2)=\frac12QV=\frac12CV^2=\frac12\,\frac{Q^2}{C}\quad\ (Q=Q_1=-Q_2).
+\tag{2.32}
+\end{equation}
+Nei vari casi particolari (p.es.\ condensatore sferico, condensatore piano) è possibile verificare direttamente l'equivalenza delle (2.32) con la (1.94).
+
+\subsection{Metodi di soluzione di problemi di elettrostatica dei conduttori}
+
+L'idea che sta alla base di molti metodi di risoluzione di problemi di elettrostatica dei conduttori è quella di sfruttare la conoscenza della soluzione di un problema di elettrostatica, tipicamente di cariche fisse, per risolverne un altro. Per esempio, sia data una distribuzione di cariche, $\varphi(x,y,z)$ il potenziale prodotto da essa, e sia $S$ una superficie equipotenziale $\varphi(x,y,z)=\varphi_0$. Dalla discussione sulle gabbie di Faraday sappiamo che se $\varphi$ non è costante dentro $S$, \ $S$ \ deve contenere delle cariche. Rimosse (solo) le cariche eventualmente contenute dentro $S$, se \ $c$ \ è un conduttore la cui superficie esterna coincide con $S$, \underline{all'esterno} del conduttore $\varphi(x,y,z)$ risolve il problema di Dirichlet con il conduttore a potenziale $\varphi_0$: infatti $\varphi(x,y,z)$ soddisfa l'equazione di Poisson nella regione esterna al conduttore, e la corretta condizione al contorno su $S$. Per l'unicità della soluzione, è la soluzione. Inoltre, la densità di carica sulla superficie del conduttore è data dalla (2.2) e quindi, essendo noto il potenziale, è calcolabile; il campo elettrico su $S$, e quindi anche il flusso di $\vec E$ uscente da $S$, è lo stesso prima e dopo, quindi per il teorema di Gauss la carica totale sul conduttore è uguale alla carica totale della distribuzione che era contenuta dentro $S$ e che abbiamo rimosso.\\
+Il metodo delle cariche immagine utilizza questo procedimento all'inverso: sia dato un sistema di conduttori $c_i$ di superfici $S_i$, ed una distribuzione di cariche nella regione $\mathcal R$ delimitata dalle superfici $S_i$ dei conduttori e dalla ``massa'' $S_0$. Il problema è quello di determinare il potenziale in $\mathcal R$, date le condizioni al contorno sui conduttori, cioè per ciascuno di essi il potenziale $\varphi_i$ o la carica $Q_i$. Il problema è risolto se è possibile trovare una distribuzione di cariche fisse \underline{esterna} ad $\mathcal R$, cioè nelle regioni interne alle $S_i$ (\textbf{cariche immagine}), che, insieme alla distribuzione di cariche fisse contenuta in $\mathcal R$, genera \underline{in assenza} dei conduttori $c_i$ un potenziale $\varphi(x,y,z)$ che è costante su ogni $S_i$, e soddisfa su di esse le condizioni al contorno assegnate: $\varphi(x,y,z)=\varphi_i$, se è assegnato il potenziale, altrimenti $\Phi_{S_i}(\vec E)=4\pi Q_i$, se è assegnata la carica. In tal caso $\varphi(x,y,z)$ è la soluzione in $\mathcal R$ del problema con i conduttori.
+
+\paragraph{Esempi}
+\begin{enumerate}
+\item Consideriamo un dipolo: due cariche $q$ e $-q$ nelle posizioni $x=y=0$, $z=\pm a$.\\
+Il potenziale è
+\begin{equation}
+\varphi(x,y,z)=q\Big(\frac{1}{\sqrt{x^2+y^2+(z-a)^2}}-\frac{1}{\sqrt{x^2+y^2+(z+a)^2}}\Big)
+\tag{2.33}
+\end{equation}
+e assume tutti i valori da $-\infty$ (avvicinandosi a $-q$) a $+\infty$ (avvicinandosi a $q$); il piano $z=0$ è la superficie equipotenziale con $\varphi=0$. Le superfici equipotenziali con $\varphi<0$ sono superfici chiuse nella regione $z<0$ contenenti la carica negativa (appiattite dalla parte del piano $z=0$, allungate nella direzione opposta), viceversa per quelle su cui $\varphi>0$. Se sostituiamo (per esempio) la carica negativa con un conduttore $c$ avente come superficie (esterna) una superficie equipotenziale $S$ che la contiene, se su $S$ \ $\varphi(x,y,z)=\varphi_0$ \ la (2.33) risolve (esternamente al conduttore) il problema dell'induzione esercitata dalla carica $q$ sul conduttore $c$ il cui potenziale sia $\varphi_0$ (problema di Dirichlet). La carica totale sul conduttore $c$ (a potenziale $\varphi_0$) è $-q$.
+\fig{fig2_8}{2.8}
+Ovviamente la (2.33) risolve anche il problema (di Neumann) in cui sia assegnata la carica $-q$ del conduttore $c$. In entrambi i casi la carica $-q$ (che non c'è più) è la carica immagine del problema ed è situata esternamente alla regione che ci interessa.\\
+In particolare, e questo è il caso più interessante, il conduttore può essere una lastra piana infinita la cui superficie ``esterna'' coincide con il piano $z=0$. In questo caso la (2.33) risolve, nella regione $z\ge0$, il problema elettrostatico (che abbiamo già in parte discusso) di una carica puntiforme $q$ posta a distanza $a$ dalla superficie di un conduttore piano infinito, messo a terra ($\varphi_0=0$). Anche in questo caso la carica $-q$ è la carica immagine del problema ed è situata esternamente alla regione che ci interessa ($z\ge0$).\\
+La carica indotta sulla superficie del conduttore si calcola facilmente: è, per la (2.2), proporzionale al campo elettrico associato al potenziale (2.33), sul piano $z=0$
+\begin{equation}
+\sigma(x,y)=\frac{1}{4\pi}\,E_z(x,y,0)=-\frac{1}{4\pi}\,\frac{2qa}{(x^2+y^2+a^2)^{3/2}}\,\cdot
+\tag{2.34}
+\end{equation}
+La carica totale sulla superficie $z=0$ del conduttore si può ottenere dalla (2.34) per integrazione, oppure mediante il teorema di Gauss applicato alla superficie infinita costituita dal piano $z=-\epsilon$ chiuso dalla semisfera all'infinito nella regione della carica $+q$ (più correttamente, figura 2.9, si considera il flusso attraverso la semisfera di raggio $R$ e centro nell'origine, completata dal disco equatoriale di raggio $R$ appena dentro il conduttore, e poi si prende il limite per $R\to\infty$): detto flusso è nullo perchè è nullo il campo elettrico dentro il conduttore, ed è nullo il flusso attraverso la semisfera all'infinito perchè il campo è un campo di dipolo, e quindi di ordine $O(r^{-3})$ all'infinito, mentre la superficie è di ordine $O(r^2)$. Quindi la carica totale sulla superficie del conduttore è $-q$.
+\fig{fig2_9}{2.9}
+Vale la pena di osservare che il momento di dipolo della distribuzione di carica ($q$ e $\sigma$) è parallelo all'asse $z$ (grazie alla simmetria delle cariche) e vale $p=qa$ (basta
+prendere come polo l'origine e calcolare solo $p_z$), mentre il potenziale all'infinito è un potenziale di dipolo con $p=2qa$: la ragione della discrepanza sta nel fatto che la distribuzione delle sorgenti ($\sigma$) si estende su una regione infinita dello spazio, per cui il procedimento seguìto per ricavare lo sviluppo del potenziale a grandi distanze non può essere applicato.\\
+Sulla carica $q$ si esercita una forza dovuta al campo elettrico generato dalla carica sulla superficie del conduttore, e quindi uguale alla forza esercitata dalla carica immagine: quindi il conduttore attira la carica con una forza pari a
+\begin{equation}
+F=\frac{q^2}{4a^2}\,\cdot
+\tag{2.35}
+\end{equation}
+L'energia elettrostatica del sistema, viste le (1.89) e (1.92), può essere calcolata come
+\begin{equation}
+U=\frac12\Big(q\varphi^{(1)}(0,0,a)+\int\sigma(x,y)\varphi(x,y,0)dx\,dy\Big)=-\frac{q^2}{4a}
+\tag{2.36}
+\end{equation}
+dato che $\varphi^{(1)}$, come nella (1.89), è il potenziale dovuto solo alla distribuzione $\sigma(x,y)$\,: \ $\varphi^{(1)}(0,0,a)=-q/2a$, \ e \ $\varphi(x,y,0)=0$.\\
+Possiamo anche calcolare $U$ in modo più diretto come il lavoro necessario per portare la carica $q$ da $z=\infty$ a $z=a$ \ $(x=y=0)$: siccome quando la carica è a distanza $z$ dal piano su di essa, per la (2.35), si esercita la forza $F_z(z)=-q^2/4z^2$, si ha
+\begin{equation}
+U=-\int_\infty^aF_z(z)\,dz=\int_\infty^a\frac{q^2}{4z^2}\,dz=-\frac{q^2}{4a}\,\cdot
+\tag{2.36'}
+\end{equation}
+Si noti che $U$ è la metà dell'energia $-q^2/2a$ del dipolo costituito da $q$ e da $-q$ a distanza $2a$: infatti il lavoro per portare due cariche (reali) $q$ e $-q$ a distanza $2a$, mantenendole in posizione simmetrica rispetto al piano $z=0$, è il doppio del lavoro su ciascuna carica; nel caso che stiamo considerando una delle due cariche non c'è, e quindi il lavoro che occorre fare è la metà (oppure: quando viene spostata la carica reale, la carica immagine si sposta da sola!).
+\item Campo di una carica puntiforme $q$ a distanza $l$ dal centro $O$ di una sfera conduttrice di raggio $R<l$: è un altro problema classico del metodo delle cariche immagine.\\
+Cominciamo con il caso in cui la sfera è a potenziale zero (sfera a massa). Ovviamente ci interessa il potenziale all'esterno della sfera. Possiamo sperare di poter sostituire la sfera con una carica puntiforme $q'$ a distanza $l'$ da $O$, con $l'<R$, in modo tale che il potenziale prodotto da $q$ e da $q'$ sia nullo su quella che era la superficie della sfera conduttrice? Proviamo: dette $r$ ed $r'$ le distanze di un punto della sfera da $q$ e $q'$, deve essere \ $q/r+q'/r'=0$, cioè \ $r/r'=-q/q'$; ma questa è proprio la definizione di cerchio di Apollonio, nel piano, e di sfera di Apollonio, nello spazio. Il cerchio (o la sfera) di Apollonio ha il centro sul prolungamento della retta congiungente $q$ e $q'$ nel punto a distanza $l$ da $q$ ed $l'$ da $q'$ tali
+\fig{fig2_10}{2.10}
+che $l/l'=(q/q')^2$, e raggio $R=\sqrt{ll'}$. Quindi, i dati essendo $R$\,, $q$ ed $l$, una carica $q'=-q\,R/l$ a distanza $l'=R^2/l$ dal centro della sfera, è la carica immagine del problema.\\
+Il potenziale in un punto $P$ esterno al conduttore è
+\begin{equation}
+\varphi(x,y,z)=\frac qr-\frac{qR}{lr'}
+\tag{2.37}
+\end{equation}
+dove $r$ ed $r'$, indicate nella figura 2.10, sono le distanze di $P$ da $q$ e dalla posizione della carica immagine $q'$. La carica totale indotta sulla sfera è $q'=-q\,R/l$. Si noti che se $q$ si allontana, $q'$ si avvicina al centro.\\
+Supponiamo ora che la sfera, anzichè a potenziale zero, sia una sfera scarica e isolata, cioè la sua carica totale è nulla: se aggiungiamo al sistema un'altra carica immagine $-q'$ nel centro della sfera, la superficie della sfera resta equipotenziale (a potenziale $\varphi_0=-q'/R=q/l$), e la carica totale sulla sfera è nulla. In questo caso il potenziale fuori dal conduttore è
+\begin{equation}
+\varphi(x,y,z)=\frac qr-\frac{qR}{lr'}+\frac{qR}{lr_0}
+\tag{2.37}
+\end{equation}
+dove $r_0$ è la distanza del punto $P$ dal centro della sfera. In generale, una opportuna carica nel centro permette di soddisfare qualsiasi condizione al contorno sulla sfera.
+\item Sfera conduttrice in un campo elettrico uniforme. Vogliamo stabilire come un campo uniforme $\vec E_0$, per esempio generato da due piani paralleli con densità di carica (fissa) $\sigma_0$ e $-\sigma_0$, viene modificato dalla presenza di una sfera conduttrice di raggio $R$ scarica e isolata, e determinare la densità di carica indotta sulla sua superficie. Si può procedere in due modi:
+
+\textit{i}) \ prendiamo l'asse $z$ parallelo e concorde con $\vec E_0$; il potenziale è \ $\varphi_0(x,y,z)=-E_0z$, e sulla superficie della sfera vale $-E_0R\cos\theta$. Le eventuali cariche immagine (carica totale nulla) devono produrre sulla superficie della sfera un potenziale uguale e opposto (tutt'al più a meno di una costante): il potenziale di un dipolo puntiforme è, ad ogni distanza,
+\[
+\frac{\vec p\cdot\vec r}{r^3}=\frac{p\cos\theta}{r^2}
+\]
+per cui, se prendiamo come cariche immagine un dipolo puntiforme con $\vec p=R^3\vec E_0$ posto nel centro della sfera, il potenziale
+\begin{equation}
+\varphi(x,y,z)=-E_0z+\frac{\vec p\cdot\vec r}{r^3}=-E_0z\Big(1-\frac{R^3}{r^3}\Big)=-E_0r\cos\theta\Big(1-\frac{R^3}{r^3}\Big)
+\tag{2.38}
+\end{equation}
+è nullo sulla superficie della sfera, e per $r\ge R$ risolve il problema.
+
+\textit{ii}) \ Possiamo pensare il campo uniforme $\vec E_0$ come prodotto da due cariche $q$ e $-q$ nelle posizioni $x=y=0$, $z=\mp z_0$ nel limite $z_0\to\infty$, $q\to\infty$: infatti \big(il calcolo è simile a quello che ha portato alla (1.75)\big)
+\[
+\varphi_0(x,y,z)\equiv q\Big(\frac{1}{\sqrt{x^2+y^2+(z+z_0)^2}}-\frac{1}{\sqrt{x^2+y^2+(z-z_0)^2}}\Big)
+\]
+\begin{equation}
+=\frac{q}{z_0}\Big(\frac{1}{\sqrt{1+(r/z_0)^2+2z/z_0}}-\frac{1}{\sqrt{1+(r/z_0)^2-2z/z_0}}\Big)\to-\frac{2qz}{z_0^2}
+\tag{2.39}
+\end{equation}
+per cui basta che $2q/z_0^2\to E_0$ quando $z_0\to\infty$. Le cariche immagine (rispetto alla sfera conduttrice) delle due cariche $q$ e $-q$, sono le cariche $-qR/z_0$ e $+qR/z_0$ nei punti $\mp R^2/z_0$ ed hanno momento di dipolo $p=2qR^3/z_0^2$ concorde con l'asse $z$. Quando $z_0\to\infty$ le due cariche immagine costituiscono un dipolo puntiforme con $\vec p=R^3\vec E_0$ posto nel centro della sfera, come prima.
+
+Per determinare la carica indotta sulla superficie della sfera occorre calcolare il campo elettrico sulla sfera: siccome sappiamo che $\vec E$ è ortogonale alla superficie, è sufficiente che calcoliamo la derivata di $\varphi$ rispetto ad $r$: per $r$ costante, uguale ad $R$, $\varphi$ non varia. Dalla (2.38) si ha
+\begin{equation}
+\begin{aligned}
+4\pi\sigma=E_n&=-\frac{\partial\varphi}{\partial r}=3E_0\cos\theta\quad\Rightarrow\\
+\Rightarrow\sigma&=\frac{3}{4\pi}\,E_0\cos\theta\equiv\sigma_0\cos\theta\qquad\quad\sigma_0\equiv\frac{3E_0}{4\pi}
+\end{aligned}
+\tag{2.40}
+\end{equation}
+quindi il campo elettrico $\vec E_0$ induce sulla sfera la distribuzione (2.40) che ha momento di dipolo $\vec p=R^3\vec E_0$. Siccome il campo dentro la sfera conduttrice è nullo, segue che la distribuzione (2.40) produce per $r<R$ un campo elettrico uniforme pari a $-\vec E_0$ quindi, in generale, una distribuzione superficiale $\sigma_0\cos\theta$ sulla superficie di una sfera, produce dentro la sfera il campo \ $\vec E=-(4\pi/3)\sigma_0\,\hat z$.
+\end{enumerate}
+
+\subsection{Effetti di bordo}
+
+Abbiamo calcolato il campo elettrico di distribuzioni di carica aventi come supporto cilindri infiniti, fili rettilinei, piani (conduttori e non) infiniti, ecc., ben sapendo che tali distribuzioni non corrispondono a situazioni reali: sembra quasi che l'unica ragione per cui ce ne siamo occupati sia quella che in questi casi campo elettrico e potenziale, grazie alle simmetrie di questi sistemi, sono facilmente calcolabili. In un certo senso questo è vero, però non è l'unica ragione: lo vedremo esplicitamente su alcuni esempi, ma è abbastanza chiaro a priori che i campi calcolati per queste distribuzioni possono costituire una buona approssimazione dei campi di distribuzioni finite, in opportune regioni di spazio di dimensioni piccole rispetto alle dimensioni delle distribuzioni. Per esempio, abbiamo visto alla fine del capitolo 1.10 che una distribuzione lineare di lunghezza finita ha la stessa singolarità di una distribuzione lineare su un filo rettilineo infinito, quindi a piccole distanze le due distribuzioni diventano indistinguibili: la ragione di ciò sta nella legge $1/r^2$, per cui i contributi delle regioni lontane di una distribuzione diventano sempre meno importanti. Per lo stesso motivo ci aspettiamo che una distribuzione costante $\sigma$ sulla superficie di un disco di raggio $R$ generi un campo elettrico che in prossimità del centro del disco non si discosti molto da quello di una identica distribuzione su un piano infinito. Supponiamo il disco nel piano $z=0$ con il centro nell'origine, il campo elettrico può essere calcolato facilmente sull'asse (asse $z$), ed è
+\begin{equation}
+E_x^0=E_y^0=0,\ \ E_z^0=2\pi\sigma\Big(\frac{z}{|z|}-\frac{z}{\sqrt{z^2+R^2}}\Big)
+\tag{2.41}
+\end{equation}
+Per $x=y=0$, \ $z=0^\pm$ \ $E_z=\pm2\pi\sigma$, come per una distribuzione piana infinita; in un intorno dell'origine, per $z>0$ si ha
+\[
+E_z=2\pi\sigma\Big(1-\frac zR+O\big(z^3/R^3\big)\Big)
+\]
+che conferma che l'approssimazione del disco con un piano infinito è accettabile vicino al centro finchè $z\ll R$. Più ci si allontana dal centro, sia in direzione dell'asse $z$, sia verso il bordo, più il campo si discosta da quello di un piano infinito: questo scostamento è ciò che normalmente viene indicato come ``effetto di bordo''. Abbiamo trascurato gli effetti di bordo quando abbiamo calcolato la capacità di un condensatore piano: in questo caso gli effetti di bordo non sono dovuti soltanto alla dimensione finita della distribuzione, ma anche al fatto che, siccome le armature sono dei conduttori, la carica non è distribuita uniformemente, come in un piano infinito, ma si ha un accumulo verso i bordi. Il campo elettrico non è completamente confinato fra le armature, ma è diverso da zero anche all'esterno e in particolare, oltre alle linee di forza che uniscono le facce interne delle armature, ci sono linee di forza che vanno dall'esterno di un'armatura all'esterno dell'altra, e queste si hanno principalmente verso i bordi delle armature.\\
+La necessità di un campo elettrico anche all'esterno del condensatore è dettata dal fatto che il campo elettrico è conservativo: se $\vec E$ fosse confinato in una regione limitata di spazio, la circuitazione di $\vec E$ lungo un circuito del tipo di quello rappresentato in figura 2.11 (il lato interno lungo una linea di forza, uno esterno dove ipotizziamo che il campo sia nullo, e gli altri due ortogonali ad $\vec E$ dove $\vec E\neq0$) sarebbe diversa da zero, in quanto riceverebbe contributo solo dal lato interno (in effetti il campo a grande distanza dal condensatore è un campo di dipolo, con momento di dipolo pari alla carica su un'armatura per la distanza fra le armature).
+\fig{fig2_11}{2.11}
+È chiaro quindi che trascurare gli effetti di bordo può portare a conclusioni in contrasto con la conservazione dell'energia: è quello che accade se un condensatore tipo quello di figura 2.11 viene attraversato da una particella carica: se il campo elettrico fosse diverso da zero solo dentro il condensatore, e quindi non conservativo, la particella verrebbe accelerata (in direzione del campo) attraversando il condensatore, ed uscirebbe con energia cinetica diversa da quella iniziale; si potrebbe poi riportare la particella nella posizione iniziale lungo un percorso tutto esterno al condensatore dove il campo elettrico è (per ipotesi) nullo. Nella realtà, invece, le linee di forza vicino ai bordi, e soprattutto all'esterno del condensatore, provvedono a rallentare la particella in modo che all'inizio e alla fine abbia la stessa energia cinetica.\\
+Questi effetti di bordo portano a correzioni alla capacità di un condensatore piano che, nel caso di armature circolari di raggio $R$, risulta maggiore di quella data dalla (2.29) per circa il 17\% per $\delta/R=0.1$, e di circa il 2\% se $\delta/R=0.01$.
