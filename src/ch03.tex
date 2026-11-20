@@ -1,0 +1,346 @@
+\section{CORRENTI STAZIONARIE}
+
+\subsection{Densità di corrente e conservazione della carica}
+
+Quando fra i capi di un filo conduttore viene mantenuta, per esempio tramite una pila, una differenza di potenziale, le cariche libere all'interno del conduttore non possono essere in equilibrio (il conduttore non è equipotenziale), e si ha una \textbf{corrente elettrica} nel filo conduttore, cioè un moto di cariche. Fissato un orientamento sul filo, si definisce \textbf{intensità di corrente} $I$ la quantità di carica che attraversa una sezione $S$ del filo nell'unità di tempo nella direzione presa come verso positivo:
+\begin{equation}
+I(t)\defeq\frac{dQ}{dt}
+\tag{3.1}
+\end{equation}
+dove $Q(t)$ è la quantità di carica che attraversa $S$ nell'intervallo di tempo $(t_0,\ t)$ ($t_0$ è arbitrario). In generale $I$ dipende sia dal tempo (se la differenza di potenziale non è costante), che dalla posizione della sezione $S$. L'intensità di corrente può essere positiva o negativa: per esempio può essere negativa o perché $S$ è attraversata da cariche negative nel verso assunto come positivo, oppure perché cariche positive attraversano $S$ nel verso negativo.\\
+Nel SI l'unità di misura di corrente è l'ampère (\texttt{A}): si ha una corrente di 1\,ampère attraverso una superficie $S$ quando la carica di 1\,coulomb attraversa $S$ in 1\,s. Dalla (1.3) si ha
+\begin{equation}
+1\,\mathrm A=3\times10^9\,\mathrm{ues}.
+\tag{3.2}
+\end{equation}
+È ovvio che si può avere un moto di cariche, e quindi una corrente, non solo in un filo conduttore, ma più in generale in un conduttore di forma qualsiasi e anche nel vuoto, come per esempio nel tubo di un televisore dove gli elettroni estratti per effetto termoionico da un filamento caldo vengono accelerati da un'opportuna differenza di potenziale.\\
+Possiamo pensare alle cariche in moto come ad un fluido, e definire la \textbf{densità di corrente} $\vec J(x,y,z,t)$: supponiamo di avere una densità di carica $\rho(x,y,z,t)$ e sia $\vec u(x,y,z,t)$ il campo di velocità delle cariche: $\vec u(x,y,z,t)$ è la velocità (media) delle cariche che all'istante $t$ si trovano in un intorno del punto $(x,y,z)$. Allora
+\begin{equation}
+\vec J(x,y,z,t)\defeq\rho(x,y,z,t)\vec u(x,y,z,t).
+\tag{3.3}
+\end{equation}
+Più in generale, la corrente potrebbe essere dovuta a più distribuzioni, ciascuna con il proprio campo di velocità, come per esempio in un gas o in un liquido dove si hanno portatori di carica (ioni) sia positivi che negativi che si muovono con velocità diverse, o anche in certi acceleratori di particelle dove vengono fatti circolare in senso inverso sia elettroni che positroni (elettroni positivi). In questi casi la (3.3) si generalizza nel modo seguente:
+\begin{equation}
+\vec J(x,y,z,t)=\textstyle\sum_i\rho_i(x,y,z,t)\vec u_i(x,y,z,t)
+\tag{3.3'}
+\end{equation}
+cioè la densità di corrente è la somma delle densità di corrente associate ai diversi portatori di carica in moto con velocità diverse: in un conduttore in quiete abbiamo
+gli elettroni di conduzione con un certo campo di velocità, e gli ioni del reticolo con densità opposta ma campo di velocità nullo.\\
+Grazie al significato di flusso (v.\ capitolo 1.4), la quantità di carica che attraversa nell'unità di tempo una superficie orientata $S$, cioè la corrente $I(S)$, è il flusso di $\vec J$ attraverso $S$:
+\begin{equation}
+I(S)=\int_S\vec J\cdot d\vec S.
+\tag{3.4}
+\end{equation}
+
+\paragraph{Esempio}
+\begin{quote}
+In un filo conduttore le cariche in moto sono solo gli elettroni, per cui la densità di corrente è data dalla (3.3). Vogliamo calcolare la velocità che compare nella (3.3). Supponiamo che il filo abbia una sezione $S$ di 1\,mm$^2$ e sia percorso da una corrente di 1\,A. Siccome in un conduttore ci sono circa $10^{23}$\,elettroni di conduzione/cm$^3$, si ha
+\begin{equation}
+\begin{aligned}
+&\rho=1.6\times10^{-19}\cdot10^{23}=1.6\times10^4\,\mathrm{C/cm^3}\quad\Rightarrow\\
+&u=\frac{I}{\rho S}=\frac{1}{10^{-2}\cdot1.6\times10^4}\,\mathrm{cm/s}\approx10^{-2}\,\mathrm{cm/s}.
+\end{aligned}
+\tag{3.5}
+\end{equation}
+\end{quote}
+Un valore così piccolo per la velocità degli elettroni ci fa capire che si tratta di una velocità media: gli elettroni di conduzione costituiscono un gas e, come le particelle di ogni gas, sono animati da un moto disordinato con energia cinetica media dell'ordine di $kT$ e quindi, a temperatura ambiente, velocità termica dell'ordine di $\sqrt{kT/m}\simeq10^7$\,cm/s. Questa che abbiamo appena calcolato è la ``velocità quadratica media'', cioè $(\overline{v^2}\,)^{1/2}$: in condizioni normali qualsiasi componente della velocità ha media nulla, in quanto non c'è nessuna direzione privilegiata (distribuzione isotropa delle velocità); in presenza di una differenza di potenziale ai capi del filo, e quindi di un campo elettrico all'interno del filo, a questa distribuzione isotropa delle velocità si sovrappone una piccola velocità d'insieme nella direzione del filo, il cui valore medio è dato dalla (3.5).
+
+Una delle leggi più importanti e meglio verificata della fisica è la legge di conservazione della carica elettrica: la carica totale di un sistema isolato resta costante nel tempo. Quando negli esperimenti di fisica delle particelle elementari vengono prodotte particelle cariche, queste vengono sempre prodotte insieme ad altre particelle in modo tale che la carica totale delle particelle prodotte è nulla: per esempio nell'urto di raggi $\gamma$ (fotoni di altissima energia) con nuclei pesanti vengono prodotte coppie di elettroni e positroni: $\gamma\to e^++e^-$, ed è sperimentalmente ben verificato che la carica del positrone è opposta a quella dell'elettrone. Un altro esempio è costituito dal decadimento del neutrone \ $n\to p+e^-+\overline\nu$: \ insieme all'elettrone viene prodotto un protone ed un antineutrino; sperimentalmente è stato stabilito che la carica del neutrone e quella del neutrino sono minori di $10^{-21}e$, e con la stessa precisione che è nulla la carica del protone più quella dell'elettrone: quindi la legge di conservazione della carica è stabilita con una precisione dell'ordine di una parte su $10^{21}$.\\
+La legge di conservazione della carica si può esprimere in questo modo: se $S$ è la superficie che racchiude un volume $V$, e $Q_V(t)$ è la carica contenuta in esso all'istante $t$, la corrente uscente da $S$ è uguale alla diminuzione di $Q_V(t)$ nell'unità di tempo: se
+attraverso $S$ esce della carica, si ha una corrispondente diminuzione della carica contenuta in $V$, e viceversa (ciò non sarebbe vero se dentro $V$ le cariche nascessero dal nulla o scomparissero nel nulla). Formalmente:
+\begin{equation}
+\Phi_S(\vec J)=-\frac{dQ_V(t)}{dt}\,\cdot
+\tag{3.6}
+\end{equation}
+La (3.6) può essere riscritta in forma \underline{locale}, nello stesso senso in cui il teorema di Gauss è tradotto in forma locale dall'equazione $\dive\vec E=4\pi\rho$: dal teorema della divergenza
+\begin{equation}
+\Phi_S(\vec J)\equiv\int_S\vec J\cdot d\vec S=\int_V\dive\vec J(x,y,z,t)\,dV
+\tag{3.7}
+\end{equation}
+e poiché
+\begin{equation}
+\frac{dQ_V(t)}{dt}=\frac{d}{dt}\int_V\rho(x,y,z,t)\,dV=\int_V\frac{\partial\rho(x,y,z,t)}{\partial t}\,dV,
+\tag{3.8}
+\end{equation}
+(è lecito portare la derivata rispetto a $t$ dentro l'integrale), dalla (3.6) si ha
+\begin{equation}
+\int_V\dive\vec J(x,y,z,t)\,dV=-\int_V\frac{\partial\rho(x,y,z,t)}{\partial t}\,dV
+\tag{3.9}
+\end{equation}
+e per l'arbitrarietà del volume $V$
+\begin{equation}
+\dive\vec J+\frac{\partial\rho}{\partial t}=0
+\tag{3.10}
+\end{equation}
+nota come \textbf{equazione di conservazione della carica}: le sorgenti di $\vec J$ sono i punti in cui si ha una diminuzione di carica ($\partial\rho/\partial t<0$), i pozzi quelli in cui si ha un accumulo.
+
+In condizioni stazionarie (per definizione) $\vec J$ e $\rho$ sono indipendenti dal tempo, quindi dalla (3.10) per una \textbf{corrente stazionaria}
+\begin{equation}
+\dive\vec J(x,y,z)=0
+\tag{3.11}
+\end{equation}
+da cui segue che la corrente uscente da una qualsiasi superficie chiusa è zero. In particolare, se la corrente è confinata dentro un filo conduttore, il filo stesso è un tubo di flusso, e quindi la corrente che attraversa una sezione del filo è indipendente dalla posizione della sezione, dal suo orientamento e dal tempo: si dice che il filo (o il circuito di cui il filo fa parte) è percorso da una \textbf{corrente continua} $I$; per questa ragione la (3.11) è detta \textbf{equazione di continuità} \big(talvolta useremo questo termine anche per l'equazione (3.10)\big).\\
+Nel seguito avremo a che fare con le cosiddette ``correnti lentamente variabili'': per esempio sono correnti lentamente variabili quelle che scorrono nei circuiti alimentati dalla forza elettromotrice a 50\,hertz di cui disponiamo nelle nostre case. La densità di una corrente lentamente variabile è della forma
+\begin{equation}
+\vec J(x,y,z,t)=\vec J_0(x,y,z)f(t)
+\tag{3.12}
+\end{equation}
+con $f(t)$ una funzione lentamente variabile, un concetto che chiariremo nel seguito; \underline{se}, come spesso accade (circuiti senza condensatori), \ $\dive\vec J_0(x,y,z)=0$ \ allora anche le correnti lentamente variabili sono a divergenza nulla per cui la corrente $I(t)$ in un circuito, pur dipendendo dal tempo, è la stessa attraverso qualsiasi sezione del circuito; quella a 50\,hertz delle nostre case \ $I(t)=I_0\cos\omega t$ \ si chiama ``corrente alternata''.
+
+\subsection{La legge di Ohm}
+
+Se fra due superfici di un conduttore (p.es.\ fra i capi di un filo) si ha una differenza di potenziale $V$, la corrente $I$ nel conduttore è proporzionale a $V$:
+\begin{equation}
+V=RI
+\tag{3.13}
+\end{equation}
+dove $R$, il coefficiente di proporzionalità, è detta la \textbf{resistenza} del conduttore. La (3.13), nota come la \textbf{legge di Ohm}, è stata stabilita da G.S. Ohm nel 1827: non è una legge fondamentale dell'elettromagnetismo, ma piuttosto segue da specifiche proprietà della materia in cui si muovono i portatori di carica. Quindi, come discuteremo, anche la sua validità non ha carattere generale, ma costituisce un'ottima approssimazione in molte situazioni sperimentali.\\
+Nel SI l'unità di misura di resistenza è l'ohm \ $(\Omega)$: un conduttore ha la resistenza di 1\,ohm quando una differenza di potenziale di 1\,volt produce una corrente di 1\,ampère. Nel sistema di Gauss la resistenza ha le dimensioni di un tempo diviso una lunghezza, cioè l'inverso di una velocità, e
+\begin{equation}
+1\,\Omega=\frac{1\,\mathrm V}{1\,\mathrm A}=\frac{1}{300\cdot3\times10^9}\,\mathrm{ues}=1.1\times10^{-12}\,\mathrm{ues}\,;\quad\ 1\,\mathrm{ues}=9\times10^{11}\,\Omega.
+\tag{3.14}
+\end{equation}
+Nella figura 3.1 è riportato il collegamento in serie ed in parallelo delle resistenze con il simbolo per le resistenze usato nei circuiti elettrici. Le resistenze in serie si sommano: per la (3.11) la corrente $I$ nelle due resistenze è la stessa, quindi $V_1=R_1I$, \ $V_2=R_2I$, \ da cui $V=V_1+V_2=(R_1+R_2)I$, quindi $R=R_1+R_2$. Se le resistenze sono collegate in parallelo si sommano gli inversi delle resistenze: poiché $V=R_1I_1$ e $V=R_2I_2$ e, sempre per la (3.11), la corrente totale è $I=I_1+I_2$, \ si ha \ $1/R\equiv I/V=1/R_1+1/R_2$.
+\fig{fig3_1}{3.1}
+Anche in questo caso conviene esprimere la legge di Ohm in forma locale. Innanzi tutto osserviamo che la resistenza è definita per una porzione di conduttore che sia un tubo di flusso di $\vec J$ (perché in un tubo di flusso è ben definita la corrente che vi scorre), chiuso da due superfici equipotenziali. Consideriamo all'interno di un conduttore un tubo di flusso infinitesimo di $\vec J$: sia $\Delta S$ la sua sezione, $\Delta L$ la lunghezza ed $R$ la sua resistenza. Se il conduttore è costituito da un materiale isotropo (proprietà fisiche indipendenti dalla direzione), $\vec J$ ed $\vec E$ sono paralleli e dalla (3.13) si ha
+\begin{equation}
+V=E\,\Delta L=RI=R\,J\Delta S\quad\ \Rightarrow\quad\ \vec E=\frac{R\,\Delta S}{\Delta L}\vec J
+\tag{3.15}
+\end{equation}
+cioè definita la \textbf{resistività} del mezzo
+\begin{equation}
+\varrho_c(x,y,z)\defeq\lim\frac{R\,\Delta S}{\Delta L}
+\tag{3.16}
+\end{equation}
+(il limite è per $\Delta L,\Delta S\to0$), si ha
+\begin{equation}
+\begin{aligned}
+&\vec E(x,y,z)=\varrho_c(x,y,z)\vec J(x,y,z)\,;\\
+&\vec J(x,y,z)=\sigma_c(x,y,z)\vec E(x,y,z)\qquad\quad(\sigma_c\equiv\varrho_c^{-1}).
+\end{aligned}
+\tag{3.17}
+\end{equation}
+La resistività $\varrho_c$ è ben definita dalla (3.16) (cioè il limite di $R\Delta S/\Delta L$ esiste) come conseguenza del fatto, contenuto nella derivazione della (3.15), che per la legge delle resistenze in serie, se il mezzo è omogeneo (e in un intorno infinitesimo di un punto lo è) $R$ è proporzionale a $\Delta L$, mentre per quella delle resistenze in parallelo $R$ è inversamente proporzionale a $\Delta S$. La resistività è quindi una proprietà (locale) del conduttore: in altri termini, mentre la resistenza di un conduttore dipende non soltanto dal materiale (rame, argento \dots) di cui è costituito, ma anche dalle sue dimensioni, dalla sua forma e da come viene collegato al resto del circuito, $\varrho_c$ dipende solo dal tipo di materiale; $\sigma_c$, che è semplicemente l'inverso di $\varrho_c$, è la \textbf{conducibilità} del mezzo.
+
+La (3.17) ha gli stessi limiti di validità della legge di Ohm, di cui è l'espressione locale; in particolare il campo elettrico nel conduttore non deve essere troppo intenso, altrimenti altera il meccanismo della conduzione, e tanto $\varrho_c$ quanto $\sigma_c$ dipenderebbero dal campo elettrico: la (3.17) costituisce l'\underline{approssimazione lineare} della (in generale complicata) relazione esistente fra campo elettrico e densità di corrente.\\
+Se il mezzo che stiamo considerando è omogeneo, $\varrho_c$ è costante; in questo caso, per un conduttore di sezione costante $S$ e lunghezza $L$ si ha
+\begin{equation}
+R=\varrho_c\,\frac LS\,\cdot
+\tag{3.18}
+\end{equation}
+La (3.18) vale per correnti stazionarie o lentamente variabili: in questo caso tutto il conduttore è un tubo di flusso e la densità di corrente è uniforme dentro il conduttore, mentre per correnti rapidamente variabili la corrente scorre prevalentemente sulla superficie (``effetto pelle'') e quindi la resistenza risulta maggiore di quella data dalla (3.18).\\
+Dalla (3.16) si vede che le dimensioni di $\varrho_c$ sono quelle di una resistenza per una lunghezza, e normalmente il suo valore viene espresso in $\Omega\cdot$cm: per esempio, la resistività del rame è $1.7\times10^{-6}\,\Omega\,$cm, e la resistenza di un filo di rame lungo 10\,m e di sezione 1\,mm$^2$ per la (3.16) è \ $R=1.7\times10^{-6}\cdot10^3/10^{-2}=0.17\,\Omega$. \ Nel sistema di Gauss la resistività si misura in secondi; per la (3.14) la resistività del rame è \ $1.9\times10^{-18}$\,ues.
+
+\paragraph{Esempi}
+\begin{enumerate}
+\item Vogliamo calcolare la resistenza di una corona sferica conduttrice di raggi $r_1$ e $r_2$, fra le sue superfici interna ed esterna.\\
+Consideriamo una corona sferica di raggio $r$ e spessore infinitesimo $\Delta r$; per la (3.18) la sua resistenza è \ $\varrho_c\Delta r/4\pi r^2$, quindi per la legge delle resistenze in serie
+\begin{equation}
+R=\varrho_c\int_{r_1}^{r_2}\frac{dr}{4\pi r^2}=\frac{\varrho_c}{4\pi}\Big(\frac{1}{r_1}-\frac{1}{r_2}\Big)\,\cdot
+\tag{3.19}
+\end{equation}
+\item La corrente circola (in senso rotatorio attorno all'asse) in un cilindro conduttore cavo di raggio interno $a$, spessore $s$ e altezza $h$. Vogliamo calcolare la resistenza del circuito.\\
+Questa volta il circuito è il \underline{parallelo} delle corone cilindriche di raggio $r$ \ $(a\le r\le a+s)$, spessore $\Delta r$ e altezza $h$; la lunghezza di ciascuno di questi circuiti elementari è \ $L=2\pi r$ \ e la sezione \ $\Delta S=h\Delta r$, e per la (3.18) la resistenza è \ $2\pi\varrho_cr/h\Delta r$. Per la legge delle resistenze in parallelo, conviene calcolare l'inverso della resistenza:
+\begin{equation}
+\begin{aligned}
+&R^{-1}=(2\pi\varrho_c)^{-1}h\int_a^{a+s}\frac{dr}{r}=(2\pi\varrho_c)^{-1}h\log\frac{a+s}{a}\\
+&\qquad\Rightarrow R=\frac{2\pi\varrho_c}{h\log\big((a+s)/a\big)}\,\cdot
+\end{aligned}
+\tag{3.20}
+\end{equation}
+Se invece la corrente scorre fra la superficie interna e quella esterna del cilindro, analogamente alla (3.19) si ottiene
+\begin{equation}
+R=\varrho_c\int_a^{a+s}\frac{dr}{2\pi hr}=\frac{\varrho_c}{2\pi h}\log\frac{a+s}{a}
+\tag{3.21}
+\end{equation}
+diversa dalla (3.20), a conferma del fatto che la resistenza di un conduttore dipende da come viene collegato al resto del circuito.
+\end{enumerate}
+
+\subsection{Il lavoro del campo elettrico}
+
+Un conduttore fra i cui estremi c'è una differenza di potenziale $V$, è percorso da una corrente stazionaria $I$. Ciò significa che nell'intervallo di tempo $\Delta t$ una carica pari a $I\Delta t$ entra nel conduttore dall'estremo a potenziale maggiore e una identica quantità di carica esce dall'altro estremo (figura 3.2): ciò è equivalente al passaggio della carica $I\Delta t$ dal potenziale $V$ al potenziale 0, quindi il campo elettrico ha fatto sulle cariche del conduttore il lavoro $\mathcal L=VI\,\Delta t$, e quindi una potenza (lavoro per unità di tempo)
+\fig{fig3_2}{3.2}
+\begin{equation}
+W_\mathrm J=I\,V.
+\tag{3.22}
+\end{equation}
+Se sugli elettroni di conduzione non agissero altre forze, il lavoro fatto dal campo elettrico produrrebbe un aumento della loro energia cinetica, cioè un'accelerazione nella direzione del campo e quindi un aumento della corrente (una differenza di potenziale di un volt accelererebbe un elettrone \underline{libero} ad una velocità di circa $10^5$\,m/s). Ma, a causa della presenza del reticolo entro cui si muovono, e con il quale gli elettroni interagiscono, su una scala di tempi macroscopica la loro energia cinetica non cambia e continuano a muoversi nella direzione del campo elettrico con la loro irrisoria velocità media poiché ad ogni urto con gli ioni del reticolo perdono l'energia cinetica acquisita tra un urto e l'altro: si tratta del contatto termico fra due gas, il gas di elettroni ed il reticolo; il campo elettrico fa lavoro sul gas di elettroni aumentandone l'energia, ma questa energia rapidamente si equipartisce fra i due gas. Quindi aumenta l'energia interna del conduttore, che si scalda. Questo effetto è noto come \textbf{effetto Joule}, e la potenza (3.22) eguaglia la potenza dissipata dagli elettroni ed è detta \textbf{potenza Joule}. Grazie alla (3.13) la (3.22) può essere anche scritta come
+\begin{equation}
+W_\mathrm J=I^2R=\frac{V^2}{R}\,\cdot
+\tag{3.22'}
+\end{equation}
+In generale, sia data una densità di corrente $\vec J$, non necessariamente in un conduttore, ed un campo elettrico $\vec E$. Sia $\Delta V$ un volumetto infinitesimo, $\rho(x,y,z)\Delta V$ la carica in esso contenuta (ad un certo istante), e $\vec u(x,y,z)$ la sua velocità. Il lavoro che il campo elettrico fa nell'unità di tempo (la potenza) sulla carica in $\Delta V$ è
+\begin{equation}
+W=\rho(x,y,z)\Delta V\,\vec E\cdot\vec u(x,y,z)=\vec E\cdot\vec J\,\Delta V
+\tag{3.23}
+\end{equation}
+e quindi la \textbf{potenza} $w$ \textbf{per unità di volume} è
+\begin{equation}
+w(x,y,z)=\vec E(x,y,z)\cdot\vec J(x,y,z)\,.
+\tag{3.24}
+\end{equation}
+Se siamo in un conduttore il lavoro del campo elettrico va in energia interna (effetto Joule), altrimenti in energia cinetica delle cariche e, forse (ne riparleremo), anche in qualche altra forma di energia (radiazione).\\
+La (3.24) è la forma locale della (3.22); se siamo in un conduttore vale la (3.17), e quindi
+\begin{equation}
+w_j=\varrho_c\vec J^{\,2}=\sigma_c\vec E^{\,2}
+\tag{3.25}
+\end{equation}
+che costituisce la forma locale della (3.22').
+
+\subsection{Un modello classico per la conduzione}
+
+Per capire sia l'origine della legge di Ohm che i suoi limiti di validità, occorre capire in termini un po' più quantitativi il meccanismo della conduzione. Consideriamo un conduttore omogeneo e di sezione costante; dalla (3.17) e dalla (3.3) si ha $\vec J=\rho\vec u=\sigma_c\vec E$, da cui segue che in presenza di un campo elettrico i portatori di carica si muovono con velocità (media) costante in direzione del campo, proporzionale al campo stesso. Anche se il comportamento dei portatori di carica in un conduttore (che può essere un metallo, ma anche un liquido od un gas ionizzato) è molto complicato e soprattutto richiederebbe una trattazione Quantistica, possiamo capirne gli elementi essenziali in un semplice modello classico dovuto a Drude e Lorentz. Per comodità ci riferiremo al caso in cui i portatori di carica sono gli elettroni. L'idea fondamentale di questo modello è questa: tra un urto ed il successivo con gli ioni del reticolo gli elettroni si muovono di moto uniformemente accelerato sotto l'azione del campo elettrico $\vec E$; l'urto con gli ioni altera in modo casuale la direzione della velocità degli elettroni, in modo tale che dopo un certo numero di urti, cioè \underline{in media} dopo un certo tempo $\tau$, la direzione del moto dell'elettrone è completamente scorrelata, cioè indipendente, dalla direzione iniziale. Il significato preciso di questa ipotesi, di natura statistica, è questo: se immaginiamo un gran numero di elettroni che inizialmente si muovono tutti in una certa direzione, dopo un tempo $\tau$, in seguito agli urti, le loro direzioni di moto sono uniformemente distribuite in tutte le direzioni. Per semplicità assumeremo che sia sufficiente un solo urto perché si realizzi questa ``perdita della memoria'' delle condizioni iniziali, cioè assumiamo che $\tau$ sia uguale al tempo medio fra due urti. Sia $\vec v_i(t)$ la velocità dell'i--esimo elettrone all'istante $t$ e $\vec v_i^{\,c}$ la sua velocità subito dopo l'ultima collisione, avvenuta al tempo $t_i<t$; si ha
+\begin{equation}
+\vec v_i(t)=\vec v_i^{\,c}-\frac em\vec E\cdot(t-t_i).
+\tag{3.26}
+\end{equation}
+Indichiamo con $\vec u(t)$ la velocità media degli elettroni all'istante $t$ cioè, se $N$ è il numero di elettroni,
+\begin{equation}
+\vec u(t)\defeq\frac1N\sum_{i=1}^N\vec v_i(t)
+\tag{3.27}
+\end{equation}
+e prendiamo la media di ambo i membri della (3.26):
+\begin{equation}
+\vec u(t)=\frac1N\sum_{i=1}^N\vec v_i^{\,c}-\frac em\vec E\,\frac1N\sum_{i=1}^N(t-t_i).
+\tag{3.28}
+\end{equation}
+Il primo termine a secondo membro della (3.28) è la velocità (vettoriale) media degli elettroni subito dopo un urto, che è nulla per la nostra ipotesi statistica di distribuzione uniforme in tutte le direzioni; il secondo termine contiene il tempo medio trascorso dall'ultimo urto; esso è uguale al tempo medio che deve trascorrere fino al prossimo urto, ed entrambi sono uguali a $\tau$, il tempo medio fra due urti (e non $\tau/2\,$!): per convincersene si pensi al gioco del Lotto, in cui un dato numero su una certa ruota esce in media ogni 18 settimane, e la probabilità che esca è sempre 1/18, anche se è uscito la settimana precedente o se è in ritardo di 100 settimane (inutile giocare i numeri in ritardo!), quindi il tempo medio di attesa è sempre di 18 settimane, a partire da un momento qualsiasi. Quindi la (3.28) diventa
+\begin{equation}
+\vec u=-\frac{e\tau}{m}\vec E
+\tag{3.29}
+\end{equation}
+(il rapporto costante fra la velocità ed il campo, cioè $e\tau/m$, è quello che quando abbiamo introdotto i conduttori abbiamo chiamato la \textbf{mobilità} degli elettroni).\\
+Il risultato espresso dalla (3.29) ci ricorda il moto di una particella in un mezzo viscoso soggetta ad una forza costante, in cui la velocità limite è proporzionale alla forza: il modello che abbiamo appena discusso ci fornisce un possibile meccanismo microscopico di ciò che macroscopicamente appare come attrito viscoso.\\
+Sia ora $n_c$ il numero di elettroni di conduzione per unità di volume, allora $-en_c$ è la densità di carica e $-en_c\vec u$ \ la densità di corrente; quindi dalla (3.29) e dalla (3.17) si ha
+\begin{equation}
+\sigma_c=\frac{e^2n_c\tau}{m}\,\cdot
+\tag{3.30}
+\end{equation}
+La relazione lineare fra campo elettrico e corrente, contenuta nella (3.29), è la legge di Ohm, i cui limiti di validità sono quindi quelli del modello. Le ipotesi fatte per arrivare alla (3.29) sono molto generali, e difficilmente confutabili (avere supposto che $\tau$ coincida con il tempo medio fra due urti è irrilevante), se non per il fatto di avere utilizzato i concetti della fisica classica, cioè avere trattato gli elettroni come delle palline in un flipper; quindi dobbiamo chiederci in quali condizioni la conducibilità data dalla (3.30) può risultare dipendente dal campo elettrico applicato. Nella (3.30) solo $\tau$ ed $n_c$ possono eventualmente dipendere da $E$: in effetti se il campo elettrico è troppo intenso il tempo medio fra due urti può venire modificato sensibilmente; ciò accade quando l'incremento di velocità degli elettroni fra un urto e l'altro è paragonabile alla velocità termica degli elettroni cioè, in termini di energia, quando
+\begin{equation}
+eEl\approx kT
+\tag{3.31}
+\end{equation}
+dove $l$ è il \textbf{cammino libero medio} degli elettroni, cioè la distanza media percorsa fra due urti, e $(3/2)kT$ l'energia cinetica media degli elettroni: a temperatura ambiente $kT=0.025$\,eV, \ $l\approx10^{-8}$\,cm in un metallo o in un liquido, mentre $l\approx10^{-6}$\,cm in un gas; in quest'ultimo caso (che è il caso più sfavorevole) la validità della legge di Ohm richiede
+\begin{equation}
+E\ll\frac{kT}{el}\approx0.025\cdot10^6\,\mathrm{V/cm}\simeq25\,\mathrm{kV/cm}.
+\tag{3.32}
+\end{equation}
+Un campo molto intenso può produrre (specialmente in un gas in cui il cammino libero medio è abbastanza grande) un altro effetto: se l'energia cinetica che gli elettroni (o gli ioni portatori di carica) acquistano fra un urto e l'altro è abbastanza grande, nell'urto contro altri ioni o atomi possono ionizzarli, quindi aumenta il numero di portatori di carica, aumenta di conseguenza la probabilità di altri urti con conseguente ionizzazione, e così via: si instaura un processo catastrofico risultante in una scarica all'interno del conduttore (il gas). È quello che succede in una lampada al neon, e in questi casi la legge di Ohm non è più applicabile ($n_c$ dipende da $E$).
+
+Un'altra situazione in cui il modello di Drude -- Lorentz cessa di essere applicabile si presenta quando il campo elettrico è rapidamente variabile: per scrivere la (3.26) abbiamo supposto il campo elettrico (praticamente) indipendente dal tempo fra un urto e l'altro; è chiaro che, per esempio nel caso di campi elettrici variabili nel tempo sinusoidalmente, se il periodo è confrontabile con $\tau$ (o minore), il meccanismo della conduzione sarà radicalmente modificato. Inoltre, come vedremo più avanti, in questi casi si ha anche un altro effetto: la presenza di un campo elettrico autoindotto che altera la distribuzione della corrente all'interno del conduttore (effetto pelle), e quindi la resistenza del conduttore stesso, che risulta quindi dipendere dalla frequenza $\omega$ del campo applicato.
+
+Qualitativamente il modello di Lorentz -- Drude per la conducibilità ci permette di capire l'aumento della resistenza dei conduttori metallici con la temperatura, in quanto un aumento della temperatura comporta una diminuzione del tempo medio fra due urti e quindi, per la (3.30), una diminuzione della conducibilità. Non possiamo però andare molto lontano con questo argomento, che certamente non è in grado di spiegarci il fenomeno della \textbf{superconduttività} a basse temperature: la conducibilità di molti metalli subisce un improvviso ed enorme aumento ad una data temperatura (detta ``temperatura critica $T_c$''), dipendente dal tipo di metallo, dell'ordine di qualche Kelvin ($T_c\simeq20$\,K per il rame): al di sotto di questa temperatura critica la resistenza del conduttore diventa praticamente nulla. Si tratta di una vera e propria transizione di fase, come la solidificazione di un liquido, e la fisica classica non è in grado di spiegare le transizioni di fase.
+
+Un altro caso in cui si manifesta l'inadeguatezza del modello classico è quello del Na (sodio): la conducibilità del sodio a temperatura ambiente risulta essere $\sigma_c=1.9\times10^{17}$\,ues, e la densità di portatori di carica (uno per atomo in questo caso) è $n_c=2.5\times10^{22}\,\mathrm{cm^{-3}}$ per cui dalla (3.30) risulta \ $\tau\simeq3\times10^{-14}$\,s \ che corrisponde, alla velocità di agitazione termica di circa $10^7$\,cm/s, ad un cammino libero medio di una trentina di passi reticolari! Come fa una pallina in un flipper denso di ostacoli a superarne impunemente e regolarmente una trentina, senza incontrarne nessuno? Sarà la Meccanica Quantistica a fornire la spiegazione, sostituendo alla descrizione degli elettroni come palline, una descrizione degli elettroni come onde, e le onde, grazie ai fenomeni di interferenza a cui danno luogo, in una struttura ordinata come quella di un cristallo si comportano in maniera ordinata.
+
+\subsection{La forza elettromotrice}
+
+Se consideriamo una parte di un circuito percorso da corrente, come abbiamo fatto quando abbiamo introdotto la legge di Ohm, o quando abbiamo discusso l'effetto Joule, la corrente che vi circola è dovuta al campo elettrico nel conduttore o, equivalentemente, alla differenza di potenziale agli estremi della parte di circuito considerata. Ma se consideriamo l'intero circuito, percorso da una corrente stazionaria, non basta il campo elettrico per spiegare la corrente che vi circola: infatti un circuito percorso da una corrente stazionaria, o anche da una corrente lentamente variabile ma a divergenza nulla, deve necessariamente essere un circuito chiuso: se vale la (3.11) i tubi di flusso di $\vec J$ non possono interrompersi, quindi le cariche che si muovono in un circuito elettrico compiono traiettorie chiuse, ed inoltre, a meno che il circuito non sia superconduttore, dissipano energia per effetto Joule. Ma il campo elettrico (statico) è conservativo, e quindi il lavoro che fa sulle cariche lungo un percorso chiuso è nullo, pertanto una corrente in un circuito richiede la presenza di forze non conservative \underline{motrici} agenti sulle cariche, cioè che fanno lavoro positivo sulle cariche quando queste percorrono l'intero circuito. Un dispositivo in grado di mettere in gioco queste forze è detto un \textbf{generatore di forza elettromotrice}: le normali pile o la batteria di un'automobile sono generatori di forza elettromotrice.\\
+Si definisce \textbf{forza elettromotrice in un circuito} (f.e.m.), \underline{non} una forza, \underline{ma} il lavoro fatto dal generatore sull'unità di carica quando questa percorre l'intero circuito; la f.e.m., normalmente indicata con $\mathcal E$, è quindi la circuitazione della forza sull'unità di carica, e il suo segno dipende dalla scelta del verso di percorrenza del circuito:
+\begin{equation}
+\mathcal E=\frac1q\oint\vec F_q\cdot d\vec s
+\tag{3.33}
+\end{equation}
+dove $\vec F_q$ è la forza totale agente sulla carica $q$ (la forza dovuta al campo elettrico possiamo a piacere includerla o no in $F_q$, in quanto la circuitazione di $\vec E$ è nulla). Il circuito sul quale è definita la f.e.m.\ in generale è una \underline{linea chiusa}, non necessariamente un filo conduttore. La f.e.m.\ ha le dimensioni di un potenziale, e si misura nelle stesse unità: in volt nel SI, in statvolt nel sistema di Gauss. Una pila da 9\,V è quindi un generatore in grado di fare un lavoro di 9\,J se la carica di 1\,C percorre un circuito come quello di figura 3.3, nel quale abbiamo riportato il simbolo usato per la pila.
+\fig{fig3_3}{3.3}
+La definizione di f.e.m.\ data dalla (3.33) è generale e sarà particolarmente significativa nel caso dei campi variabili (legge di Faraday--Neumann), in cui le forze non conservative agiscono lungo tutto il circuito; nel caso di una pila o di una batteria le forze non conservative sono localizzate nel generatore e vanno da quello che abbiamo indicato come polo negativo al polo positivo, quindi la f.e.m.\ $\mathcal E$ è l'integrale (3.33) solo all'interno del generatore, limitato alle sole forze non conservative $\vec F_q^{\,\mathrm{n.c.}}$; se nel circuito di figura 3.3 il verso di percorrenza è quello antiorario,
+\begin{equation}
+\mathcal E=\frac1q\int_-^+\vec F_q^{\,\mathrm{n.c.}}\cdot d\vec s.
+\tag{3.34}
+\end{equation}
+Se il circuito è aperto, cioè il generatore non è collegato al resto del circuito, siccome all'interno del generatore le cariche sono in equilibrio, è presente un campo elettrico che esercita sulle cariche una forza uguale e opposta a $\vec F_q^{\,\mathrm{n.c.}}$, quindi $\mathcal E$ coincide con la differenza di potenziale (d.d.p.) fra il polo positivo e quello negativo, a circuito aperto. Ma è chiaro che la f.e.m.\ non va confusa con la differenza di potenziale: sono due concetti diversi, il primo ha significato per le forze non conservative, il secondo è definito solo per i campi di forze conservativi.
+\fig{fig3_4}{3.4}
+Quando il circuito è chiuso, all'esterno del generatore le cariche circolano dal polo positivo a quello negativo sotto l'azione del campo elettrico, mentre all'interno del generatore le cariche (di solito non le stesse che circolano all'esterno) si muovono dal polo negativo a quello positivo, cioè, grazie alla presenza delle forze non conservative, contro il campo elettrico.\\
+All'interno del generatore il moto delle cariche comporta una più o meno grande dissipazione di energia per effetto Joule: siccome $I$ è la quantità di carica che circola nell'unità di tempo, dal bilancio energetico riferito al moto delle cariche dentro il generatore e all'unità di tempo
+\begin{equation}
+I\mathcal E+I\int_-^+\vec E\cdot d\vec s\equiv I(\mathcal E-V)=W_J>0
+\tag{3.35}
+\end{equation}
+(dove $V$ è la d.d.p.\ fra il polo positivo e quello negativo), si vede che quando il circuito è chiuso \ $V<\mathcal E$: la differenza $\mathcal E-V$ è detta ``caduta di potenziale'' all'interno del generatore, e dipende dalla corrente $I$, difatti è nulla per $I=0$. Se assumiamo che il comportamento del mezzo in cui si muovono le cariche all'interno del generatore sia ohmico, cioè schematizzabile con una resistenza $r$, detta \textbf{resistenza interna} del generatore, dalla (3.35) e (3.22') si ha
+\begin{equation}
+I(\mathcal E-V)=I^2r\quad\ \Rightarrow\quad\ \mathcal E-V=Ir\quad\ \Leftrightarrow\quad\ V=\mathcal E-rI
+\tag{3.36}
+\end{equation}
+e quindi in questa ipotesi la caduta di potenziale è proporzionale alla corrente erogata. In una pila nuova la resistenza interna è di qualche decimo di ohm, e cresce con l'uso fino a raggiungere il valore di qualche ohm (valori solo indicativi, in quanto dipendono molto dal tipo di pila).\\
+Nella figura 3.5 abbiamo riportato il \underline{circuito equivalente} ad un generatore di f.e.m.: un generatore ``ideale'' (cioè con resistenza interna nulla) con in serie una resistenza uguale alla resistenza interna; quando il generatore eroga una corrente $I$, la d.d.p.\ fra i poli $+$ e $-$ del generatore è data dalla (3.36).
+\fig{fig3_5}{3.5}
+L'equazione di un circuito come quello della figura 3.3, cioè l'equazione che lega la f.e.m.\ $\mathcal E$ del generatore (di resistenza interna $r$) e la corrente nel circuito (di resistenza $R$), per la legge di Ohm e la (3.36) è
+\begin{equation}
+V\equiv\mathcal E-rI=RI\quad\ \Rightarrow\quad\ \mathcal E=(R+r)I.
+\tag{3.37}
+\end{equation}
+Oppure: la potenza erogata dal generatore, che per definizione di f.e.m.\ è $W=\mathcal EI$, deve eguagliare la potenza dissipata sia all'interno del generatore che nella resistenza
+esterna, e quindi per la (3.22') e le (3.35), (3.36)
+\begin{equation}
+\mathcal EI=I^2r+I^2R
+\tag{3.38}
+\end{equation}
+da cui dividendo per $I$ si riottiene la (3.37).
+
+Ma qual è l'origine delle forze non conservative all'interno del generatore o, equivalentemente, chi fornisce l'energia? La risposta a questa domanda varia a seconda del generatore: nel generatore di Van de Graaff (1931) il lavoro è fatto da chi (o cosa) fa girare la cinghia che trasporta le cariche che vengono poi depositate su una grossa sfera cava, contro il campo elettrico prodotto dalla sfera carica; in una pila chimica, che è un sistema termodinamico in ambiente a temperatura e pressione costanti, il lavoro eguaglia (se le trasformazioni sono reversibili) la variazione dell'energia libera di Gibbs cambiata di segno: $\mathcal L=-\Delta\mathcal G$, quindi c'è scambio di calore e di lavoro con l'ambiente esterno, ma quasi tutto il lavoro ``elettrico'' proviene dalla variazione dell'energia interna (energia chimica) del sistema.\\
+Un esempio di generatore di f.e.m.\ molto istruttivo, anche se certamente non di interesse commerciale come le pile, è costituito dalla \textbf{pila a gravità}: un tubo di vetro verticale contiene una soluzione di Ag$^+$NO$_3^-$ e porta agli estremi due elettrodi di Ag; la forza di gravità provoca un aumento della concentrazione degli ioni Ag$^+$ lungo il tubo dall'alto verso il basso; di conseguenza i due elettrodi non possono essere entrambi in equilibrio con la soluzione: l'elettrodo superiore manda in soluzione ioni Ag$^+$, restando carico negativamente, mentre nella parte inferiore del tubo, dove la concentrazione è maggiore, ioni Ag$^+$ si depositano sull'elettrodo, caricandolo positivamente. Quindi si instaura un campo elettrico dal basso verso l'alto, necessario per l'equilibrio fra elettrodi e soluzione.\\
+Quando il circuito viene chiuso, per effetto del campo elettrico gli elettroni passano lungo il circuito esterno dall'elettrodo superiore, dove sono in eccesso, all'elettrodo inferiore: per ogni elettrone che lascia l'elettrodo superiore, per ripristinare l'equilibrio fra elettrodo e soluzione, uno ione Ag$^+$ passa in soluzione, e per ogni elettrone che arriva all'elettrodo inferiore uno ione viene neutralizzato e quindi un altro ione passa dalla soluzione all'elettrodo; in definitiva, per ogni elettrone che percorre il circuito esterno, un atomo di Ag ``cade'' dall'elettrodo superiore a quello inferiore ed il lavoro fatto su di esso è $Mgh$, dove $M$ è la massa dell'atomo di Ag. In questo caso la forza non conservativa motrice è la forza di gravità! Questo è possibile perché l'intero circuito chiuso non è percorso da una stessa carica: fuori gli elettroni (leggeri), dentro gli ioni argento (pesanti). È proprio questo fatto che permette alla gravità, un campo di forze conservativo, di giocare il ruolo di forza motrice: siccome non è la stessa massa che compie l'intero circuito chiuso, il lavoro fatto dalla gravità non è nullo. In effetti il sistema non torna allo stato di partenza: poco a poco l'elettrodo superiore si consuma e aumenta la massa di quello inferiore.
+\fig{fig3_6}{3.6}
+Quindi la f.e.m.\ della pila a gravità è
+\begin{equation}
+\mathcal E=\frac{Mgh}{e}\,\cdot
+\tag{3.39}
+\end{equation}
+Moltiplichiamo numeratore e denominatore a secondo membro della (3.39) per il numero di Avogadro $N_\mathrm A$: siccome il peso atomico dell'Ag è 108, e $N_\mathrm Ae=96500$\,C (costante di Faraday), per $h=1$\,m si trova $\mathcal E=11\times10^{-6}$\,V.
+
+\subsection{Carica e scarica di un condensatore}
+
+Il circuito di figura 3.7 (circuito $RC$) è costituito da una pila di f.e.m.\ $V_0$, una resistenza $R$ (che include l'eventuale resistenza interna della pila), un condensatore di capacità $C$, ed un interruttore I a due vie: nella posizione A la pila è inserita nel circuito, che quindi è il circuito di carica del condensatore; nella posizione B la pila è esclusa ed il condensatore si scarica attraverso la resistenza $R$.\\
+Portiamo l'interruttore nella posizione A; fissiamo arbitrariamente come verso di percorrenza del circuito che definisce il segno della corrente quello (orario) che va esternamente dal polo positivo della pila a quello negativo; indichiamo con $V(t)$ la d.d.p.\ all'istante $t$ fra le armature del condensatore secondo il verso stabilito ($V(t)$ è la d.d.p.\ fra l'armatura superiore e quella inferiore), e scriviamo l'equazione del circuito eguagliando la d.d.p.\ (o f.e.m.) $V_0$ con la somma delle d.d.p.\ ai capi dei vari elementi del circuito (i conduttori che collegano i vari elementi del circuito di solito hanno resistenza trascurabile, in caso contrario la loro resistenza viene inglobata in $R$):
+\fig{fig3_7}{3.7}
+\begin{equation}
+V_0=RI(t)+V(t)\,;\qquad\quad V(t)\equiv\frac{Q(t)}{C}\,\cdot
+\tag{3.40}
+\end{equation}
+Poiché $Q(t)$ è la carica sull'armatura superiore del condensatore, si ha $I(t)=\dot Q(t)=C\dot V(t)$, quindi possiamo prendere come incognita indifferentemente $I(t)$, $Q(t)$ o $V(t)$: se prendiamo $V(t)$, l'equazione del circuito è
+\begin{equation}
+\dot V(t)=-\frac{1}{RC}V(t)+\frac{V_0}{RC}
+\tag{3.41}
+\end{equation}
+che è identica all'equazione per la velocità di un corpo in un mezzo viscoso, soggetto ad una forza costante: il prodotto $RC$ ha le dimensioni di un tempo (indipendentemente dal sistema di unità), ed è l'analogo del tempo di smorzamento nel moto in un mezzo viscoso. Esso è detto \textbf{tempo di scarica} (o di carica) del condensatore, e viene indicato con $\tau$: se prendiamo, per esempio, $R=10^3\,\Omega$\,; $C=10$\,nF, si ottiene $\tau=10^{-5}$\,s.\\
+La soluzione generale della (3.41), che è un'equazione lineare non omogenea, è
+\begin{equation}
+V(t)=V_0+Ae^{-t/\tau}.
+\tag{3.42}
+\end{equation}
+Con la condizione iniziale $V(0)=0$ (il condensatore inizialmente è scarico), si ha
+\begin{equation}
+V(t)=V_0\big(1-e^{-t/\tau}\big)\,;\qquad\ I(t)=C\dot V(t)=\frac{V_0}{R}e^{-t/\tau}.
+\tag{3.43}
+\end{equation}
+Nella figura 3.8 abbiamo riportato sullo stesso grafico sia l'andamento di $V(t)$ che quello di $RI(t)$.
+\fig{fig3_8}{3.8}
+Ci sono un paio di cose da discutere a proposito del modo in cui abbiamo ottenuto la (3.43): in primo luogo abbiamo applicato la legge di Ohm in un caso in cui la corrente non è stazionaria; questo è lecito purché la corrente sia una corrente lentamente variabile, che in questo caso significa che $\tau$ deve essere abbastanza grande. Grande rispetto a cosa? Anticipando cose che giustificheremo in seguito, $\tau$ deve essere grande rispetto al tempo che i segnali elettromagnetici (che viaggiano alla velocità della luce) impiegano ad attraversare il circuito: se il circuito ha le dimensioni di 30\,cm questo tempo è di $10^{-9}$\,s mentre, come abbiamo visto, con $R=10^3\,\Omega$\,, \ $C=10$\,nF, \ \ $\tau=10^{-5}$\,s.\\
+Si noti che anche se $I(t)$ è lentamente variabile, $\vec J$ non è a divergenza nulla perché il circuito (cioè il tubo di flusso) si interrompe sulle armature del condensatore: e infatti sull'armatura superiore si ha un accumulo di carica, e su quella inferiore una diminuzione, in accordo con la (3.10).\\
+La seconda cosa che vogliamo discutere è la discontinuità in $I(t)$: la corrente è nulla finché non si chiude l'interruttore, poi improvvisamente passa al valore $V_0/R$, e questo è un po' sospetto in quanto, schematizzazioni a parte, di solito le grandezze fisiche variano con continuità. Anche qui interviene il fatto che la corrente non è stazionaria; quando la corrente in un circuito dipende dal tempo, diventa importante un'altra grandezza caratteristica del circuito, oltre alla resistenza e la capacità: l'induttanza, il cui effetto, più o meno grande a seconda di quanto rapidamente varia la corrente, è quello di introdurre una specie di inerzia alle variazioni della corrente con il risultato, mostrato nella figura 3.9, di rendere continuo il passaggio della corrente dal valore 0 al valore (quasi) $V_0/R$.
+\fig{fig3_9}{3.9}
+Dopo un tempo $t_0\gg\tau$ il condensatore è (praticamente) carico al potenziale $V_0$; a questo punto portiamo l'interruttore nella posizione B. La nuova equazione del circuito è
+\begin{equation}
+\dot V(t)=-\frac{1}{RC}V(t)
+\tag{3.44}
+\end{equation}
+cioè la (3.41) con $V_0=0$. Presa $t_0$ come nuova origine dei tempi, la soluzione della (3.44) con la condizione iniziale \ $V(0)=V_0$ \ è
+\begin{equation}
+V(t)=V_0e^{-t/\tau}\,;\qquad\ I(t)=C\dot V(t)=-\frac{V_0}{R}e^{-t/\tau}
+\tag{3.45}
+\end{equation}
+cioè corrente e potenziale si portano esponenzialmente a zero con il solito tempo caratteristico $\tau$. Il segno $-$ nell'espressione di $I(t)$ è dovuto al fatto che ora la corrente circola in senso antiorario, e noi non abbiamo cambiato la convenzione sul verso delle correnti positive (potevamo farlo). Anche in questo caso la $I(t)$ presenta una discontinuità, che in realtà non esiste.
+
+Calcoliamo l'energia dissipata per effetto Joule nella resistenza durante la scarica del condensatore:
+\begin{equation}
+\begin{split}
+E_\mathrm J&=\int_0^\infty W_\mathrm J(t)\,dt=\int_0^\infty\frac{V(t)^2}{R}\,dt=\frac{V_0^2}{R}\int_0^\infty e^{-2t/\tau}\,dt\\
+&=\frac{V_0^2\tau}{2R}=\frac12CV_0^2
+\end{split}
+\tag{3.46}
+\end{equation}
+che coincide, come dovevamo aspettarci, con l'energia immagazzinata nel condensatore nella fase di carica, data dalla (2.32).\\
+E quant'è l'energia dissipata nella resistenza nella fase di carica del condensatore? Il conto si può fare nello stesso modo e non presenta difficoltà, ma in effetti non c'è bisogno di fare nessun conto: nella fase di carica la pila fa circolare la carica $Q=CV_0$, quindi (definizione di f.e.m.) compie il lavoro $QV_0=CV_0^2$; metà di questo lavoro ($\frac12CV_0^2$) va in energia del condensatore, quindi l'altra metà viene dissipata nella resistenza.
+
+L'importanza dei condensatori nella tecnica elettronica risiede sostanzialmente nel fatto che consente di introdurre nell'equazione di un circuito un \underline{tempo} caratteristico del circuito, cioè la possibilità di correnti variabili grazie alle proprietà intrinseche del circuito: l'alternativa sarebbe quella di fare intervenire il tempo dall'esterno, per esempio tramite un generatore di f.e.m.\ variabile.
