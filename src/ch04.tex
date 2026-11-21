@@ -1,0 +1,593 @@
+\section{ELEMENTI DI TEORIA DELLA RELATIVITÀ}
+
+\subsection{Il campo magnetico: introduzione fenomenologica}
+
+I fenomeni magnetici erano noti già nell'antichità, grazie all'esistenza di magneti naturali (Fe$_3$O$_4$) e di quelli costruiti artificialmente (le calamite). L'interazione fra oggetti magnetizzati è una interazione a distanza e pertanto la descriviamo dicendo che ognuno di essi genera nello spazio un \textbf{campo magnetico}, e che a loro volta gli oggetti magnetizzati risentono dell'azione del campo magnetico. Contrariamente al caso delle forze elettriche, i fenomeni magnetici non sono (sperimentalmente) riconducibili all'interazione fra ``cariche magnetiche'' o ``poli magnetici'': l'interazione fra due magneti dipende, oltre che dalla distanza, anche dall'orientamento relativo; fra due magneti si esercita non solo una forza, ma anche un momento.\\
+Il primo passo importante per capire l'origine del magnetismo si ha intorno al 1819 con gli esperimenti di Oersted, il quale scoprì che un circuito percorso da corrente fa deviare l'ago di una bussola, e viceversa che un magnete esercita una forza su un circuito percorso da corrente: un circuito percorso da una corrente genera un campo magnetico ed esso stesso risente dell'azione di un campo magnetico, quindi fra due circuiti si devono esercitare delle forze, come fra due magneti. In effetti gli esperimenti di Ampère (1820) confermano quanto sopra: due fili paralleli percorsi da corrente si attirano se le correnti sono concordi, altrimenti si respingono. È su questo fatto che si basa la definizione dell'ampère come unità fondamentale del SI: due fili paralleli rettilinei indefiniti distanti 1\,metro sono entrambi percorsi dalla corrente di 1\,ampère se la forza fra i due fili per unità di lunghezza è di $2\times10^{-7}$\,N/m.\\
+La domanda che si pone a questo punto è che relazione c'è fra i magneti e i circuiti percorsi da corrente. Per rispondere a questa domanda osserviamo che l'esperienza insegna che le cariche ferme non risentono dell'azione del campo magnetico e non generano campo magnetico e che invece le cariche in moto, siano esse libere come in un tubo a raggi catodici (tubo del televisore) o in un acceleratore di particelle, o trascinate da un supporto come nel generatore di Van de Graaff, o in moto all'interno di un conduttore, generano un campo magnetico e risentono dell'azione di campi magnetici. Inoltre sappiamo che la materia è costituita da cariche in movimento (gli elettroni orbitanti attorno ai nuclei), cioè da tanti circuiti microscopici: normalmente questi circuiti sono isotropicamente orientati e i loro effetti magnetici si cancellano macroscopicamente, con l'eccezione dei materiali ferromagnetici, in cui correlazioni a lungo raggio fra gli orientamenti di questi circuiti fanno sì che gli effetti magnetici si manifestino anche a livello macroscopico.\\
+Quindi le sorgenti del campo magnetico sono le cariche in movimento, e una carica in movimento in un campo magnetico è soggetta ad una forza. Fino a questo punto non abbiamo dato una definizione operativa di campo magnetico: a questo fine occorre ricavare dall'esperienza le caratteristiche della forza che il campo esercita su una carica (puntiforme) in moto: supponiamo che non ci siano campi elettrici; l'esperienza dice che la forza è proporzionale alla carica e alla sua velocità $v$, ed è sempre ortogonale a $\vec v$; un po' meno semplice da verificare sperimentalmente, ma possibile, è la dipendenza
+lineare della forza dalla velocità $\vec v$: \ $\vec F[\vec v_1+\vec v_2]=\vec F[\vec v_1]+\vec F[\vec v_2]$, quindi l'applicazione $\vec v\to\vec F$ è una applicazione lineare antisimmetrica, infatti
+\begin{equation}
+0=(\vec v_1+\vec v_2)\cdot\vec F[\vec v_1+\vec v_2]\quad\ \Rightarrow\quad\ \vec v_1\cdot\vec F[\vec v_2]=-\vec v_2\cdot\vec F[\vec v_1].
+\tag{4.1}
+\end{equation}
+Una applicazione lineare antisimmetrica nello spazio a tre dimensioni, se non è banale, ha un nucleo unidimensionale e può sempre essere scritta come il prodotto vettore fra un opportuno vettore del nucleo e il vettore al quale è applicata, quindi possiamo sempre porre, esplicitando la proporzionalità fra la forza e la carica,
+\begin{equation}
+\vec F=q\,\frac{\vec v}{c}\wedge\vec B\qquad\qquad\text{(Sistema di Gauss)}
+\tag{4.2}
+\end{equation}
+dove $-(q/c)\vec B$ è l'opportuno vettore del nucleo (il segno $-$ perché abbiamo scritto il prodotto vettore in senso inverso). Il vettore $\vec B$, che dipende in generale dal punto, è ciò che definiamo campo magnetico, che quindi è definito dalla forza che esercita su una carica in moto. Si noti che $\vec F$, cioè la \textbf{forza di Lorentz}, è ortogonale sia a $\vec v$ (forza a lavoro nullo o ``deviatrice'') che a $\vec B$. La (4.2) è l'espressione della forza su una carica in movimento nel sistema di Gauss; nel SI viene scritta senza il fattore $1/c$:
+\begin{equation}
+\vec F=q\vec v\wedge\vec B\qquad\qquad\text{(Sistema Internazionale)}.
+\tag{4.2'}
+\end{equation}
+Nel sistema di Gauss il campo magnetico ha le stesse dimensioni del campo elettrico e si misura in gauss (\texttt{G}): un campo di 1\,G esercita sulla carica di 1\,franklin che ha la velocità di 1\,cm/s una forza di $1/(3\times10^{10})$\,dyne: il campo magnetico terrestre ha una intensità di circa 0.5\,G (varia da posto a posto). Nel SI $B$ si misura in weber/m$^2$ (Wb/m$^2$), più spesso chiamato tesla (\texttt{T}) \ (evidentemente il weber è nel SI l'unità di misura per il flusso del campo magnetico): un campo di 1\,T esercita la forza di 1\,N sulla carica di 1\,C che ha la velocità di 1\,m/s. Si ha
+\begin{equation}
+1\,\mathrm{tesla}=\frac{1\,\mathrm N}{1\,\mathrm C\cdot1\,\mathrm{m/s}}=\frac{10^5\,\mathrm{dyne}}{3\times10^9\,\mathrm{ues}\cdot10^2\,\mathrm{cm/s}}=10^4\,\mathrm{gauss}.
+\tag{4.3}
+\end{equation}
+Vedremo che se è presente anche un campo elettrico la forza su una carica è data da
+\begin{equation}
+\vec F=q\Big(\vec E+\frac{\vec v}{c}\wedge\vec B\Big)
+\tag{4.4}
+\end{equation}
+un risultato non ovvio in quanto la carica è in moto, e noi per ora sappiamo solo che un campo elettrico esercita una forza $q\vec E$ su una carica in quiete (definizione di campo elettrico).
+
+Supponiamo di essere in un certo riferimento inerziale $K$, che il campo elettrico $\vec E$ sia nullo ma sia presente un campo magnetico $\vec B$. Prendiamo una carica $q$ e facciamola muovere con velocità $\vec v$ costante: per esempio una pallina di sambuco infilata in un filo rettilineo, e fatta muovere con velocità uniforme. Sulla pallina il campo magnetico esercita una forza data dalla (4.2), e che in questo caso è compensata dalla reazione del vincolo (il filo). Mettiamoci ora nel riferimento $K'$ rispetto al quale la pallina è ferma: su di essa il campo magnetico non esercita più nessuna forza, però la reazione del vincolo c'è sempre (e continua a consumare il vincolo), e siccome la pallina è ferma, ci deve essere un'altra forza che agisce su di essa. Siccome la pallina è carica quest'altra forza non può che essere un campo elettrico: quindi la presenza di (solo) un
+campo magnetico in $K$ comporta la presenza di (anche) un campo elettrico in $K'$. Per esempio, in $K$ il campo magnetico è generato da un filo superconduttore percorso da corrente (una volta instaurata, la corrente non ha bisogno di campo elettrico per essere mantenuta); siccome il conduttore è neutro (tanti elettroni quanti protoni), in $K$ c'è solo campo magnetico, mentre in un riferimento $K'$ in moto (uniforme) rispetto a $K$ c'è anche un campo elettrico: prima o poi dovremo capire dove sono le sorgenti di questo campo elettrico.\\
+Viceversa, se in $K$ abbiamo (solo) un campo elettrico, generato da un certo numero di cariche fisse, in $K'$ queste cariche sono in moto, e quindi generano un campo magnetico. Prima di trarre delle conclusioni da questo discorso, facciamo una digressione. Preso, nel posto sulla Terra dove ci troviamo, un sistema di coordinate con l'asse $z$ verso l'alto, possiamo affermare che c'è un campo di gravità in direzione dell'asse $z$, ma non c'è nessun campo di gravità in direzione dell'asse $x$. Ma se ora cambiamo il sistema di coordinate, per esempio ruotandolo rispetto al precedente di un certo angolo attorno all'asse $y$, ecco che nasce un campo di gravità anche lungo l'asse $x$! Nessuno si commuove per questa scoperta, perché la cosa è fin troppo ovvia: il campo di gravità è una entità fisica ben precisa e ben definita indipendentemente dal sistema di coordinate usato per la sua descrizione, ed è ovvio che la sua descrizione (come quella di qualunque vettore) cambia a seconda del sistema di coordinate usato. L'analogia con la discussione precedente è evidente: qui si parla di cambiamenti di coordinate, là si parlava di cambiamenti di riferimento, quindi la conclusione che possiamo trarre dalla discussione sui campi elettrici o magnetici che vanno e vengono a seconda del riferimento, è in primo luogo che i cambiamenti di riferimento assumono un ruolo analogo a quello dei cambiamenti di coordinate (e vedremo che ciò è vero non già nello spazio tridimensionale, ma nello spazio--tempo, cioè in uno spazio quadridimensionale), ed in secondo luogo che il campo elettrico ed il campo magnetico non sono entità separate, ma due aspetti della stessa entità fisica, il \underline{campo elettromagnetico} (proprio come le componenti $g_x,g_y,g_z$ sono aspetti dello stesso ente: $\vec g$), che si trasformano l'uno nell'altro per cambiamenti di riferimento.\\
+Non a caso la teoria della Relatività ha avuto origine dall'elettromagnetismo: il famoso lavoro di Einstein del 1905 in cui venivano gettate le basi della teoria della Relatività ristretta era intitolato ``Sull'elettrodinamica dei corpi in movimento''. Quasi un secolo dopo la nascita della teoria della Relatività, ci permetteremo di non seguire lo sviluppo storico: partiremo dal principio di relatività per capire sia l'origine del campo magnetico, sia le equazioni fondamentali che lo legano al campo elettrico.
+
+\subsection{Da Galileo ad Einstein}
+
+Il principio di relatività afferma che le leggi della fisica sono le stesse in tutti i riferimenti in moto relativo traslatorio rettilineo uniforme: in particolare in tutti i riferimenti inerziali.\\
+In effetti il principio di relatività era già stato enunciato in modo molto chiaro da Galileo; il problema si è riproposto oltre due secoli più tardi quando con Maxwell l'elettromagnetismo ha raggiunto il suo assetto teorico definitivo: dalle equazioni dell'elettromagnetismo (equazioni di Maxwell) segue che la velocità dei segnali elettroma-
+gnetici (la velocità della luce) è costante, la stessa in tutte le direzioni, indipendente dalla velocità della sorgente, ed ha un ben preciso valore, $c$\,. Ma se $c$ è la velocità della luce in un certo riferimento, la velocità della luce in un altro riferimento deve essere $c'=\sqrt{c^2+v^2+2cv\cos\theta}$, con ovvio significato dei simboli. Dovrebbe pertanto esistere un unico e ben preciso riferimento in cui valgono le equazioni di Maxwell, quello nel quale la luce ha velocità $c$: un ``Riferimento assoluto'', o ``Riferimento dell'etere'', il supposto mezzo invisibile, imponderabile e che pervade ogni corpo, in cui si propagano le onde elettromagnetiche, così come l'aria è il mezzo (meglio: un mezzo) in cui si propagano le onde sonore. Un tale riferimento è improbabile che si muova solidalmente con la Terra (cerchiamo di non commettere gli errori del passato): allora nel corso di un anno la Terra si muove rispetto ad esso con velocità diverse. Quindi dovremmo aspettarci che la velocità della luce (misurata sulla Terra) dipenda dalla direzione di propagazione, perché se $v$ è la velocità della terra rispetto all'etere, al variare della direzione di propagazione la velocità della luce deve variare da $c+v$ a $c-v$. Gli esperimenti di Michelson e Morley (1887 e anni successivi), ripetuti in diversi periodi dell'anno, continuati e migliorati prima dagli ideatori stessi poi da altri negli 80 anni successivi nelle condizioni più diverse, hanno mostrato che la velocità della luce è indipendente dalla direzione di propagazione, e quindi non hanno rivelato alcun indizio di un eventuale moto della Terra rispetto all'etere. Siccome gli esperimenti sono stati effettuati anche usando come sorgenti di luce le stelle, è anche escluso che l'etere si muova solidalmente con la Terra.\\
+Al giorno d'oggi le conferme della costanza della velocità della luce non vengono soltanto dai laboratori di fisica: molte applicazioni tecnologiche funzionano correttamente proprio perché la velocità della luce è indipendente dal riferimento (e quindi in particolare dal moto della sorgente e da quello del rivelatore): dal General Positioning System (GPS) che permette di fornire la posizione di un oggetto (nave, aereo, carro armato ecc.) con la precisione di pochi metri, al controllo delle navicelle spaziali, ecc..
+
+Ed ecco che a questo punto interviene Einstein, con una delle sue (tante) idee, semplicissime da enunciare, ma ciascuna delle quali ha portato ad una vera rivoluzione del pensiero scientifico: il principio di relatività enunciato da Galileo vale anche per l'elettromagnetismo (Galileo non conosceva i fenomeni legati all'elettricità, per cui parla di volo di farfalle, gocce che cadono \dots). Questo postulato mette la parola fine alla ricerca del riferimento assoluto: le equazioni di Maxwell valgono in ogni riferimento inerziale, e quindi la velocità della luce è $c$ in ogni riferimento inerziale.\\
+È evidente il contrasto con la nota formula di composizione delle velocità, contrasto che sarà risolto da una profonda revisione dei concetti di spazio e di tempo assoluto che sono alla base della fisica newtoniana.
+
+\subsection{Il principio di relatività}
+
+Il significato del principio di relatività è indipendente da quali sono le leggi della fisica: le equazioni di Maxwell potrebbero essere diverse da quelle che sono, la velocità della luce potrebbe non essere costante, ecc.. Le conseguenze del principio di relatività sarebbero diverse, ma l'enunciato del principio ed il suo significato non ne dipendono: esso afferma che le leggi della fisica, \underline{quali che siano}, sono le stesse in tutti i riferimenti
+in moto relativo uniforme, e quindi tutti i riferimenti in moto relativo uniforme sono fra loro indistinguibili, cioè equivalenti (d'ora in poi, senza bisogno di specificarlo continuamente, ci riferiremo esclusivamente ai riferimenti inerziali); ciò significa che se abbiamo due riferimenti $K_1$ e $K_2$, per ogni fenomeno che si svolge secondo certe modalità rispetto a $K_1$, sia esso un fenomeno spontaneo o un esperimento, ne esiste (in linea di principio) uno che si svolge secondo le stesse modalità rispetto a $K_2$: i due fenomeni sono ``soggettivamente identici'' per gli osservatori di $K_1$ e di $K_2$. Per esempio, se in $K_1$ due cariche di 1\,C in quiete (in $K_1$) e a distanza di 1\,m si respingono con la forza di $9\times10^9$\,N, esattamente la stessa cosa succede con due cariche di 1\,C in quiete in $K_2$ e a distanza di 1\,m: le relazioni sui due esperimenti scritte dallo sperimentatore in $K_1$ e dallo sperimentatore in $K_2$ son identiche. Più in generale, uno studente che risiede in $K_1$ può impunemente copiare le relazioni di qualsiasi esperimento fatto da uno studente in $K_2$, e nessuno si accorge del plagio.\\
+Siccome le descrizioni dei due esperimenti comportano anche la descrizione dei campioni usati come unità di misura, questo implica che i due sperimentatori stanno usando campioni soggettivamente identici (p.es.\ entrambi definiscono nello stesso modo le unità di lunghezza e di tempo riferendole rispettivamente alle righe del Kripton e del Cesio): brevemente diciamo che usano le stesse unità di misura.\\
+Siccome le leggi della fisica sono il compendio di tutti i possibili esperimenti, l'esistenza di esperimenti (o fenomeni) soggettivamente identici è condizione necessaria e sufficiente per la validità del principio di relatività.\\
+Vediamo allora una conseguenza del principio di relatività; i due osservatori di $K_1$ e di $K_2$, anziché analizzare esperimenti soggettivamente identici, possono entrambi osservare uno stesso fenomeno: due particelle che si urtano, un condensatore che si scarica su una resistenza \dots. Le descrizioni che i due osservatori danno dello svolgimento del fenomeno sono diverse: se $a_1$, $b_1$, $c_1\dots$ sono i valori che le grandezze fisiche $a$, $b$, $c\dots$ (relative al fenomeno osservato) hanno per l'osservatore in $K_1$ (le velocità delle particelle che si urtano, oppure la corrente di scarica del condensatore, il tempo di scarica\dots), le stesse grandezze fisiche avranno valori diversi $a_2$, $b_2$, $c_2\dots$ per l'osservatore in $K_2$; la corrispondenza
+\begin{equation}
+a_1,\,b_1,\,c_1\,\dots\quad\ \leftrightarrow\quad\ a_2,\,b_2,\,c_2\,\dots
+\tag{4.5}
+\end{equation}
+è detta la ``legge di trasformazione'' delle grandezze $a$, $b$, $c\dots$ fra i due riferimenti $K_1$ e $K_2$. La legge di trasformazione delle grandezze fisiche, questa sì, è diversa a seconda che si consideri la fisica newtoniana (si ignorano i fenomeni elettromagnetici e si considerano velocità molto minori di $c$), o si accetti il postulato di Einstein.\\
+Esempi di leggi di trasformazione (nella fisica newtoniana) sono la legge di trasformazione delle coordinate $x_2=x_1+vt$\,, \ $y_2=y_1$\,, $\cdots$ \ ($\vec v$ è la velocità di $K_1$ rispetto a $K_2$), la legge di trasformazione delle velocità $\vec v_2=\vec v_1+\vec v$, \ la formula di Coriolis per le accelerazioni (qui i due riferimenti non sono necessariamente in moto relativo uniforme), eccetera.\\
+Ma ogni esperimento (o fenomeno) deve essere compatibile con le leggi della fisica, indipendentemente dal riferimento rispetto al quale viene osservato: quindi, se $L(\,\cdots)=0$ è l'equazione (o l'insieme di equazioni) che esprime le leggi alle quali il fenomeno osservato deve obbedire, deve essere
+\begin{equation}
+L(a_1,\,b_1,\,c_1\dots)=0\quad\ \Longleftrightarrow\quad\ L(a_2,\,b_2,\,c_2\dots)=0
+\tag{4.6}
+\end{equation}
+dove $a_1$, $b_1$, $c_1\dots$ e $a_2$, $b_2$, $c_2\dots$ sono legate dalla opportuna legge di trasformazione: si dice che le equazioni della fisica devono essere \textbf{covarianti} per le (opportune) trasformazioni delle grandezze fisiche (trasformazioni galileiane, trasformazioni della relatività di Einstein).\\
+Per esempio, il fenomeno osservato è l'urto di due particelle: se $\vec p_{a1}$, $\vec p_{b1}$; $\vec p\,'_{a1}$, $\vec p\,'_{b1}$ sono rispettivamente i valori delle quantità di moto delle due particelle prima dell'urto e dopo l'urto nel riferimento $K_1$, e $\vec p_{a2}$, $\vec p_{b2}$; $\vec p\,'_{a2}$, $\vec p\,'_{b2}$ i valori delle quantità di moto delle stesse particelle nel riferimento $K_2$, univocamente determinati dai valori in $K_1$ (e quindi funzioni di $\vec p_{a1}$, $\vec p_{b1}$, $\vec p\,'_{a1}$, $\vec p\,'_{b1}$), e viceversa, siccome (o meglio: se) nell'urto la quantità di moto si conserva, deve essere
+\begin{equation}
+\vec p_{a1}+\vec p_{b1}=\vec p\,'_{a1}+\vec p\,'_{b1}\quad\ \Longleftrightarrow\quad\ \vec p_{a2}+\vec p_{b2}=\vec p\,'_{a2}+\vec p\,'_{b2}.
+\tag{4.7}
+\end{equation}
+Se la (4.6) \big(o la (4.7)\big) non è soddisfatta, ciò significa che o la legge di trasformazione delle grandezze fisiche interessate (p.es.\ $\vec p_{a2}=\vec f(\vec p_{a1})$ ecc.), o la legge fisica espressa dall'equazione $L(\,\cdots)=0$ (o entrambe) sono incompatibili con il principio di relatività: è chiaro quindi che la richiesta di covarianza delle equazioni comporta delle condizioni alle quali le equazioni stesse devono obbedire.
+
+\paragraph{Esempio}
+\begin{quote}
+Restiamo nell'ambito della meccanica newtoniana. Le equazioni del moto per un sistema isolato di $N$ punti materiali sono
+\begin{equation}
+m_i\vec a_i=\vec F_i(\vec r_1\cdots\vec r_N,\,\vec v_1\cdots\vec v_N)\qquad\quad\forall i=1\cdots N
+\tag{4.8}
+\end{equation}
+e le leggi di trasformazione (fra riferimenti inerziali $K$ e $K'$) delle grandezze interessate sono
+\begin{equation}
+m_i'=m_i;\quad\ \vec a_i\,'=\vec a_i;\quad\ \vec F_i'=\vec F_i;\quad\ \vec r_i\,'=\vec r_i-\vec vt;\quad\ \vec v_i\,'=\vec v_i-\vec v;\quad\ t'=t.
+\tag{4.9}
+\end{equation}
+L'equazione
+\begin{equation}
+m_i'\vec a_i\,'=\vec F_i'(\vec r_1\,'\cdots\vec r_N\,',\,\vec v_1\,'\cdots\vec v_N\,')\qquad\quad\forall i=1\cdots N
+\tag{4.8'}
+\end{equation}
+è soddisfatta, grazie alle (4.9), se e solo se
+\begin{equation}
+\vec F_i(\vec r_1-\vec vt\cdots\vec r_N-\vec vt,\,\vec v_1-\vec v\cdots\vec v_N-\vec v)=\vec F_i(\vec r_1\cdots\vec r_N,\,\vec v_1\cdots\vec v_N)\quad\forall\vec v
+\tag{4.10}
+\end{equation}
+cioè se la forza dipende solo dalle coordinate e velocità relative: nel caso di un sistema di due particelle $\vec F=\vec F(\vec r_1-\vec r_2,\,\vec v_1-\vec v_2)$.
+\end{quote}
+Per quanto detto è chiaro che il nostro obiettivo più immediato sarà quello di determinare le leggi di trasformazione di grandezze fisiche: tutte quelle riguardanti grandezze cinematiche discendono dalle leggi di trasformazione delle coordinate (trasformazioni di Lorentz), mentre quelle meccaniche richiedono anche la conoscenza della legge di trasformazione della massa, e quelle elettriche quella della carica: in altri termini, se una particella è in quiete rispetto a $K_2$ e viene osservata da $K_1$ rispetto al quale ha velocità $v$, il problema è quello di determinare la relazione fra il valore della massa $m$ misurata dall'osservatore in $K_2$ e quello $m(v)$ misurato dall'osservatore in $K_1$, e analogamente per la carica. La risposta a questa domanda dipende da come massa e carica vengono
+definite, cioè -- più precisamente -- da come intendiamo misurare la massa e la carica di una particella in moto: è quindi una questione di definizione. La definizione più naturale è quella che massa e carica di una particella si misurano sulla particella ferma: se tanto l'osservatore in $K_1$ quanto quello in $K_2$ stanno osservando una certa particella, per esempio un elettrone, ciascuno di loro per determinarne massa e carica prende la particella (o un'altra uguale), la mette in quiete nel proprio riferimento, e procede alla misura. Ovviamente sono possibili anche definizioni diverse (ne riparleremo), ma queste corrispondono proprio a quello che si fa normalmente: per esempio si misura la massa misurando il rapporto fra la forza applicata e l'accelerazione (l'accelerazione del ``moto incipiente''), mentre si può misurare la carica con un esperimento come quello di Millikan, oppure dalla legge di Coulomb. In ogni caso le misure effettuate in $K_1$ e in $K_2$ sono esperimenti soggettivamente identici, quindi per il principio di relatività forniscono gli stessi risultati. Così definite, massa e carica di una particella in moto sono (per definizione) indipendenti dalla velocità della particella, cioè indipendenti dal riferimento: tali grandezze sono dette \textbf{invarianti}.
+
+\subsection{Il tempo non è uguale per tutti}
+
+Un carrello si muove con velocità uniforme $\vec v$ rispetto alla strada, e su di esso un punto materiale $P$ si muove nella stessa direzione (e verso) con velocità $\vec u$ rispetto al carrello; dalla legge Galileiana di trasformazione delle velocità otteniamo che la velocità del punto $P$ rispetto alla strada è $u+v$. La spiegazione è semplice: un osservatore sul carrello constata, guardando il proprio orologio ed usando un regolo per misurare le lunghezze, che il tempo che il punto $P$ impiega a percorrere la distanza $l$ fra due punti del carrello è $\Delta t$, e conclude che la velocità di $P$ è $u\equiv l/\Delta t$; un osservatore sulla strada, usando un orologio ed un regolo identici a quelli usati dal primo osservatore, osserva che nel tempo $\Delta t$ il carrello si sposta di $L$: dopo avere chiesto all'osservatore sul carrello quanta strada ha percorso sul carrello il punto $P$ nel tempo $\Delta t$, conclude che la velocità del punto $P$ rispetto alla strada deve essere $(L+l)/\Delta t=u+v$.\\
+Tutto semplice, se non fosse per il fatto che l'esperienza -- come sappiamo -- non conferma questa previsione: se invece del punto materiale $P$ prendessimo un fotone o un breve impulso di luce, entrambi gli osservatori troverebbero che esso ha velocità $c$.\\
+Cerchiamo allora di capire quale può essere il punto debole del ragionamento fatto sopra. Non ci sono molte vie di uscita: tutti e due gli osservatori hanno correttamente concluso, semplicemente in base alla definizione di velocità, l'uno che $P$ ha velocità $u$, e l'altro che il carrello ha velocità $v$, e quindi il punto debole non può che essere nel fatto che l'osservatore fermo (sulla strada) accetta per buoni i risultati dell'osservatore mobile: per esempio, ha preso per buono che il tempo intercorso fra il passaggio del punto $P$ tra due punti del carrello a distanza $l$ misurato dall'osservatore mobile è uguale a quello che avrebbe ottenuto se i passaggi li avesse cronometrati lui. E lo stesso discorso per la distanza fra i due punti sul carrello: misurata dall'osservatore solidale al carrello è $l$, ma potrebbe essere (ed è) diversa se misurata direttamente dall'osservatore fermo, per esempio segnando sulla strada le posizioni occupate dai due punti in uno stesso istante, e poi misurandone la distanza. Il punto cruciale deve essere proprio questo perché logica vuole che una velocità rispetto ad un certo riferimento sia definita da
+misure di tempo e di distanza fatte in quel riferimento; se prendere in prestito misure fatte in un altro riferimento non portasse a risultati errati, potremmo non preoccuparci, ma se porta a risultati in disaccordo con gli esperimenti allora il punto debole deve essere proprio lì: ecco un esempio di legge di trasformazione (quella delle velocità) incompatibile con il principio di Relatività, il quale richiede che $c$ sia un invariante.
+
+Vediamo allora le implicazioni di questa conclusione. Occupiamoci intanto delle misure di intervalli temporali: ciò che è emerso è che il risultato della misura di un intervallo temporale fra due eventi dipende dal riferimento (si chiama \textbf{evento} qualunque cosa avvenga in un dato punto ad un dato istante: p.es.\ l'urto fra due particelle, l'arrivo in un certo punto di un fotone, il passaggio di una particella per un dato punto, il decadimento di una particella\dots). È una affermazione sconvolgente: stiamo affermando che la durata di un viaggio in treno che i passeggeri misurano con il proprio orologio è diversa dalla durata che si legge sull'orario ferroviario, che è quella misurata dagli orologi nelle stazioni! Sgombriamo il terreno da possibili equivoci: abbiamo detto che i due osservatori, quello fermo e quello mobile, usano orologi identici cioè costruiti dalla stessa fabbrica, anzi, per evitare che qualcuno pensi che il funzionamento di quello usato dall'osservatore mobile possa essere stato influenzato dalla fase di accelerazione del carrello, diciamo costruiti nello stesso modo uno nel riferimento della strada e l'altro in quello del carrello, p.es.\ due orologi al Cesio (il principio di Relatività ci garantisce che gli atomi di Cesio si comportano nello stesso modo nei due riferimenti). Allora non c'è proprio via di scampo: l'idea di Newton che il tempo è assoluto, cioè in termini precisi, che l'intervallo temporale fra due eventi è indipendente dal riferimento, non è tenibile.
+
+Prima di andare avanti è opportuno chiedersi se esistono verifiche sperimentali della relatività degli intervalli temporali: al giorno d'oggi non c'è che l'imbarazzo della scelta. Molte particelle ``elementari'' sono instabili (come i nuclei radioattivi) e si disintegrano (``decadono'') in altre particelle. Per esempio, i mesoni $\mu$ prima o poi decadono in un elettrone e due neutrini; abbiamo detto ``prima o poi'' perché il loro tempo di vita non è sempre lo stesso, ma è regolato da leggi di probabilità: ad ogni istante la probabilità che un mesone decada nel successivo intervallo (infinitesimo) $\Delta t$ è proporzionale a $\Delta t$, cioè non dipende da quanto ha già vissuto (``le particelle non invecchiano''). Siccome il concetto di probabilità ha senso se riferito ad un grande numero di eventi (la probabilità di un evento è il rapporto fra il numero di casi favorevoli ed il numero di casi possibili), supponiamo di avere ad un certo istante ($t=0$) $N_0$ particelle (ferme o quasi), e indichiamo con $N(t)$ il numero di particelle sopravvissute dopo un tempo $t$; la probabilità che una particella decada nell'intervallo di tempo $t$, $t+\Delta t$ è (per definizione) il rapporto fra il numero di particelle che decadono in detto intervallo di tempo (i casi favorevoli) ed il numero di particelle presenti (i casi possibili), ed è (nel limite $\Delta t\to0$) proporzionale a $\Delta t$; se indichiamo con $1/\tau$ il coefficiente di proporzionalità (che ha le dimensioni dell'inverso di un tempo) e consideriamo $N(t)$ come una variabile continua (lecito finché $N(t)\gg1$), si ha
+\begin{equation}
+\begin{split}
+&\frac{N(t)-N(t+\Delta t)}{N(t)}=\tau^{-1}\Delta t\quad\ \Rightarrow\quad\ \frac{dN(t)}{dt}=-\frac1\tau\,N(t)\quad\ \Rightarrow\\
+&N(t)=N_0e^{-t/\tau}
+\end{split}
+\tag{4.11}
+\end{equation}
+quindi se al tempo $t=0$ osserviamo un mesone $\mu$, la probabilità che dopo un tempo $t$ non sia ancora decaduto è
+\begin{equation}
+P(t)\equiv\frac{N(t)}{N_0}=e^{-t/\tau}
+\tag{4.12}
+\end{equation}
+ed è nota come la \textbf{legge di decadimento esponenziale}; $\tau$ (che ha le dimensioni di un tempo) è detta \emph{vita media} della particella, e ogni particella instabile ha una ben determinata vita media. Essa è definita nel sistema di riferimento in cui la particella è ferma e si ottiene, grazie alla (4.11), misurando il tempo necessario perché il numero di particelle si riduca di un fattore $e=2.71828\dots$.\\
+La vita media dei mesoni $\mu$ è $\tau_\mu\simeq2\times10^{-6}$\,s. Nei raggi cosmici che arrivano sulla terra c'è abbondanza di mesoni $\mu$ che vengono prodotti nell'urto di raggi cosmici primari con i nuclei presenti negli strati alti dell'atmosfera. Un esperimento classico è consistito nel misurare il flusso di mesoni $\mu$ (cioè il numero di particelle che giungono su una data superficie in un dato intervallo di tempo) nel laboratorio d'alta quota al Plateau Rosa, e confrontarlo con il flusso al livello del mare: i mesoni $\mu$ sono molto veloci, e viaggiano quasi alla velocità della luce, quindi impiegano circa $10^{-5}$\,s a coprire la distanza di $\simeq4000$\,metri che separa il Plateau Rosa dal livello del mare, e quindi il flusso di mesoni al livello del mare dovrebbe essere circa $e^{-5}\approx0.007$ volte il flusso in quota, mentre l'esperienza rileva un flusso quasi 100 volte maggiore di quello previsto.\\
+L'interpretazione di questo risultato è che $\tau_\mu$ è l'intervallo di tempo fra due eventi ($N=N_0$\,, \ $N=N_0/e$) misurato in un certo riferimento, quello rispetto al quale le particelle sono in quiete (cioè che si muove insieme ai mesoni $\mu$), e l'intervallo di tempo fra gli stessi due eventi misurato nel riferimento della terra risulta diverso (molto più lungo): questo fatto è noto come il fenomeno della dilatazione dei tempi, sul quale ritorneremo. Per la stessa ragione, molte particelle che hanno una vita media molto breve ($\approx10^{-15}$\,s), riescono a lasciare una traccia visibile almeno al microscopio nelle emulsioni fotografiche in cui sono prodotte: senza la dilatazione dei tempi esse in media potrebbero percorrere solo qualche decimo di micron dall'istante in cui sono prodotte a quello in cui decadono.
+
+Abbiamo prima citato, in termini alquanto paradossali dato che non è certo nelle situazioni della vita comune che si può mettere in evidenza la relatività degli intervalli temporali, il caso della durata di un viaggio in treno: ebbene, in tempi non troppo lontani (1971) un esperimento del genere è stato fatto. Si tratta dell'esperimento di Hafele--Keating che hanno montato su due aeroplani due identici orologi atomici: i due aerei sono partiti insieme dallo stesso aeroporto all'equatore ed hanno fatto il giro del mondo, uno viaggiando verso est -- cioè in verso concorde a quello della rotazione terrestre, e l'altro verso ovest atterrando insieme dopo circa 50 ore all'aeroporto di partenza. I due orologi, regolati all'inizio in modo da segnare lo stesso tempo, controllato che effettivamente finché si trovano in uno stesso riferimento restano sincronizzati, all'arrivo segnavano tempi diversi: l'intervallo di tempo segnato dall'orologio sull'aereo ``più veloce'' (quello che viaggiava verso est) era minore di quello segnato dall'altro orologio (proprio come per i mesoni $\mu$), con una differenza di circa 300\,ns
+(ns $=$ nanosecondo $=10^{-9}$\,s): il viaggio sui due aerei, partiti insieme dallo stesso posto e atterrati insieme ha avuto durate diverse, e quindi anche diverse da quella misurata dalla torre di controllo a terra.
+
+Così stando le cose, le leggi di trasformazione delle coordinate per cambiamenti di riferimento che conosciamo nell'ambito della fisica newtoniana, anche se risulteranno essere un'ottima approssimazione tutte le volte che le velocità in gioco (velocità delle particelle e dei sistemi di riferimento) sono molto minori della velocità della luce, non vanno bene: in esse è implicita l'ipotesi newtoniana di tempo assoluto \ $t'=t$. \ Non discuteremo come le equazioni generali di trasformazione debbano essere modificate, ma determineremo soltanto le leggi di trasformazione fra due riferimenti inerziali.
+
+\subsection{Le trasformazioni di Lorentz}
+
+Sono dati due riferimenti inerziali $K$ e $K'$ in moto relativo il secondo rispetto al primo con velocità $\vec v$. Un dato evento può essere osservato da entrambi i riferimenti; se $x,y,z$ sono le coordinate nel riferimento $K$ rispetto ad una terna cartesiana $O$, $\hat\imath$, $\hat\jmath$, $\hat\kappa$ del punto in cui si verifica l'evento, e $t$ è l'istante, sempre nel riferimento $K$, in cui l'evento avviene, diremo che l'evento ha -- nel riferimento $K$ -- coordinate spazio--temporali $ct$, $x,y,z$: utilizziamo $ct$ come coordinata temporale, di modo che tutte e quattro le coordinate hanno le stesse dimensioni. Le coordinate spazio--temporali dello stesso evento nel riferimento $K'$ saranno, rispetto ad una terna $O'$, $\hat\imath\,'$, $\hat\jmath\,'$, $\hat\kappa'$ (terne destrorse), $ct'$, $x',y',z'$.\\
+Indichiamo con \ $x$ \ la quaterna, anzi, il \textbf{quadrivettore} $(ct,\,x,\,y,\,z)$ e, naturalmente, $x'\equiv(ct',\,x',\,y',\,z')$. Le singole componenti del quadrivettore di solito vengono indicate con $x_\mu$ \ $(\mu=0,1,2,3)$: \ $x_0=ct$, $x_1=x$, $x_2=y$, $x_3=z$\,; \quad $x_0'=ct'$, ecc..\\
+Vogliamo determinare la relazione fra $x$ e $x'$, cioè la legge di trasformazione delle coordinate spazio--temporali di uno stesso evento in due diversi riferimenti; nell'ambito della fisica newtoniana il problema lo abbiamo risolto tacitamente assumendo che la coordinata temporale di un evento fosse la stessa in tutti i riferimenti: $t'=t$ (``trasformazioni galileiane''); ora lo risolveremo senza l'ipotesi del ``tempo assoluto'', ma con l'ipotesi della costanza della velocità della luce: queste leggi di trasformazione sono dette \textbf{trasformazioni di Lorentz}. È sottinteso, e lo abbiamo già detto nella discussione precedente, che in entrambi i riferimenti si utilizzano identici orologi e identici regoli per misurare tempo e lunghezze (altrimenti la velocità della luce non avrebbe lo stesso valore nei due riferimenti).\\
+Sia \ $L$ \ l'applicazione \ $x\mapsto x'$\,; scelta (a piacere) in $K$ l'origine $O$ e l'origine dei tempi, prendiamo in $K'$ come origine il punto $O'$ che all'istante $t=0$ coincide con $O$, e questo stesso istante come origine dei tempi: questa è una scelta che facciamo solo per ragioni di semplicità; in altri termini l'evento che consiste nella coincidenza delle origini $O$ e $O'$ ha coordinate spazio--temporali $(0,0,0,0)$ sia in $K$ che in $K'$. Quindi
+\begin{equation}
+x'=L(x)\,;\qquad\quad L(0)=0\,.
+\tag{4.13}
+\end{equation}
+La prima cosa che vogliamo dimostrare è che l'applicazione \ $L$ \ è lineare; l'ipotesi fisica su cui si basa la dimostrazione è quella dell'omogeneità dello spazio e del tempo: le leggi di trasformazione cercate devono essere indipendenti dalla scelta dell'origine $O$ e da quella
+dell'origine temporale. Si tratta pur sempre del principio di relatività applicato non al caso di riferimenti in moto relativo, ma traslati nello spazio e nel tempo: se la relazione $L$ fra le coordinate di due riferimenti in moto relativo cambiasse in seguito ad una traslazione degli assi e degli orologi di entrambi i riferimenti, il riferimento $K$ e quello traslato non sarebbero equivalenti. Allora, sia $\overline O$ di coordinate spaziali $\bar x_i$, \ $i=1\cdots3$, la nuova origine in $K$, e \ $\bar x_0\equiv c\bar t$ \ la nuova origine dei tempi (in $K$) e $\bar x'$ le coordinate spazio--temporali della nuova origine spazio--temporale in $K'$, cioè
+\begin{equation}
+\bar x'=L(\bar x)\,.
+\tag{4.14}
+\end{equation}
+Rispetto alle nuove origini le coordinate di un evento sono \ $y=x-\bar x$ \ in $K$ e \ $y'=x'-\bar x'$ in $K'$: l'indipendenza dalla scelta dell'origine si traduce in
+\begin{equation}
+y'=L(y)\quad\ \Leftrightarrow\quad\ x'-\bar x'=L(x-\bar x)\quad\ \Rightarrow\quad\ L(x-\bar x)=L(x)-L(\bar x)
+\tag{4.15}
+\end{equation}
+che esprime la linearità di $L$. $\blacksquare$\\
+Possiamo quindi riscrivere la (4.13) come
+\begin{equation}
+x'=Lx
+\tag{4.16}
+\end{equation}
+dove $L$ è una matrice $4\times4$ (se avessimo scelto l'origine spazio--temporale in $K'$ in modo indipendente da quella in $K$ anziché la (4.16) avremmo \ $x'=Lx+a$).\\
+Imponiamo ora che la velocità della luce sia $c$ in entrambi i riferimenti; facciamo partire un segnale luminoso (fotone) dall'origine di $K$ all'istante $t=0$ (e quindi dall'origine di $K'$ all'istante $t'=0$), in direzione del punto (arbitrario) $P$ di coordinate $x,y,z$ in $K$, dove arriva all'istante $t$ tale che \ $c^2t^2=x^2+y^2+z^2$: i due eventi partenza da $O$ e arrivo in $P$ del fotone hanno coordinate \ $(0,0,0,0)$; \ $(ct',x',y',z')$ \ in $K'$, e per la costanza della velocità della luce si ha \ $c^2t'^2=x'^2+y'^2+z'^2$. Sia
+\begin{equation}
+G\defeq\begin{pmatrix}-1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix}
+\tag{4.17}
+\end{equation}
+\big(``tensore metrico di Minkowski''; talvolta $G$ è definito come l'opposta della matrice (4.17)\big), allora la condizione
+\begin{equation}
+c^2t^2=x^2+y^2+z^2\quad\ \Longleftrightarrow\quad\ c^2t'^2=x'^2+y'^2+z'^2
+\tag{4.18}
+\end{equation}
+grazie alla (4.16) si scrive
+\begin{equation}
+{}^tx\,G\,x=0\quad\ \Longleftrightarrow\quad\ {}^tx\,{}^tL\,G\,L\,x=0\,.
+\tag{4.19}
+\end{equation}
+Vogliamo dimostrare che dalla (4.19) segue
+\begin{equation}
+{}^tL\,G\,L=G
+\tag{4.20}
+\end{equation}
+cioè, per ogni evento,
+\begin{equation}
+x^2+y^2+z^2-c^2t^2=x'^2+y'^2+z'^2-c^2t'^2.
+\tag{4.20'}
+\end{equation}
+Poniamo
+\begin{equation}
+M\equiv{}^tL\,G\,L={}^tM\equiv\begin{pmatrix}m_0&m_1&m_2&m_3\\m_1&&&\\m_2&&\boldsymbol M&\\m_3&&&\end{pmatrix}
+\tag{4.21}
+\end{equation}
+(utilizziamo il grassetto per grandezze che si riferiscono allo spazio tridimensionale), e sia \ $x=(x_0,\,\pm\boldsymbol x)$ \ con \ $x_0^2=\boldsymbol x\cdot\boldsymbol x$ \ $({}^tx\,G\,x=0)$. \ Dalla (4.19), posto \ $\boldsymbol m\equiv(m_1,m_2,m_3)$, si ha
+\begin{equation}
+0={}^tx\,M\,x=x_0^2\,m_0\pm2x_0\,\boldsymbol m\cdot\boldsymbol x+{}^t\boldsymbol x\,\boldsymbol M\,\boldsymbol x.
+\tag{4.22}
+\end{equation}
+Sommando e sottraendo le due equazioni (quella con il $+$ e quella con il $-$) ed essendo $x_0^2=\boldsymbol x\cdot\boldsymbol x$, si ottiene
+\begin{equation}
+\boldsymbol m\cdot\boldsymbol x=0,\qquad\quad{}^t\boldsymbol x\,(m_0\,\boldsymbol I+\boldsymbol M)\,\boldsymbol x=0
+\tag{4.23}
+\end{equation}
+e siccome $\boldsymbol x$ è arbitrario e $\boldsymbol M={}^t\boldsymbol M$, si ottiene
+\begin{equation}
+\boldsymbol m=0;\quad\ \boldsymbol M=-m_0\,\boldsymbol I\quad\ \Rightarrow\quad\ M=-m_0\,G.
+\tag{4.24}
+\end{equation}
+Resta da dimostrare che $m_0=-1$; a questo scopo basta dimostrare che \ $\det L=\pm1$, perché in tal caso per la (4.21) \ $\det M=\det G$ \ e dalla (4.24) \ $\det M=m_0^4\det G$ \ $\Rightarrow$ \ $m_0^4=1$ \ $\Rightarrow$ \ $m_0=\pm1$ \ ($m_0$ è reale), ed $m_0=1$ è escluso dal teorema di Sylvester.\\
+Osserviamo intanto che l'ipotesi che la velocità della luce sia $c$ in entrambi i riferimenti non è sufficiente per dimostrare che \ $\det L=\pm1$, in quanto la velocità della luce in $K$ e in $K'$ è $c$ anche se in $K$ le unità di misura sono il metro ed il secondo, mentre in $K'$ sono p.es.\ il km ed il ks (kilosecondo): un cambiamento delle unità di lunghezza e di tempo per uno stesso fattore comporta che $L$ viene divisa per lo stesso fattore. Quindi se vogliamo dimostrare che \ $\det L=\pm1$ \ dobbiamo fare intervenire l'ipotesi che in tutti i riferimenti vengono usati gli stessi regoli e gli stessi orologi, cioè le stesse unità. Questa ipotesi interviene tramite il principio di relatività in quanto esso ci garantisce che se gli osservatori in due riferimenti diversi usano le stesse unità di misura allora per ogni fenomeno fisico in uno dei due riferimenti ne esiste uno soggettivamente identico nell'altro; quindi, in particolare, se $K$ e $\bar K$ sono due riferimenti, e $L$ è la matrice di trasformazione da $K$ ad un (terzo) riferimento $K'$, allora esiste un (quarto) riferimento $\bar K'$ tale che $L$ è anche la matrice di trasformazione da $\bar K$ a $\bar K'$: $K'$ e $\bar K'$ sono soggettivamente identici rispetto a $K$ e $\bar K$.\\
+Quanto sopra significa che l'insieme $\Lambda$ di tutte le trasformazioni di Lorentz $L$ non dipende da quale riferimento $(K,\ \bar K,\ \cdots)$ si parte, e che $\Lambda$ è un \textbf{gruppo}: infatti, siano $L_1$ e $L_2$ le trasformazioni di Lorentz da $K$ a $K_1$ e da $K$ a $K_2$; il prodotto $L_3\equiv L_2L_1$ è esso stesso una trasformazione di Lorentz, \ $K\mapsto K_3$, quella che si ottiene componendo la trasformazione da $K$ a $K_1$ con la trasformazione da $K_1$ a quel riferimento $K_3$ (che esiste) il cui moto (e orientamento) rispetto a $K_1$ è ``soggettivamente identico'' al moto (e orientamento) di $K_2$ rispetto a $K$. L'esistenza della trasformazione inversa è ovvia: per quanto appena detto, l'inversa della trasformazione da $K$ a $K'$ è la trasformazione da $K'$ a $K$.\\
+Stabilito che il principio di relatività comporta che le trasformazioni di Lorentz formano un gruppo $\Lambda$, consideriamo l'omomorfismo da $\Lambda$ al gruppo moltiplicativo $\boldsymbol R\setminus\{0\}$\,: \ $L\mapsto\det L$ \ il cui nucleo è un sottogruppo normale di $\Lambda$. Siccome $\Lambda$ non ha sottogruppi normali diversi dall'identità e dall'intero gruppo, e poiché il nucleo dell'omomorfismo contiene almeno le rotazioni, ne segue che \ $\det L=1\ \ \forall L$. $\blacksquare$\\
+Nota: stiamo considerando solo il caso in cui le terne di riferimento sono tutte destrorse (o tutte sinistrorse): il ``gruppo di Lorentz proprio''; in caso contrario le trasformazioni
+fra riferimenti dello stesso tipo costituiscono un sottogruppo normale del gruppo di Lorentz con riflessioni.
+
+Quindi per ogni trasformazione di Lorentz vale la (4.20); è vero anche il viceversa, cioè ogni applicazione lineare che soddisfa la (4.20) è la legge di trasformazione delle coordinate spazio--temporali fra due riferimenti in moto relativo uniforme (senza restrizioni sugli orientamenti delle terne). Non diamo una vera e propria dimostrazione di questa affermazione, ma ci limitiamo a ``contare'' quante sono le trasformazioni di Lorentz, e quante sono le matrici che soddisfano la (4.20): una trasformazione di Lorentz è individuata da 6 parametri, 3 per assegnare la velocità relativa $\vec v$, e altri 3 corrispondono ai possibili orientamenti della terna $\hat\imath\,'$, $\hat\jmath\,'$, $\hat\kappa'$ rispetto alla terna $\hat\imath$, $\hat\jmath$, $\hat\kappa$ \ (niente di nuovo sotto il sole: un corpo rigido, o un riferimento, ha 6 gradi di libertà); le matrici che soddisfano la (4.20) costituiscono il gruppo ortogonale rispetto al prodotto scalare definito dalla matrice $G$ \big(il gruppo $SO(3,1)$\big), e anche in questo caso sono necessari 6 parametri per individuare una matrice ortogonale: $16=4\times4$ sono gli elementi di una matrice, e 10 sono le condizioni indipendenti espresse dalla (4.20) (e non 16, in quanto sono condizioni fra matrici simmetriche).
+
+Quando si ha a che fare con delle trasformazioni, e in particolare con trasformazioni di coordinate, sono importanti gli invarianti, cioè quelle grandezze che mantengono il loro valore sotto la trasformazione considerata. Per esempio, nel caso di rotazioni o traslazioni (o entrambe insieme), se $x_1,y_1,z_1$ e $x_2,y_2,z_2$ sono le coordinate di due punti, si ha che
+\begin{equation}
+\begin{split}
+&(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2=\\
+&\qquad=(x_1'-x_2')^2+(y_1'-y_2')^2+(z_1'-z_2')^2
+\end{split}
+\tag{4.25}
+\end{equation}
+e quindi \ $(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2$ \ è un invariante (la distanza fra due punti non dipende da come si scelgono le coordinate!).\\
+Nel caso delle trasformazioni di Lorentz, queste sono caratterizzate dalla (4.20) che esprime l'invarianza del prodotto scalare \ ${}^ty\,G\,x$ \ e in particolare di \ ${}^tx\,G\,x$\,. Quindi è invariante \big(v.\ (4.20')\big)
+\begin{equation}
+s^2\equiv x^2+y^2+z^2-c^2t^2
+\tag{4.26}
+\end{equation}
+e nel caso di due eventi è invariante la loro ``pseudodistanza'' spazio--temporale
+\begin{equation}
+(\Delta s)^2\equiv(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2-c^2(t_1-t_2)^2.
+\tag{4.27}
+\end{equation}
+
+\subsection{Le trasformazioni di Lorentz senza rotazioni}
+
+In questo paragrafo determiniamo esplicitamente le matrici $L$ associate a particolari trasformazioni di Lorentz: quelle fra riferimenti $K$ e $K'$ con gli assi paralleli, e velocità relativa parallela agli assi (coincidenti) $x$ e $x'$: l'unico parametro libero è la velocità scalare $v$ di $K'$ rispetto a $K$. È vero che si tratta di trasformazioni di Lorentz molto
+\fig{fig4_1}{4.1}
+particolari (trasformazioni di Lorentz ``senza rotazioni''), ma queste e le rotazioni generano l'intero gruppo (vedi figura 4.1).\\
+L'ipotesi che gli assi $x$ e $x'$ coincidono significa che \ $y=0,z=0$ \ $\Leftrightarrow$ \ $y'=0,z'=0$, che si traduce in \ $L_{20}=L_{21}=0$\,, \ $L_{30}=L_{31}=0$, quindi
+\begin{equation}
+L=\begin{pmatrix}A&B\\0&D\end{pmatrix}
+\tag{4.28}
+\end{equation}
+con \ $A$, $B$, $D$ \ matrici $2\times2$. Dalla (4.20) si ottiene
+\begin{equation}
+\begin{gathered}
+{}^tA\,g\,A=g\,;\quad\ {}^tA\,g\,B=0\,;\quad\ {}^tB\,g\,B+{}^tD\,D=I\\
+g\equiv\begin{pmatrix}-1&0\\0&1\end{pmatrix};\quad\ I\equiv\begin{pmatrix}1&0\\0&1\end{pmatrix}.
+\end{gathered}
+\tag{4.29}
+\end{equation}
+Dalla prima delle (4.29) segue che $A$ è invertibile ($\det(A)\neq0$), quindi dalla seconda $B=0$, e dalla terza che $D$ è ortogonale: quindi mediante una rotazione di matrice $D^{-1}$ \ attorno all'asse $x'$ è possibile orientare gli assi $y'$ e $z'$ come gli assi $y$ e $z$, cioè $L_{22}=L_{33}=1$\,, \ $L_{23}=L_{32}=0$. Poniamo
+\begin{equation}
+A=\begin{pmatrix}a&b\\c&d\end{pmatrix};\qquad\quad a>0,\ d>0
+\tag{4.30}
+\end{equation}
+le ultime due condizioni sono dettate dalla richiesta che gli assi $x$ e $x'$ siano orientati nello stesso verso, e così pure per gli assi dei tempi (gruppo di Lorentz ortocrono). Dalla prima delle (4.29) si ha
+\begin{equation}
+a^2-c^2=1\,;\quad\ ab=cd\,;\quad\ d^2-b^2=1\,.
+\tag{4.31}
+\end{equation}
+La seconda delle (4.31) dice che $a$ e $c$ sono proporzionali a $d$ e $b$, la prima e la terza più la positività di $a$ e $d$ dicono che il coefficiente di proporzionalità è 1, cioè $a=d$, \ $c=b$; infine, posto \ $a^2=\cosh^2\theta$\,; \ $c^2=\sinh^2\theta$\,, e tenuto conto che $a>0$
+\begin{equation}
+a=\cosh\theta\,;\ \ c=-\sinh\theta
+\tag{4.32}
+\end{equation}
+(il segno $-$ nella seconda delle (4.32) solo per comodità), quindi
+\begin{equation}
+\left\{\begin{aligned}
+ct'&=ct\cosh\theta-x\sinh\theta\\
+x'&=x\cosh\theta-ct\sinh\theta\\
+y'&=y\\
+z'&=z\,.
+\end{aligned}\right.
+\tag{4.33}
+\end{equation}
+Infine, imponiamo che la velocità di $K'$ rispetto a $K$ è $v$: dalla seconda delle (4.33) si vede che la legge oraria dell'origine $O'$ di $K'$ è, in $K$,
+\begin{equation}
+x=ct\tanh\theta\quad\ \Rightarrow\quad\ v=c\tanh\theta\quad\ \Leftrightarrow\quad\ \theta=\tanh^{-1}\frac vc\,\cdot
+\tag{4.34}
+\end{equation}
+Il parametro $\theta$ è detto \textbf{rapidità} del riferimento $K'$ rispetto al riferimento $K$; le trasformazioni di Lorentz senza rotazioni costituiscono un sottogruppo abeliano del gruppo $\Lambda$: esse sono rappresentate dalle matrici
+\begin{equation}
+L(\theta)=\begin{pmatrix}\begin{pmatrix}\cosh\theta&-\sinh\theta\\-\sinh\theta&\cosh\theta\end{pmatrix}&0\\0&I\end{pmatrix}
+\tag{4.35}
+\end{equation}
+e la legge di composizione è data da
+\begin{equation}
+L(\theta_1)L(\theta_2)=L(\theta_2)L(\theta_1)=L(\theta_1+\theta_2)
+\tag{4.36}
+\end{equation}
+quindi le rapidità si sommano: se $\theta_1$ è la rapidità di $K_1$ rispetto a $K$, e $\theta_2$ quella di $K_2$ rispetto a $K_1$, la rapidità di $K_2$ rispetto a $K$ è \ $\theta_3=\theta_1+\theta_2$; non così per le velocità, infatti poiché \ $v_1=c\tanh\theta_1$ \ e \ $v_2=c\tanh\theta_2$, dalla (4.36) si ottiene per la velocità $v_3$ di $K_2$ rispetto a $K$
+\begin{equation}
+v_3=v_1\circ v_2=c\tanh(\theta_1+\theta_2)=c\,\frac{\tanh\theta_1+\tanh\theta_2}{1+\tanh\theta_1\tanh\theta_2}=\frac{v_1+v_2}{1+v_1v_2/c^2}\,\cdot
+\tag{4.37}
+\end{equation}
+La (4.37) costituisce la legge di composizione delle velocità nel caso di velocità parallele, sulla quale ritorneremo fra poco.
+
+Di solito le (4.33) si scrivono esplicitando la dipendenza da $v$: dall'identità \ $\cosh^2\theta=(1-\tanh^2\theta)^{-1}$ \ si ottiene
+\begin{equation}
+\cosh\theta\equiv\gamma(v)=\frac{1}{\sqrt{1-v^2/c^2}};\quad\ \beta\defeq\frac vc;\quad\ \sinh\theta=\beta\,\gamma(v)
+\tag{4.38}
+\end{equation}
+e quindi
+\begin{equation}
+\left\{\begin{aligned}
+x'&=\gamma(v)(x-vt)\\
+y'&=y\\
+z'&=z\\
+t'&=\gamma(v)\Big(t-\frac{v}{c^2}x\Big).
+\end{aligned}\right.
+\tag{4.39}
+\end{equation}
+Le trasformazioni inverse delle (4.39) si determinano facilmente osservando che per la (4.20) \ $L^{-1}=G\,{}^tL\,G$ \ e risulta che si ottengono dalle (4.39) scambiando \ $x,t$ \ con \ $x',t'$ \ e $v$ con $-v$:
+\begin{equation}
+\left\{\begin{aligned}
+x&=\gamma(v)(x'+vt')\\
+y&=y'\\
+z&=z'\\
+t&=\gamma(v)\Big(t'+\frac{v}{c^2}x'\Big)
+\end{aligned}\right.
+\tag{4.40}
+\end{equation}
+e questo significa che il riferimento $K$ si muove rispetto a $K'$ con velocità $-\vec v$.\\
+Se $v/c\ll1$ le (4.39) si riducono alle trasformazioni galileiane, mentre invece le differenze con la cinematica galileiana (o newtoniana) sono tanto più rilevanti quanto più $v$ è confrontabile con $c$:
+\begin{equation}
+\gamma(v)=1+\frac12\,\frac{v^2}{c^2}+\dots\quad\ (v/c\ll1);\qquad\ \gamma(v)\to\infty\quad\text{se }v\to c\,.
+\tag{4.41}
+\end{equation}
+Dalle (4.38) e (4.39) risulta che deve sempre essere $|v|<c$: la velocità relativa di due riferimenti è sempre minore della velocità della luce, che quindi costituisce la velocità limite.
+
+\subsection{Dilatazione dei tempi e contrazione delle lunghezze}
+
+Consideriamo un mesone $\mu$ che viaggia con velocità $v$ rispetto alla Terra (riferimento $K$), e prendiamo un riferimento ($K'$) che si muova solidalmente con il mesone: quindi $K'$ si muove con velocità $v$ rispetto a $K$, ed il mesone è fermo rispetto a $K'$. Sia (in $K'$) $t_1'$ l' istante in cui il mesone $\mu$ viene prodotto e $t_2'$ quello in cui decade; le coordinate spaziali di questi due eventi sono le stesse perché il mesone è fermo. Poniamo $\Delta t'\equiv t_2'-t_1'$. Vogliamo determinare l'intervallo temporale $\Delta t\equiv t_2-t_1$ fra questi due eventi nel riferimento della terra ($K$). Possiamo procedere in due modi: dalle (4.40)
+\begin{equation}
+t_1=\gamma(v)\Big(t_1'+\frac{v}{c^2}x'\Big),\quad\ t_2=\gamma(v)\Big(t_2'+\frac{v}{c^2}x'\Big)\quad\ \Rightarrow\quad\ \Delta t=\gamma(v)\Delta t'
+\tag{4.42}
+\end{equation}
+oppure, ed è più istruttivo, sfruttando l'invariante (4.27): siccome $v\Delta t$ è lo spazio percorso (in $K$) dal mesone $\mu$ tra il momento della produzione a quello del decadimento, grazie alla (4.27) \big(o alla (4.20')\big) si ha
+\begin{equation}
+c^2(\Delta t')^2=c^2(\Delta t)^2-v^2(\Delta t)^2\quad\ \Rightarrow\quad\ \Delta t=\gamma(v)\Delta t'
+\tag{4.43}
+\end{equation}
+quindi, se p.es.\ \ $\beta\equiv v/c=0.99$
+\begin{equation}
+\gamma(v)=\frac{1}{\sqrt{(1+\beta)(1-\beta)}}\simeq\frac{1}{\sqrt{2\times0.01}}=\sqrt{50}\simeq7
+\tag{4.44}
+\end{equation}
+e quindi $\Delta t\simeq7\Delta t'$.\\
+In conclusione:\\
+\textit{Se $\Delta t_0$ è l'intervallo temporale fra due eventi nel riferimento in cui essi sono spazialmente sovrapposti, l'intervallo temporale in un riferimento che si muova con velocità $v$ rispetto ad esso è $\gamma(v)\Delta t_0$, e quindi è maggiore di $\Delta t_0$ (dilatazione dei tempi).\\
+$\Delta t_0$ è detto ``intervallo di tempo proprio'' fra i due eventi.}
+
+Nel capitolo 4.4 in cui abbiamo sollevato il problema della composizione delle velocità, abbiamo messo in dubbio che la misura della distanza $l$ fra due punti del carrello effettuata nel riferimento del carrello sia uguale alla distanza fra gli stessi punti misurata dal riferimento della strada. Per vedere come stanno le cose, dobbiamo prima definire chiaramente come si misura la distanza fra due punti $P_1'$ e $P_2'$. Nel riferimento ($K'$) in cui i due punti sono fermi (il riferimento del carrello) non c'è problema: si confronta la distanza fra i due punti con l'unità di lunghezza. In un riferimento ($K$) rispetto al quale i due punti si muovono (con velocità $v$) si procede come segue (per definizione): ad un certo istante $t$ si registrano (traguardano) le posizioni dei due punti e poi con calma si misura la distanza fra le posizioni $P_1$ e $P_2$ registrate.\\
+Supponiamo che i due punti $P_1'$ e $P_2'$ differiscano solo per l'ascissa $x'$ (il segmento $P_1'P_2'$ è parallelo all'asse $x'$); siano $x_1'$ e $x_2'$ le loro ascisse, e quindi \ $\Delta x'\equiv x_2'-x_1'$ \ la loro distanza in $K'$. Dobbiamo calcolare la distanza spaziale \ $\Delta x\equiv x_2(t)-x_1(t)$ \ fra i due eventi costituiti dalla registrazione in $K$ delle posizioni ad uno stesso istante $t$ dei due punti mobili: dalla (4.39)
+\begin{equation}
+x_1'=\gamma(v)(x_1-vt)\,,\quad\ x_2'=\gamma(v)(x_2-vt)
+\tag{4.45}
+\end{equation}
+quindi le leggi orarie in $K$ dei punti $P_1'$ e $P_2'$ sono
+\begin{equation}
+x_1(t)=\frac1\gamma x_1'+vt\,,\quad\ x_2(t)=\frac1\gamma x_2'+vt
+\tag{4.46}
+\end{equation}
+da cui
+\begin{equation}
+\Delta x=\frac{1}{\gamma(v)}\Delta x'
+\tag{4.47}
+\end{equation}
+e quindi\\
+\textit{Se $L_0\equiv\Delta x'$ è la lunghezza di un segmento nel riferimento in cui è in quiete (la ``lunghezza propria''), la lunghezza $L\equiv\Delta x$ -- definita come detto sopra -- in un riferimento che si muove rispetto ad esso con velocità $v$ parallela al segmento, è $L=L_0/\gamma(v)$ e quindi minore di $L_0$ (contrazione delle lunghezze).}
+
+Possiamo capire il perché di questo risultato nei seguenti termini. Gli eventi di coordinate spazio--temporali $x_1,t$, $x_2,t$, che consistono nella registrazione in $K$ delle posizioni dei due punti, sono simultanei in $K$, ma non lo sono in $K'$: usiamo nuovamente l'invariante (4.27)
+\begin{equation}
+L^2-0=L_0^2-c^2(\Delta t')^2\quad\ \Rightarrow\quad\ |\Delta t'|=\beta\,\frac{L_0}{c}\,\cdot
+\tag{4.48}
+\end{equation}
+Quindi\\
+\textit{La simultaneità di due eventi non sovrapposti è relativa al riferimento.}
+
+Consideriamo ora il caso in cui i due punti abbiano la stessa ascissa $x'$, ma p.es.\ ordinata $y'$ diversa: \ $L_0=y_2'-y_1'$. In questo caso dalle (4.39) si ha $L=L_0$, quindi la contrazione delle lunghezze riguarda solo quelle che non sono ortogonali alla direzione del moto relativo dei due riferimenti. La stessa cosa vale per la simultaneità: due eventi la cui separazione spaziale è ortogonale alla direzione del moto relativo di due riferimenti, se sono simultanei in uno di essi sono simultanei anche nell'altro.
+
+\subsection{Composizione delle velocità}
+
+Un punto $P$ si muove in $K'$ con legge oraria
+\begin{equation}
+x'(t')=ut'\,,\ \ y'=y_0'\,,\ \ z'=z_0'.
+\tag{4.49}
+\end{equation}
+Vogliamo determinare la sua legge oraria nel riferimento $K$.\\
+Dalla prima delle (4.40) e dall'ultima delle (4.39)
+\begin{equation}
+\begin{aligned}
+&x=\gamma(v)(u+v)t'=\gamma(v)^2(u+v)\Big(t-\frac{v}{c^2}x\Big)\quad\ \Rightarrow\\
+&x\Big(\frac{1}{\gamma^2}+\frac{v}{c^2}(u+v)\Big)=(u+v)\,t\quad\ \Rightarrow\\
+&x=\frac{u+v}{1+uv/c^2}\,t\,,\ \ y=y_0'\,,\ \ z=z_0'
+\end{aligned}
+\tag{4.50}
+\end{equation}
+quindi la velocità del punto $P$ rispetto a $K$ è
+\begin{equation}
+u_P\equiv u\circ v=\frac{u+v}{1+uv/c^2}
+\tag{4.51}
+\end{equation}
+cioè la (4.37). Si noti che se $u\le c$ e $v<c$, \ $u\circ v\le c$, e in particolare se $u=c$ (fotone, segnale luminoso) $u\circ v=c$, come deve essere.\\
+Supponiamo ora che $P$ si muova in $K'$ con velocità ortogonale all'asse $x'$:
+\begin{equation}
+x'=0\,,\ \ y'(t)=ut'\,,\ \ z'=z_0'.
+\tag{4.52}
+\end{equation}
+Se ci accontentiamo di determinare $\vec u_P$ possiamo ragionare come segue:
+\begin{equation}
+(u_P)_x=v
+\tag{4.53}
+\end{equation}
+infatti $P$ si muove sull'asse $y'$ che si muove rispetto a $K$ con velocità $v$ in direzione dell'asse $x$;
+\begin{equation}
+(u_P)_y=\frac{\Delta y}{\Delta t}=\frac{\Delta y'}{\gamma(v)\Delta t'}=\frac{1}{\gamma(v)}u
+\tag{4.54}
+\end{equation}
+difatti dall'ultima delle (4.40) \ $\Delta t=\gamma(v)\Delta t'$ \ $(\Delta x'=0)$.\\
+L'angolo $\alpha$ che la traiettoria di $P$ forma con l'asse $y$ in $K$ è dato da
+\begin{equation}
+\tan\alpha=\frac{(u_P)_x}{(u_P)_y}=\gamma(v)\frac vu
+\tag{4.55}
+\end{equation}
+e se $P$ è un fotone ($u=c$), l'angolo $\alpha$ (angolo di aberrazione) è dato da
+\begin{equation}
+\tan\alpha=\gamma(v)\frac vc\equiv\beta\gamma
+\tag{4.56}
+\end{equation}
+che differisce dall'espressione non relativistica per il fattore $\gamma$. Se la propagazione della luce fosse istantanea ($c=\infty$) non ci sarebbe aberrazione: la misura dell'aberrazione della luce proveniente da stelle allo zenit, dovuta al moto di rivoluzione della terra ha permesso a J.Bradley (1725) una buona determinazione della velocità della luce.
+
+\subsection{La geometria dello spazio--tempo}
+
+Considerato in termini astratti, lo spazio degli eventi è uno spazio affine di dimensione 4. Nello spazio vettoriale associato $\mathcal M$ è definito un prodotto scalare la cui matrice è $G$, data dalla (4.17). Un vettore $v$ di $\mathcal M$ è detto di \emph{tipo tempo} se $(v,v)<0$, di \emph{tipo spazio} se $(v,v)>0$, di \emph{tipo luce} se $(v,v)=0$.\\
+Nell'insieme $V$ dei vettori di tipo tempo, $(v_1,v_2)<0$ \ è una relazione di equivalenza (dimostrare!) e le due classi di equivalenza in cui $V$ viene decomposto si indicano con $V^+$ e $V^-$ (la scelta di quale è l'una e quale è l'altra è arbitraria e viene fatta una volta per tutte); $V^+$ è detto il ``cono futuro'' e $V^-$ il ``cono passato''.\\
+In ogni base ortonormale \big($(e_\alpha,e_\beta)=\pm\delta_{\alpha\beta}$\big) esiste un solo vettore di tipo tempo; viceversa, dato un vettore normalizzato $e_0$ di tipo tempo, esiste una (ma non una sola!) base ortonormale contenente $e_0$. I riferimenti inerziali ``ortocroni'' (quelli nei quali il tempo ``scorre nel verso giusto'', cioè un fotone prima parte e poi arriva) sono in corrispondenza biunivoca con i vettori di $V^+$ (non di tutto $V$ perché il tempo ``scorre in un verso solo''): ogni riferimento inerziale $K$ è univocamente individuato da un vettore $e_0\in V^+$ che definisce ``l'asse delle $t$''; lo spazio (fisico) tridimensionale $K$ è il sottospazio di $\mathcal M$ ortogonale ad $e_0$; una terna $\hat\imath,\hat\jmath,\hat\kappa$ in $K$ costituisce insieme ad $e_0$ una base ortonormale ortocrona in $\mathcal M$. Le trasformazioni di Lorentz $L$, definite dalla (4.20), sono le matrici che trasformano basi ortonormali ortocrone in basi ortonormali ortocrone.\\
+Ristretto alla varietà tridimensionale $K$ il prodotto scalare definito da $G$ è euclideo e consente di introdurre il concetto di distanza: la distanza fra due punti $P$ e $Q$ è
+la norma del vettore $\overline{PQ}$, ed in termini di essa sono definiti i concetti metrici della geometria euclidea (teorema di Pitagora, trigonometria\dots); lo spazio degli eventi è prima di tutto uno spazio affine, e quindi ha in comune con lo spazio euclideo i concetti della geometria affine (rette, piani, parallelismo\dots), mentre quelli legati alle proprietà metriche risultano modificati in quanto sono indotti dal prodotto scalare definito dal tensore metrico $G$ che non è positivo definito (geometria di Lorentz--Minkowski).\\
+Le relazioni geometriche nello spazio--tempo sono relazioni fisiche fra gli eventi, e sono indipendenti dal riferimento (cioè invarianti per trasformazioni di Lorentz) proprio come nello spazio euclideo le proprietà e le relazioni puramente geometriche (teorema di Pitagora, teorema dei seni\dots) prescindono dall'uso delle coordinate, cioè dalla scelta di una base (invarianza per rotazioni); ovviamente esistono anche problemi che fanno esplicito riferimento alle coordinate (``la proiezione sull'asse $x$ di un segmento è uguale a\dots'').\\
+Se diciamo, per esempio, che le leggi della fisica newtoniana sono formulate in termini geometrici in uno spazio euclideo, intendiamo che esse sono formulate in termini di vettori (magari anche tensori\dots), fanno uso della geometria euclidea (p.es.\ vedi il significato geometrico del prodotto scalare o di quello vettoriale fra due vettori), e come tali sono indipendenti dalla scelta delle coordinate. Il superamento della fisica newtoniana significa che ora l'ambiente naturale in cui si formulano le leggi della fisica è lo spazio degli eventi, e che in questo spazio quadridimensionale esse devono essere formulate in termini geometrici, la geometria essendo ora quella di Lorentz--Minkowski; la geometria dello spazio--tempo, cioè in definitiva il tensore metrico $G$, determina quindi la fisica in tutti i riferimenti inerziali: le leggi della fisica (nei riferimenti inerziali) sono esprimibili come relazioni geometriche nello spazio--tempo (vuoto).\\
+Per esempio, la propagazione rettilinea della luce è espressa dicendo che la \textbf{linea di universo} di un fotone è una retta isotropa, cioè parallela ad un vettore isotropo \big($(v,v)=0$, detto anche ``vettore di tipo luce''\big), mentre le linee di universo delle particelle sono le rette (o i segmenti) ``di tipo tempo'', la ``linea di universo'' di una particella o di un fotone è l'insieme degli eventi sovrapposti alla particella stessa (una particella vive almeno per un certo tempo e occupa posizioni nello spazio e quindi individua una successione di eventi). In ogni riferimento la linea di universo della particella è vista come una relazione fra le sue coordinate spaziali e la sua coordinata temporale, cioè come la sua legge oraria: secondo questo ``modo di pensare quadridimensionale'' la linea di universo \underline{è} (dal punto di vista cinematico) \underline{la particella}, la legge oraria le sue coordinate.
+
+Esaminiamo un po' più da vicino la geometria di Lorentz--Minkowski; per semplicità ci limitiamo ad uno spazio--tempo bidimensionale, con tensore metrico $g$ come nella (4.29), e quindi le trasformazioni di Lorentz in questo spazio sono le (4.33), relative soltanto alle coordinate $x$ e $t$. Tutti i vettori (normalizzati) di tipo tempo in $V^+$ sono i vettori
+\begin{equation}
+e_0(\phi)=\begin{pmatrix}\cosh\phi\\\sinh\phi\end{pmatrix},\quad\ \big(e_0(\phi),e_0(\phi)\big)=-1;\qquad\ -\infty<\phi<\infty
+\tag{4.57}
+\end{equation}
+($V^+$, per definizione, si distingue da $V^-$ per il segno della 1$^{\rm a}$ componente); ortogonali ad $e_0$ sono i vettori (normalizzati)
+\begin{equation}
+e_1(\phi)=\pm\begin{pmatrix}\sinh\phi\\\cosh\phi\end{pmatrix},\quad\ \big(e_1(\phi),e_1(\phi)\big)=1
+\tag{4.58}
+\end{equation}
+(il segno $\pm$ dipende dalla scelta del verso dell'asse $x$). Scelto il segno $+$, le basi ortonormali ortocrone sono
+\begin{equation}
+\{e_0(\phi),\,e_1(\phi)\,\};\quad\ e_0(\phi)=\begin{pmatrix}\cosh\phi\\\sinh\phi\end{pmatrix},\quad\ e_1(\phi)=\begin{pmatrix}\sinh\phi\\\cosh\phi\end{pmatrix}.
+\tag{4.59}
+\end{equation}
+Date due basi \ $\{e_0(\phi_1),\,e_1(\phi_1)\,\}$; \ \ $\{e_0(\phi_2),\,e_1(\phi_2)\,\}$ \ si ha
+\begin{equation}
+\begin{aligned}
+\big(e_0(\phi_1),e_0(\phi_2)\big)&=-\cosh(\phi_1-\phi_2);&\quad\big(e_0(\phi_1),e_1(\phi_2)\big)&=\sinh(\phi_1-\phi_2)\\
+\big(e_1(\phi_1),e_0(\phi_2)\big)&=-\sinh(\phi_1-\phi_2);&\quad\big(e_1(\phi_1),e_1(\phi_2)\big)&=\cosh(\phi_1-\phi_2)
+\end{aligned}
+\tag{4.60}
+\end{equation}
+Se vogliamo rappresentare in $\boldsymbol R^2$ lo spazio--tempo (bidimensionale), in esso le due bisettrici dei quadranti $(1,3)$ e $(2,4)$ rappresentano le due rette isotrope, cioè le linee di universo dei fotoni passanti per l'origine: le rette isotrope costituiscono il \textbf{cono--luce}, perché in $\mathcal M$ costituiscono la superficie di un cono (quadridimensionale) a due falde ($V^+$ e $V^-$); il cono--luce separa i vettori di tipo tempo da quelli di tipo spazio. Una base $\{e_0(\phi),\,e_1(\phi)\,\}$ è rappresentata da due vettori simmetricamente disposti rispetto ad una delle rette isotrope e se ``applicati'' all'origine hanno l'altro estremo rispettivamente sulle iperboli \ $x_0^2-x_1^2=1$, e \ $x_1^2-x_0^2=1$.
+
+\paragraph{Esempi}
+\begin{enumerate}
+\item Possiamo ritrovare per via geometrica le trasformazioni di Lorentz senza rotazioni, date dalla (4.33).\\
+Siamo nello spazio--tempo quadridimensionale; i riferimenti $K$ e $K'$ siano individuati rispettivamente dai vettori di $V^+$ \ $e_0$ ed $e_0'$. Completiamo le basi prendendo i versori $\hat\imath$ e $\hat\imath\,'$ entrambi nel piano individuato da \ $e_0$ ed $e_0'$, e concordi ($\hat\imath\cdot\hat\imath\,'>0$); nel piano ortogonale prendiamo \ $\hat\jmath=\hat\jmath\,'$; \ $\hat\kappa=\hat\kappa'$, per cui \ $y'=y$ \ $z'=z$. Quindi ci siamo ricondotti allo spazio--tempo bidimensionale discusso sopra. Se $E$ è un evento in questo spazio e $v$ il vettore che lo individua, si ha (posto $e_1=\hat\imath$, \ $e_1'=\hat\imath\,'$)
+\begin{equation}
+v=x_0e_0+x_1e_1=x_0'e_0'+x_1'e_1'
+\tag{4.61}
+\end{equation}
+quindi dobbiamo esprimere \ $e_0$ ed \ $e_1$ \ in termini di \ $e_0'$ ed \ $e_1'$: si ha
+\[
+e_0=\alpha e_0'+\beta e_1'
+\]
+e dalle (4.60) con \ $e_\alpha(\phi_1)\equiv e_\alpha'$, \ $e_\alpha(\phi_2)\equiv e_\alpha$ \ e \ $\theta=\phi_1-\phi_2$, si ha
+\begin{equation}
+\begin{aligned}
+&\alpha=-(e_0',e_0)=\cosh\theta,\quad\ \beta=(e_1',e_0)=-\sinh\theta\quad\ \Rightarrow\\
+&e_0=\cosh\theta\,e_0'-\sinh\theta\,e_1'
+\end{aligned}
+\tag{4.62}
+\end{equation}
+e analogamente
+\begin{equation}
+e_1=-\sinh\theta\,e_0'+\cosh\theta\,e_1'\,.
+\tag{4.63}
+\end{equation}
+Inserite le (4.62) e (4.63) nella (4.61) si ottengono le (4.33).\\
+Nelle (4.60) \ $\phi_1-\phi_2$ \ è la rapidità del riferimento $e_\alpha(\phi_1)$ rispetto al riferimento $e_\alpha(\phi_2)$.
+\item Ritroviamo per via geometrica la dilatazione dei tempi.\\
+Siano $E_1$ ed $E_2$ gli eventi corrispondenti alla produzione e al decadimento del
+mesone $\mu$ e sia \ $v\in V^+$ \ il vettore $\overline{E_1E_2}$. In ogni riferimento il tempo di vita del mesone $\mu$ è la coordinata temporale (in quel riferimento) del vettore $v$: nel riferimento in cui il mesone è in quiete $v$ è parallelo all'asse dei tempi $e_0'$, quindi detto \ $\tau$ \ il tempo di vita del mesone nel suo riferimento di quiete, si ha
+\begin{equation}
+v=c\tau\,e_0',\qquad\quad\Big(c\tau\equiv\sqrt{-(v,v)}\,\Big).
+\tag{4.64}
+\end{equation}
+In un riferimento individuato da $e_0$ la coordinata temporale del vettore $v$, cioè l'intervallo temporale $\Delta t$ fra i due eventi, si ottiene da
+\begin{equation}
+\begin{aligned}
+&v=c\Delta t\,e_0+\alpha\,e_1\quad\ \Rightarrow\\
+&c\Delta t=-(v,e_0)=-c\tau(e_0',e_0)=c\tau\,\cosh\theta=c\gamma(v)\tau\,.
+\end{aligned}
+\tag{4.65}
+\end{equation}
+\item Ed infine la contrazione delle lunghezze.\\
+Nella figura 4.2 le linee tratteggiate sono le linee di universo degli estremi di una sbarretta di lunghezza propria $L_0$. Nel riferimento $K'$ di quiete della sbarretta $e_0'$ è parallelo alle due linee di universo ed $e_1'$ ha la direzione simmetrica a quella di $e_0'$ rispetto alle linee del cono--luce (linee punteggiate nella figura 4.2).\\
+In un riferimento $K$ la lunghezza $L$ è per definizione la distanza fra le due linee di universo presa ad un dato istante. Dalla figura si vede che i vettori \ $L_0e_1'$ \ e \ $Le_1$ \ differiscono per un vettore parallelo ad \ $e_0'$, quindi
+\fig{fig4_2}{4.2}
+\[
+L_0\,e_1'=L\,e_1+\alpha\,e_0'\quad\ \Rightarrow\quad\ L_0=L\,(e_1',e_1)
+\]
+e dalla (4.63)
+\[
+L_0=L\,\cosh\theta\ \Rightarrow\ L=L_0/\gamma(v).
+\]
+\end{enumerate}
+
+\subsection{Il tempo proprio e la quadrivelocità}
+
+Abbiamo determinato la legge di composizione delle velocità in due casi particolari, quelli in cui il moto della particella è parallelo oppure ortogonale alla velocità relativa dei due riferimenti. Non c'è nessun problema a determinare le formule di composizione delle velocità nel caso generale in cui la velocità $\vec w$ della particella nel riferimento $K$ è comunque orientata rispetto alla velocità relativa $\vec v$ di $K'$ rispetto a $K$: diamo direttamente il risultato nel caso di trasformazioni senza rotazioni, lasciandone la derivazione come esercizio:
+\begin{equation}
+\left\{\begin{aligned}
+w_x'&=\frac{w_x-v}{(1-w_xv/c^2)}\\
+w_y'&=\frac{w_y}{\gamma(v)\big(1-w_xv/c^2\big)}\\
+w_z'&=\frac{w_z}{\gamma(v)\big(1-w_xv/c^2\big)}
+\end{aligned}\right.
+\qquad\qquad\vec w\,'=\vec w\circ(-\vec v)
+\tag{4.66}
+\end{equation}
+che nei casi particolari citati prima coincidono con le inverse ($v\to-v$) delle (4.51) e (4.54).\\
+Le (4.66) non hanno un aspetto particolarmente attraente, e neppure tanto facile da ricordare: la ragione sta nel fatto che, essendo la velocità definita come spazio/tempo, cambiando riferimento cambiano sia il numeratore che il denominatore. Dal momento che ci sarà utile più avanti, possiamo definire una grandezza, detta \textbf{quadrivelocità}, legata alla velocità di una particella, che ha leggi di trasformazione identiche a quelle delle coordinate, e quindi più semplici di quelle della velocità. Cominciamo con la definizione di \textbf{tempo proprio} di una particella in moto: se la particella si muove di moto rettilineo uniforme il tempo proprio $\tau$ è il tempo misurato nel riferimento in cui la particella è in quiete: abbiamo già incontrato questo concetto a proposito della dilatazione dei tempi e della vita media del mesone $\mu$. Se il moto della particella non è uniforme, si definisce (ad ogni istante) l'\underline{intervallo} (infinitesimo) di tempo proprio $\Delta\tau$ come l'intervallo di tempo misurato in un riferimento inerziale rispetto al quale la particella è istantaneamente ferma: con terminologia molto espressiva un tal riferimento è detto \textbf{riferimento tangente} al moto della particella, in quanto è individuato dal versore $e_0$ tangente alla linea di universo della particella; ovviamente il riferimento tangente cambia da istante a istante. Per come è stato definito, l'intervallo di tempo proprio è un \underline{invariante} e, se $w$ è la velocità della particella in un riferimento $K$, e quindi anche la velocità del riferimento tangente rispetto a $K$, per la (4.42) o (4.43) o (4.65) si ha
+\begin{equation}
+\Delta\tau=\frac{\Delta t}{\gamma(w)}\,\cdot
+\tag{4.67}
+\end{equation}
+La quadrivelocità \ $u\equiv(u_0,\vec u)$ \ viene definita come il rapporto fra lo spazio percorso ed il tempo proprio impiegato a percorrerlo:
+\begin{equation}
+u_0\defeq\lim_{\Delta\tau\to0}\frac{c\Delta t}{\Delta\tau};\quad\ u_1\defeq\lim_{\Delta\tau\to0}\frac{\Delta x}{\Delta\tau},\ \ u_2\defeq\lim_{\Delta\tau\to0}\frac{\Delta y}{\Delta\tau},\ \ u_3\defeq\lim_{\Delta\tau\to0}\frac{\Delta z}{\Delta\tau}
+\tag{4.68}
+\end{equation}
+e per la (4.67) si ha
+\begin{equation}
+u_1=\frac{dx}{dt}\cdot\frac{dt}{d\tau}\,,\ \cdots\quad\ \Rightarrow\quad\ \vec u=\gamma(w)\vec w;\qquad\ u_0=c\gamma(w).
+\tag{4.69}
+\end{equation}
+Siccome $\Delta\tau$ è un invariante, la legge di trasformazione della quadrivelocità è quella di $c\Delta t$, $\Delta x$, $\Delta y$, $\Delta z$, cioè quella delle coordinate spazio--temporali:
+\begin{equation}
+u'=L(\theta)\,u
+\tag{4.70}
+\end{equation}
+in particolare (trasformazioni senza rotazioni)
+\begin{equation}
+\left\{\begin{aligned}
+u_x'&=\gamma(v)(u_x-\beta u_0)\\
+u_y'&=u_y\\
+u_z'&=u_z\\
+u_0'&=\gamma(v)(u_0-\beta u_x)\,.
+\end{aligned}\right.
+\tag{4.71}
+\end{equation}
+Siccome per la (4.69) è anche $u_0'=c\gamma(w')$, dall'ultima delle (4.71) e dalle (4.69) si ha
+\begin{equation}
+u_0'=c\gamma(w')=\gamma(v)(u_0-\beta u_x)=c\gamma(v)\gamma(w)(1-vw_x/c^2)
+\tag{4.72}
+\end{equation}
+da cui, essendo \ $\vec w\,'=\vec w\circ(-\vec v)$ (la particella ha velocità $\vec w$ rispetto a $K$ che ha velocità $-\vec v$ rispetto a $K'$), si ottiene l'identità
+\begin{equation}
+\gamma(w')=\gamma(v)\gamma(w)(1-vw_x/c^2);\qquad\qquad\vec w\,'=\vec w\circ(-\vec v).
+\tag{4.73}
+\end{equation}
+(Nella (4.73) $\vec v$ è parallelo e concorde con l'asse $x$; nel caso generale al posto di $vw_x$ si ha $\vec v\cdot\vec w$\,).\\
+Dalle (4.69) e (4.71) si ha
+\begin{equation}
+\left\{\begin{aligned}
+\gamma(w')w_x'&=\gamma(v)\gamma(w)(w_x-v)\\
+\gamma(w')w_y'&=\gamma(w)w_y\\
+\gamma(w')w_z'&=\gamma(w)w_z
+\end{aligned}\right.
+\tag{4.74}
+\end{equation}
+per cui, grazie alla (4.73), si ottengono le (4.66), che risultano così dimostrate senza calcoli troppo laboriosi.
+
+Onde evitare confusioni, si noti che in questa discussione intervengono due fattori $\gamma$ con significati diversi: uno, $\gamma(v)$, dovuto al cambiamento di riferimento, ed uno, $\gamma(w)$, nella definizione della quadrivelocità.
