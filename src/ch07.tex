@@ -1,0 +1,594 @@
+\section{MAGNETOSTATICA}
+
+\subsection{Il significato del rotore e il teorema di Stokes}
+
+Il rotore (o rotazione) di un campo vettoriale è stato introdotto nel 1$^\circ$ capitolo e definito dalla (1.65). Come per la divergenza di un campo vettoriale, anche per il rotore è possibile dare una definizione intrinseca, cioè indipendente dalle coordinate: è un po' più complicata perché, mentre la divergenza di un campo vettoriale è un campo scalare, la rotazione è essa stessa un campo vettoriale.
+\fig{fig7_1}{7.1}
+Sia $\Delta\vec S$ una superficie infinitesima orientata, $P$ un punto interno e $\gamma$ il suo contorno, sul quale il verso di percorrenza è, per definizione, quello antiorario rispetto a $\Delta\vec S$.\\
+Sia $\vec F$ un campo vettoriale (di classe $C^1$) e $C[\Delta\vec S\,]$ la circuitazione di $\vec F$ su $\gamma$. Vogliamo dimostrare (ma in effetti ci limitiamo a dire quali sono le idee su cui si basa la dimostrazione) che (per $\Delta S\to0$) \ $\Delta\vec S\mapsto C[\Delta\vec S\,]$ \ è una applicazione lineare:
+\begin{equation}
+C[\Delta\vec S\,]=\sum_{i=1}^3R_i\Delta S_i\equiv\vec R(P)\cdot\Delta\vec S.
+\tag{7.1}
+\end{equation}
+La (7.1) dice che la circuitazione di $\vec F$ sul bordo di una superficie infinitesima $\Delta\vec S$ è uguale al flusso attraverso $\Delta\vec S$ di un opportuno campo vettoriale $\vec R$. Il campo vettoriale $\vec R$ vedremo essere proprio la rotazione di $\vec F$ definita dalla (1.65).\\
+Per dimostrare la (7.1) prendiamo -- per semplicità -- per $\Delta\vec S$ il triangolo $ABC$ della figura 7.1, orientato in modo che il verso di percorrenza di $\gamma$ sia $ABCA$. Si consideri il tetraedro $OABC$ (figura 7.1) in cui tre facce sono parallele agli assi cartesiani. Si ha
+\begin{equation}
+\Delta\vec S=\Delta S_x\,\hat\imath+\Delta S_y\,\hat\jmath+\Delta S_z\,\hat\kappa
+\tag{7.2}
+\end{equation}
+dove \ $\Delta S_x,\Delta S_y,\Delta S_z$ \ sono le componenti di $\Delta\vec S$ lungo i tre assi (cioè le aree con segno $OBC$ ecc.).\\
+Poiché la circuitazione lungo $ABCA$ è uguale alla somma delle circuitazioni \ $OBCO$, $OCAO$, $OABO$, cioè
+\begin{equation}
+\begin{aligned}
+C[\Delta\vec S\,]&=C[\Delta S_x\,\hat\imath\,]+C[\Delta S_y\,\hat\jmath\,]+C[\Delta S_z\,\hat\kappa]\\
+&=\frac{C[\Delta S_x\,\hat\imath\,]}{\Delta S_x}\,\Delta S_x+\frac{C[\Delta S_y\,\hat\jmath\,]}{\Delta S_y}\,\Delta S_y+\frac{C[\Delta S_z\,\hat\kappa]}{\Delta S_z}\,\Delta S_z\,,
+\end{aligned}
+\tag{7.3}
+\end{equation}
+il vettore $\vec R$ è definito da
+\begin{equation}
+R_x=\lim_{\Delta S_x\to0}\frac{C[\Delta S_x\,\hat\imath\,]}{\Delta S_x};\ \ R_y=\lim_{\Delta S_y\to0}\frac{C[\Delta S_y\,\hat\jmath\,]}{\Delta S_y};\ \ R_z=\lim_{\Delta S_z\to0}\frac{C[\Delta S_z\,\hat\kappa]}{\Delta S_z}
+\tag{7.4}
+\end{equation}
+quando il limite (che era sottinteso dal fatto che $\Delta\vec S$ è infinitesimo) esiste (finito) al tendere a zero di $\Delta S$, indipendentemente dalla sua forma e dal suo orientamento.\\
+Dimostriamo ora che il vettore $\vec R$ coincide con la rotazione di $\vec F$ nel punto $P$, definita dalla (1.65): prendiamo per $\Delta\vec S$ un rettangolo parallelo al piano $x,y$ di lati $\Delta x$, $\Delta y$ con centro nel punto $P$ di coordinate $(x,y,z)$. Si ha
+\begin{equation}
+\begin{aligned}
+C[\Delta\vec S\,]&=F_x(x,y-\Delta y/2,z)\Delta x+F_y(x+\Delta x/2,y,z)\Delta y+\\
+&\quad-F_x(x,y+\Delta y/2,\,,z)\Delta x-F_y(x-\Delta x/2,y,z)\Delta y=\\
+&=\Big(\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}\Big)\Delta x\Delta y+o(\Delta x\Delta y)
+\end{aligned}
+\tag{7.5}
+\end{equation}
+e quindi
+\begin{equation}
+\lim_{\Delta S\to0}R_z\equiv\lim_{\Delta S\to0}\frac{C[\Delta S\,\hat\kappa]}{\Delta S}=\Big(\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}\Big)\equiv\big(\rot\vec F\,\big)_z
+\tag{7.6}
+\end{equation}
+e analoghe per le altre componenti. In generale
+\begin{equation}
+\big(\rot\vec F\,\big)_n\equiv\big(\rot\vec F\,\big)\cdot\hat n=\lim_{\Delta S\to0}\frac{C[\Delta S\,\hat n]}{\Delta S}
+\tag{7.7}
+\end{equation}
+quindi la rotazione di un campo vettoriale $\vec F$ è un campo vettoriale le cui componenti sono la \textbf{circuitazione per unità di area} del campo $\vec F$ lungo i bordi di superfici orientate nella direzione della componente considerata.
+
+Sia ora $S$ una superficie orientabile su cui $\rot\vec F$ è ovunque definito, e sia $\gamma$ il contorno (se $S$ è una superficie chiusa $\gamma$ è nullo: una superficie chiusa non ha bordo). Se $S$ viene divisa in due parti $S_1$ e $S_2$ da una linea $\gamma'$ (figura 7.2) che è quindi il tratto a comune, ma con versi di percorrenza opposti, dei due contorni $\gamma_1$ e $\gamma_2$, si ha
+\fig{fig7_2}{7.2}
+\begin{equation}
+\oint_\gamma\vec F\cdot d\vec s=\oint_{\gamma_1}\vec F\cdot d\vec s+\oint_{\gamma_2}\vec F\cdot d\vec s.
+\tag{7.8}
+\end{equation}
+Quindi, se $\Delta S_1\cdots\Delta S_i\cdots\Delta S_n$ è una partizione di $S$, si ha
+\begin{equation}
+\oint_\gamma\vec F\cdot d\vec s=\sum_{i=1}^n\oint_{\gamma_i}\vec F\cdot d\vec s
+\tag{7.9}
+\end{equation}
+e per la (7.1) nel limite $n\to\infty$ \quad $(\Delta S_i\to0)$
+\begin{equation}
+\lim_{n\to\infty}\sum_{i=1}^n\oint_{\gamma_i}\vec F\cdot d\vec s=\lim_{n\to\infty}\sum_{i=1}^n\rot\vec F\cdot\Delta\vec S_i
+\tag{7.10}
+\end{equation}
+da cui
+\begin{equation}
+\oint_\gamma\vec F\cdot d\vec s=\int_S\rot\vec F\cdot d\vec S.
+\tag{7.11}
+\end{equation}
+Si noti che siccome il 1$^\circ$ membro della (7.11) dipende solo da $\gamma$, se due superfici $S$ e $S'$ hanno lo stesso contorno il 2$^\circ$ membro è lo stesso.\\
+La (7.11), anche se il modo in cui la abbiamo ottenuta non ha certo la dignità di una ``vera'' dimostrazione, costituisce il
+
+\textbf{\textit{Teorema di Stokes.}} \textit{Sia $S$ una superficie (orientabile) e $\gamma$ il suo contorno. La circuitazione di un campo vettoriale su $\gamma$ è uguale al flusso attraverso $S$ della sua rotazione. Se $S'$ è un'altra superficie avente $\gamma$ come contorno, il flusso attraverso $S'$ è uguale al flusso attraverso $S$.}
+
+Se $S$ è una superficie chiusa, $\gamma$ è il circuito nullo, quindi nella (7.11) il 1$^\circ$ membro è zero, e perciò è zero anche il 2$^\circ$. Quindi
+
+\textbf{\textit{Corollario.}} \textit{Il flusso attraverso una superficie chiusa della rotazione di qualsiasi campo vettoriale è sempre nullo.}
+
+Grazie alla definizione (1.21) della divergenza come densità di flusso, il corollario è espresso in forma locale dall'identità (che può anche essere verificata direttamente)
+\begin{equation}
+\dive\Big(\rot\vec F(x,y,z,t)\Big)=0\qquad\quad\forall\vec F(x,y,z,t).
+\tag{7.12}
+\end{equation}
+Un campo a divergenza nulla è detto \textbf{solenoidale}: la rotazione di un campo è quindi un campo solenoidale; il campo magnetico, essendo a divergenza nulla, è anch'esso un campo solenoidale.
+
+Il teorema di Stokes permette di trasformare un integrale di superficie (il flusso di $\rot\vec F$) in un integrale di linea (la circuitazione di $\vec F$); esso, tuttavia, ci sarà spesso più utile nell'altro verso (cioè per trasformare una circuitazione in un flusso) e ciò per due ragioni: 1$^\circ$ perché non sempre un campo vettoriale è la rotazione di un altro campo vettoriale, mentre invece la rotazione di un campo (sufficientemente regolare) esiste sempre; 2$^\circ$ perché ciò sarà richiesto dal problema fisico: tipico sarà il caso della legge dell'induzione in cui la f.e.m.\ in un circuito, cioè la circuitazione del campo elettrico (v.\ capitolo 3.5), verrà collegata con il flusso del campo magnetico attraverso una superficie di cui il circuito sia il bordo, ed in questo caso il dato è il circuito, non la superficie. Tutto ciò non costituisce un problema, \underline{purché} per i circuiti che dovremo prendere in considerazione si possa sempre garantire l'esistenza di (almeno) una superficie di cui il circuito dato sia il bordo: questo non è un problema banale, come può sembrare a prima vista, in quanto anche i circuiti normalmente utilizzati nelle applicazioni possono avere una topologia complicata (nodi, incroci), in modo da non poter essere pensati come semplici deformazioni di circonferenze. Per fortuna ci viene incontro un bel teorema di topologia che ci assicura che per ogni circuito con un numero finito di incroci esiste sempre una superficie orientabile (``superficie di Seifert'') di cui il dato circuito è il bordo, e questo è proprio quello che ci serve.
+
+Abbiamo subito una applicazione di quanto sopra: sappiamo che \ $\rot\vec F=0$ \ è condizione necessaria perché $\vec F$ sia conservativo; se la regione $\mathcal D$ in cui $\vec F$ è definito è semplicemente connessa, cioè ogni circuito $\gamma$ è riducibile (restando dentro $\mathcal D$) con continuità ad un punto (una regione bidimensionale con un ``buco'' non è semplicemente connessa, e analogamente $\boldsymbol R^3$ privato di un cilindro o di un toro non è semplicemente connesso: vedremo che situazioni di questo tipo sono fisicamente rilevanti), allora la condizione \ $\rot\vec F=0$ \ è anche sufficiente: infatti in tal caso ogni circuito del tipo considerato sopra è il bordo di una superficie tutta interna alla regione, e dal teorema di Stokes segue che la circuitazione di $\vec F$ su questi circuiti è nulla. Il fatto che la circuitazione di un campo sia nulla per tutti i circuiti del tipo considerato è sufficiente a garantire che essa è nulla per qualunque circuito.
+
+Concludiamo questo paragrafo con una importante osservazione: se prendiamo la divergenza di ambo i membri della 4$^\mathrm{a}$ delle (6.53), grazie alla (7.12) e alla 1$^\mathrm{a}$ delle (6.53) si ha
+\[
+0=\frac{4\pi}{c}\dive\vec J+\frac{1}{c}\frac{\partial}{\partial t}\dive\vec E\quad\ \Rightarrow\quad\ \dive\vec J+\frac{\partial\rho}{\partial t}=0
+\]
+cioè l'equazione (3.10). Quindi l'equazione che esprime la conservazione della carica è una conseguenza delle equazioni di Maxwell.
+
+\subsection{Le equazioni della magnetostatica}
+
+Se le sorgenti non dipendono dal tempo, \ $\rho=\rho(x,y,z)$; \ $\vec J=\vec J(x,y,z)$, \ le equazioni di Maxwell ammettono soluzioni statiche (ma non solo), cioè con $\vec E$ e $\vec B$ indipendenti dal tempo: queste sono determinate dalle (6.53) in cui vengono messe uguali a zero le derivate temporali dei campi:
+\begin{equation}
+\left\{\begin{aligned}
+&\dive\vec E=4\pi\rho\\[4pt]
+&\rot\vec E=0
+\end{aligned}\right.
+\tag{7.13}
+\end{equation}
+\begin{equation}
+\left\{\begin{aligned}
+&\dive\vec B=0\\[4pt]
+&\rot\vec B=\frac{4\pi}{c}\vec J.
+\end{aligned}\right.
+\tag{7.14}
+\end{equation}
+Dalla (7.12) e dalla seconda delle (7.14) segue \ $\dive\vec J=0$, cioè la (3.11), che è quindi condizione necessaria per la validità delle (7.14).
+
+Le equazioni per il campo elettrico e quelle per il campo magnetico sono indipendenti: le (7.13) sono le equazioni dell'elettrostatica, e di esse già conosciamo la soluzione, mentre le (7.14) determinano il campo magnetico statico. Si noti che mentre nell'elettrostatica le (7.13) hanno rappresentato il punto di arrivo, in quanto le abbiamo ricavate a partire dalle proprietà della soluzione del problema elettrostatico, le (7.14) nella magnetostatica costituiscono il punto di partenza: il campo magnetico lo dobbiamo determinare a partire dalle (7.14).
+
+Come già sappiamo, la prima delle (7.14) esprime il fatto che è nullo il flusso di $\vec B$ uscente da una qualsiasi superficie chiusa; ne deriva che il flusso di $\vec B$ attraverso una superficie dipende solo dal suo contorno e \underline{non} dalla forma della superficie: infatti se $S_1$ ed $S_2$ hanno lo stesso contorno $\gamma$, siccome è nullo il flusso uscente dal volume racchiuso dalle due superfici, il flusso attraverso $S_1$ è uguale al flusso attraverso $S_2$, quando entrambe siano orientate in modo che il verso di percorrenza di $\gamma$, considerato come contorno di $S_1$ o di $S_2$, sia lo stesso.\\
+La versione integrale della seconda delle (7.14) è fornita dal teorema di Stokes:
+\begin{equation}
+\oint_\gamma\vec B\cdot d\vec s=\int_S\rot\vec B\cdot d\vec S=\frac{4\pi}{c}\int_S\vec J\cdot d\vec S\equiv\frac{4\pi}{c}I_\gamma
+\tag{7.15}
+\end{equation}
+dove $\gamma$ è un circuito arbitrario e $I_\gamma$ è la corrente che attraversa una qualsiasi superficie $S$ avente $\gamma$ come contorno (``corrente concatenata con $\gamma$''); siccome $I_\gamma$ è il flusso di $\vec J$ attraverso $S$, il suo segno è determinato dall'orientamento di $S$, e quindi dal verso di percorrenza di $\gamma$. La (7.15) è nota come
+
+\textbf{\textit{Teorema di Ampère.}} \textit{La circuitazione di $\vec B$ su un qualsiasi circuito $\gamma$ è uguale a $4\pi/c$ volte la corrente concatenata con il circuito.}
+
+Nel SI la (7.15) si scrive in maniera diversa: a secondo membro è presente il fattore $k/c$ \ $(k=1/4\pi\epsilon_0=9\times10^9)$; il $c$ al denominatore è dovuto al fatto che nel SI la forza di Lorentz si scrive senza il fattore $1/c$ \big(v.\ (4.2')\big). Posto (nel SI)
+\begin{equation}
+\frac{k}{c^2}\equiv\frac{\mu_0}{4\pi}\quad\ \Rightarrow\quad\ \frac{1}{c}=\sqrt{\epsilon_0\mu_0};\qquad\ \mu_0=4\pi\times10^{-7}\,\mathrm{newton/ampère^2}
+\tag{7.16}
+\end{equation}
+($\mu_0$ è detta \textbf{\textit{permeabilità magnetica del vuoto}}), la seconda delle (7.14) si scrive
+\begin{equation}
+\rot\vec B=\mu_0\vec J
+\tag{7.14'}
+\end{equation}
+e il teorema di Ampère nel SI assume la forma
+\begin{equation}
+\oint_\gamma\vec B\cdot d\vec s=\mu_0I_\gamma.
+\tag{7.15'}
+\end{equation}
+Le (7.14) o equivalentemente la (7.15) mostrano che il campo magnetico non è un campo conservativo, in compenso è solenoidale. Sappiamo che la rotazione di qualsiasi campo vettoriale è a divergenza nulla, ed è naturale chiedersi se ogni campo a divergenza nulla sia esprimibile come la rotazione di un opportuno campo vettoriale: la risposta è sì, anzi esiste una classe di campi la cui rotazione è uguale ad un dato campo solenoidale, e fra questi ne esiste sempre uno che è a divergenza nulla. Dimostreremo più avanti questa affermazione. Quindi esiste un campo vettoriale $\vec A$, detto \textbf{potenziale vettore}, tale che
+\begin{equation}
+\vec B=\rot\vec A;\qquad\quad\dive\vec A=0.
+\tag{7.17}
+\end{equation}
+In termini del potenziale vettore la 2$^\mathrm{a}$ delle (7.14) si scrive
+\begin{equation}
+\rot(\rot\vec A)=\frac{4\pi}{c}\vec J.
+\tag{7.18}
+\end{equation}
+Per calcolare la doppia rotazione conviene (ma è sempre possibile il calcolo diretto) usare la seguente notazione
+\begin{equation}
+(\rot\vec A)_i=\epsilon_{ijk}\,\partial_jA_k\qquad\quad\left(\partial_jA_k\equiv\frac{\partial A_k}{\partial x_j}\right)
+\tag{7.19}
+\end{equation}
+avendo adottato la convenzione di somma sugli indici ripetuti. Quindi
+\begin{equation}
+\begin{aligned}
+\big(\rot(\rot\vec A)\big)_i&=\epsilon_{ijk}\,\partial_j(\rot\vec A)_k=\epsilon_{ijk}\,\partial_j\,\epsilon_{klm}\,\partial_lA_m\\
+&=(\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl})\,\partial_j\partial_lA_m=\partial_i\partial_jA_j-\partial_j\partial_jA_i\\
+&=\partial_i\,(\dive\vec A)-\Delta\,A_i
+\end{aligned}
+\tag{7.20}
+\end{equation}
+dove $\Delta$ è l'operatore di Laplace. Quindi, siccome \ $\dive\vec A=0$,
+\begin{equation}
+\Delta\,\vec A=-\frac{4\pi}{c}\vec J.
+\tag{7.21}
+\end{equation}
+Le tre componenti dell'equazione (7.21) sono identiche all'equazione di Poisson (1.85) della quale conosciamo la soluzione, che è data dalla (1.59); quindi
+\begin{equation}
+\vec A(\vec r\,)=\frac{1}{c}\int\frac{\vec J(\vec r\,')}{|\vec r-\vec r\,'|}\,dV
+\tag{7.22}
+\end{equation}
+dove l'integrale è esteso alla regione in cui $\vec J\ne0$. Ovviamente bisogna assicurarsi che $\vec A$ dato dalla (7.22) è a divergenza nulla; non facciamo questa verifica, in quanto si tratta solo di un problema di calcolo e di integrazione per parti: risulta che la divergenza del 2$^\circ$ membro della (7.22) è zero grazie al fatto che \ $\dive\vec J=0$, cioè al fatto che $\vec J$ è una corrente stazionaria.\\
+Per ottenere il campo magnetico occorre calcolare la rotazione del 2$^\circ$ membro della (7.22): lasciamo al lettore anche questo calcolo che non presenta particolari difficoltà e che costituisce niente di più che un esercizio; il risultato è
+\begin{equation}
+\vec B(\vec r\,)=\frac{1}{c}\int\frac{\vec J(\vec r\,')\wedge(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV
+\tag{7.23}
+\end{equation}
+che risolve le (7.14).\\
+(Siccome $\vec B$ dato dalla (7.23) risolve le (7.14), allora la soluzione delle (7.17) si ottiene sostituendo nella (7.23) $\vec B$ con $\vec A$ e $4\pi\vec J/c$ con $\vec B$: ciò dimostra l'esistenza del potenziale vettore).
+
+Spesso la corrente è concentrata in un filo conduttore, che costituisce quindi un tubo di flusso; in questo caso, se lo spessore del filo è sufficientemente piccolo da poter considerare i termini $(\vec r-\vec r\,')$ (sia al numeratore che al denominatore) costanti quando $\vec r\,'$ varia attraverso la sezione del filo, e la direzione di $\vec J$ coincidente (in ogni punto) con la direzione del filo, possiamo dare alla (7.23) una forma più conveniente: scriviamo l'elemento di volume $dV$ nella (7.23) come \ $dV=dS\,dl$, dove $dS$ è l'elemento della sezione $S$ del filo e $dl$ è l'elemento di lunghezza; nelle ipotesi dette ($\vec r-\vec r\,'$ costante su $S$), l'integrazione su $dS$, essendo \ $\vec J dS\,dl=J\,dS\,d\vec l$ \ (la direzione di $\vec J$ coincide con la direzione $d\vec l$ del filo), ci dà $I\,d\vec l$, dove $I$ è il flusso di $\vec J$ attraverso la generica sezione $S$, cioè la corrente nel filo. Quindi la (7.23), dopo l'integrazione su $dS$ \ $(\vec J dV\to I d\vec l\,)$, diventa
+\begin{equation}
+\vec B(\vec r\,)=\frac{I}{c}\int\frac{d\vec l\wedge(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\qquad\qquad\text{(legge di Biot -- Savart).}
+\tag{7.24}
+\end{equation}
+Come nella (7.22), così nella (7.23) l'integrale è esteso a tutto il volume dove sono presenti le sorgenti, e nella (7.24) a tutto il filo percorso dalla corrente $I$. È certamente possibile, dal punto di vista matematico, per esempio nel caso della (7.24), scomporre l'integrale nella somma di due o più integrali ciascuno esteso ad una porzione di filo, ma questa scomposizione \textbf{non} corrisponde a calcolare il campo magnetico generato dalle singole porzioni: il contributo di una porzione di filo \textbf{non} è un campo magnetico in quanto non soddisfa le (7.14). Infatti sappiamo che \ $\dive\vec J=0$ \ è condizione necessaria per la validità delle (7.14): se un tubo di flusso della corrente viene tagliato, nessuna delle due parti in cui la corrente è stata suddivisa è a divergenza nulla (in un volume attorno al taglio c'è flusso entrante ma non flusso uscente, o viceversa). Questo discorso non ha nulla a che fare con il principio di sovrapposizione, che riguarda il campo dovuto a più sorgenti \underline{reali}, e che quindi non contraddicono le equazioni generali alle quali le sorgenti devono soddisfare: un pezzo di un filo percorso da corrente non è, senza il resto del filo, una sorgente reale.
+
+\subsection{Il campo di una spira e di un solenoide}
+
+Un filo conduttore di forma circolare è percorso dalla corrente $I$; utilizzando la (7.24) vogliamo determinare il campo $\vec B$ sull'asse della spira. Sia $a$ il raggio della spira, disposta nel piano $z=0$ con il centro nell'origine; prendiamo nella (7.24) $d\vec l$ \ in verso antiorario (rispetto all'asse $z$), quindi $I>0$ se concorde con $d\vec l$, altrimenti $I<0$.
+\fig{fig7_3}{7.3}
+``Per ragioni di simmetria'' il campo sull'asse ha la direzione dell'asse, quindi basta prendere la componente $z$ della (7.24): siccome $\vec r$ \ ha la direzione dell'asse $z$,
+\begin{equation}
+\big(d\vec l\wedge(\vec r-\vec r\,')\big)_z=-(d\vec l\wedge\vec r\,')_z=a\,dl
+\tag{7.25}
+\end{equation}
+e quindi
+\begin{equation}
+B_z(z)=\frac{I}{c}\oint\frac{a\,dl}{(a^2+z^2)^{3/2}}=\frac{2\pi Ia^2}{c(a^2+z^2)^{3/2}}\,\cdot
+\tag{7.26}
+\end{equation}
+$\vec B$ ha il verso dell'asse $z$ se la corrente circola in senso antiorario, altrimenti ha il verso opposto. In particolare si noti che (sull'asse) il verso del campo è lo stesso sia sopra la spira che sotto: il confronto con il caso del campo elettrico generato da una circonferenza con carica lineare $\lambda$ ed un uso errato delle simmetrie avrebbe potuto far ritenere che il campo debba avere verso opposto dalle due parti della spira, e di conseguenza che debba essere nullo nel centro della spira. Questa conclusione, corretta nel caso del campo elettrico, è errata nel caso del campo magnetico in quanto una rotazione di 180$^\circ$ che inverta l'asse $z$ inverte anche il verso della corrente, mentre non cambia il segno della carica lineare $\lambda$ che genera il campo elettrico.\\
+Un'altra differenza con il caso della distribuzione di carica, è che per \ $|z|\to\infty$, \ $\vec B=O(1/z^3)$, mentre \ $\vec E=O(1/z^2)$: la ragione è dovuta al fatto che, siccome le cariche magnetiche non esistono, il campo magnetico è sempre (almeno) un campo di dipolo.
+
+Come conseguenza delle proprietà di trasformazione del campo magnetico (che discuteremo più avanti in questo paragrafo e nel prossimo) le linee di forza di $\vec B$ giacciono nei piani contenenti l'asse della spira, attraversano ortogonalmente il piano che la contiene, in un verso all'interno della spira e nel verso opposto all'esterno; inoltre si richiudono su se stesse (eccetto quella che coincide con l'asse) e più si avvicinano al filo della spira e più tendono a diventare delle circonferenze sulle quali, per il teorema di Ampère, il campo diverge come $1/r$, dove $r$ è la distanza dalla spira. La figura 7.4 illustra qualitativamente le linee di forza in un piano contenente l'asse: i due circoletti neri sono le intersezioni della spira con detto piano.
+\fig{fig7_4}{7.4}
+Un solenoide è un insieme di $N$ spire identiche sovrapposte, ciascuna percorsa da una corrente $I$; se $L$ è la lunghezza del solenoide, \ $n\equiv N/L$ \ è il numero di spire per unità di lunghezza.
+Se le spire sono di spessore trascurabile e ben sovrapposte le une alle altre (senza spazi vuoti nel mezzo), la corrente che scorre in esse può essere considerata una corrente superficiale costante $\mathcal J=nI$, in quanto $nI$ è la corrente per unità di lunghezza (come $J$ è la corrente per unità di superficie ortogonale a $\vec J$).\\
+Suddividiamo il solenoide (nel senso della sua lunghezza) in cilindri di altezza infinitesima $\Delta z$ (figura 7.5): il campo del solenoide è la somma dei campi prodotti dai singoli cilindri, ciascuno dei quali (nel limite $\Delta z\to0$) genera un campo uguale a quello di una spira percorsa da una corrente $nI\Delta z$.
+\fig{fig7_5}{7.5}
+Quindi, se $O$ è il punto (sull'asse) in cui vogliamo calcolare il campo, presa in $O$ l'origine dell'asse $z$, dalla (7.26) ($a$ è il raggio del solenoide) si ha
+\begin{equation}
+B_z(O)=\int_{z_1}^{z_2}\frac{2\pi nIa^2\,dz}{c(a^2+z^2)^{3/2}}=\frac{2\pi In}{c}\int_{z_1}^{z_2}\frac{1}{\big[1+(z/a)^2\big]^{3/2}}\,\frac{dz}{a}
+\tag{7.27}
+\end{equation}
+dove \ $z_1$ \ e \ $z_2$ \ sono le coordinate (rispetto ad $O$) degli estremi del solenoide. Posto $z/a=\tan\theta$ dove, se $P$ è un punto sul solenoide di ordinata $z$, $\theta$ è l'angolo fra $OP$ e il piano $z=0$,
+\begin{equation}
+\begin{aligned}
+B_z(O)&=\frac{2\pi In}{c}\int_{\theta_1}^{\theta_2}\cos^3\theta\,\frac{d\theta}{\cos^2\theta}=\frac{2\pi In}{c}(\sen\theta_2-\sen\theta_1)\\
+&=\frac{2\pi In}{c}\left(\frac{z_2}{d_2}-\frac{z_1}{d_1}\right)\qquad\quad\Big(d_{1,2}=\sqrt{z_{1,2}^2+a^2}\,\Big).
+\end{aligned}
+\tag{7.28}
+\end{equation}
+Come per la spira, il verso di $\vec B$ è quello per cui $\vec B$ ``vede'' la corrente circolare in senso antiorario. Il campo è massimo al centro del solenoide (se $O$ è interno al solenoide \ $z_1<0,z_2>0$) e, se $L\gg a$, il campo si riduce a circa la metà agli estremi del solenoide.
+
+Nella figura 7.6 è riportato il campo sull'asse di due solenoidi di uguale lunghezza, ma raggio diverso: uno con \ $L/a\approx4$, l'altro \ $L/a\approx20$; nel solenoide ``più lungo'' il campo è praticamente costante in un ampio intervallo attorno al centro del solenoide.
+\fig{fig7_6}{7.6}
+Siccome \ $\dive\vec B=0$, quanto più il campo sull'asse è costante, tanto più $\vec B$ è uniforme in prossimità dell'asse: infatti se \ $\partial B_z/\partial z\simeq0$, allora \ $\partial B_x/\partial x+\partial B_y/\partial y\simeq0$ \ e quindi $B_x$ e $B_y$, che sono nulli per $x=y=0$, sono molto piccoli (rispetto a $B_z$) in un intorno dell'asse \ $\big(B_x\approx\big(\partial B_x/\partial x\big)_0x$\,, ecc.).
+
+Quanto più è richiesto un campo uniforme, tanto maggiore deve essere la lunghezza del solenoide rispetto al suo raggio; consideriamo allora il caso limite $L\to\infty$, cioè un solenoide illimitato da entrambe le parti: dalla (7.28), siccome per $L\to\infty$ ogni punto sull'asse finisce per essere un punto interno al solenoide, \ $z_2/d_2\to1$, \ $z_1/d_1\to-1$, e quindi il campo sull'asse tende al valore costante
+\begin{equation}
+B_z(z)=\frac{4\pi In}{c}\,\cdot
+\tag{7.29}
+\end{equation}
+
+Vogliamo ora dimostrare che il campo è costante dentro tutto il solenoide e nullo all'esterno, e quindi la (7.29) fornisce il campo in tutti i punti interni ad un solenoide infinito, e non solo sull'asse. A questo scopo faremo uso delle proprietà di simmetria del campo magnetico conseguenti alle simmetrie delle sorgenti per traslazioni e rotazioni, che sono del tutto identiche a quelle del campo elettrico espresse dalla (1.42); nel prossimo paragrafo discuteremo le leggi di trasformazione del campo magnetico per riflessioni, che sono diverse da quelle del campo elettrico.\\
+Le sorgenti del campo magnetico, cioè la corrente che circola nelle spire di cui è costituito il solenoide, sono invarianti per rotazioni attorno all'asse del solenoide e, nelle stesse ipotesi che ci hanno consentito di ricavare la (7.28) (spire di spessore trascurabile e ben sovrapposte), sono invarianti per traslazioni parallele all'asse $z$ (asse del solenoide).\\
+In generale, quando le sorgenti sono invarianti per rotazioni attorno ad un asse, in un generico punto $P$ chiamiamo $B_z$ la componente di $\vec B$ parallela all'asse di simmetria, $B_\varrho$ la \textbf{\textit{componente radiale}} nel piano ortogonale all'asse $z$ e $B_\theta$, detta \textbf{\textit{componente tangenziale}}, la componente di $\vec B$ tangente alla circonferenza con centro sull'asse e ortogonale all'asse stesso (figura 7.7).
+\fig{fig7_7}{7.7}
+Consideriamo la componente tangenziale: grazie all'invarianza per rotazioni essa è costante lungo tutta la circonferenza di raggio $\varrho$ passante per $P$, quindi per il teorema di Ampère vale
+\begin{equation}
+B_\theta=\frac{2I_\varrho}{\varrho\,c}
+\tag{7.30}
+\end{equation}
+dove $I_\varrho$ è la corrente concatenata con la circonferenza di raggio $\varrho$.\\
+La (7.30) vale in tutti i casi in cui le sorgenti sono invarianti per rotazioni attorno ad un asse: nel caso di una spira, in tutti i punti non appartenenti alla spira, come pure nel caso del solenoide finito (sia che $\varrho<a$ come pure se $\varrho>a$), \ $I_\varrho=0$, quindi $B_\theta$ è ovunque nulla, e quindi le linee di forza di $\vec B$ giacciono nei piani passanti per l'asse.\\
+Consideriamo ora un solenoide infinito e un arbitrario cilindro coassiale con esso: siccome \ $\dive\vec B=0$, il flusso di $\vec B$ uscente dal cilindro è nullo; grazie all'invarianza per traslazioni, il campo è lo stesso sulle due basi nei punti che differiscono solo per la coordinata $z$, e quindi il flusso uscente dalle basi è nullo; su tutta la superficie laterale la componente radiale \ $B_\varrho$, l'unica che contribuisce al flusso, grazie sia all'invarianza per rotazioni che a quella per traslazioni, è costante, quindi deve essere nulla, altrimenti sarebbe diverso da zero il flusso attraverso la superficie laterale, e quindi quello uscente dal cilindro.\\
+Resta solo $B_z$ che, per l'invarianza per traslazioni, è indipendente da $z$ ma, a priori, potrebbe dipendere dalla distanza dall'asse.\\
+Consideriamo un circuito rettangolare con un lato sull'asse, come quello indicato nella figura 7.8, tutto interno al solenoide; siccome la corrente concatenata con il circuito è nulla, per la (7.15) la circuitazione di $\vec B$ è zero: i lati ortogonali all'asse danno contributo nullo in quanto il campo è ortogonale ad essi; su ciascuno degli altri due $B_z$ è costante (è indipendente da $z$) ed il loro contributo alla
+\fig{fig7_8}{7.8}
+circuitazione è nullo solo se $B_z$ ha lo stesso valore su entrambi. Quindi $B_z$ è costante dentro tutto il solenoide, e il suo valore è dato dal valore che ha sull'asse, cioè dalla (7.29). Con lo stesso ragionamento si conclude che $B_z$, l'unica componente non nulla di $\vec B$, è costante anche fuori dal solenoide: basta considerare un circuito rettangolare tutto esterno al solenoide con due lati paralleli all'asse $z$.\\
+Per determinare $B_z$ fuori dal solenoide, consideriamo un circuito rettangolare come quello mostrato nella figura 7.9, con i lati paralleli all'asse di lunghezza $l$, uno dentro al solenoide, e uno fuori. La corrente concatenata con il circuito è $n\cdot l\cdot I$, in quanto $n\,l$ è il numero di spire che attraversano il rettangolo; il verso di percorrenza per calcolare la circuitazione è determinato dalla convenzione di considerare $I>0$ se antioraria rispetto all'asse $z$, quindi il lato interno deve essere percorso nel verso dell'asse $z$.
+\fig{fig7_9}{7.9}
+Allora per il teorema di Ampère si ha
+\begin{equation}
+l\,(B_z^{int}-B_z^{est})=\frac{4\pi}{c}n\,l\,I
+\tag{7.31}
+\end{equation}
+e siccome il campo interno $B_z^\mathrm{int}$ è dato dalla (7.29), ne segue che $B_z^\mathrm{est}=0$.\\
+In conclusione, in un solenoide infinito il campo è diverso da zero solo all'interno, è costante, parallelo all'asse, ed è dato dalla (7.29).\\
+Consideriamo un solenoide costruito con filo di rame di 0.3\,mm di diametro, e quindi $n\approx35$\,spire/cm, percorso da una corrente di 1\,ampère (è buona norma non superare i 10\,A/mm$^2$): il campo al suo interno vale
+\[
+B=\frac{4\pi\cdot35\cdot3\times10^9}{3\times10^{10}}\,\mathrm{gauss}=44\,\mathrm{gauss}
+\]
+cioè circa 100 volte il campo magnetico terrestre; in laboratorio si possono ottenere campi che per brevi intervalli di tempo raggiungono i $10^5$\,G (si utilizzano magneti superconduttori per poter avere correnti molto elevate e limitare il riscaldamento dovuto all'effetto Joule).\\
+Si noti che siccome nell'espressione del campo magnetico interviene sempre il fattore $I/c$ \big(v.\ (7.24)\big), se la corrente è data in ampère, basta sostituire $I/c$ con $I/10$ per ottenere direttamente il campo in gauss, senza bisogno di trasformare gli ampère in ues.
+
+Il campo magnetico subisce una discontinuità pari a $4\pi nI/c$ tra l'interno e l'esterno del solenoide; questo è un risultato generale, analogo alla discontinuità del campo elettrico attraverso una distribuzione superficiale $\sigma$: abbiamo già incontrato questa discontinuità per il campo magnetico nel capitolo 6 quando abbiamo determinato il campo $\vec B$ dovuto ad una corrente superficiale \ $\vec{\mathcal J}=\sigma\vec u$: il campo magnetico, dato dalla (6.11), presenta una discontinuità pari a \ $4\pi\mathcal J/c$ \ nella componente parallela alla superficie su cui scorre la corrente e ortogonale alla corrente:
+\begin{equation}
+\Delta\vec B=\frac{4\pi}{c}\vec{\mathcal J}\wedge\hat n
+\tag{7.32}
+\end{equation}
+dove $\Delta\vec B$ è la differenza fra $\vec B$ sulla faccia positiva della superficie supporto di $\vec{\mathcal J}$, individuata dal verso (arbitrario) della normale $\hat n$, e $\vec B$ sulla faccia negativa.
+La dimostrazione della (7.32) segue la falsariga di quella per ricavare la (1.87): si usa il teorema di Ampère applicato ad un circuito rettangolare come quello della figura 7.9 (con i lati paralleli ad $\hat n$ infinitesimi rispetto agli altri due) per ricavare la (7.32), ancora il teorema di Ampère applicato ad un circuito rettangolare ortogonale a quello precedente per dimostrare che l'altra componente parallela alla superficie è continua, ed infine il teorema della divergenza applicato ad un cilindretto infinitesimo con le basi parallele al piano tangente alla superficie per dimostrare che la componente di $\vec B$ parallela ad $\hat n$ è continua.
+
+\subsection{Il campo di sorgenti invarianti per riflessioni}
+
+Come abbiamo già anticipato nel precedente paragrafo, le proprietà di trasformazione del campo magnetico per trasformazioni isometriche delle sorgenti sono identiche a quelle del campo elettrico \big(espresse dalla (1.39)\big) per quanto riguarda le traslazioni e le rotazioni, mentre sono diverse nel caso delle riflessioni, cioè per tutte quelle trasformazioni per cui $\det(R)=-1$. Per esempio, riprendiamo in considerazione il confronto fra il campo magnetico sull'asse di una spira circolare e il campo elettrico generato da una distribuzione di carica $\lambda$ su una circonferenza: in entrambi i casi le sorgenti sono invarianti per riflessioni rispetto al piano delle sorgenti, ma mentre ciò comporta che $\vec E$ ha verso opposto dalle due parti del piano, la stessa conclusione è falsa per il campo magnetico.\\
+Il teorema espresso dalla (1.39) assume ora la seguente forma:
+
+\textbf{\textit{Teorema.}} \textit{Il campo magnetico $\vec B'(x)$ generato dalla distribuzione \ $\vec J\,'(x)$ \ definita da}
+\begin{equation}
+J_i'(x)\defeq\textstyle\sum_kR_{ik}J_k\big(\psi^{-1}(x)\big)\equiv\sum_kR_{ik}J_k\big(R^{-1}(x-a)\big)
+\tag{7.33}
+\end{equation}
+\textit{è dato da}
+\begin{equation}
+B_i'(x)=\det(R)\textstyle\sum_jR_{ij}B_j\big(\psi^{-1}(x)\big).
+\tag{7.34}
+\end{equation}
+Per dimostrare questo teorema abbiamo due possibilità: o dimostriamo che se $\vec B(x)$ è soluzione delle (7.14) allora \ $\vec B\,'(x)$ \ dato dalla (7.34) è soluzione delle (7.14) con la corrente $\vec J\,'$ data dalla (7.33), oppure utilizziamo direttamente l'espressione (7.23) del campo in termini delle sorgenti. Scegliamo questa seconda strada, e limitiamoci al caso della trasformazione \ $\psi(x)=-x$, cioè \ $x\mapsto-x$, $y\mapsto-y$, $z\mapsto-z$. In questo caso $R=-I$\,, dove $I$ è la matrice identità, e $\det(R)=-1$. Dalla (7.23) con la corrente \ $\vec J\,'(x,y,z)=-\vec J(-x,-y,-z)$ \ si ha
+\begin{equation}
+\vec B\,'(x,y,z)=\frac{1}{c}\int\frac{-\vec J(-\vec r\,')\wedge(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV
+\tag{7.35}
+\end{equation}
+ed effettuiamo il cambiamento di variabili \ $\vec r\,''=-\vec r\,'$, per cui
+\begin{equation}
+\vec B\,'(x,y,z)=\frac{1}{c}\int\frac{-\vec J(\vec r\,'')\wedge(\vec r+\vec r\,'')}{|\vec r+\vec r\,''|^3}\,dV
+\tag{7.36}
+\end{equation}
+(i volumi sono invarianti per isometrie, quindi il $dV$ non viene trasformato), e quindi
+\begin{equation}
+\vec B\,'(x,y,z)=\frac{1}{c}\int\frac{\vec J(\vec r\,'')\wedge(-\vec r-\vec r\,'')}{|-\vec r-\vec r\,''|^3}\,dV=\vec B(-x,-y,-z)
+\tag{7.37}
+\end{equation}
+in accordo con la (7.34). $\blacksquare$ \ (In modo del tutto analogo si dimostra la (7.34) nel caso generale).\\
+Anche in questo caso vale il
+
+\textbf{\textit{Corollario.}} \textit{Se le sorgenti sono invarianti: \ $\vec J\,'(\vec r\,)=\vec J(\vec r\,)$, e quindi}
+\begin{equation}
+J_i\big(\psi(x)\big)=\textstyle\sum_kR_{ik}J_k(x)
+\tag{7.38}
+\end{equation}
+\textit{allora anche il campo è invariante: \ $\vec B\,'(\vec r\,)=\vec B(\vec r\,)$\,, e quindi}
+\begin{equation}
+B_i\big(\psi(x)\big)=\det(R)\textstyle\sum_jR_{ij}B_j(x).
+\tag{7.39}
+\end{equation}
+La legge di trasformazione del campo magnetico per riflessione rispetto ad un piano si ottiene combinando la (7.37) con una rotazione di $\pi$ attorno ad una retta ortogonale al piano e, come la (7.37), dà per le componenti di $\vec B$ il risultato opposto a quello che si ottiene per il campo elettrico: le componenti di $\vec B$ parallele al piano cambiano segno, mentre resta inalterata la componente ortogonale al piano; se la riflessione viene fatta rispetto al piano $z=0$ si ha
+\begin{equation}
+\begin{aligned}
+&B_x'(x,y,-z)=-B_x(x,y,z)\,;\ \ B_y'(x,y,-z)=-B_y(x,y,z)\,;\\
+&B_z'(x,y,-z)=B_z(x,y,z)
+\end{aligned}
+\tag{7.40}
+\end{equation}
+e se la trasformazione è di invarianza per le sorgenti
+\begin{equation}
+\begin{aligned}
+&B_x(x,y,-z)=-B_x(x,y,z)\,;\ \ B_y(x,y,-z)=-B_y(x,y,z)\,;\\
+&B_z(x,y,-z)=B_z(x,y,z)
+\end{aligned}
+\tag{7.41}
+\end{equation}
+(l'ultima delle (7.41) è quella che ci garantisce che il campo sull'asse della spira ha lo stesso verso sia sopra che sotto la spira).
+
+Se, grazie all'invarianza delle sorgenti per riflessioni e per opportune rotazioni o traslazioni (incontreremo esempi di entrambi i casi), per ogni punto $P$ esiste un piano che lo contiene tale che sorgenti sono invarianti per riflessione rispetto ad esso (e quindi lo stabilizzatore di $P$ contiene questa riflessione), allora in ogni punto $P$ la direzione di $\vec B$ è univocamente determinata e, se $\vec B(P)\ne0$, è quella ortogonale al piano di simmetria: questo mostra che l'invarianza per riflessioni ha -- nel caso del campo magnetico -- una portata ben maggiore che nel caso del campo elettrico (per il quale la simmetria rispetto ad un piano consente tutte le componenti parallele al piano) e, come vedremo, permette di risolvere problemi a prima vista insolubili con metodi elementari.
+
+Discutiamo ora alcuni casi particolarmente significativi.
+\begin{enumerate}
+\item Filo rettilineo indefinito percorso da una corrente $I$.\\
+Il gruppo $\mathcal G$ di invarianza delle sorgenti contiene le rotazioni attorno al filo e le riflessioni rispetto a qualsiasi piano contenente il filo. $\mathcal G$ contiene anche le traslazioni parallele al filo, ma non ne avremo bisogno, per cui la discussione che segue si applica anche a sistemi non invarianti per traslazioni, come ad esempio il sistema illustrato nella figura 7.10, in cui il filo è interrotto da una sfera conduttrice.
+\fig{fig7_10}{7.10}
+In ogni punto $P$ il campo $\vec B$ è ortogonale
+al piano passante per $P$ e per l'asse di simmetria, e quindi ha solo la componente tangenziale $B_\theta$, e pertanto vale la (7.30). Se il sistema è il filo rettilineo si ha
+\begin{equation}
+B_\theta(\varrho)=\frac{2I}{c\varrho}\,\cdot
+\tag{7.42}
+\end{equation}
+Le linee di forza sono circonferenze ortogonali al filo e con centro su di esso; il verso è quello per il quale il cavatappi avanza nel verso della corrente. La (7.42) vale anche per sistemi del tipo di quello illustrato nella figura 7.10 in tutti i punti ``esterni'', cioè tali che le linee di forza passanti per essi ``concatenano'' l'intera corrente $I$ (altrimenti a 2$^\circ$ membro della (7.42) si ha la corrente $I_\varrho$ concatenata); con riferimento alla figura 7.10, se la corrente scorre sulla superficie della sfera il campo all'interno della sfera è nullo.\\
+Si noti che il campo diverge come $1/\varrho$ in prossimità del filo: non è difficile rendersi conto, applicando il teorema di Ampère a circuiti infinitesimi attorno al filo, che questo è un risultato generale che riguarda (solo) la componente ``tangenziale'', valido qualunque sia la forma del filo.
+\item Corrente superficiale costante $\vec{\mathcal J}$ su un piano $\Sigma$ (lamina di corrente).\\
+È il sistema che abbiamo discusso nel capitolo 6 e che ci ha permesso di ``inventare'' (o meglio: di scoprire) il campo magnetico, dato dalla (6.11). Possiamo ritrovare lo stesso risultato sfruttando le simmetrie del problema: le sorgenti sono invarianti per riflessioni rispetto a qualsiasi piano parallelo ad $\vec{\mathcal J}$ e ortogonale a $\Sigma$, quindi $\vec B$ è parallelo a $\Sigma$ e ortogonale a $\vec{\mathcal J}$; inoltre anche $\Sigma$ è piano di simmetria per le sorgenti, quindi in punti simmetrici rispetto a $\Sigma$ l'unica componente non nulla di $\vec B$, essendo parallela a $\Sigma$, ha valori opposti e il teorema di Ampère (come nel caso del solenoide) permette di concludere che è costante da ciascuna parte di $\Sigma$ e che vale
+\begin{equation}
+\vec B=\frac{2\pi}{c}\vec{\mathcal J}\wedge\hat n_P
+\tag{7.43}
+\end{equation}
+dove $\hat n_P$ è la normale a $\Sigma$ diretta verso il punto $P$ in cui si calcola $\vec B$.
+\item Solenoide infinito con spire di forma qualsiasi (quadrate, ellittiche, \dots).\\
+(A prima vista sembra un ``caso disperato'', ma \ \dots\ )\\
+Il gruppo di invarianza contiene le traslazioni ortogonali alle spire e le riflessioni rispetto a qualsiasi piano parallelo alle spire. Quindi in ogni punto (interno o esterno) $\vec B$ (se non è nullo) è ortogonale al piano delle spire. A questo punto, come per il solenoide a spire circolari, dal teorema di Ampère segue che il campo è costante dentro e fuori dal solenoide, e che la discontinuità tra l'interno e l'esterno è $4\pi nI/c$\,. In questo caso non possiamo concludere che il campo è nullo all'esterno, in quanto il solenoide potrebbe trovarsi immerso in un campo magnetico uniforme parallelo a quello del solenoide (p.es.\ perché all'interno di un grande solenoide). Nel caso del solenoide a spire circolari il problema non si è posto perché conoscevamo il campo sull'asse: in questo caso basterebbe rendersi conto che la (7.24) dà luogo ad un campo che tende a zero per $r$ che tende all'$\infty$ nel piano delle spire.
+
+Un solenoide ``reale'', a parte il fatto che è di lunghezza finita, non è costituito da spire sovrapposte, ma il filo è avvolto a elica su un opportuno supporto, quindi la
+corrente $\vec{\mathcal J}$ non ha solo componenti ortogonali alla direzione rispetto alla quale il solenoide è invariante per traslazioni (l'asse del solenoide, nel caso di spire circolari), ma anche una componente ``di salita'', cioè parallela alla suddetta direzione: questo fa sì che il risultato trovato sopra è solo approssimato, sia per quanto riguarda il campo all'esterno, che non è più nullo, che per quanto riguarda il campo all'interno, che (in generale) non è più costante. La corrente totale ``di salita'' (asse $z$) è I, quindi
+\begin{equation}
+\mathcal J_z=\frac{I}{l}\,;\qquad\mathcal J_\perp\approx nI
+\tag{7.44}
+\end{equation}
+dove $l$ è la lunghezza di ogni spira, quindi se $n\gg1/l$, che è la condizione espressa dalla (7.28), \ $\mathcal J_\perp\gg\mathcal J_z$ \ per cui certamente l'effetto della corrente di salita è molto minore di quello dovuto alla corrente $\mathcal J_\perp$. Vediamo in dettaglio cosa succede nel caso del solenoide a spire circolari (di raggio $a$); per il principio di sovrapposizione il campo è la somma di quello dovuto a $\mathcal J_\perp$, che è quello del solenoide a spire sovrapposte, e di quello dovuto alla corrente di salita che ha le stesse simmetrie del filo rettilineo, e quindi per la (7.30) genera un campo che è nullo all'interno del solenoide, e identico a quello di un filo, dato dalla (7.42), fuori dal solenoide, cioè per $\varrho>a$. Se è importante che il campo all'esterno sia nullo basta sovrapporre all'avvolgimento ``dal basso verso l'alto'' un secondo avvolgimento, continuazione del primo, dall'alto verso il basso e nello stesso verso di rotazione del primo.
+\item Sistema toroidale: solenoide finito con spire di forma arbitraria $C$ richiuso su se stesso \ $(\mathcal T=C\otimes S_1)$. La figura 7.11 illustra il toro a spire circolari.
+\fig{fig7_11}{7.11}
+Il gruppo di invarianza, qualunque sia la forma delle spire, contiene le rotazioni attorno all'asse del toro e, trascurando ``l'elicoidalità'' dell'avvolgimento, le riflessioni rispetto ad ogni piano passante per l'asse. Quindi il campo ha solo la componente tangenziale $B_\theta$. Le linee di forza sono circonferenze coassiali con il toro e le uniche che concatenano corrente sono quelle interne al toro, e la corrente concatenata è $NI$ \ dove $N$ è il numero di spire, e $I$ la corrente in ciascuna di esse. Quindi il campo è diverso da zero solo dentro il toro e vale
+\begin{equation}
+B_\theta=\frac{2NI}{c\varrho}\,\cdot
+\tag{7.45}
+\end{equation}
+\end{enumerate}
+
+\subsection{Il campo magnetico a grandi distanze}
+
+L'assenza di cariche magnetiche ha come conseguenza che il campo magnetico decresce almeno come $r^{-3}$ a grandi distanze. Così come nel caso elettrostatico conviene determinare il comportamento a grandi distanze del potenziale, anziché del campo, nel magnetismo è più semplice determinare l'andamento a grandi distanze del potenziale vettore. Qui ci limitiamo a determinare solo il primo termine (termine di dipolo magnetico) dello sviluppo del potenziale vettore in termini di multipolo, nel caso di un unico circuito (spira) percorso da corrente. Dalla (7.22), se la corrente è concentrata in un filo conduttore,
+\begin{equation}
+\vec A(\vec r\,)=\frac{I}{c}\oint_\gamma\frac{d\vec l}{|\vec r-\vec r\,'|}
+\tag{7.46}
+\end{equation}
+ed utilizzando lo sviluppo (1.75)
+\begin{equation}
+\vec A(\vec r\,)=\frac{I}{rc}\oint_\gamma d\vec l+\frac{I}{r^3c}\oint_\gamma(\vec r\cdot\vec r\,')\,d\vec l+\cdots
+\tag{7.47}
+\end{equation}
+Il primo termine è nullo \big($\oint d\vec l=0$\big); per il secondo si ha, se $\hat n$ è un versore arbitrario e utilizzando il teorema di Stokes (con \ $\rot'$ \ indichiamo la rotazione rispetto alle variabili $x',y',z'$),
+\[
+A_n(\vec r\,)=\frac{I}{r^3c}\oint_\gamma(\vec r\cdot\vec r\,')\,\hat n\cdot d\vec l+\cdots=\frac{I}{r^3c}\int_{S_\gamma}\rot'\big[(\vec r\cdot\vec r\,')\,\hat n\big]\cdot d\vec S+\cdots
+\]
+e poiché \ $\rot'\big[(\vec r\cdot\vec r\,')\,\hat n\big]=\vec r\wedge\hat n$,
+\begin{equation}
+A_n(\vec r\,)=\frac{I}{r^3c}\,(\vec r\wedge\hat n)\cdot\int_{S_\gamma}d\vec S+\cdots=-\frac{I}{r^3c}\Big(\vec r\wedge\int_{S_\gamma}d\vec S\,\Big)\cdot\hat n+\cdots
+\tag{7.48}
+\end{equation}
+e quindi, definito il \textbf{momento magnetico} della spira
+\begin{equation}
+\vec m\defeq\frac{I}{c}\int_{S_\gamma}d\vec S\equiv\frac{I}{c}\vec a
+\tag{7.49}
+\end{equation}
+(nel caso di una spira piana $\vec a$ è l'area della spira),
+\begin{equation}
+\vec A(\vec r\,)=\frac{\vec m\wedge\vec r}{r^3}+\cdots
+\tag{7.50}
+\end{equation}
+quindi il potenziale vettore, e perciò anche il campo magnetico, a grandi distanze dipende dall'area della spira e non dalla sua forma. Siccome \ $\vec A=O\big(r^{-2}\big)$, ne segue, come anticipato, \ $\vec B=O\big(r^{-3}\big)$.\\
+Il risultato espresso dalla (7.50) è generalizzabile ad un numero qualsiasi di spire: in tal caso $\vec m$ è il momento magnetico totale del sistema di correnti, ed è dato dalla somma dei momenti magnetici delle varie spire.
+
+\subsection{Forza magnetica su un circuito}
+
+Il campo magnetico esercita una forza sulle cariche in moto, e quindi anche su un circuito percorso da corrente. Questa forza si determina direttamente dall'espressione della forza di Lorentz: se trascuriamo lo spessore del filo conduttore che costituisce il circuito, il che è lecito se la variazione $\delta B$ del campo attraverso la sezione del filo è piccola rispetto al campo \ $(\delta B/B\ll1)$, la forza esercitata dal campo $\vec B$ su una porzione di filo di volume infinitesimo \ $dV=dS\,dl$, poiché \ $\vec J dV=I\,d\vec l$, per la (6.54) è data da
+\begin{equation}
+\vec F_{dl}=\frac{1}{c}\vec J\wedge\vec B\,dV=\frac{I}{c}\,d\vec l\wedge\vec B
+\tag{7.51}
+\end{equation}
+e quindi il risultante delle forze sull'intero circuito $\gamma$ è
+\begin{equation}
+\vec F=\frac{I}{c}\int_\gamma d\vec l\wedge\vec B.
+\tag{7.52}
+\end{equation}
+Verifichiamo esplicitamente che la (7.52) è corretta anche se il circuito è in moto: infatti, se $\lambda dl$ e $-\lambda dl$ sono rispettivamente le cariche dovute agli elettroni e agli ioni del reticolo nel tratto $dl$ del circuito e, sempre relativamente al tratto $dl$, $\vec u$ la velocità degli elettroni rispetto al reticolo e $\vec v$ quella del circuito (la velocità degli elettroni è quindi $\vec u+\vec v$), la forza totale agente sul tratto di circuito considerato è
+\begin{equation}
+\vec F_{dl}=\frac{\lambda dl}{c}(\vec u+\vec v\,)\wedge\vec B+\frac{-\lambda dl}{c}\vec v\wedge\vec B=\frac{\lambda dl}{c}\vec u\wedge\vec B=\frac{I}{c}\,d\vec l\wedge\vec B
+\tag{7.53}
+\end{equation}
+cioè la (7.51).
+
+Consideriamo due fili rettilinei paralleli a distanza $d$ percorsi da correnti $I_1$ e $I_2$, e calcoliamo la forza che il filo percorso dalla corrente $I_1$ esercita su un tratto di lunghezza $\Delta l$ del secondo filo. Dalla (7.42) e dalla (7.52) si riconosce subito che la forza è attrattiva o repulsiva a seconda che le correnti sono concordi o discordi ed il suo modulo è dato da
+\begin{equation}
+F=\frac{2I_1I_2}{c^2}\int_0^{\Delta l}\frac{dz}{d}=\frac{2I_1I_2}{dc^2}\,\Delta l.
+\tag{7.54}
+\end{equation}
+Se entrambi i fili sono percorsi da una corrente di 1\,ampère e la loro distanza è di 1\,metro,
+\begin{equation}
+F/\Delta l=2\times10^{-2}\,\mathrm{dyne}=2\times10^{-7}\,\mathrm{N/m}
+\tag{7.55}
+\end{equation}
+e ciò è conforme alla definizione dell'ampère come unità fondamentale del SI.
+
+Consideriamo ora una spira in un campo magnetico. Se la spira, supposta indeformabile, si trova in una regione in cui $\vec B$ è uniforme (p.es.\ in prossimità del centro di un solenoide di lunghezza finita), la forza risultante agente su di essa è nulla; infatti
+\begin{equation}
+\vec F=\frac{I}{c}\Big(\oint_\gamma d\vec l\,\Big)\wedge\vec B=0\qquad\qquad\Big(\oint_\gamma d\vec l=0\Big)
+\tag{7.56}
+\end{equation}
+e se la spira è piana ed è disposta ortogonalmente al campo, anche il momento risultante delle forze (rispetto a qualunque polo) è nullo:
+\begin{equation}
+\vec M=\frac{I}{c}\oint_\gamma\vec r\,'\wedge(d\vec l\wedge\vec B)=\frac{I}{c}\Big(\oint_\gamma(\vec r\,'\cdot\vec B)\,d\vec l-\vec B\oint_\gamma\vec r\,'\cdot d\vec l\,\Big)=0
+\tag{7.57}
+\end{equation}
+infatti entrambi gli integrali sono nulli: il primo, se il polo è sul piano della spira, perché $\vec r\,'\perp\vec B$, il secondo perché è la circuitazione di $\vec r\,'$. In generale, se la spira non è ortogonale al campo o non è piana, il primo integrale non è nullo e procedendo come nella (7.48)
+\begin{equation}
+\begin{aligned}
+M_n&=\frac{I}{c}\oint_\gamma(\vec r\,'\cdot\vec B)\,\hat n\cdot d\vec l=\frac{I}{c}\int_{S_\gamma}\rot'\big[(\vec r\,'\cdot\vec B)\,\hat n\big]\cdot d\vec S=\frac{I}{c}\int_{S_\gamma}(\vec B\wedge\hat n)\cdot d\vec S\\
+&=\frac{I}{c}\int_{S_\gamma}d\vec S\wedge\vec B\cdot\hat n=(\vec m\wedge\vec B)_n
+\end{aligned}
+\tag{7.58}
+\end{equation}
+e quindi, essendo $\hat n$ un versore arbitrario,
+\begin{equation}
+\vec M=\vec m\wedge\vec B.
+\tag{7.59}
+\end{equation}
+Il risultato espresso dalla (7.59) resta valido anche se il campo non è uniforme, purché la spira sia sufficientemente piccola da poter considerare il campo uniforme nella regione occupata da essa.
+
+Calcoliamo infine la forza che si esercita su una piccola spira in un campo non uniforme. Anziché fare il calcolo in generale, che è simile a quello che abbiamo fatto per ricavare la (7.50) o la (7.59), consideriamo il caso particolare di una spira circolare di raggio $b$ coassiale con un solenoide (finito), posta in una regione in cui il campo non è uniforme, quindi lontano dal centro del solenoide. Siccome la spira è indeformabile, è solo la componente radiale $B_\varrho$ che determina la forza sulla spira. Preso l'asse del solenoide come asse $z$ e la corrente $I$ nella spira positiva se antioraria rispetto all'asse $z$, si ha
+\begin{equation}
+F_z=-\frac{I}{c}2\pi bB_\varrho.
+\tag{7.60}
+\end{equation}
+La componente radiale $B_\varrho$ è legata dal teorema di Gauss--Green alla derivata di $B_z$: preso un cilindretto infinitesimo di raggio $b$ e altezza $\Delta z$ (coassiale con il solenoide), si ha
+\begin{equation}
+0=2\pi b\,\Delta z\,B_\varrho+\pi b^2\big(B_z(z+\Delta z)-B_z(z)\big)
+\tag{7.61}
+\end{equation}
+(siccome la spira è piccola abbiamo preso $B_z$ costante sull'area della spira), e quindi
+\begin{equation}
+F_z=\frac{I}{c}\pi b^2\,\frac{\partial B_z}{\partial z}=m_z\frac{\partial B_z}{\partial z}
+\tag{7.62}
+\end{equation}
+(in generale, per un orientamento arbitrario della spira, ma sempre per una spira piccola in un campo statico, \ $\vec F=\grad(\vec m\cdot\vec B)$, cioè \ $F_i=\sum_jm_j\partial B_j/\partial x_i$\,; nel capitolo 10 ricaveremo l'espressione della forza risultante su una spira di dimensioni arbitrarie).
+
+Se la corrente nella spira è concorde con quella che scorre nel solenoide la spira viene attratta verso il centro del solenoide, altrimenti viene espulsa.
+
+Come è possibile che la forza esercitata dal campo magnetico, cioè la forza di Lorentz che è una forza a lavoro nullo, possa accelerare la spira? Notiamo che quando la spira si muove parallelamente all'asse $z$, i portatori di carica hanno una componente di velocità $u_\theta$ parallela alla spira e anche una componente $v_z$ parallela all'asse $z$; se $\lambda$ è la loro densità lineare di carica, la forza (di Lorentz) che si esercita sugli elettroni di conduzione nel tratto $d\vec l$ di circuito ha due componenti, una parallela all'asse $z$ ed una $F_\theta$ parallela a $d\vec l$:
+\begin{equation}
+F_z=-\frac{\lambda dl\,u_\theta}{c}B_\varrho\,,\quad\ F_\theta=\frac{\lambda dl\,v_z}{c}B_\varrho
+\tag{7.63}
+\end{equation}
+e la potenza sviluppata è
+\begin{equation}
+F_zv_z+F_\theta u_\theta=0
+\tag{7.64}
+\end{equation}
+(la potenza della forza di Lorentz che si esercita sulle cariche del reticolo, che hanno velocità $\vec v$ -- in questo caso parallela all'asse $z$ -- è nulla in quanto \ $\vec v\wedge\vec B\cdot\vec v=0$\,).\\
+Quindi effettivamente la forza totale esercitata dal campo magnetico sui portatori di carica è a lavoro nullo e il lavoro positivo fatto per accelerare la spira è compensato dal lavoro negativo fatto sulla corrente che circola nella spira: se nella spira è inserito
+un generatore che mantiene inalterata la corrente circolante (generatore di corrente), il lavoro per accelerare la spira è uguale a quello fatto dal generatore, dato che per mantenere costante la corrente deve sviluppare una potenza (per ogni tratto $dl$ di circuito) \ $W=-F_\theta u_\theta=F_zv_z$ \ (oltre a quella che viene dissipata per effetto Joule); in ultima analisi, dal punto di vista energetico la variazione (positiva o negativa) dell'energia cinetica della spira è dovuta al generatore.\\
+Questo discorso verrà ripreso nel capitolo 10 quando studieremo la f.e.m.\ indotta nei circuiti in movimento.
+
+\subsection{L'effetto Hall}
+
+La forza che un campo magnetico esercita su un circuito fermo percorso da corrente agisce direttamente sui portatori di carica, e non sul reticolo cristallino (che costituisce la parte rigida del conduttore): tuttavia, siccome gli elettroni non possono uscire dal conduttore, la forza di Lorentz è una forza \underline{esterna} che agisce sul sistema reticolo--elettroni, cioè sul conduttore, il quale quindi risente come un tutt'uno di questa forza. Il meccanismo con il quale la forza si trasmette al reticolo cristallino è il seguente: la forza di Lorentz agisce in direzione ortogonale al moto degli elettroni producendo un accumulo di carica nella direzione in cui agisce, e quindi un campo elettrico ortogonale a $\vec J$; l'equilibrio viene raggiunto quando il campo elettrico compensa la forza di Lorentz, in quanto il moto degli elettroni è un moto ``su traiettoria prestabilita'', cioè lungo il conduttore. A sua volta questo campo elettrico esercita una forza opposta sul reticolo, e quindi esattamente uguale alla forza che il campo magnetico esercita sugli elettroni.
+
+Anche se dal punto di vista della meccanica, cioè della 1$^\mathrm{a}$ equazione cardinale, questo meccanismo di forze interne elettroni--reticolo è irrilevante per il calcolo della forza che agisce sul circuito, esso è importante dal punto di vista elettrico, in quanto la presenza del campo elettrico ortogonale a $\vec J$ (e a $\vec B$) comporta l'esistenza di una differenza di potenziale: per esempio, supponiamo che una porzione del conduttore sia una sbarra di dimensioni trasversali $L_x$ e $L_z$, percorsa da corrente nella direzione positiva dell'asse $y$, immersa in un campo magnetico costante $\vec B$ parallelo e concorde all'asse $z$ (figura 7.12); in queste condizioni il campo elettrico ha la direzione dell'asse $x$.
+\fig{fig7_12}{7.12}
+Detta $\vec u$ la velocità (media) dei portatori di carica, all'equilibrio
+\begin{equation}
+\vec E=-\frac{\vec u}{c}\wedge\vec B\quad\ \Rightarrow\quad\ E_x=-\frac{u_y}{c}B
+\tag{7.65}
+\end{equation}
+$u_y>0$ o $u_y<0$ a seconda che la carica $q$ dei portatori sia positiva o negativa: infatti siccome $J_y>0$, la velocità delle cariche è concorde o discorde con l'asse $y$, a seconda del loro segno.\\
+Se $n$ è il numero dei portatori di carica per unità di volume,
+\begin{equation}
+I=J\cdot L_xL_z=nqu_yL_xL_z\quad\ \Rightarrow\quad\ u_y=\frac{I}{nqL_xL_z}
+\tag{7.66}
+\end{equation}
+e quindi la differenza di potenziale fra la faccia con $x>0$ e quella opposta è
+\begin{equation}
+V=-E_xL_x=\frac{B}{nqcL_z}\,I.
+\tag{7.67}
+\end{equation}
+L'esistenza di questa differenza di potenziale è nota come \textbf{effetto Hall} dal nome del suo scopritore (1879); il rapporto $V/I$ è la \textbf{resistenza Hall}, ed è data da
+\begin{equation}
+R_H\equiv\frac{V}{I}=\frac{B}{nqcL_z}\,\cdot
+\tag{7.68}
+\end{equation}
+L'effetto Hall è stato, ed è tutt'ora, molto importante per diverse ragioni. In primo luogo, siccome il segno di $V$ dipende dal segno dei portatori di carica, ha permesso di stabilire che per la maggior parte dei conduttori (lo zinco è una eccezione!) questi sono gli elettroni; in secondo luogo la misura di $n$ \ ($n\approx10^{23}\,\mathrm{cm}^{-3}$) permette di determinare il numero di elettroni di conduzione per atomo, e nella maggior parte dei casi $n$ è compatibile con un elettrone per atomo.\\
+Normalmente $V$ è molto piccolo: se, ad esempio, nella (7.67) poniamo \ $I=1$\,A, \ $B=1$\,T, \ $L_z=1$\,mm, si ottiene $V\approx10^{-7}$\,volt, che è pur sempre misurabile; nel caso dei semiconduttori, sostanze come il germanio ed il silicio la cui conducibilità dipende fortemente dalla temperatura e dalle impurità del cristallo (``drogaggio''), $n$ vale circa $10^{12}\,\mathrm{cm}^{-3}$, e ciò fa sì che $V$ sia molto maggiore che nei conduttori: l'effetto Hall in questi casi è uno strumento indispensabile per stabilire il segno e la densità dei portatori di carica, che non sempre sono gli elettroni, ma talvolta, come nel caso dello zinco, le ``lacune'', cioè siti liberi che venendo via via occupati dagli elettroni, si spostano in direzione opposta ad essi, comportandosi come cariche positive: la corretta descrizione di questo fenomeno richiede la teoria quantistica della conduzione.\\
+In anni recenti (1980) sono stati scoperti importanti effetti quantistici nel comportamento della resistenza Hall dei semiconduttori al variare del campo magnetico, per campi molto elevati \ ($10^4\div10^5$\,G), effetti ancora oggi argomento di indagini sia teoriche che sperimentali, e che hanno fruttato il premio Nobel al suo scopritore Klaus von Klitzing.
+
+\subsection{Le simmetrie nell'effetto Hall}
+
+Nel sistema che dà luogo all'effetto Hall le sorgenti sono la corrente $\vec J$ che scorre nel conduttore ed il campo magnetico $\vec B$ esterno o, equivalentemente, la corrente che lo genera (p.es.\ $\vec B$ può essere il campo di un grande solenoide che contiene il conduttore). Il sistema è invariante per riflessioni rispetto al piano ortogonale a $\vec B$ passante per il centro della sbarra conduttrice (piano $z=0$): \ $\vec J\to\vec J$, \ $\vec B\to\vec B$. Una eventuale componente del campo elettrico parallela a $\vec B$ cambia segno per questa trasformazione, e quindi è esclusa (almeno sul piano mediano della sbarra). Invece non sono escluse componenti di $\vec E$ ortogonali a $\vec B$, e in effetti sono presenti: infatti per la legge di Ohm è presente una componente di $\vec E$ parallela a $\vec J$ ed inoltre, come abbiamo visto, per effetto del campo magnetico nasce un campo elettrico ortogonale sia a $\vec B$ che a $\vec J$, quello responsabile dell'effetto Hall.\\
+Resta sempre il problema di stabilire se quelle che abbiamo individuate sono le uniche simmetrie del sistema, o se ne esistono altre le cui conseguenze sono indipendenti da quelle già trovate: nel caso che stiamo studiando, il fatto di avere constatato che tutte le componenti di $\vec E$ non escluse dalla simmetria sono effettivamente presenti, ci garantisce
+che eventuali altre proprietà di simmetria non possono portare ad ulteriori restrizioni sulle componenti dei campi ammesse. Eppure, a prima vista, sembrerebbe che le cose non stiano così: se consideriamo una riflessione rispetto al piano ortogonale a $\vec J$ \ (piano $y=0$) accompagnata da una coniugazione di carica, ancora \ $\vec J\to\vec J$, \ $\vec B\to\vec B$, e per questa trasformazione le componenti di $\vec E$ parallele a detto piano cambiano segno, e quindi sono escluse. In particolare risulterebbe escluso proprio il campo elettrico che dà luogo all'effetto Hall! La ragione di questo paradosso sta in un uso troppo ingenuo della coniugazione di carica: infatti nel sistema è presente un conduttore (o un semiconduttore) che va annoverato fra le sorgenti (contiene cariche), ma non è invariante per coniugazione di carica in quanto in esso i portatori di carica sono solo le cariche con un ben determinato segno (gli elettroni se si tratta di un conduttore), mentre la trasformazione \ $I\to-I$ \ \big(o \ $\vec J\to-\vec J$\,\big) dovrebbe essere accompagnata dalla trasformazione \ $\rho\to-\rho$ \ e quindi richiederebbe il cambiamento di segno dei portatori di carica, mantenendone inalterata la velocità (e non viceversa).\\
+Quindi il sistema non è invariante per la trasformazione considerata; lo sarebbe se la sbarra fosse di un ipotetico materiale in cui sono presenti (con uguali densità e mobilità) sia portatori di carica positivi che negativi: in questo caso, quindi, non si avrebbe effetto Hall. Infatti la forza di Lorentz agente sulla corrente, costituita in ugual misura da cariche positive (con velocità parallela a $\vec J$) e da cariche negative (con velocità opposta), non produrrebbe un accumulo di carica nella direzione ortogonale a $\vec J$, anche se la corrente viene ``spostata'' verso il bordo della sbarra.\\
+L'unica conclusione corretta che in questo caso possiamo trarre dall'uso della coniugazione di carica è che se disponiamo di due materiali, uno con portatori di carica positivi e l'altro con portatori di carica negativi e con uguali densità, il ``campo elettrico Hall'' nei due casi è opposto, e quindi è opposto l'effetto Hall, cioè il segno della differenza di potenziale fra le due facce della sbarra, in accordo con la (7.67).
+
+La lezione che si impara da questa discussione è che in linea di principio in presenza di conduttori non sono possibili invarianze in cui interviene la coniugazione di carica; tuttavia si tratta il più delle volte solo di una questione di principio, in quanto gli effetti della non invarianza dei conduttori per coniugazione di carica normalmente sono trascurabili. Come abbiamo visto nel caso dell'effetto Hall (ed è vero in generale), questi effetti si manifestano in presenza di un campo magnetico e riguardano l'interazione del campo con le sorgenti (è la prima volta che prendiamo in considerazione anche l'effetto dei campi sulle sorgenti, che fino ad ora consideravamo assegnate): il campo elettrico responsabile dell'effetto Hall, che sarebbe proibito dall'invarianza per coniugazione di carica, in un normale conduttore (nel quale la velocità media degli elettroni è dell'ordine di $10^{-2}$\,cm/s) per la (7.65) vale circa $10^{-12}B$: è chiaro che per mettere in evidenza effetti di quest'ordine di grandezza sono necessari esperimenti mirati alla loro rivelazione, in altri termini bisogna andarli deliberatamente a cercare.
+
+\subsection{L'inversione del tempo}
+
+In effetti, quella che ingenuamente ed erroneamente nella discussione fatta a proposito delle simmetrie nell'effetto Hall abbiamo presentato come coniugazione di carica, cioè il cambiamento di segno della corrente in un conduttore, non accompagnata dal
+cambiamento di segno delle cariche (elettroni $\to$ positroni, protoni $\to$ antiprotoni), è un'altra trasformazione, chiamata \textbf{\textit{inversione del tempo}}, ed è quella trasformazione che fa corrispondere ad un fenomeno fisico l'eventuale fenomeno fisico che si svolge come il filmato del primo proiettato in verso opposto, cioè il fenomeno fisico soggettivamente identico per un osservatore che usi orologi che segnano il tempo a rovescio.\\
+Abbiamo usato il termine ``eventuale'' perché non è detto che ciò che vediamo nel filmato proiettato a rovescio corrisponda ad un fenomeno fisico possibile: per esempio, se proiettiamo a rovescio il film di un corpo che si arresta per effetto dell'attrito, o l'espansione di un gas nel vuoto, certamente \underline{dal punto di vista macroscopico} ciò che vediamo non corrisponde a qualcosa di possibile, mentre invece se lo esaminiamo da un punto di vista microscopico (film ad altissima risoluzione!) seguendo il comportamento di ogni atomo, ciò che vediamo, ancorché improbabile, è conforme con le leggi della fisica che descrivono il mondo microscopico (v.\ discussione sul 2$^\circ$ principio della termodinamica nel volume di Fisica Generale 1). Quindi ``possibile'' o ``non possibile'' dipende dall'ambito (microscopico o macroscopico) nel quale ci collochiamo, in pratica, da quali equazioni stiamo utilizzando per descrivere i fenomeni: quelle della fisica microscopica o quelle della fisica macroscopica ricavate (o ricavabili) dalle prime con ipotesi di carattere statistico che ne sanciscono l'irreversibilità (leggi dell'attrito, equazioni della termodinamica, \dots).
+
+Quando il sistema che stiamo considerando obbedisce ad equazioni per le quali la trasformazione \ $t\mapsto-t$ \ manda un fenomeno possibile in un'altro possibile, diciamo che per il sistema si ha \textbf{\textit{invarianza per inversione del tempo}}; detto in altri termini, in questi casi il principio di relatività vale anche per riferimenti in quiete relativa, ma con il tempo che scorre nel verso opposto.
+
+Le equazioni di Maxwell, e quindi i fenomeni da esse descritti, sono invarianti per inversione del tempo: ciò significa che se \ $\vec E(\vec r,t)$, $\vec B(\vec r,t)$ \ sono soluzioni delle equazioni di Maxwell quando le sorgenti sono \ $\rho(\vec r,t)$, $\vec J(\vec r,t)$, allora \ $\vec E\,'(\vec r,t)\equiv\vec E(\vec r,-t)$, \ $\vec B\,'(\vec r,t)\equiv-\vec B(\vec r,-t)$ \ sono soluzioni delle equazioni di Maxwell quando le sorgenti sono \ $\rho\,'(\vec r,t)\equiv\rho\,(\vec r,-t)$, \ $\vec J\,'(\vec r,t)=-\vec J(\vec r,-t)$\,:
+\begin{equation}
+\left\{\begin{aligned}
+\rho\,(\vec r,t)&\to\phantom{-}\rho\,(\vec r,-t)\\
+\vec J(\vec r,t)&\to-\vec J(\vec r,-t)
+\end{aligned}\right.
+\quad\ \Rightarrow\quad\
+\left\{\begin{aligned}
+\vec E(\vec r,t)&\to\phantom{-}\vec E(\vec r,-t)\\
+\vec B(\vec r,t)&\to-\vec B(\vec r,-t)
+\end{aligned}\right.
+\tag{7.69}
+\end{equation}
+\big(la verifica è immediata: basta notare che \ $(\partial f(-t)/\partial t)(t)=-(\partial f(t)/\partial t)(-t)$\,\big).\\
+La trasformazione considerata corrisponde effettivamente all'inversione del tempo, in quanto per \ $t\mapsto-t$ \ le velocità cambiano segno \big(più precisamente \ $\vec v(t)\to-\vec v(-t)$\big), mentre le cariche restano invariate, quindi le correnti cambiano segno.
+
+Nel caso di correnti stazionarie e campi statici le (7.69) diventano
+\begin{equation}
+\left\{\begin{aligned}
+\rho\,(\vec r\,)&\to\phantom{-}\rho\,(\vec r\,)\\
+\vec J(\vec r\,)&\to-\vec J(\vec r\,)
+\end{aligned}\right.
+\quad\ \Rightarrow\quad\
+\left\{\begin{aligned}
+\vec E(\vec r\,)&\to\phantom{-}\vec E(\vec r\,)\\
+\vec B(\vec r\,)&\to-\vec B(\vec r\,).
+\end{aligned}\right.
+\tag{7.70}
+\end{equation}
+Se ora applichiamo le (7.70), accompagnate dalla riflessione rispetto al piano $y=0$, al sistema che dà luogo all'effetto Hall, la trasformazione è ora di invarianza \ ($\rho\to\rho$, $\vec J\to\vec J$) e per questa trasformazione le componenti di $\vec E$ parallele a detto piano restano
+inalterate e quindi non sono più escluse (in particolare non è più escluso il campo elettrico responsabile dell'effetto Hall).\\
+Però, a pensarci bene, qualcosa di sospetto c'è: la componente di $\vec E$ parallela a $\vec J$, quella che per la legge di Ohm (3.17) \ $(\vec J=\sigma_c\vec E\,)$ \ produce la corrente $\vec J$, dovrebbe cambiare segno, in contrasto con la (3.17) \ $(\vec J\to\vec J,\ \vec E\to-\vec E\,)$. La ragione sta nel fatto che la (3.17) è una equazione della fisica ``macroscopica'', ricavata dall'equazione microscopica (3.26) più l'ipotesi statistica di ``perdita della memoria'' delle condizioni iniziali dopo un tempo $\tau$ (teoria di Drude -- Lorentz), ed è proprio in questa ipotesi che risiede il seme dell'irreversibilità che dà luogo ad una equazione, la (3.17), non invariante per inversione del tempo, cioè non compatibile con le (7.70).\\
+Quindi, nel caso statico, l'invarianza per inversione del tempo fornisce le stesse informazioni della coniugazione di carica per quanto riguarda il campo magnetico, e non fornisce alcuna informazione sul campo elettrico.
