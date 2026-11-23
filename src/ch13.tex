@@ -1,0 +1,198 @@
+\section{FENOMENI ONDULATORI}
+
+\subsection{Introduzione}
+
+In questo capitolo discuteremo alcuni dei più importanti fenomeni caratteristici delle grandezze che obbediscono all'equazione delle onde: si tratta di quei fenomeni (interferenza, diffrazione \dots) che storicamente hanno permesso di stabilire la natura ondulatoria della luce e, successivamente, dei raggi X, ma che essendo conseguenze dell'equazione delle onde si manifestano per molti altri sistemi, come il suono, le onde in un liquido, ecc.. Dato che la nostra discussione riguarda solo i fenomeni elettromagnetici, gli argomenti di questo capitolo rientrano in quello più vasto dell'Ottica ondulatoria (o Ottica fisica), un capitolo della fisica di grande interesse ma anche molto esteso: basti solo dire che il suo naturale completamento è l'Ottica geometrica.\\
+Il nostro obiettivo non è quello di una discussione ragionevolmente esauriente di questi argomenti (sia pure con le limitazioni che le tecniche a nostra disposizione ci impongono), ma una discussione mirata alla comprensione degli argomenti che normalmente vengono utilizzati come introduzione ai fondamenti della Meccanica Quantistica: questo spiega sia la trattazione molto semplificata del problema dell'interferenza che quella, praticamente solo a livello qualitativo, del problema della diffrazione. Un altro argomento che possiamo portare per giustificare le nostre scelte, è che lo strumento matematico ``naturale'' per la discussione di questi problemi, in particolare quello della diffrazione, non è tanto quello delle formule approssimate di Huygens--Fresnel, ma quello della trasformata di Fourier, un argomento che solitamente viene trattato nei corsi degli anni superiori al secondo.
+
+\subsection{L'interferenza}
+
+L'interferenza, come altri fenomeni ondulatori, trae origine dalla linearità delle equazioni di Maxwell nel vuoto, per cui ogni combinazione lineare di soluzioni è anch'essa una soluzione (principio di sovrapposizione).\\
+Sia data un'onda piana monocromatica che si propaga in direzione dell'asse $x$:
+\begin{equation}
+\vec E(x,t)=\big(0,\,E_{0y}\cos(kx-\omega t+\phi),\,E_{0z}\cos(kx-\omega t+\psi)\big)
+\tag{13.1}
+\end{equation}
+Se consideriamo uno schermo piano in direzione ortogonale alla direzione di propagazione (per esempio una lastra fotografica), l'intensità che incide sullo schermo, data dalla (12.32), è indipendente da $y$ e da $z$ (oltre che dalla posizione dello schermo): lo schermo viene quindi ``illuminato'' uniformemente.\\
+Supponiamo ora che sullo schermo incidano due onde piane $\vec E_1(x,t)$ ed $\vec E_2(x,t)$ con la stessa frequenza e che si propagano entrambe in direzione dell'asse $x$:
+\begin{equation}
+\begin{aligned}
+&\vec E_1(x,t)=\big(0,\,E_{1y}^0\cos(kx-\omega t+\phi_1),\,E_{1z}^0\cos(kx-\omega t+\psi_1)\big)\\
+&\vec E_2(x,t)=\big(0,\,E_{2y}^0\cos(kx-\omega t+\phi_2),\,E_{2z}^0\cos(kx-\omega t+\psi_2)\big)
+\end{aligned}
+\tag{13.2}
+\end{equation}
+il campo \ $\vec E(x,t)=\vec E_1(x,t)+\vec E_2(x,t)$ \ è ancora un'onda piana monocromatica, e ancora lo schermo viene illuminato uniformemente. Tuttavia, in generale, l'intensità con cui lo schermo viene illuminato \big(cioè l'intensità dell'onda $\vec E(x,t)$\big), non è la somma delle intensità delle due onde piane $\vec E_1(x,t)$ ed $\vec E_2(x,t)$: infatti, tenuto conto che
+\begin{equation}
+\frac{1}{T}\int_t^{t+T}\cos(\omega t'-\alpha)\cos(\omega t'-\beta)\,dt'=\frac{1}{2}\cos(\alpha-\beta)
+\tag{13.3}
+\end{equation}
+si ha
+\begin{equation}
+\begin{aligned}
+I&\equiv\frac{c}{4\pi}\overline{|\vec E_1(x,t)+\vec E_2(x,t)|^2}=\frac{c}{4\pi}\Big(\overline{\vec E_1(x,t)^2}+\overline{\vec E_2(x,t)^2}+2\overline{\vec E_1(x,t)\cdot\vec E_2(x,t)}\Big)\\
+&=I_1+I_2+\frac{c}{4\pi}\big(E_{1y}^0E_{2y}^0\cos(\phi_1-\phi_2)+E_{1z}^0E_{2z}^0\cos(\psi_1-\psi_2)\big)
+\end{aligned}
+\tag{13.4}
+\end{equation}
+per cui
+\begin{equation}
+I_1+I_2-2\sqrt{I_1I_2}\le I\le I_1+I_2+2\sqrt{I_1I_2}
+\tag{13.5}
+\end{equation}
+Fissati $I_1$ ed $I_2$, il massimo ed il minimo per $I$ si hanno quando \ $\cos(\phi_1-\phi_2)=\cos(\psi_1-\psi_2)=\pm1$ \ ed i vettori $\vec E_{01}$ ed $\vec E_{02}$ sono paralleli. Quando $I\ne I_1+I_2$ si dice che le due onde danno luogo al fenomeno dell'\textbf{interferenza}; se $I<I_1+I_2$ si dice che l'interferenza è distruttiva, mentre nel caso opposto si dice che è costruttiva.\\
+L'intensità può essere nulla (interferenza completamente distruttiva) quando \ $\vec E_1(x,t)=-\vec E_2(x,t)$ \ (e quindi $\vec E(x,t)=0$), ed è massima (interferenza completamente costruttiva) quando \ $\vec E_1(x,t)=\vec E_2(x,t)$ \ \big(e quindi $\vec E(x,t)=2\vec E_1(x,t)$\big), ed in tal caso \ $I=4I_1$. Nel primo caso si dice che le due onde sono \textbf{in controfase}, mentre nel secondo caso si dice che le onde sono \textbf{in fase}.\\
+Due onde entrambe polarizzate linearmente in direzioni fra loro ortogonali non interferiscono:
+\begin{equation}
+\begin{aligned}
+&\vec E_1(x,t)=\vec E_{01}\cos(kx-\omega t+\phi_1),\quad\ \vec E_2(x,t)=\vec E_{02}\cos(kx-\omega t+\phi_2)\quad\ \Rightarrow\\
+&I=I_1+I_2+\frac{c}{4\pi}\vec E_{01}\cdot\vec E_{02}\cos(\phi_1-\phi_2)=I_1+I_2
+\end{aligned}
+\tag{13.6}
+\end{equation}
+in quanto (per ipotesi) \ $\vec E_{01}\cdot\vec E_{02}=0$.
+
+Supponiamo ora di avere due sorgenti poste nei punti $x=0$, $y=0,\,z=\pm d$, e lo schermo nel piano $x=D$, con $D\gg d$.\\
+Prendiamo per i campi emessi dalle due sorgenti quelli dati dalla (12.46); limiteremo la regione di osservazione sullo schermo alla zona in cui $y,z\ll D$, per cui in tutti i punti di detta regione i raggi $\vec r_1$ e $\vec r_2$ provenienti dalle due sorgenti formano fra di loro un piccolo angolo, di modo che possiamo assumere che sia i campi elettrici che quelli magnetici delle due onde siano paralleli (onde polarizzate nello stesso modo). Con le ipotesi fatte, in tutta la regione di osservazione $\theta\approx90^\circ$ \ ($\sen\theta\approx1$) per entrambe le onde provenienti dalle due sorgenti; in detta regione \ $\vec E_{1,2}\parallel z$ \ e
+\fig{fig13_1}{13.1}
+\begin{equation}
+\begin{aligned}
+&E_{1z}(\vec r,t)=\frac{A}{r_1}\sen(kr_1-\omega t+\phi)\,,\qquad E_{2z}(\vec r,t)=\frac{A}{r_2}\sen(kr_2-\omega t)\\
+&r_{1,2}=\sqrt{D^2+y^2+(z\pm d)^2}
+\end{aligned}
+\tag{13.7}
+\end{equation}
+Inoltre, nella regione dello schermo alla quale siamo interessati, consideriamo costanti ed uguali a $D$ le distanze $r_1$ ed $r_2$ dalle sorgenti che compaiono nei denominatori della (13.7); non possiamo considerarle costanti quando compaiono nella forma $kr$ come
+argomenti del seno, in quanto, per piccole lunghezze d'onda, cioè grandi $k$, anche se $r$ varia poco ($\Delta r\ll r$), $kr$ può variare di parecchi multipli di $2\pi$: in particolare vedremo che la distribuzione dell'intensità sullo schermo dipende proprio dalla differenza fra $kr_1$ e $kr_2$.\\
+Allora, posto \ $I_0=(c/8\pi)(A/D)^2$ \ (l'intensità sullo schermo dovuta a ciascuna sorgente),
+\begin{equation}
+\begin{aligned}
+I(y,z)&=2I_0\big(\overline{\sen^2(kr_1-\omega t+\phi)}+\overline{\sen^2(kr_2-\omega t)}+\\
+&\qquad+\overline{2\sen(kr_1-\omega t+\phi)\sen(kr_2-\omega t)}\big)=\\
+&=2I_0\big(1+\cos\big(k(r_1-r_2)+\phi\big)\big)
+\end{aligned}
+\tag{13.8}
+\end{equation}
+L'intensità di illuminazione in un punto dello schermo dipende quindi sia dallo sfasamento $\phi$ fra le due onde, che dalla differenza $r_1-r_2$ dei ``cammini ottici'': se per esempio $\phi=0$, l'interferenza è completamente costruttiva nei punti in cui i cammini ottici differiscono per un numero intero di lunghezze d'onda ($\lambda=2\pi/k$), ed è completamente distruttiva dove la differenza fra i cammini ottici è un multiplo dispari di semi--lunghezze d'onda.\\
+Siccome nelle nostre ipotesi \ $|r_1-r_2|\ll D$, conviene riscrivere la (13.8) in una forma più espressiva, approssimando \ $r_1-r_2$ \ con \ $2d\,\partial r/\partial z$ \ e $r$ con $D$:
+\begin{equation}
+I(y,z)\approx2I_0\Big(1+\cos\big(\frac{2kdz}{D}+\phi\big)\Big)
+\tag{13.9}
+\end{equation}
+L'intensità di illuminazione sullo schermo varia quindi in direzione dell'asse $z$ da 0 a $4I_0$ con un alternarsi periodico di \textbf{frange} più chiare dove l'interferenza è costruttiva \ $(\cos(2kdz/D+\phi)>0)$, e di frange più scure dove l'interferenza è distruttiva \ $(\cos(2kdz/D+\phi)<0)$. La larghezza $\Delta z$ di ogni frangia, cioè la distanza fra due massimi o due minimi di illuminazione, è data da
+\begin{equation}
+\frac{2kd\Delta z}{D}=2\pi\quad\ \Rightarrow\quad\ \Delta z=\frac{\pi D}{kd}=\frac{\lambda D}{2d}
+\tag{13.10}
+\end{equation}
+ed i centri delle frange chiare si trovano nei punti dati da
+\begin{equation}
+\frac{2kdz_n}{D}+\phi=2\pi n\quad\ \Rightarrow\quad\ z_n=\big(n-\frac{\phi}{2\pi}\big)\frac{\lambda D}{2d}\qquad n=\pm1,\pm2,\cdots
+\tag{13.11}
+\end{equation}
+per cui se viene variato lo sfasamento $\phi$ fra le due onde, tutta la figura di interferenza (cioè l'insieme delle frange) si sposta rigidamente.
+
+\subsection{La diffrazione}
+
+Supponiamo che un'onda piana (p.es.\ monocromatica) incida ortogonalmente su uno schermo nel quale è praticato un foro di forma arbitraria: circolare, rettangolare, \dots\\
+Ci si potrebbe aspettare che l'onda prosegua oltre il foro con un profilo, nel piano ortogonale alla direzione di propagazione, uguale alla forma del foro, e quindi che si abbia un passaggio netto dalla zona illuminata alla zona d'ombra. Ciò non è possibile, in quanto $\vec E$ e $\vec B$, pur in assenza di sorgenti, subirebbero una discontinuità nel passaggio da una zona all'altra. Si potrebbe obiettare che una separazione netta fra zona illuminata e zona d'ombra non è fisica, in quanto il bordo del foro (anche se ``otticamente ben lavorato'') non è una linea geometrica, ma una regione fisica in cui si passa dal vuoto
+allo schermo su distanze dell'ordine (almeno) delle dimensioni atomiche, e quindi si potrebbe supporre che l'onda oltre il foro, relativa a qualsiasi componente del campo elettrico o magnetico, sia della forma
+\begin{equation}
+F(x,y,z,t)=AS(y,z)\cos(kx-\omega t)\qquad\ x>0
+\tag{13.12}
+\end{equation}
+dove \ $A\cos(kx-\omega t)$ \ è l'onda incidente sullo schermo (posto nel piano $x=0$), $S(y,z)$ è la funzione caratteristica del foro opportunamente regolarizzata, cioè una funzione derivabile quanto basta, che vale 1 quando $y,z$ sono interni al foro, e nulla al di fuori di una regione appena superiore a quella del foro.\\
+Neppure la (13.12) può essere soluzione dell'equazione delle onde (12.4), indipendentemente dal fatto che $F$ sia una componente del campo elettromagnetico, o una qualsiasi grandezza che deve obbedire all'equazione delle onde (onda sonora, onda in un liquido, \dots); infatti
+\begin{equation}
+\Delta\,F-\frac{1}{c^2}\frac{\partial^2F}{\partial t^2}=A\Big(\frac{\partial^2S}{\partial y^2}+\frac{\partial^2S}{\partial z^2}\Big)\cos(kx-\omega t)
+\tag{13.13}
+\end{equation}
+quindi affinché $F$ sia soluzione dell'equazione delle onde è necessario che
+\begin{equation}
+\frac{\partial^2S}{\partial y^2}+\frac{\partial^2S}{\partial z^2}=0
+\tag{13.14}
+\end{equation}
+È facile vedere che la (13.14) ammette solo la soluzione identicamente nulla: basta, per esempio, pensare $S$ come un potenziale elettrostatico in tre dimensioni (costante rispetto a $x$), privo di sorgenti.\\
+Ciò significa che la forma della soluzione oltre il foro è molto complicata, e non è nemmeno possibile determinarla esplicitamente (occorre soddisfare le condizioni al contorno imposte dalla presenza dello schermo).\\
+Non possiamo andare molto a fondo nella discussione di questo problema: anche le trattazioni approssimate richiedono una discussione non banale per essere giustificate.\\
+La cosa più semplice che possiamo dire, e che è alla base delle trattazioni approssimate (principio di Huygens -- Fresnel dedotto dalle formule di Kirchhoff), è che il foro si comporta come una sorgente estesa di onde elettromagnetiche: è come se ogni elemento infinitesimo del foro si comportasse come un'antenna (parallela al campo elettrico incidente) ed essa, mantenuta in oscillazione dal campo incidente ed in fase con esso, emettesse un'onda del tipo della (12.46); il campo oltre il foro è quindi la sovrapposizione dei campi emessi da questo insieme infinito di antenne infinitesime, e l'interferenza fra tutte queste onde determina la distribuzione dell'intensità.\\
+Il risultato è che, per esempio nel caso di un foro circolare di raggio $d\gg\lambda$, l'intensità è praticamente diversa da zero in un cono di apertura \ $\theta\approx\lambda/d$, attorno alla direzione dell'onda incidente (il fattore numerico di proporzionalità fra $\theta$ e $\lambda/d$ dipende dalla forma del foro): questo è il fenomeno della \textbf{diffrazione}, evidentemente tanto più rilevante quanto più piccolo è il foro, e tanto maggiore la lunghezza d'onda. Per angoli maggiori di $\theta$, l'intensità tende a zero con oscillazioni di ampiezza de-
+\fig{fig13_2}{13.2}
+crescente (figura 13.2). Quindi il passaggio dalla zona illuminata alla zona d'ombra è graduale e non monotono, per cui su uno schermo in un piano $x=D\gg d$, l'immagine del foro appare come una macchia illuminata di dimensioni $\approx\theta D$, contornata da un insieme di anelli scuri e anelli chiari di intensità rapidamente decrescente (figura di diffrazione del foro): se $\theta=\lambda/d$ non è trascurabile, le dimensioni della figura di diffrazione hanno poco a che fare con le dimensioni del foro.\\
+Se il foro è di forma rettangolare di lati $a,b$; \ $a<b$, la figura di diffrazione risulta allungata nella direzione del lato corto \ ($\Delta y\approx\lambda D/a$), e accorciata nella direzione del lato lungo \ ($\Delta z\approx\lambda D/b$).
+
+\paragraph{Esempio}
+\begin{quote}
+Calcoliamo la dimensione $\Delta$ della frangia centrale prodotta da un forellino di 0.1\,mm, attraversato da luce di lunghezza d'onda $\lambda=6000$\,Å (luce gialla), su uno schermo a distanza $D=2$\,m dal foro:
+\begin{equation}
+\Delta\approx\frac{6\times10^{-5}\cdot2\times10^2}{10^{-2}}\simeq1\,\mathrm{cm}\gg0.1\,\mathrm{mm}
+\tag{13.15}
+\end{equation}
+\end{quote}
+Se l'onda (piana e monocromatica) incide ortogonalmente su uno schermo sul quale sono praticati due fori di dimensioni piccole rispetto alla loro distanza $2d$, \underline{qualitativamente} la situazione è identica a quella discussa alla fine del paragrafo precedente: il campo oltre lo schermo è la sovrapposizione dei campi dati dalla (13.7) (con $\phi=0$), cioè dei campi di due antenne nei punti $z=\pm d$ (ma ciò è vero solo se è valida l'approssimazione di dipolo, cioè se la dimensione dei fori è molto minore della lunghezza d'onda), ed il risultato è (sui piani a distanza $D\gg d$) una figura di interferenza simile a quella data dalla (13.9): se la condizione che il foro sia piccolo rispetto alla lunghezza d'onda non è soddisfatta (p.es.\ nel caso della luce), l'intensità delle frange decresce allontanandosi dalla frangia centrale. Si noti che la larghezza delle frange, data dalla (13.10), coincide con la dimensione della frangia centrale della figura di diffrazione di un foro di dimensione $2d$: in effetti tutta la figura di interferenza può essere considerata come la figura di diffrazione prodotta da una fenditura di altezza $2d$ in direzione dell'asse $z$; il fatto che questa fenditura sia in buona parte ostruita si riflette sull'intensità, e in misura molto minore sulla posizione, delle frange adiacenti a quella centrale.
+
+\subsection{La luce}
+
+Il processo di emissione della luce da parte degli atomi è un processo quantistico, che non può essere spiegato con le leggi dell'elettromagnetismo classico: in un atomo gli elettroni hanno una accelerazione quindi, come ogni carica accelerata, dovrebbero emettere onde elettromagnetiche perdendo in tal modo energia fino a fermarsi; siccome l'unica configurazione di equilibrio è quella in cui gli elettroni sono appiccicati al nucleo (non esistenza di posizioni di equilibrio stabile nel vuoto), ne segue che tutti gli elettroni finirebbero per cadere sul nucleo, e quindi le dimensioni stabili dell'atomo sarebbero quelle nucleari, cioè circa $10^{-12}\div10^{-13}$\,cm (``collasso per irraggiamento'').\\
+Uno dei risultati fondamentali della Meccanica Quantistica è che l'energia di un atomo (energia cinetica più energia potenziale) non può essere arbitraria, ma può solo avere determinati valori discreti $E_n$ limitati inferiormente: \ $E_0<E_1<E_2<\cdots$. Queste
+energie permesse $E_n$ sono i \textbf{livelli energetici} dell'atomo ed il livello di energia più bassa $E_0$ è detto \textbf{livello} (o \textbf{stato}) \textbf{fondamentale}.\\
+La luce viene emessa quando l'atomo passa da un livello energetico $E_n$ ad un altro di energia inferiore $E_m$: la frequenza della luce emessa nella transizione $E_n\to E_m$ è legata al ``salto quantico'' \ $\Delta E\equiv E_n-E_m$ \ (che, per la conservazione dell'energia, è anche l'energia del ``quanto'' (\textbf{fotone}) di luce emessa), dalla relazione di Einstein
+\begin{equation}
+E_\mathrm{fotone}=\Delta E=h\nu\qquad\qquad h=6.6\times10^{-27}\,\mathrm{erg\,s}
+\tag{13.16}
+\end{equation}
+$h$ è una costante fondamentale tipica dei processi quantistici, nota come costante di Planck.\\
+Quando l'atomo si trova nello stato fondamentale non può più irraggiare, quindi lo stato fondamentale è lo stato di equilibrio di un atomo.\\
+Le transizioni fra due livelli avvengono in un tempo dell'ordine di $10^{-8}\div10^{-9}$\,s, per cui l'estensione spaziale dell'onda emessa è $c$ volte il suddetto tempo: $30\div300$\,cm; un'onda di estensione spaziale (e quindi temporale) limitata è detta un \textbf{pacchetto d'onde} (la terminologia nasce dalla teoria della trasformata di Fourier).
+
+La luce emessa da una sorgente luminosa monocromatica, per esempio da una lampada al sodio (luce gialla), non è quindi un'unica onda monocromatica, ma è un insieme statistico di fotoni (in quanto ogni atomo emette indipendente dagli altri), cioè un insieme statistico di pacchetti d'onda con la stessa frequenza, ma con polarizzazioni diverse (esistono diversi stati dell'atomo che corrispondono allo stesso livello energetico, e la polarizzazione del fotone emesso dipende dallo stato di partenza e da quello di arrivo nella transizione fra due livelli energetici). Quindi un fascio di luce naturale non è mai polarizzato.\\
+Esistono in natura, ma soprattutto in commercio, sostanze plastiche (polaroid) che permettono di ottenere luce polarizzata linearmente: queste sostanze hanno la proprietà di essere completamente trasparenti alla luce polarizzata linearmente in una certa direzione (detta ``asse ottico''), di assorbire completamente la luce polarizzata in direzione ortogonale all'asse ottico, e di avere un comportamento \textbf{lineare}: il campo in uscita dipende linearmente dal campo in entrata (quello che stiamo descrivendo è un polaroid ideale: la trasparenza e l'assorbimento non sono mai completi).\\
+Consideriamo un'onda piana che si propaga in direzione dell'asse $x$, e disponiamo ortogonalmente alla direzione di propagazione un foglio polaroid; prendiamo l'asse $z$ (per esempio) nella direzione dell'asse ottico. L'onda piana è descritta dalla (13.1) e può essere considerata come la sovrapposizione di un'onda polarizzata in direzione dell'asse $y$: \ $\vec E_1(x,t)=\big(0,\,E_{0y}\cos(kx-\omega t+\phi),\,0\big)$, e di un'onda polarizzata in direzione dell'asse $z$: \ $\vec E_2(x,t)=\big(0,\,0,\,E_{0z}\cos(kx-\omega t+\psi)\big)$. Grazie alla linearità del polaroid, la prima viene completamente assorbita, e la seconda completamente trasmessa, quindi l'onda uscente dal polaroid è polarizzata in direzione dell'asse $z$, cioè dell'asse ottico del polaroid.\\
+Se indichiamo con $I$ \ l'intensità dell'onda incidente e con $I_\mathrm{tr}$ quella dell'onda trasmessa, e con $\vec E_0$ il vettore $(0,\,E_{0y},\,E_{0z})$, si ha
+\begin{equation}
+I=\frac{c}{8\pi}\vec E_0^2\,,\quad\ I_\mathrm{tr}=\frac{c}{8\pi}E_{0z}^2\,;\quad\ \Rightarrow\quad\ I_\mathrm{tr}=I\cos^2\alpha
+\tag{13.17}
+\end{equation}
+dove $\alpha$ è l'angolo fra il vettore $\vec E_0$ e l'asse ottico. La (13.17) è nota come \textbf{Legge di Malus}.\\
+Se sul polaroid incidono diverse onde piane (o diversi pacchetti d'onda) con polarizzazioni diverse, le onde trasmesse sono tutte polarizzate in direzione dell'asse ottico, ed in tal modo, a scapito dell'intensità, si può ottenere un fascio di luce polarizzata: ciò può essere dimostrato sperimentalmente disponendo due polaroid con assi ottici paralleli e verificando che tutta la luce trasmessa dal primo attraversa anche il secondo (oppure, se gli assi ottici sono ortogonali, che il sistema dei due polaroid è completamente opaco).
+
+Nasce però un problema: se il fascio incidente è un fascio di fotoni, cosa accade al singolo fotone, cioè al singolo pacchetto d'onde, che non sia polarizzato né parallelamente né ortogonalmente all'asse ottico del polaroid ma, per esempio, sia polarizzato linearmente in una direzione che forma un angolo $\alpha$ con l'asse ottico? Secondo quanto sopra, ne dovrebbe essere trasmessa una frazione, cioè l'energia del fotone trasmesso per la legge di Malus dovrebbe essere uguale a $h\nu\cos^2\alpha$, e quindi, se vale la relazione di Einstein (13.16) che lega l'energia di un fotone con la sua frequenza, il fotone trasmesso dovrebbe avere una frequenza \ $\nu'=\nu\cos^2\alpha$. Che le cose non stiano così ce lo dice l'ovvia constatazione che se sul polaroid incide luce gialla (o rossa, o verde), esce luce gialla (o rossa, o verde), cioè luce con la stessa frequenza. Questo è un esempio tipico del conflitto fra la natura ondulatoria della luce, espressa dal principio di sovrapposizione, e la natura corpuscolare introdotta dalla relazione (13.16) di Einstein: il fotone ha un'energia, una quantità di moto $E/c$ \ e soprattutto è, come una particella, un'entità \underline{indivisibile}; il modo in cui la Meccanica Quantistica risolve questo problema costituisce uno dei più profondi cambiamenti dei paradigmi su cui si basa la fisica classica.
+
+\subsection{L'interferometro di Mach e Zehnder}
+
+In tempi recenti sono stati realizzati esperimenti di interferenza nei quali anziché un fascio di luce veniva utilizzato un fascio di particelle, più precisamente neutroni. Questi esperimenti forniscono una prova molto convincente della natura ondulatoria delle particelle e quindi delle previsioni della Meccanica Quantistica.\\
+L'interferometro utilizzato negli esperimenti con i neutroni è molto simile all'interferometro di Mach e Zehnder, utilizzato per la luce: diamo quindi una breve descrizione di questo interferometro.
+\fig{fig13_3}{13.3}
+L'interferometro di Mach e Zehnder, rappresentato in figura 13.3, consiste di quattro specchi fra loro paralleli e disposti ai vertici di un rettangolo e formano con i lati di questo rettangolo angoli di 45$^\circ$. Due di questi specchi ($s_2$ ed $s_3$) sono normali specchi, mentre gli altri due ($s_1$ ed $s_4$) sono specchi semi--trasparenti: un fascio di luce incidente su di essi viene parzialmente riflesso e parzialmente trasmesso (``beam--splitters''); supporremo che il 50\% dell'intensità venga riflessa e il 50\% trasmessa.\\
+Un fascio di luce, provenendo da sinistra, incide su $s_1$: il fascio trasmesso si riflette su $s_3$ e incide su $s_4$, dal quale viene parzialmente riflesso verso il rivelatore $R_1$ e parzialmente trasmesso verso il rivelatore $R_2$; il fascio riflesso da $s_1$ si riflette su $s_2$ ed infine
+viene da $s_4$ parzialmente trasmesso verso $R_1$, e parzialmente riflesso verso $R_2$. Quindi, su ciascuno dei due rivelatori giunge sia parte del fascio proveniente dal ramo $s_2-s_4$, sia parte del fascio proveniente dal ramo $s_3-s_4$, e questi due fasci interferiscono fra di loro: le intensità $I_1$ e $I_2$ registrate dai due rivelatori $R_1$ ed $R_2$ sono il risultato dell'interferenza fra i due fasci che giungono su ciascuno di essi: se uno (qualsiasi) dei due fasci venisse intercettato, p.es.\ mediante l'interposizione di un materiale assorbente in uno dei due cammini, i due rivelatori $R_1$ ed $R_2$ registrerebbero la stessa intensità, 1/4 dell'intensità del fascio incidente.\\
+Prendiamo l'asse $x$ nella direzione del fascio incidente; supponiamo che la luce incidente sia un'onda piana, che per semplicità supponiamo linearmente polarizzata (ma questa ipotesi non è affatto necessaria), in modo che possiamo scrivere l'onda come
+\begin{equation}
+F(x,t)=F_0\cos(kx-\omega t)
+\tag{13.18}
+\end{equation}
+dove $F$ è l'unica componente del campo elettrico diversa da zero.\\
+Siccome l'intensità dell'onda è quadratica nell'ampiezza $F_0$, l'ampiezza dell'onda trasmessa da uno specchio semi--trasparente e quella dell'onda riflessa sono entrambe ridotte di un fattore $\sqrt2$ rispetto all'ampiezza dell'onda incidente. Quindi l'onda che arriva su $R_1$ lungo il percorso $s_1\to s_2\to s_4$, avendo incontrato entrambi gli specchi semi--trasparenti, è
+\begin{equation}
+\frac{1}{2}F_0\cos(kx-\omega t+\phi_1)
+\tag{13.19}
+\end{equation}
+e quella che arriva su $R_1$ lungo il percorso $s_1\to s_3\to s_4$ \ è
+\begin{equation}
+\frac{1}{2}F_0\cos(kx-\omega t+\phi_2)
+\tag{13.20}
+\end{equation}
+Se i cammini ottici \ $s_1\to s_2\to s_4$ \ e \ $s_1\to s_3\to s_4$ \ fossero rigorosamente identici, $\phi_1=\phi_2$, ma da un lato è impossibile calibrare l'interferometro in modo che la differenza fra i due cammini ottici sia molto minore della lunghezza d'onda, e d'altro lato può essere utile introdurre deliberatamente uno sfasamento fra le due onde, quindi nelle (13.19) e (13.20) manteniamo $\phi_1\ne\phi_2$ e poniamo $\phi=\phi_1-\phi_2$.\\
+Quindi, se \ $I\equiv cF_0^2/8\pi$ \ è l'intensità dell'onda incidente su $s_1$, l'intensità su $R_1$ è
+\begin{equation}
+\begin{aligned}
+I_1&=\frac{c}{4\pi}\frac{1}{4}F_0^2\,\overline{\big(\cos(kx-\omega t+\phi_1)+\cos(kx-\omega t+\phi_2)\big)^2}\\
+&=\frac{1}{2}I\,(1+\cos\phi)
+\end{aligned}
+\tag{13.21}
+\end{equation}
+Di conseguenza, dato che \ $I_1+I_2=I$, deve essere
+\begin{equation}
+I_2=\frac{1}{2}I\,(1-\cos\phi)
+\tag{13.22}
+\end{equation}
+L'intensità su ciascuno dei rivelatori può quindi variare da 0 a $I$, al variare dello sfasamento $\phi$: lo sfasamento può essere variato con continuità inserendo in uno dei rami dell'interferometro una sottile lastrina di vetro, e variandone l'inclinazione, in modo da cambiare lo spessore del vetro attraversato dal fascio: se $n$ è l'indice di rifrazione del vetro, lo sfasamento introdotto è dato da \ $\delta\phi=k(n-1)d=2\pi(n-1)d/\lambda$, dove $d$ è lo spessore attraversato.
