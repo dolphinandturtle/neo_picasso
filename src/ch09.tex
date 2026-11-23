@@ -1,0 +1,343 @@
+\section{LA CORRENTE DI SPOSTAMENTO NEI CIRCUITI CAPACITIVI}
+
+\subsection{La corrente di spostamento}
+
+La \textit{corrente di spostamento} $\vec J_S$, definita dalla (8.13), fu introdotta ``a mano'' da Maxwell per ragioni di coerenza delle equazioni: gli esperimenti, principalmente quelli effettuati da Faraday con correnti variabili, avevano permesso di stabilire l'esistenza di forze elettromotrici indotte dalle variazioni del campo magnetico, e quindi l'equazione (6.50), ma non erano in grado di mettere in evidenza il fenomeno reciproco, descritto dalla (6.52), cioè l'esistenza di campi magnetici dovuti alle variazioni del campo elettrico, fenomeno che avrebbe richiesto esperimenti mirati alla ricerca di questo effetto, e condotti con correnti rapidamente variabili nel tempo.\\
+Le equazioni per il campo magnetico erano quindi ancora quelle della magnetostatica (7.14), e fu chiaro a Maxwell che queste sono accettabili solo se la corrente $\vec J$, pur \textit{dipendendo dal tempo, è a divergenza nulla}: infatti, come abbiamo già notato, la 2$^\mathrm{a}$ delle (7.14), grazie alla (7.12), implica \ $\dive\vec J=0$. Di qui la necessità di correggere l'equazione per il campo magnetico:
+\begin{equation}
+\rot\vec B=\frac{4\pi}{c}\vec J+\ ?
+\tag{9.1}
+\end{equation}
+in modo che anche la divergenza del secondo membro sia nulla.\\
+Il ragionamento di Maxwell fu molto semplice: siccome vale l'equazione di conservazione della carica (3.10), prendendo la divergenza di ambo i membri della (9.1) si ha
+\begin{equation}
+\dive\ ?\ =-\frac{4\pi}{c}\dive\vec J=\frac{4\pi}{c}\frac{\partial\rho}{\partial t}=\frac{1}{c}\frac{\partial}{\partial t}\dive\vec E=\dive\Big(\frac{1}{c}\frac{\partial\vec E}{\partial t}\Big)
+\tag{9.2}
+\end{equation}
+per cui ipotizzò che il termine mancante nella (9.1) fosse proprio $(1/c)\partial\vec E/\partial t$, e quindi scrisse la (6.52), che noi abbiamo invece ricavato come conseguenza del principio di relatività.\\
+Il termine ``corrente di spostamento'' a noi oggi non sembra molto appropriato: lo era invece per Maxwell che, occupandosi di campi variabili all'interno dei dielettrici, notava che la corrente di spostamento corrispondeva effettivamente ad uno spostamento di cariche, quelle che costituiscono i dipoli molecolari, all'interno del mezzo.\\
+Siccome
+\begin{equation}
+\dive(\vec J+\vec J_S)=0
+\tag{9.3}
+\end{equation}
+è chiaro che pozzi e sorgenti dell'una sono rispettivamente sorgenti e pozzi per l'altra: si può quindi dire che la corrente di spostamento costituisce la continuazione, o il prolungamento, di $\vec J$; per esempio, quando un condensatore viene caricato, la corrente di conduzione termina su una armatura e scaturisce dall'altra: la corrente di spostamento salda questa interruzione fra le armature del condensatore, infatti mentre il condensatore si carica varia il campo elettrico fra le armature, e quindi è presente la corrente di spostamento. La corrente totale di spostamento $I_S$ all'interno del condensatore, dove la corrente di conduzione $I$ è nulla, è precisamente uguale a $I$.
+
+\paragraph{Esempio}
+\begin{quote}
+Una sfera contenente un materiale radioattivo emette particelle cariche uniformemente in tutte le direzioni. La corrente è quindi a simmetria sferica: \ $\vec J(\vec r,t)=J_r(r,t)\,\hat r$. Vogliamo determinare il campo magnetico generato da questa corrente.
+\fig{fig9_1}{9.1}
+La corrente non è a divergenza nulla, in quanto ha le sue sorgenti nella sfera radioattiva; presa una sfera di raggio $r$ si ha
+\begin{equation}
+\Phi(\vec J\,)=4\pi r^2J_r(r,t)=-\frac{dQ_r(t)}{dt}\quad\ \Rightarrow\quad\ J_r(r,t)=-\frac{\dot Q_r(t)}{4\pi r^2}
+\tag{9.4}
+\end{equation}
+dove $Q_r(t)$ è la carica contenuta dentro la sfera di raggio $r$ all'istante $t$. Siccome la densità di carica è a simmetria sferica, per il teorema di Gauss si ha
+\begin{equation}
+\vec E(\vec r,t)=\frac{Q_r(t)}{r^2}\,\hat r\ \Rightarrow\ \vec J_S(\vec r,t)=-\vec J(\vec r,t)
+\tag{9.5}
+\end{equation}
+quindi \ $\vec J(\vec r,t)+\vec J_S(\vec r,t)=0$ \ ed il campo magnetico è nullo.\\
+Potevamo ottenere più rapidamente lo stesso risultato usando le simmetrie: le sorgenti sono a simmetria sferica, quindi il campo magnetico, se non è nullo, è radiale, ma un campo radiale non è a divergenza nulla in quanto non è nullo il flusso uscente da una sfera concentrica con la distribuzione, e siccome \ $\dive\vec B=0$ \ ne segue $\vec B=0$.
+\end{quote}
+
+Nel capitolo precedente abbiamo discusso situazioni in cui la corrente di spostamento può essere trascurata. Abbiamo visto che ciò è possibile quando \ \textit{i}) le correnti sono lentamente variabili, e \ \textit{ii}) $\dive\vec J=0$. L'esempio appena discusso dimostra l'importanza della corrente di spostamento quando la corrente non è a divergenza nulla; l'altro caso in cui la corrente di spostamento giuoca un ruolo essenziale si verifica quando le correnti, e quindi i campi, sono rapidamente variabili, come nelle antenne che generano le onde elettromagnetiche.\\
+In questo capitolo ci occupiamo ancora di campi generati da correnti lentamente variabili ma, diversamente dai casi trattati nel precedente capitolo, in situazioni in cui la corrente di spostamento non è, a priori, trascurabile.
+
+\subsection{La corrente di spostamento nei circuiti capacitivi}
+
+Se in un circuito, sempre in regime di correnti lentamente variabili, sono presenti dei condensatori, le equazioni (8.12) non sono applicabili in quanto la 1$^\mathrm{a}$ richiede che la corrente sia a divergenza nulla, ma le armature dei condensatori, essendo regioni in cui si hanno variazioni della densità di carica, costituiscono pozzi e sorgenti per $\vec J$. Per la stessa ragione la divergenza del campo elettrico non è nulla, e quindi anche la 4$^\mathrm{a}$ delle (8.12) deve essere modificata.\\
+L'approssimazione delle correnti lentamente variabili, che consiste nella determinazione dei campi fino all'ordine $L/c\tau$, può essere facilmente riproposta anche nel caso in cui il campo elettrico non è dovuto soltanto alla variazione del campo magnetico, ma anche alla presenza di cariche: per esempio quelle sulle armature dei condensatori.\\
+La differenza rispetto alla trattazione del capitolo precedente sta nel fatto che mentre allora, in assenza di cariche, si partiva dal campo ``quasi statico'' $\vec B_0(x,y,z,t)$ soluzione
+della (8.4), per ottenere iterativamente i termini delle serie (8.7), ora partiamo dai campi quasi--statici \ $\vec E_0$, soluzione delle equazioni
+\begin{equation}
+\left\{\begin{aligned}
+&\dive\vec E_0(x,y,z,t)=4\pi\rho(x,y,z,t)\\
+&\rot\vec E_0(x,y,z,t)=0
+\end{aligned}\right.
+\tag{9.6}
+\end{equation}
+\big(e che sono risolte dalla (1.10) con $\rho=\rho(\vec r\,',t)$\big), \ e da $\vec B_0$ che è determinato sia dalla corrente di conduzione $\vec J$ che da quella di spostamento \ $\vec J_S^{\,0}$, in quanto sono dello stesso ordine: \ $E_0\approx Q/L^2\ \Rightarrow\ J_S^0\approx\dot Q/L^2=I/L^2\approx J$
+\begin{equation}
+\left\{\begin{aligned}
+&\dive\vec B_0=0\\
+&\rot\vec B_0=\frac{4\pi}{c}(\vec J+\vec J_S^{\,0})\,;\qquad\qquad\vec J_S^{\,0}\equiv\frac{1}{4\pi}\frac{\partial\vec E_0}{\partial t}\,\cdot
+\end{aligned}\right.
+\tag{9.7}
+\end{equation}
+La corrente \ $\vec J+\vec J_S^{\,0}$ \ è a divergenza nulla: la verifica è d'obbligo in quanto \ $\vec J_S^{\,0}$ \ non è tutta la corrente di spostamento ma solo quella dovuta al campo quasi--statico $\vec E_0$, comunque si effettua utilizzando, come nella (9.2), l'equazione di conservazione della carica e la 1$^\mathrm{a}$ delle (9.6).\\
+Calcolato $\vec E_0$ dalle (9.6), $\vec B_0$ è dato dalla formula di Biot -- Savart (7.23):
+\begin{equation}
+B_0(\vec r,t)=\frac{1}{c}\int\frac{\vec J(\vec r\,',t)\wedge(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV+\frac{1}{c}\int\frac{\vec J_S^{\,0}(\vec r\,',t)\wedge(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV
+\tag{9.8}
+\end{equation}
+dove il primo integrale è effettuato lungo i conduttori nei quali scorre la corrente, mentre il secondo è esteso a tutto lo spazio in cui è presente la corrente di spostamento, cioè il campo elettrico $\vec E_0$. A prima vista la presenza del secondo integrale nella (9.8) sembra precludere ogni possibilità di determinare $\vec B_0$ e quindi (e questo è il nostro obiettivo) la f.e.m.\ in un circuito: la circostanza tanto favorevole quanto sorprendente è che questo integrale, \underline{in questo caso} in cui \ $\rot\vec E_0=0$, è nullo!\\
+Un modo (uno dei tanti) per dimostrare questa affermazione è quello di prendere la rotazione di ambo i membri della 2$^\mathrm{a}$ della (9.7) e di utilizzare la formula (7.20) per la doppia rotazione, con $\vec B_0$ al posto di $\vec A$: siccome \ $\dive\vec B_0=0$\,, \ si ha
+\begin{equation}
+\rot(\rot\vec B_0)=-\Delta\,\vec B_0=\frac{4\pi}{c}\rot(\vec J+\vec J_S^{\,0})
+\tag{9.9}
+\end{equation}
+e poiché \underline{in questo caso}, per la (9.6) \ $\rot\vec J_S^{\,0}=0$, si ha
+\begin{equation}
+\Delta\,\vec B_0=-\frac{4\pi}{c}\rot\vec J
+\tag{9.10}
+\end{equation}
+che è l'equazione di Poisson per le componenti di $\vec B_0$, ed è la stessa che si ottiene prendendo la rotazione della 2$^\mathrm{a}$ della (7.14); siccome per sorgenti in una regione limitata dello spazio il campo magnetico si annulla all'infinito, la soluzione della (9.10) è unica e quindi è data dalla (7.23), cioè dal primo integrale nella (9.8):
+\begin{equation}
+B_0(\vec r,t)=\frac{1}{c}\int\frac{\rot\vec J(\vec r\,',t)}{|\vec r-\vec r\,'|}\,dV\equiv\frac{1}{c}\int\frac{\vec J(\vec r\,',t)\wedge(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV
+\tag{9.11}
+\end{equation}
+dove la seconda eguaglianza è una identità garantita da una opportuna integrazione per parti.\\
+Il risultato è importante, ma va preso con le molle: \underline{importante} perché dimostra che
+il campo è completamente determinato dalla sola corrente di conduzione, per cui se l'interruzione nel circuito è soltanto dovuta alla presenza di condensatori, praticamente non differisce dal campo di un circuito chiuso, in quanto il contributo ``mancante'', se $\delta$ è la separazione fra le armature del condensatore ed $l$ la lunghezza del conduttore, possiamo aspettarci che sia dell'ordine di $\delta/l$ rispetto a $\vec B_0$\,; se il circuito contiene anche una induttanza questo rapporto è certamente molto piccolo; \ \underline{con le molle} perché può indurre nella tentazione di considerare nullo l'effetto della corrente di spostamento, e quindi di poterla ignorare. È vero che la corrente di conduzione (in questo caso) ``contiene già il DNA della corrente di spostamento'' (infatti per le (9.6) e (9.7) $\vec J_S^{\,0}$ è un campo irrotazionale le cui sorgenti, a parte il segno, sono quelle di $\vec J$\,), ma si noti che anche se $\vec B_0$ è dato dalla (9.11) in cui $\vec J_S^{\,0}$ non compare, la determinazione di $\vec B_0$ mediante il teorema della circuitazione (teorema di Stokes), non può prescindere dalla corrente di spostamento, dal momento che è una conseguenza della (9.7):
+\begin{equation}
+\oint\vec B\cdot d\vec l=\frac{4\pi}{c}\Phi(\vec J+\vec J_S^{\,0})
+\tag{9.12}
+\end{equation}
+ed ignorare $\vec J_S^{\,0}$ nella (9.12) porta inevitabilmente a contraddizioni in quanto, siccome la sola corrente di conduzione $\vec J$ non è a divergenza nulla, il flusso di $\vec J$ dipende dalla superficie e non solo dal suo contorno.
+
+Si noti che quanto sopra chiarisce anche la discussione che abbiamo fatto a proposito delle (7.23) e (7.24), quando abbiamo fatto notare che il contributo al campo dovuto ad una porzione di filo non soddisfa la seconda delle (7.14): ora vediamo che soddisfa una equazione come la (9.7), con l'opportuna corrente di spostamento univocamente determinata dalla porzione di corrente considerata.
+
+\paragraph{Esempio}
+\begin{quote}
+Consideriamo il sistema illustrato nella figura 9.2: un condensatore sferico alimentato da una corrente $I(t)$ tramite due fili rettilinei collegati alle due armature. Il campo elettrico $\vec E_0(t)$ è diverso da zero solo all'interno del condensatore, e quindi anche la corrente di spostamento è confinata fra le armature del ``buon condensatore''. Il sistema ha le solite invarianze: rotazioni attorno al filo (asse $z$) e riflessioni rispetto a qualsiasi piano passante per l'asse $z$, quindi per la (9.12) il campo magnetico in ogni punto a distanza $\varrho$ dall'asse
+\fig{fig9_2}{9.2}
+è dato dalla (7.30), dove $I_\varrho$ è la corrente \underline{totale}, cioè di conduzione più quella di spostamento, concatenata con la circonferenza di raggio $\varrho$; per ogni punto esterno al condensatore
+\begin{equation}
+B_\theta(t)=\frac{2I(t)}{c\,\varrho}
+\tag{9.13}
+\end{equation}
+infatti in questo caso $I_\varrho=I(t)$: basta prendere come superficie una calotta tutta esterna al condensatore, dove $\vec J_S^{\,0}$ è assente, che è quindi attraversata solo dalla corrente del filo. Se invece prendiamo un punto fra le due armature del condensatore, $I_\varrho$ riceve contributo solo (o anche) dalla corrente di spostamento.
+Se chiudiamo il circuito cortocircuitando il condensatore, cioè con un filo fra le due armature come nella figura 9.3, il campo cambia solo all'interno del condensatore, e in modo sensibile solo in una piccola regione attorno al tratto di filo aggiunto.
+\fig{fig9_3}{9.3}
+Possiamo anche verificare (per il sistema descritto nella figura 9.2) che il 2$^\circ$ integrale nella (9.8) è nullo: supponiamo che la carica sulla sfera interna (e di conseguenza anche su quella esterna) sia uniformemente distribuita, allora $\vec E_0$, e anche $\vec J_S^{\,0}$, è radiale, quindi
+\begin{equation}
+\begin{aligned}
+&\frac{1}{c}\int\frac{\vec J_S^{\,0}(\vec r\,',t)\wedge(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV=\frac{1}{c}\int\frac{J_{S\,r}^0(r',t)\,\hat r\,'\wedge(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV\\
+&=\frac{1}{c}\int\frac{J_{S\,r}^0(r',t)}{r'}\,\frac{\vec r\,'\wedge\vec r}{|\vec r-\vec r\,'|^3}\,dV=\frac{\vec r}{c}\wedge\int\frac{J_{S\,r}^0(r',t)}{r'}\,\frac{(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV
+\end{aligned}
+\tag{9.14}
+\end{equation}
+l'ultimo integrale è un campo uguale al campo elettrico generato da una densità di carica a simmetria sferica \ $J_{S\,r}^0/r'$, quindi è un campo radiale ed il suo prodotto esterno con \ $\vec r$ \ è nullo.
+\end{quote}
+
+\subsection{Il circuito $RLC$}
+
+Consideriamo il circuito $RLC$ di figura 9.4, e supponiamo che, con l'interruttore aperto, il condensatore sia carico alla d.d.p.\ $V_0$, quindi chiudiamo l'interruttore. Quando l'interruttore è chiuso, e quindi circola una corrente $I(t)$, nel circuito sono presenti due campi elettrici: uno è il campo $\vec E_0$ (conservativo) soluzione delle equazioni (9.6), dovuto alle cariche $Q(t)$ e $-Q(t)$ sulle armature del condensatore, l'altro è il campo elettrico (non conservativo) autoindotto $\vec E_1$ che nell'approssimazione delle correnti lentamente variabili è soluzione delle equazioni
+\fig{fig9_4}{9.4}
+\begin{equation}
+\left\{\begin{aligned}
+&\dive\vec E_1=0\\
+&\rot\vec E_1=-\frac{1}{c}\frac{\partial\vec B_0}{\partial t}
+\end{aligned}\right.
+\tag{9.15}
+\end{equation}
+con $\vec B_0$ definito dalle (9.7) e dato dalla (9.11). Per determinare l'equazione del circuito procediamo in modo simile a come abbiamo ricavato con le (8.57) e (8.58) la (8.55): la differenza sta nel fatto che ora, a causa della presenza del condensatore, il circuito non è chiuso. Preso come verso positivo per la corrente quello orario, cioè dall'armatura $A$ all'armatura $B$ attraverso la resistenza e l'induttanza si ha, come nella (8.57),
+\begin{equation}
+\int_A^B(\vec E_0+\vec E_1)\cdot d\vec l=RI(t)
+\tag{9.16}
+\end{equation}
+mentre
+\begin{equation}
+\int_A^B\vec E_0\cdot d\vec l=-V(t)
+\tag{9.17}
+\end{equation}
+dove $V(t)$ è la differenza di potenziale fra l'armatura $B$ e l'armatura $A$, e
+\begin{equation}
+\int_A^B\vec E_1\cdot d\vec l\approx-L\frac{dI(t)}{dt}\,\cdot
+\tag{9.18}
+\end{equation}
+Il segno $\approx$ è d'obbligo in quanto il coefficiente di autoinduzione è stato definito per un circuito chiuso: ovviamente in un condensatore la separazione fra le armature è minima e trattare il circuito come se fosse chiuso, alla luce della discussione che abbiamo fatto a proposito della (9.11), è pienamente legittimo.\\
+Mettendo insieme le (9.16), (9.17) e (9.18) si ottiene l'equazione del circuito
+\begin{equation}
+L\frac{dI(t)}{dt}+RI(t)+V(t)=0\,.
+\tag{9.19}
+\end{equation}
+Anche in questo caso, e con le stesse approssimazioni contenute nella (9.18), si può ritrovare la (9.19) mediante il bilancio energetico: nel circuito è presente sia energia magnetica $U_M$ che energia elettrica $U_E$:
+\begin{equation}
+U_M=\frac{1}{2}LI^2\,;\qquad U_E=\frac{1}{2}\frac{Q^2}{C}
+\tag{9.20}
+\end{equation}
+e la loro diminuzione nell'unità di tempo deve eguagliare l'energia dissipata per effetto Joule:
+\begin{equation}
+LI(t)\dot I(t)+V(t)I(t)+RI^2(t)=0
+\tag{9.21}
+\end{equation}
+(si è fatto uso della relazione \ $Q/C=V$\,), da cui la (9.19).\\
+La soluzione della (9.19) richiede la conoscenza, come condizioni iniziali, di $I$ e di $V$ ad un certo istante; possiamo scrivere la (9.19) come equazione nella sola incognita $Q(t)$:
+\begin{equation}
+L\frac{d^2Q(t)}{dt^2}+R\frac{dQ(t)}{dt}+\frac{1}{C}Q(t)=0
+\tag{9.22}
+\end{equation}
+ma di solito si preferisce prendere come funzione incognita $I(t)$: derivando rispetto a $t$ la (9.22) si ottiene
+\begin{equation}
+L\frac{d^2I(t)}{dt^2}+R\frac{dI(t)}{dt}+\frac{1}{C}I(t)=0\,.
+\tag{9.23}
+\end{equation}
+La (9.23) richiede come condizioni iniziali $I$ e $\dot I$ ad un certo istante, ma queste sono determinate, grazie alla (9.19), dalla conoscenza di $V$ e di $I$ (o di $Q$ e $\dot Q$) allo stesso istante, quindi la (9.23) è equivalente alla (9.19) e alla (9.22).\\
+Tanto nella forma (9.22) che in quella (9.23) l'equazione del circuito è identica all'equazione di un oscillatore smorzato: nella (9.22) $Q(t)$ prende il posto di $x(t)$, $L$ quello della massa, $1/C$ quello della costante elastica, mentre $R$ è l'analogo del coefficiente $\gamma$ di attrito viscoso; l'energia magnetica $U_M$ e quella elettrica $U_E$ sono rispettivamente l'analogo dell'energia cinetica e dell'energia potenziale dell'oscillatore.\\
+Pertanto rimandiamo per la determinazione della soluzione della (9.23) \big(o della (9.22)\big) alle Lezioni di Fisica Generale 1, capitolo 11: qui ci limitiamo a richiamare gli aspetti essenziali della soluzione.\\
+Il circuito ha una ``frequenza propria'' $\omega_0$ ed un ``tempo di smorzamento'' $\tau$ dati da
+\begin{equation}
+\omega_0=\frac{1}{\sqrt{LC}}\,;\quad\ \tau=\frac{L}{R}\,\cdot
+\tag{9.24}
+\end{equation}
+Sono possibili due regimi di funzionamento, a seconda che \ $1/(2\tau)\gtrless\omega_0$\,, cioè \ $R/L\gtrless2/\sqrt{LC}$: nel primo caso \ $(R/L>2/\sqrt{LC}\,)$ \ $I(t)$ è combinazione lineare di due esponenziali reali decrescenti:
+\begin{equation}
+I(t)=c_1e^{-\alpha_1t}+c_2e^{-\alpha_2t}\,;\qquad\alpha_{1,2}=\frac{1}{2}\Big(\frac{R}{L}\pm\sqrt{\frac{R^2}{L^2}-\frac{4}{LC}}\,\Big)\cdot
+\tag{9.25}
+\end{equation}
+Il caso tipico è quello di un circuito senza induttanza (circuito $RC$) in cui $L$ è non nullo solo perché qualunque circuito, in quanto concatena il flusso del campo magnetico da esso prodotto, ha un coefficiente di autoinduzione diverso da zero. In questo caso, poiché \ $L/R\ll\sqrt{LC}$ \ (o equivalentemente, quadrando ambo i membri, \ $L/R\ll RC$)
+\begin{equation}
+\alpha_1\approx\frac{R}{L}\,;\quad\ \alpha_2\approx\frac{1}{RC}
+\tag{9.26}
+\end{equation}
+e la soluzione della (9.23) con le condizioni iniziali \ $I(0)=0$, \ $V(0)=V_0$, e quindi dalla (9.19) \ $\dot I(0)=-V_0/L$, è
+\begin{equation}
+I(t)\approx-\frac{V_0}{R}\big(e^{-t/RC}-e^{-(R/L)t}\big)
+\tag{9.27}
+\end{equation}
+il cui grafico, a parte il segno, è quello della figura (3.9):
+\begin{equation}
+I(t)\approx\left\{\begin{array}{ll}
+-\dfrac{V_0}{R}\big(1-e^{-(R/L)t}\big)&\quad\text{per }t\ll RC\\[10pt]
+-\dfrac{V_0}{R}e^{-t/RC}&\quad\text{per }t\gg L/R\,.
+\end{array}\right.
+\tag{9.28}
+\end{equation}
+Se invece \ $R/L<2/\sqrt{LC}$, \ $I(t)$ compie oscillazioni smorzate di frequenza (pulsazione)
+\begin{equation}
+\omega=\sqrt{\omega_0^2-1/(2\tau)^2}=\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}
+\tag{9.29}
+\end{equation}
+e tempo di smorzamento
+\begin{equation}
+\tau_{\scriptscriptstyle RLC}=2\tau=2\frac{L}{R}\,\cdot
+\tag{9.30}
+\end{equation}
+La soluzione generale della (9.23) in questo caso è
+\begin{equation}
+I(t)=e^{-t/2\tau}(c_1\cos\omega t+c_2\sen\omega t)
+\tag{9.31}
+\end{equation}
+ed il fattore di qualità $\mathcal Q$ del circuito è dato da
+\begin{equation}
+\mathcal Q\equiv\omega_0\tau=\frac{\sqrt{L/C}}{R}\,\cdot
+\tag{9.32}
+\end{equation}
+La situazione fisicamente interessante è quella di piccolo smorzamento \ $\mathcal Q\gg1$, cioè \ $\tau\gg1/\omega_0$, per cui la corrente compie molte ($\approx\mathcal Q$) oscillazioni prima che queste si siano apprezzabilmente smorzate. Il periodo delle oscillazioni, in questo caso in cui la resistenza è molto piccola \big($\,R\ll\sqrt{L/C}$\,: per esempio solo quella del conduttore che costituisce l'induttanza e dei fili di connessione\big), è praticamente \ $T_0=2\pi/\omega_0$, cioè quello del circuito $LC$.\\
+Se le condizioni iniziali sono (come prima) \ $I(0)=0$, \ $\dot I(0)=-V_0/L$,
+\begin{equation}
+I(t)=-\frac{V_0}{\sqrt{L/C}}\,e^{-t/2\tau}\sen\omega_0t\,.
+\tag{9.33}
+\end{equation}
+Se nel circuito è presente un generatore di f.e.m.\ $\mathcal E(t)$ in serie con gli altri elementi del circuito, nella (9.18) $\vec E_1$ è la somma del campo autoindotto e di quello dovuto al generatore, per cui
+\begin{equation}
+\int_A^B\vec E_1\cdot d\vec l\approx\mathcal E(t)-L\frac{dI(t)}{dt}
+\tag{9.34}
+\end{equation}
+quindi l'equazione del circuito è
+\begin{equation}
+L\frac{dI(t)}{dt}+RI(t)+V(t)=\mathcal E(t)
+\tag{9.35}
+\end{equation}
+che discuteremo nel prossimo paragrafo.
+
+Riprendiamo il discorso sulle extracorrenti di apertura: se fra i contatti dell'interruttore c'è il vuoto, oppure un fluido difficilmente ionizzabile (normalmente olio) per cui diventa trascurabile la corrente che passa fra di essi, diventa importante un altro effetto: l'apertura dell'interruttore comporta l'introduzione nel circuito di una piccola capacità in serie, quella fra i contatti dell'interruttore. Il circuito diventa quindi un circuito oscillante a frequenza elevata, ed inoltre non fissa, in quanto la capacità fra i contatti dell'interruttore varia nel tempo: l'energia immagazzinata nel circuito si dissipa sia nella resistenza del circuito, sia mediante l'emissione di onde elettromagnetiche (la corrente è rapidamente variabile). Normalmente i due effetti, l'elevata resistenza fra i contatti e la piccola capacità fra di essi, sono entrambi presenti, e non sempre è facile stabilire quale dei due prevalga.
+
+\subsection{Circuiti in corrente alternata}
+
+Nell'elettronica \underline{lineare} i circuiti sono costituiti esclusivamente da resistenze, induttanze, condensatori e generatori di f.e.m. Il termine ``elettronica lineare'' è dovuto al fatto che le equazioni che permettono di determinare la corrente in ogni ramo del circuito sono un sistema di equazioni differenziali lineari, in generale non omogenee a causa della presenza di generatori di f.e.m.\\
+Sono elementi \underline{non lineari} (e quindi fanno parte dell'elettronica non lineare) i diodi e i transistor: un diodo, per esempio, è un oggetto che presenta una elevata resistenza alla corrente in un dato verso, e una resistenza trascurabile se la corrente lo percorre nel verso opposto, quindi l'equazione che lega la d.d.p.\ ai capi di un diodo con la corrente che lo attraversa non è una equazione lineare, come lo è -- invece -- l'equazione che lega la d.d.p.\ ai capi di una resistenza con la corrente che la attraversa (legge di Ohm).
+
+Un circuito (in generale) è costituito da \textbf{maglie} e \textbf{nodi}: una maglia è un percorso chiuso all'interno del circuito, ed un nodo è un punto in cui due o più elementi sono collegati fra di loro. Nel circuito di figura 9.5, nel quale sono indicati i tre nodi, si riconoscono tre maglie: una contiene il generatore la resistenza e la capacità, un'altra contiene il generatore la resistenza e l'induttanza, infine la terza è quella costituita dal condensatore e dall'induttanza; le tre maglie non sono indipendenti nel senso che, per esempio, la terza si ottiene percorrendo la prima maglia e poi la seconda in senso inverso.
+\fig{fig9_5}{9.5}
+Possiamo prendere come incognite le correnti $I_k(t)$ nei vari rami del circuito, che però non sono tutte indipendenti fra di loro: siccome in regime di correnti lentamente variabili la densità di corrente è a divergenza nulla lungo tutto il circuito ($\dive\vec J\ne0$ solo sulle armature dei condensatori), la corrente entrante in ogni nodo deve eguagliare quella uscente (conservazione della corrente); per ogni maglia possiamo scrivere un'equazione nello stesso modo in cui per il circuito di figura 9.4 (una sola maglia) abbiamo scritto la (9.19) (o la (9.35) se è presente un generatore come nella figura 9.6): è possibile dimostrare (p.es.\ per induzione) che le equazioni di conservazione della corrente ad ogni nodo e quelle relative ad un insieme completo di maglie indipendenti sono necessarie e sufficienti a determinare, date le condizioni iniziali, le incognite $I_k(t)$.
+\fig{fig9_6}{9.6}
+Consideriamo ad esempio il circuito di figura 9.5; fissato come verso delle correnti nella prima e nella seconda maglia (maglia $RC$ e maglia $RL$) il verso orario (cioè dal generatore alla resistenza), detta $I$ la corrente nella resistenza, $I_1$ quella nel ramo contenente il condensatore ed $I_2$ quella nell'induttanza, $V_1$ la differenza di potenziale fra l'armatura superiore del condensatore e quella inferiore, si ha
+\begin{equation}
+\left\{\begin{aligned}
+&I=I_1+I_2\\
+&\mathcal E-V_1=RI\\
+&\mathcal E-L\dot I_2=RI\,.
+\end{aligned}\right.
+\tag{9.36}
+\end{equation}
+Se prendiamo la differenza fra le due ultime equazioni si ottiene
+\begin{equation}
+V_1-L\dot I_2=0
+\tag{9.37}
+\end{equation}
+che è l'equazione della terza maglia: la dipendenza delle maglie si traduce quindi nella dipendenza delle equazioni.
+
+Vogliamo ora discutere il caso in cui le f.e.m.\ $\mathcal E_j(t)$ esterne siano della forma \ $\mathcal E_j(t)=\mathcal E_j^0\cos\omega t$ \ (oppure, è indifferente, \ $\mathcal E_j(t)=\mathcal E_j^0\sen\omega t$\,): in questo caso si dice che il circuito è alimentato in corrente alternata (c.a.). Se il circuito di figura 9.6 è alimentato in c.a.\ l'equazione del circuito è identica a quella di un oscillatore forzato: dalla (9.35) si ha
+\begin{equation}
+L\frac{d^2Q}{dt^2}+R\frac{dQ}{dt}+\frac{1}{C}Q=\mathcal E_0\sen\omega t
+\tag{9.38}
+\end{equation}
+oppure, prendendo come incognita $I(t)$,
+\begin{equation}
+L\frac{d^2I(t)}{dt^2}+R\frac{dI(t)}{dt}+\frac{1}{C}I(t)=\mathcal E_0\,\omega\cos\omega t\,.
+\tag{9.39}
+\end{equation}
+Anziché discutere separatamente i circuiti in c.a.\ delle figure 9.5 e 9.6, (l'oscillatore forzato, e quindi il circuito di figura 9.6, è stato trattato nel corso di Fisica Generale 1), forniamo gli elementi di una trattazione generale che può essere utilizzata per tutti i circuiti lineari alimentati in c.a.\\
+Abbiamo visto che le equazioni del circuito sono un sistema di equazioni differenziali lineari della forma
+\begin{equation}
+L_j\dot I_{j1}+\cdots+R_jI_{j2}+\cdots+\frac{1}{C}Q_{j3}+\cdots=\mathcal E_j(t)\qquad\qquad j=1\dots n
+\tag{9.40}
+\end{equation}
+(l'indice $j$ distingue le varie maglie, le correnti \ $I_{j1}\cdots$, \ $I_{j2}\cdots$, \ $I_{j3}=\dot Q_{j3}\cdots$ \ in generale sono diverse, in quanto fra i diversi elementi possono essere presenti dei nodi); la soluzione generale è la somma della soluzione generale del sistema omogeneo associato \ $(\mathcal E_j(t)=0\quad\forall j\,)$ \ e di una soluzione particolare. Noi siamo interessati a quest'ultima, in quanto ogni soluzione del sistema omogeneo, a causa dell'energia dissipata nelle resistenze, in assenza di f.e.m.\ esterne è destinata a smorzarsi in un tempo più o meno lungo.\\
+Se le f.e.m.\ sono \ $\mathcal E_j(t)=\mathcal E_j^0\cos\omega t$\,, la soluzione particolare la cerchiamo della forma \ $I_k(t)=|I_k^0|\cos(\omega t+\varphi_k)$. Se la soluzione esiste, allora \ $|I_k^0|\sen(\omega t+\varphi_k)$ \ costituisce la soluzione se le f.e.m.\ sono \ $\mathcal E_j(t)=\mathcal E_j^0\sen\omega t$\,, quindi per la linearità delle equazioni, se poniamo
+\begin{equation}
+\mathcal E_j(t)=\mathcal E_j^0\,e^{i\omega t}\equiv\mathcal E_j^0\,(\cos\omega t+i\sen\omega t)
+\tag{9.41}
+\end{equation}
+cerchiamo la soluzione particolare nella forma
+\begin{equation}
+I_k(t)=|I_k^0|\,e^{i(\omega t+\varphi_k)}\equiv I_k^0\,e^{i\omega t}\qquad\qquad I_k^0\equiv|I_k^0|\,e^{i\varphi_k}.
+\tag{9.42}
+\end{equation}
+Con la posizione (9.41) e (9.42), le (9.40) diventano, dopo avere diviso per il fattore $e^{i\omega t}$ comune a tutti i termini,
+\begin{equation}
+i\omega L_jI_{j1}^0+\cdots+R_jI_{j2}^0+\cdots+\frac{1}{i\omega C}I_{j3}^0+\cdots=\mathcal E_j^0\qquad\qquad j=1\dots n.
+\tag{9.43}
+\end{equation}
+Le equazioni del circuito sono ora un sistema lineare di equazioni algebriche nelle incognite complesse $I_k^0$: $|I_k^0|$ è il valore assoluto della corrente che circola nell'elemento $k$--esimo, mentre $\varphi_k$ è lo sfasamento (l'anticipo di fase) della corrente rispetto alla f.e.m.\\
+Il grosso vantaggio delle (9.43) è che, trattandosi di equazioni algebriche, esse sono formalmente identiche alle equazioni di un circuito costituito da sole resistenze con f.e.m.\ costanti $\mathcal E_j^0$: nelle equazioni di un circuito puramente resistivo la corrente (reale) nella $k$--esima resistenza è moltiplicata per $R_k$; ora la corrente (complessa) nel $k$--esimo elemento è moltiplicata per l'\textbf{impedenza complessa} $Z_k$ (l'inverso di un'impedenza si chiama \textbf{ammettenza}, ed è indicata con $Y$), dove a seconda che l'elemento sia una resistenza, un'induttanza o una capacità si ha
+\begin{equation}
+Z=\left\{\begin{array}{l}
+R\\[2pt]
+i\omega L\\[2pt]
+-\dfrac{i}{\omega C}\,\cdot
+\end{array}\right.
+\tag{9.44}
+\end{equation}
+Di conseguenza, in particolare, valgono per le impedenze in serie e in parallelo le stesse regole che valgono per le resistenze in serie e in parallelo: le impedenze in serie si sommano, mentre nel caso di elementi in parallelo si sommano le ammettenze.
+
+Vediamo allora come si ritrovano i risultati (già noti dalla trattazione dell'oscillatore forzato) relativi al circuito di figura 9.6.\\
+Poiché i vari elementi sono in serie, l'impedenza del circuito è
+\begin{equation}
+\begin{aligned}
+&Z=R+i\omega L-\frac{i}{\omega C}=\sqrt{R^2+(\omega L-1/\omega C)^2}\,e^{-i\varphi}\,;\\
+&\tan\varphi=-\frac{1}{R}(\omega L-1/\omega C)
+\end{aligned}
+\tag{9.45}
+\end{equation}
+e quindi
+\begin{equation}
+I^0=\frac{\mathcal E_0}{Z}=\frac{\mathcal E_0}{\sqrt{R^2+(\omega L-1/\omega C)^2}}\,e^{i\varphi}.
+\tag{9.46}
+\end{equation}
+Se utilizziamo le (9.24) si ha
+\begin{equation}
+|I^0|=\frac{\mathcal E_0\omega/L}{\sqrt{(\omega_0^2-\omega^2)^2+\omega^2/\tau^2}}
+\tag{9.47}
+\end{equation}
+che ha la stessa forma dell'ampiezza dell'oscillatore forzato e, come per quest'ultimo, è evidente il carattere risonante del circuito quando $\omega\approx\omega_0$. Per questa ragione il circuito di figura 9.6 è detto \textbf{circuito risonante}.
+
+Per concludere, consideriamo la maglia $LC$ del circuito di figura 9.5. L'ammettenza della maglia fra i due nodi è
+\begin{equation}
+Y=i(\omega C-1/\omega L)\,;\qquad|Y|=\frac{C}{\omega}|\omega^2-\omega_0^2|
+\tag{9.48}
+\end{equation}
+che tende a zero (e quindi l'impedenza tende all'infinito) per $\omega\approx\omega_0$. Quindi, nel circuito di figura 9.5, quando $\omega$ si avvicina ad $\omega_0$ la corrente nel ramo contenente il generatore tende bruscamente a zero: per questa ragione il circuito di figura 9.5 è detto \textbf{circuito antirisonante}.
