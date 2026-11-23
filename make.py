@@ -241,9 +241,23 @@ def make_constants():
         file.write("\\end{document}\n")
     build("picasso_constants")
 
+def make_cover():
+    with open(os.path.join("src", "include.tex"), "r") as file:
+        tex_include = file.read()
+    with open(os.path.join("src", "cover.tex"), "r") as file:
+        tex_cover = file.read()
+    with open("picasso_cover.tex", "w") as file:
+        file.write(tex_include + '\n')
+        file.write("\\begin{document}\n")
+        file.write(tex_cover + '\n')
+        file.write("\\end{document}\n")
+    build("picasso_cover")
+
 def make_all():
     with open(os.path.join("src", "include.tex"), "r") as file:
         tex_include = file.read()
+    with open(os.path.join("src", "cover.tex"), "r") as file:
+        tex_cover = file.read()
     with open(os.path.join("src", "frontmatter.tex"), "r") as file:
         tex_frontmatter = file.read()
     with open(os.path.join("src", "ch01.tex"), "r") as file:
@@ -283,6 +297,7 @@ def make_all():
     with open("picasso.tex", "w") as file:
         file.write(tex_include + '\n')
         file.write("\\begin{document}\n")
+        file.write(tex_cover + '\n')
         file.write("\\pagenumbering{roman}\n")
         file.write(tex_frontmatter + '\n')
         file.write("\\pagenumbering{arabic}\n")
@@ -361,6 +376,9 @@ elif sys.argv[1] == "index":
 
 elif sys.argv[1] == "constants":
     make_constants()
+
+elif sys.argv[1] == "cover":
+    make_cover()
 
 elif sys.argv[1] == "clean":
     for fname in os.listdir():
