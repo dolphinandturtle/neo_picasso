@@ -1,0 +1,535 @@
+\section{PROPRIETÀ MAGNETICHE DELLA MATERIA}
+
+\subsection{Campi variabili nella materia}
+
+Nel capitolo precedente abbiamo ricavato le equazioni per il campo elettrico in presenza di materia nel caso statico. Vogliamo stabilire come si modificano le equazioni di Maxwell se le sorgenti macroscopiche (le cariche e le correnti) dipendono dal tempo.\\
+Il problema è sempre quello di passare dalle (14.4), valide per i campi microscopici, alle equazioni per i campi macroscopici $\vec E$ e $\vec B$, medie spaziali dei campi microscopici:
+\begin{equation}
+\left\{\begin{aligned}
+&\dive\vec E=4\pi(\rho+\rho')\\[4pt]
+&\rot\vec E+\frac{1}{c}\frac{\partial\vec B}{\partial t}=0\\[4pt]
+&\dive\vec B=0\\[4pt]
+&\rot\vec B=\frac{4\pi}{c}(\vec J+\vec J\,')+\frac{1}{c}\frac{\partial\vec E}{\partial t}\,\cdot
+\end{aligned}\right.
+\tag{15.1}
+\end{equation}
+$\vec J\,'$ è la media, analoga a $\rho'$, delle correnti microscopiche $\vec J_\mathrm{micr}$ dovute al moto delle cariche atomiche e molecolari. Nelle (15.1) le sorgenti $\rho$, $\rho'$, $\vec J$, $\vec J\,'$ possono dipendere anche dal tempo.
+
+La polarizzazione della materia è ancora completamente descritta dal vettore $\vec P(\vec r,t)$ e le cariche di polarizzazione $\rho'$ e $\sigma'$ sono date dalle (14.22).\\
+Nell'ipotesi di comportamento lineare del mezzo, $\vec P$ dipende linearmente da $\vec E$ e per campi lentamente variabili con buona approssimazione è ancora dato dalla (14.25), ma in generale la relazione è più complicata \big($\vec P(\vec r,t)=\int\chi(t-t')\vec E(\vec r,t')\,dt'$\,\big): si pensi, per esempio, al caso in cui il campo elettrico varia nel tempo in moto sinusoidale, $\vec E(\vec r,t)=\vec E_0(\vec r\,)\sen\omega t$ (onda monocromatica), e a un mezzo non polare; sappiamo allora che nell'approssimazione lineare gli atomi o le molecole sono equivalenti a oscillatori armonici (l'approssimazione delle piccole oscillazioni). In presenza di un campo oscillante, dalla teoria degli oscillatori forzati (Volume 1 capitolo 11) sappiamo che l'ampiezza di oscillazione, in questo caso del momento di dipolo indotto, è sì proporzionale al campo esterno, ma il coefficiente di proporzionalità, cioè la polarizzabilità $\alpha$, è funzione di $\omega$. Inoltre il dipolo oscilla sfasato rispetto al campo, e ciò dà luogo ad un assorbimento di energia da parte dell'oscillatore.\\
+Questi effetti diventano rilevanti solo quando ci si avvicina alla frequenza di risonanza dei nostri oscillatori, che è la frequenza $\nu_0$ delle oscillazioni proprie del sistema; siccome la polarizzazione degli atomi e delle molecole non polari è dovuta alla deformazione della nube elettronica, la frequenza di risonanza si trova nella regione in cui il sistema emette radiazione per effetto del moto degli elettroni (transizioni elettroniche), cioè nel campo della luce visibile ($\nu\approx10^{15}\,\mathrm{s}^{-1}$).\\
+Il comportamento delle molecole polari in un campo oscillante è abbastanza diverso: ora la polarizzabilità delle molecole non è dovuta (solo) agli elettroni che, come abbiamo visto, riescono a seguire il campo fino a frequenze piuttosto elevate, ma all'intera molecola, che ha una inerzia ben maggiore di quella degli elettroni: l'analogo meccanico di
+una molecola polare in un campo oscillante è un pendolo fisico (per di più smorzato) in un campo di gravità $g\sen\omega t$. Il risultato è che la molecola riesce a seguire il campo solo per frequenze relativamente basse (dipende molto dalla sostanza, ma valori tipici sono intorno ai $10^6\,\mathrm{s}^{-1}$), al disopra delle quali la polarizzabilità diventa praticamente nulla.
+
+Consideriamo l'ultima delle (15.1): se prendiamo la divergenza di entrambi i membri si ottiene
+\begin{equation}
+0=\dive\vec J+\dive\vec J\,'+\frac{1}{4\pi}\frac{\partial\dive\vec E}{\partial t}
+\tag{15.2}
+\end{equation}
+e dalla 1$^\mathrm{a}$ delle (15.1) e dall'equazione di conservazione della carica \ $\dive\vec J=-\partial\rho/\partial t$ \ si ha
+\begin{equation}
+\dive\vec J\,'+\frac{\partial\rho'}{\partial t}=0
+\tag{15.3}
+\end{equation}
+che esprime la conservazione delle cariche atomiche; se utilizziamo la 1$^\mathrm{a}$ delle (14.22) \ $\dive\vec P=-\rho'$ \ si ha
+\begin{equation}
+\dive\Big(\vec J\,'-\frac{\partial\vec P}{\partial t}\Big)=0.
+\tag{15.4}
+\end{equation}
+Dalla (15.4) non segue che \ $\vec J\,'$ deve essere uguale a \ $\partial\vec P/\partial t$ \ ma, siccome la loro differenza è un campo a divergenza nulla, possono differire per la rotazione di un campo vettoriale (abbiamo visto nel capitolo 7 che un campo a divergenza nulla può sempre essere espresso come la rotazione di un altro campo), quindi poniamo
+\begin{equation}
+\vec J\,'=\frac{\partial\vec P}{\partial t}+c\rot\vec M\equiv\vec J_p'+\vec J_m'.
+\tag{15.5}
+\end{equation}
+Il primo termine a 2$^\circ$ membro ha una interpretazione molto semplice, in quanto rappresenta la corrente media dovuta allo spostamento relativo delle cariche che danno luogo ai momenti di dipolo atomici o molecolari. Infatti supponiamo, per semplicità, che i dipoli nel volumetto $\Delta V$ siano costituiti da cariche puntiformi $q$ e $-q$, tutte uguali (altrimenti consideriamo i dipoli con cariche comprese fra $q$ e $q+dq$ e poi sommiamo sui diversi gruppi di dipoli); si ha
+\begin{equation}
+\begin{aligned}
+&\vec P(\vec r,t)=\frac{n}{n\Delta V}\sum_{i\in\Delta V}q\vec a_i\quad\ \Rightarrow\\
+&\frac{\partial\vec P}{\partial t}=\frac{n}{n\Delta V}\sum_{i\in\Delta V}q\dot{\vec a}_i=\frac{n}{n\Delta V}\sum_{i\in\Delta V}q(\vec u_i^{\,+}-\vec u_i^{\,-})
+\end{aligned}
+\tag{15.6}
+\end{equation}
+dove $n$ è la densità di dipoli, $\vec u^{\,+}$ e $\vec u^{\,-}$ sono rispettivamente le velocità delle cariche positive e di quelle negative.\\
+Siccome $\rho=nq$ e la velocità media è \ $\vec u\equiv(1/n\Delta V)\sum_i\vec u_i$, si ha
+\begin{equation}
+\frac{\partial\vec P}{\partial t}=\rho^+\vec u^{\,+}+\rho^-\vec u^{\,-}\equiv\vec J_p'.
+\tag{15.7}
+\end{equation}
+Per quanto riguarda il termine \ $\vec J_m'\equiv c\rot\vec M$ \ nella (15.5), prima di tutto dobbiamo convincerci che non solo effettivamente può essere diverso da zero, poi vedremo come
+è legato alle proprietà microscopiche della materia.\\
+Per quanto riguarda la sua esistenza, tutti sappiamo (e lo sapevano anche gli antichi) che esistono i magneti, i quali generano nello spazio un campo magnetico in assenza di sorgenti esterne come correnti macroscopiche $\vec J$ o campi elettrici: in questi casi l'unico termine che può essere non nullo a secondo membro dell'ultima delle (15.1) è $\vec J_m'$, e anzi deve essere non nullo, altrimenti \ $\dive\vec B=0$, $\rot\vec B=0\ \Rightarrow\ \vec B=0$.\\
+Quindi $\vec M$ è legato al fenomeno della magnetizzazione e questo intanto giustifica il nome di \textbf{densità di magnetizzazione} per il campo $\vec M$, e di \textbf{corrente di magnetizzazione} per $\vec J_m'$. Nei prossimi paragrafi cercheremo di capirne l'origine fisica.
+
+Possiamo riscrivere le (15.1) tenendo conto della definizione del vettore induzione dielettrica \ $\vec D\equiv\vec E+4\pi\vec P$ \ e definendo analogamente il campo $\vec H$:
+\begin{equation}
+\vec H\defeq\vec B-4\pi\vec M
+\tag{15.8}
+\end{equation}
+per cui si ha
+\begin{equation}
+\left\{\begin{aligned}
+&\dive\vec D=4\pi\rho\\[4pt]
+&\rot\vec E+\frac{1}{c}\frac{\partial\vec B}{\partial t}=0\\[4pt]
+&\dive\vec B=0\\[4pt]
+&\rot\vec H=\frac{4\pi}{c}\vec J+\frac{1}{c}\frac{\partial\vec D}{\partial t}\,\cdot
+\end{aligned}\right.
+\tag{15.9}
+\end{equation}
+Le (15.9), che non presuppongono il comportamento lineare del mezzo, caso per caso devono essere completate dalle relazioni fra $\vec D$ ed $\vec E$ e fra $\vec H$ e $\vec B$, dette \textbf{equazioni costitutive}: è appunto nelle equazioni costitutive che si legge se il comportamento del mezzo è lineare o no.
+
+La terminologia relativa ai campi $\vec B$ e $\vec H$ è cambiata rispetto ad alcuni decenni fa: oggi, quasi universalmente, quando si dice ``campo magnetico'' si intende $\vec B$, e ad $\vec H$ non viene dato nessun nome, mentre una volta era $\vec H$ che veniva chiamato ``campo magnetico'', e \ $\vec B=\vec H+4\pi\vec M$ \ ``induzione magnetica''; il motivo va ricercato nel fatto che il campo generato dai magneti era noto e studiato prima di quello generato dalle correnti, e quindi era considerato il campo fondamentale. Oggi si preferisce abbandonare la vecchia terminologia per mettere in risalto il fatto che il campo fondamentale è $\vec B$, in quanto è il campo che interviene nelle equazioni microscopiche (14.4), e $\vec H$ nasce solo in seguito al processo di media che porta alla descrizione macroscopica: i campi ausiliari $\vec D$ e $\vec H$ potrebbero non venire mai introdotti, in quanto sarebbero sufficienti i campi $\vec E$ e $\vec B$, più \ $\vec P$ e $\vec M$ \ per descrivere le proprietà elettriche e magnetiche della materia.
+
+Nel sistema di Gauss $\vec B$ ed $\vec H$ sono grandezze omogenee, cioè non solo hanno le stesse dimensioni, ma possono anche essere sommate \big(v.\ (15.8)\big), e quindi l'unità di misura è la stessa, cioè il gauss; tuttavia, come eredità di un passato ancora non abbastanza lontano resta la consuetudine di chiamare \textbf{oersted} (abbreviato Oe) questa stessa unità di misura (il gauss), quando ci si riferisce al campo $\vec H$: così, se siamo nel vuoto dove $\vec B=\vec H$, un campo $B$ di $10^3$\,gauss, è un campo $H$ di $10^3$\,oersted!
+
+\subsection{Fenomenologia}
+
+Il comportamento della materia in un campo magnetico ha qualche somiglianza con quello dei dielettrici in un campo elettrico, ma è più articolato. Mentre abbiamo visto che un dielettrico in un campo elettrico non omogeneo viene sempre attirato nella direzione in cui aumenta l'intensità del campo, con una forza che è proporzionale al quadrato del campo (se il campo viene raddoppiato la forza aumenta di un fattore 4), nel caso di sostanze poste un campo magnetico non omogeneo, come ad esempio vicino agli estremi di un solenoide, alcune vengono attratte dal solenoide, cioè verso la regione in cui il campo è più intenso, altre vengono respinte.\\
+Inoltre, nel caso delle sostanze che vengono attratte dal solenoide, per la maggior parte di esse la forza è, come nel caso del campo elettrico, proporzionale al quadrato del campo magnetico ed è sempre molto debole (saremo più precisi più avanti) e decresce all'aumentare della temperatura; le sostanze di questo tipo sono dette \textbf{paramagnetiche}: ad esempio, sono paramagnetiche l'alluminio, il sodio, il platino, il cloruro di rame (CuCl$_2$), ecc.\\
+Alcune sostanze, invece, vengono attratte nella direzione in cui il campo aumenta con una forza molto intensa proporzionale al campo, e non al suo quadrato: queste sostanze sono dette \textbf{ferromagnetiche}, e rientrano in questa classe il ferro, il cobalto, il nichel, purché al disotto di una opportuna temperatura, detta \textbf{temperatura di Curie} $\Theta$, che dipende dalla sostanza: per il ferro $\Theta=774\,^\circ$C, per il cobalto $\Theta=1131\,^\circ$C, e per il nichel $\Theta=372\,^\circ$C; al disopra della temperatura di Curie le sostanze ferromagnetiche diventano paramagnetiche.\\
+Infine, nel caso delle sostanze che vengono respinte dal solenoide, la forza è molto debole (normalmente circa un ordine di grandezza più piccola di quella che agisce sulle sostanze paramagnetiche a temperatura ambiente), e sempre proporzionale al quadrato del campo, ed inoltre questa forza è indipendente dalla temperatura: queste sostanze sono dette \textbf{diamagnetiche}, e fra esse troviamo l'H$_2$O, il rame, il piombo, l'oro, lo zolfo e il cloruro di sodio.
+
+Se lasciamo da parte (per ora) le sostanze ferromagnetiche e facciamo il confronto con il caso dei dielettrici, in primo luogo notiamo che tutti i dielettrici vengono attirati nella direzione in cui aumenta l'intensità del campo, mentre nel caso magnetico questo è vero solo per le sostanze paramagnetiche (quindi forse sarebbe più appropriato chiamare ``paraelettrici'' i dielettrici \dots\ ): il comportamento dei dielettrici è dovuto al fatto che la costante dielettrica è sempre maggiore di 1 (o equivalentemente la suscettività elettrica $\chi_e>0$), e questo perché sia il momento di dipolo indotto che il momento di dipolo medio (nel caso delle sostanze polari) è sempre nello stesso verso del campo.\\
+In secondo luogo, sempre nel caso dei dielettrici, la dipendenza delle proprietà dielettriche dalla temperatura si ha solo per le sostanze polari, cioè quelle in cui la polarizzazione è dovuta all'orientamento dei momenti di dipolo permanenti (o propri), mentre è assente per le sostanze non polari; nel caso magnetico solo le sostanze paramagnetiche hanno un comportamento che dipende dalla temperatura.\\
+Infine, notiamo che le espressioni della forza e del momento che un campo magnetico esercita su un momento magnetico sono formalmente identiche a quelle della forza e del momento che un campo elettrico esercita su un dipolo, pur di sostituire $\vec p$ con $\vec m$ ed
+$\vec E$ con $\vec B$: i momenti sono dati rispettivamente dalla (7.59) e dalla (14.15); per quanto riguarda le forze, tenuto conto che (nel caso statico) il campo elettrico è conservativo, e quindi \ $\partial_iE_j=\partial_jE_i$, la (14.62) può essere riscritta come \big(v.\ anche (14.65)\big)
+\begin{equation}
+F_i=\textstyle\sum_jp_j\partial_jE_i=\sum_jp_j\partial_iE_j\quad\ \Rightarrow\quad\ \vec F=\nabla(\vec p\cdot\vec E)
+\tag{15.10}
+\end{equation}
+e la (7.62), come abbiamo già detto a suo tempo, in generale si scrive
+\begin{equation}
+\vec F=\nabla(\vec m\cdot\vec B).
+\tag{15.11}
+\end{equation}
+Questo confronto suggerisce che nel passaggio dalla trattazione dei dielettrici a quella delle sostanze paramagnetiche e diamagnetiche il momento magnetico $\vec m$ degli atomi o delle molecole prenda il posto del momento di dipolo $\vec p$; la densità di magnetizzazione, definita come
+\begin{equation}
+\vec M(x,y,z)=\frac{\sum_i\vec m_i}{\Delta V}
+\tag{15.12}
+\end{equation}
+quello della densità di polarizzazione $\vec P$; che nelle sostanze diamagnetiche il momento magnetico sia un momento magnetico \underline{indotto}, in verso \underline{opposto} al campo magnetico inducente, mentre le sostanze paramagnetiche siano quelle i cui atomi possiedono un momento magnetico proprio (o permanente), che parzialmente si allinea con il campo.\\
+Inoltre, nell'ipotesi che il comportamento magnetico del mezzo sia lineare (ipotesi ampiamente soddisfatta da tutte le sostanze paramagnetiche e diamagnetiche), $\vec M$ è proporzionale a $\vec B$, e la costante di proporzionalità $\chi_m$ è detta \textbf{suscettività magnetica}; in effetti, sempre come eredità dei tempi in cui $\vec H$ era considerato il campo fondamentale, anziché \ $\vec M=\chi_m\vec B$ \ si pone
+\begin{equation}
+\vec M=\chi_m\vec H.
+\tag{15.13}
+\end{equation}
+In pratica le due definizioni, la (15.13) e quella più naturale ma non adottata \ $\vec M=\chi_m\vec B$, sono equivalenti perché, grazie alla (15.8), differiscono per termini di ordine $(\chi_m)^2$, e $\chi_m$ è sempre molto piccolo: \ $|\chi_m|\simeq10^{-6}$ \ per le sostanze diamagnetiche, ed arriva eccezionalmente ad assumere il valore di $\simeq10^{-3}$ nel caso dell'ossigeno liquido (paramagnetico), ma in questo caso (ovviamente) la temperatura è molto bassa.\\
+La suscettività magnetica $\chi_m$ dovrebbe essere (ed è) negativa per le sostanze diamagnetiche, e positiva per quelle paramagnetiche.\\
+In tutti i casi in cui $\vec M$ è proporzionale ad $\vec H$ (o equivalentemente a $\vec B$) si definisce la \textbf{permeabilità magnetica} $\mu$, analoga alla costante dielettrica $\epsilon$, come
+\begin{equation}
+\mu\defeq1+4\pi\chi_m
+\tag{15.14}
+\end{equation}
+per cui in questi casi dalla (15.8) e (15.13) si ha
+\begin{equation}
+\vec B=\mu\vec H.
+\tag{15.15}
+\end{equation}
+La permeabilità magnetica $\mu$ può essere maggiore o minore di 1 e, come abbiamo visto, per le sostanze non ferromagnetiche differisce poco da 1, per cui gli effetti magnetici sono generalmente trascurabili.
+
+\subsection{Il momento magnetico degli atomi}
+
+Nel paragrafo precedente abbiamo illustrato il comportamento della materia in un campo magnetico e per analogia con la trattazione dei dielettrici abbiamo anticipato quello che dovrebbe essere il risultato di una trattazione teorica del problema. Il punto è che, a stretto rigore, non esiste una teoria classica del magnetismo nella materia, dato che secondo la fisica classica (o meglio, la meccanica statistica classica) non esiste né il diamagnetismo, né il paramagnetismo, né il ferromagnetismo: sono tutti fenomeni che possono essere correttamente spiegati solo facendo ricorso alla meccanica quantistica, in quanto intervengono in maniera determinante sia lo spin dell'elettrone, cioè il suo ``momento angolare intrinseco'', sia il principio di esclusione di Pauli, sia gli effetti legati alla quantizzazione.\\
+Quindi non potremo andare molto lontano con una trattazione puramente classica e il linguaggio classico che useremo sarà spesso inadeguato.
+
+Nel capitolo 7.5 abbiamo definito il momento magnetico $\vec m$ di una spira percorsa da corrente; in generale, se abbiamo una distribuzione di volume $\vec J$ di corrente contenuta in un volume finito $V$, il momento magnetico $\vec m$ è definito come
+\begin{equation}
+\vec m\defeq\frac{1}{2c}\int_V\vec r\,'\wedge\vec J(\vec r\,')\,dV.
+\tag{15.16}
+\end{equation}
+Innanzi tutto la (15.16) coincide con la (7.49) se la corrente è stazionaria ed è concentrata in una spira \big(brevemente: si usa l'identità \ $\hat n\cdot(\vec r\wedge d\vec l\,)=-(\vec r\wedge\hat n)\cdot d\vec l$ \ dove $\hat n$ è un versore arbitrario, poi si usa il teorema di Stokes e l'identità \ $\rot(\vec r\wedge\hat n)=-2\hat n$\,\big); in secondo luogo, sempre nel caso di una corrente stazionaria ($\dive\vec J=0$), con la definizione (15.16) vale la (7.50), cioè
+\[
+\vec A(\vec r\,)=\frac{\vec m\wedge\vec r}{r^3}+\cdots.
+\]
+Consideriamo ora un atomo; gli elettroni che ruotano attorno al nucleo danno luogo ad una distribuzione di corrente rapidamente variabile nel tempo; se però facciamo la media di questa corrente su un tempo grande rispetto ai periodi orbitali degli elettroni ($T\approx10^{-15}$\,s), sparisce la dipendenza dal tempo e il momento magnetico (medio) dell'atomo dato dalla (15.16) è costante. (La media temporale trasforma, per esempio, un elettrone che ruota su un'orbita circolare di raggio $a$ con velocità $v$ in una spira percorsa dalla corrente stazionaria $I=(e/2\pi a)v$; in una trattazione quantistica la media temporale non è necessaria perché la corrente in un atomo è automaticamente stazionaria).\\
+Il processo di media che portato alla distribuzione di corrente \ $\vec J=\rho\vec v$, dove $\rho$ è la distribuzione di carica degli elettroni e $\vec v$ è il campo delle velocità di questa distribuzione, porta anche ad una distribuzione di massa $\mu$ degli elettroni proporzionale a $\rho$ : \ $\mu=-(m/e)\rho$ \ ($m$ è la massa dell'elettrone), e quindi \ $\vec J=-(e/m)\mu\vec v$. Se inseriamo questa relazione nella (15.16) si ha
+\begin{equation}
+\vec m=-\frac{e}{2mc}\int_V(\vec r\,'\wedge\vec v\,)\mu(\vec r\,')\,dV.
+\tag{15.17}
+\end{equation}
+L'integrale nella (15.17) è il \textit{momento angolare} $\vec L$ dell'atomo che, in seguito al processo di media, viene ora considerato come un sistema continuo; quindi
+\begin{equation}
+\vec m=-\frac{e}{2mc}\vec L.
+\tag{15.18}
+\end{equation}
+Il momento magnetico dato dalla (15.18) è detto ``momento magnetico orbitale'', in quanto è dovuto al \textit{moto orbitale} degli elettroni.\\
+Inoltre, \textit{ogni} elettrone ha un momento magnetico intrinseco (cioè anche quando è fermo), detto anche momento magnetico di spin, anch'esso proporzionale al momento angolare intrinseco $\vec s$, ma con coefficiente di proporzionalità $-e/mc$, cioè il doppio di quello che compare nella (15.18).\\
+Il momento magnetico intrinseco, come il momento angolare di spin, è di natura completamente quantistica: per aiutare l'intuizione uno può pensare all'elettrone come se fosse una sferetta carica rotante; questo però è solo un modello che non è in grado di spiegare il comportamento dell'elettrone.\\
+Il momento magnetico dell'atomo è la somma (vettoriale) dei \textit{momenti magnetici orbitali e di quelli di spin} e se non è nullo allora diciamo che l'atomo ha un momento magnetico proprio. Secondo la meccanica quantistica il momento angolare è ``quantizzato'', cioè i valori che può assumere sono solo i multipli interi della costante di Planck, divisa per $2\pi$ : \ $\hbar\equiv h/2\pi\approx10^{-27}\,$erg\,s, e siccome il momento angolare di un atomo, quando non è nullo, è sempre di poche unità di $\hbar$, l'ordine di grandezza del momento magnetico proprio di un atomo è
+\begin{equation}
+m_{\textsc b}=\frac{e\hbar}{2mc}=\frac{4.8\times10^{-10}\cdot10^{-27}}{2\cdot0.9\times10^{-27}\cdot3\times10^{10}}\simeq0.9\times10^{-20}\,\mathrm{erg/gauss}
+\tag{15.19}
+\end{equation}
+$m_{\textsc b}$ è una costante fondamentale ed è chiamata \textit{magnetone di Bohr}.
+
+In un campo magnetico le sostanze i cui atomi possiedono un momento magnetico proprio si comportano come le sostanze polari in un campo elettrico, quindi non ci soffermiamo ulteriormente su di esse, ma preferiamo discutere il caso delle sostanze i cui atomi non hanno un momento magnetico permanente in quanto, come abbiamo già anticipato, il loro comportamento in un campo esterno presenta differenze rispetto a quello delle molecole non polari in un campo elettrico.\\
+Se un atomo non possiede un momento magnetico proprio, un campo magnetico esterno induce nell'atomo un momento magnetico secondo il meccanismo che ora descriviamo.
+
+Cominciamo con un caso semplice: immaginiamo di avere un elettrone che ruota attorno ad un nucleo di carica $Ze$ descrivendo un'orbita circolare di raggio $r$ con velocità angolare $\omega_0$ data da
+\begin{equation}
+m\omega_0^2r=\frac{Ze^2}{r^2}\,\cdot
+\tag{15.20}
+\end{equation}
+Mettiamo l'atomo dentro un solenoide con l'asse ortogonale all'orbita dell'elettrone e supponiamo che inizialmente $\vec B=0$ $(I=0)$; quindi accendiamo la corrente nel solenoide finché il campo raggiunge un certo valore $\vec B\neq0$. Poiché il campo magnetico varia, si ha un campo elettrico indotto, e siccome la sua circuitazione lungo l'orbita dell'elettrone non è nulla, il suo effetto è quello di modificare la velocità orbitale dell'elettrone: per la
+legge di Lenz, siccome $\dot B>0$, la variazione della velocità dell'elettrone è in verso tale da dar luogo ad un campo magnetico opposto a quello del solenoide quindi, siccome la carica dell'elettrone è negativa, se l'elettrone ruota in verso orario rispetto al verso di $\vec B$ $(\omega_0<0)$ viene rallentato, altrimenti $(\omega_0>0)$ viene accelerato e alla fine la velocità angolare $\omega$ dell'elettrone sarà diversa da quella iniziale $\omega_0$.\\
+Per calcolare $\omega$ supponiamo che sia trascurabile la variazione del raggio dell'orbita, cioè che la forza centrale $Ze^2/r^2$ sia molto maggiore della forza di Lorentz; allora la componente centripeta di $\vec F=m\vec a$, tenuto conto che ora c'è anche la forza di Lorentz, è
+\begin{equation}
+m\omega^2r=\frac{Ze^2}{r^2}+\frac{eB}{c}\omega r.
+\tag{15.21}
+\end{equation}
+Posto
+\begin{equation}
+\omega_{\textsc l}=\frac{eB}{2mc}
+\tag{15.22}
+\end{equation}
+e tenuto conto della (15.20) si ha
+\begin{equation}
+\omega^2-2\omega\omega_{\textsc l}-\omega_0^2=0\quad\Rightarrow\quad\omega=\omega_{\textsc l}\pm\sqrt{\omega_0^2+\omega_{\textsc l}^2}
+\tag{15.23}
+\end{equation}
+e se trascuriamo $\omega_{\textsc l}^2$ rispetto a $\omega_0^2$ si ha, sia per $\omega_0>0$ che per $\omega_0<0$,
+\begin{equation}
+\omega=\omega_0+\omega_{\textsc l}.
+\tag{15.24}
+\end{equation}
+Prima di tutto verifichiamo in quali condizioni è legittimo trascurare $\omega_{\textsc l}^2$ rispetto a $\omega_0^2$ (mettiamo $Z=1$):
+\begin{equation}
+\frac{\omega_{\textsc l}^2}{\omega_0^2}=\frac{e^2B^2}{4m^2c^2}\cdot\frac{mr^3}{e^2}=\frac{B^2r^3}{4mc^2};\quad\omega_{\textsc l}^2\ll\omega_0^2\ \Rightarrow\ B^2\ll\frac{4mc^2}{r^3}
+\tag{15.25}
+\end{equation}
+e se poniamo $r=10^{-8}\,$cm si ha che deve essere $B\ll10^{13}\,$gauss, e questa è anche la condizione che deve essere verificata affinché sia trascurabile la variazione del raggio dell'orbita.\\
+Il significato della (15.24) è questo: qualunque sia la velocità e il verso di rotazione dell'elettrone, il campo magnetico induce una variazione della sua velocità angolare data da $\omega_{\textsc l}$ (\textit{frequenza di Larmor}), e quindi una variazione $\Delta\vec m$ del momento magnetico associato al suo moto. Si noti che la frequenza di Larmor è la metà della velocità angolare di una carica \underline{libera} in un campo magnetico uniforme, data dalla (5.11) (con $\gamma(v)=1$): infatti in questo caso $\omega_0=0$ e dalla (15.23) segue che, se la particella non è ferma, $\omega=2\omega_{\textsc l}$.\\
+Il risultato espresso dalla (15.24) è lo stesso se, invece di accendere il campo magnetico, l'atomo viene portato da una regione in cui $\vec B=0$ ad una in cui $\vec B\neq0$: in questo caso è la forza di Lorentz dovuta alla velocità con cui l'atomo viene spostato che produce la variazione della velocità angolare dell'elettrone.\\
+La variazione di $\vec m$ mediata su un periodo è data da (l'asse $z$ è orientato come $\vec B$)
+\begin{equation}
+\Delta m_z=\frac{\Delta I_{\mathrm{el}}}{c}\,\pi r^2=\frac{-e\omega_{\textsc l}r}{2\pi rc}\,\pi r^2=-\frac{e^2r^2}{4mc^2}\,B
+\tag{15.26}
+\end{equation}
+quindi il momento magnetico indotto è \underline{opposto} al campo magnetico: il segno $-$ viene dalla legge di Lenz, e questa è l'origine del diamagnetismo.
+
+Così, per esempio, se abbiamo due elettroni che ruotano in versi opposti sulla stessa orbita attorno ad un nucleo (trascuriamo la repulsione fra gli elettroni), il momento magnetico proprio dell'atomo è nullo, ma se l'atomo viene posto in un campo magnetico il momento magnetico indotto è il doppio di quello dato dalla (15.26).\\
+Se nella (15.26) prendiamo $r=10^{-8}\,$cm, \ $B=10^4\,$gauss si ha $|\Delta m_z|\simeq10^{-25}\,$erg/gauss, 5 ordini di grandezza inferiore al magnetone di Bohr: all'incirca lo stesso rapporto che si ha nella teoria dei dielettrici fra il momento di dipolo indotto da un campo di $10^4\,$V/cm e i momenti di dipolo permanenti.
+
+Abbiamo capito su un esempio semplice l'origine del diamagnetismo: il risultato è generale, indipendente dal moto degli elettroni all'interno di un atomo, in quanto il campo magnetico esterno -- tramite il campo elettrico indotto o la forza di Lorentz -- induce su un sistema di elettroni legati un moto di insieme di rotazione attorno alla direzione del campo con la frequenza di Larmor, e quindi un momento magnetico opposto a $\vec B$ (\textbf{teorema di Larmor}); vale la pena di dare una dimostrazione (una delle tante possibili) di questo fatto.\\
+Consideriamo un atomo di numero atomico $Z$ e, per semplicità, supponiamo che si trovi al centro di un solenoide nel quale viene acceso il campo. Supponiamo che all'inizio il momento angolare $\vec L$ dell'atomo sia nullo, e quindi per la (15.18) l'atomo non possiede momento magnetico orbitale proprio. Calcoliamo mediante il teorema dell'impulso angolare il momento angolare finale dell'atomo. Le forze che il nucleo esercita su ogni elettrone sono a momento nullo (forze centrali), e quelle di repulsione fra gli elettroni sono forze interne, quindi a momento risultante nullo; le uniche forze che hanno un momento non nullo sono le forze di Lorentz \ $-e\big(\vec E+(\vec v/c)\wedge\vec B\big)$ \ che agiscono sugli elettroni, dove $\vec E$ è il campo elettrico indotto dalla variazione di $\vec B$ ed è dato dalla (8.20). Il momento della forza di Lorentz su un elettrone è
+\begin{equation}
+\vec M=-e\vec r\wedge(\vec E+\frac{\vec v}{c}\wedge\vec B);\qquad\vec E=\frac{1}{2c}\vec r\wedge\dot{\vec B}.
+\tag{15.27}
+\end{equation}
+Usiamo l'identità \ $\vec a\wedge(\vec b\wedge\vec c\,)=(\vec a\cdot\vec c\,)\,\vec b-(\vec a\cdot\vec b\,)\,\vec c$ \ e prendiamo l'asse $z$ nel verso di $\vec B$; si ha
+\begin{equation}
+M_z=-\frac{e}{2c}\Big(z^2\dot B-r^2\dot B+2z\dot zB-2(\vec r\cdot\vec v)B\Big)=\frac{e}{2c}\frac{d}{dt}\Big((x^2+y^2)B\Big).
+\tag{15.28}
+\end{equation}
+Sommando sugli $Z$ elettroni e integrando sul tempo si ottiene
+\begin{equation}
+L_z=\frac{eB}{2c}\sum_{i=1}^Z(x^2+y^2)_i\equiv Z\frac{eB}{2c}\,(\overline{x^2+y^2}).
+\tag{15.29}
+\end{equation}
+In modo analogo, ma alquanto più laborioso, si dimostra che le componenti $L_x$ e $L_y$ sono (in media) nulle. Quindi, per la (15.18), il momento magnetico indotto è dato da
+\begin{equation}
+m_z=-Z\frac{e^2B}{4mc^2}\,(\overline{x^2+y^2}).
+\tag{15.30}
+\end{equation}
+Siccome sappiamo che l'effetto del campo magnetico sulle dimensioni delle orbite è trascurabile e per un atomo con $\vec L=0$ non c'è nessuna direzione privilegiata, \ $\overline{x^2}=\overline{y^2}=\overline{z^2}=(1/3)\overline{r^2}$\,, quindi possiamo scrivere
+\begin{equation}
+m_z=-Z\frac{e^2B}{6mc^2}\,\overline{r^2}
+\tag{15.31}
+\end{equation}
+dove $\overline{r^2}$ è il raggio quadratico medio dell'atomo: varia da atomo ad atomo, ma è sempre dell'ordine di $10^{-8}\,$cm.\\
+Il problema che abbiamo appena discusso ha molti punti in comune con il problema della rotazione del piano di oscillazione di un pendolo di Foucault al polo, e ciò è dovuto all'identità formale fra la forza di Coriolis in un riferimento rotante e la forza di Lorentz.\\
+(Abbiamo detto che secondo la meccanica quantistica il momento angolare può assumere solo valori multipli di $\hbar$, mentre dalla (15.29) risulta che $L_z$ è proporzionale a $B$, quindi può assumere qualsiasi valore: non c'è contraddizione, perché nella formulazione hamiltoniana della meccanica il momento angolare ``canonico'' \ $\vec L=\vec r\wedge\vec p$ \ in presenza di un campo magnetico è diverso dal momento angolare ``cinetico'' \ $\vec r\wedge(m\vec v\,)$\,, cioè $\vec p\neq m\vec v$, ed è il momento angolare canonico che è quantizzato, mentre nelle (15.17) e (15.18) interviene il momento angolare cinetico\big).
+
+Dalla (15.31) segue che il momento magnetico indotto è proporzionale al campo magnetico, e quindi possiamo definire la \textbf{polarizzabilità magnetica} $\alpha_m$ di un atomo:
+\begin{equation}
+\vec m=\alpha_m\vec B\approx\alpha_m\vec H
+\tag{15.32}
+\end{equation}
+(come abbiamo detto a proposito della (15.13) le definizioni in termini di $\vec B$ o di $\vec H$ in pratica sono equivalenti), analoga alla polarizzabilità elettrica definita dalla (14.9). Anche in questo caso la proporzionalità fra momento magnetico e campo è solo approssimata, in quanto segue dall'aver trascurato nella (15.31) la dipendenza del raggio medio delle orbite degli elettroni dal campo (come nel modello di atomo che ci ha portato alla (14.9) abbiamo trascurato la deformazione della distribuzione di carica negativa), ma la (15.25) ci garantisce che (per le sostanze diamagnetiche) ciò è legittimo per i campi che possono essere prodotti in laboratorio.\\
+Dalla (15.31) si ha che la polarizzabilità (dia)magnetica $\alpha_m$ di un atomo con $Z$ elettroni è dell'ordine di
+\begin{equation}
+\alpha_m=-Z\frac{e^2}{6mc^2}\,\overline{r^2}\simeq-Z\cdot5\times10^{-30}\,\mathrm{cm}^3
+\tag{15.33}
+\end{equation}
+cioè parecchi ordini di grandezza $(3\div5)$ inferiore alla polarizzabilità elettrica ($\alpha_e\approx10^{-24}\,\mathrm{cm}^3$), e ciò spiega come mai gli effetti magnetici nelle sostanze non ferromagnetiche sono quasi sempre trascurabili.\\
+Grazie alla piccolezza di $\alpha_m$ la suscettività magnetica $\chi_m$ definita dalle (15.12) e (15.13) è con ottima approssimazione data da
+\begin{equation}
+\chi_m=n\alpha_m=-nZ\frac{e^2}{6mc^2}\,\overline{r^2}
+\tag{15.34}
+\end{equation}
+($n$ è il numero di atomi per unità di volume), in quanto il campo microscopico prodotto dai momenti magnetici indotti è sempre molto piccolo, per cui non è necessario ricercare una formula analoga a quella di Mossotti--Clausius. Le misure di suscettività magnetica costituiscono un buon metodo per ricavare le dimensioni degli atomi delle sostanze diamagnetiche.
+
+\subsection{La corrente di magnetizzazione}
+
+La densità di magnetizzazione $\vec M$ è definita dalla (15.12): resta da vedere che essa coincide con il campo $\vec M$ introdotto in maniera formale nell'equazione (15.5), cioè che effettivamente la densità di magnetizzazione dà luogo a una corrente, detta di magnetizzazione.\\
+La dimostrazione formale di questo fatto è simile a quella che ci ha permesso di stabilire le (14.22): si parte dall'identità
+\begin{equation}
+M_i=\frac12\Big([\vec r\wedge\rot\vec M]_i+\dive(M_i\vec r\,)-\partial_i(\vec r\cdot\vec M)\Big).
+\tag{15.35}
+\end{equation}
+Consideriamo, per esempio, la componente $x$: se $\hat\imath$ è il versore dell'asse $x$ possiamo scrivere gli ultimi due termini nella (15.35) come $\dive\big(M_x\vec r-(\vec r\cdot\vec M)\hat\imath\big)$, quindi per il teorema della divergenza si ha
+\begin{equation}
+\begin{split}
+\int_VM_i\,dV&=\frac12\int_V[\vec r\wedge\rot\vec M]_i\,dV+\frac12\int_S\big[(\vec r\cdot\hat n)M_i-(\vec r\cdot\vec M)\,\hat n_i\big]\,dS\\
+&=\frac12\int_V[\vec r\wedge\rot\vec M]_i\,dV+\frac12\int_S\big[\vec r\wedge(\vec M\wedge\hat n)\big]_i\,dS.
+\end{split}
+\tag{15.36}
+\end{equation}
+D'altronde, se $\vec J_m'$ è la corrente di magnetizzazione dentro il volume $V$ e $\vec{\mathcal F}_m'$ la corrente (di magnetizzazione) sulla superficie $S$ del volume $V$, per la (15.16) si ha
+\begin{equation}
+\int_VM_i\,dV=\frac{1}{2c}\int_V(\vec r\wedge\vec J_m')_i\,dV+\frac{1}{2c}\int_S(\vec r\wedge\vec{\mathcal F}_m')_i\,dS.
+\tag{15.37}
+\end{equation}
+Dal confronto fra la (15.36) e la (15.37) e dal fatto che, scelta opportunamente l'origine delle coordinate e le dimensioni del volume di integrazione \big(è lo stesso argomento che abbiamo utilizzato per passare dalle (14.20) e (14.21) alla (14.22)\big), gli integrali di volume sono infinitesimi di ordine maggiore di quelli di superficie, si conclude l'uguaglianza degli integrandi; ancora sfruttando l'arbitrarietà dell'origine, e quindi del vettore $\vec r$, segue
+\begin{equation}
+\vec J_m'=c\rot\vec M;\qquad\vec{\mathcal F}_m'=c\vec M\wedge\hat n
+\tag{15.38}
+\end{equation}
+Una dimostrazione alternativa consiste nel mostrare che il campo generato da una magnetizzazione $\vec M$ in un volume arbitrario $V$ genera lo stesso potenziale vettore delle correnti $\vec J_m'$ e $\vec{\mathcal F}_m'$ date dalla (15.38):
+\begin{equation}
+\vec A(\vec r\,)=\int_V\frac{\vec M(\vec r\,')\wedge(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV=\int_V\frac{\rot\vec M(\vec r\,')}{|\vec r-\vec r\,'|}\,dV+\int_S\frac{M(\vec r\,')\wedge\hat n}{|\vec r-\vec r\,'|}\,dS.
+\tag{15.39}
+\end{equation}
+Il vantaggio della prima dimostrazione è che si applica anche al caso in cui la magnetizzazione dipende dal tempo, mentre la seconda vale nel caso statico. Va comunque notato che da entrambe le dimostrazioni emerge che la magnetizzazione in un volume $V$ è \underline{equivalente} ad una corrente di volume $\vec J_m'$ e ad una corrente superficiale $\vec{\mathcal F}_m'$, e non necessariamente che queste correnti esistono all'interno del volume $V$: infatti parte della magnetizzazione è dovuta al momento magnetico intrinseco degli elettroni, e non sembra che esso sia attribuibile ad un moto di cariche, cioè a ``correnti amperiane'' (il modello dell'elettrone come una sferetta carica rotante è solo un modello e non sembra corrispondere alla realtà).
+
+Per capire l'origine delle (15.38), supponiamo di avere un cilindro uniformemente magnetizzato parallelamente all'asse: la figura 15.1 illustra una sezione del cilindro e le correnti atomiche che danno luogo alla magnetizzazione (si confronti la figura 15.1 con la 14.3). È chiaro che la corrente che attraversa una qualsiasi superficie (molto maggiore delle dimensioni degli atomi) tutta interna al cilindro è nulla: ogni atomo contribuisce in egual misura ad una corrente che attraversa la superficie in un verso e nel verso opposto. Invece sulla superficie laterale del cilindro le correnti atomiche danno luogo ad una corrente superficiale (in verso antiorario nella figura 15.1) ortogonale alla direzione di $\vec M$. Se invece la magnetizzazione non è uniforme sono possibili anche correnti di volume all'interno del cilindro: per esempio, se la densità di magnetizzazione varia con la distanza dall'asse, si hanno correnti di volume circolanti attorno all'asse.
+\fig{fig15_1}{15.1}
+
+\subsection{Le sostanze ferromagnetiche}
+
+Supponiamo di avere una calamita di forma cilindrica: siccome una calamita (o magnete permanente) genera un campo magnetico, necessariamente la magnetizzazione $\vec M$ deve essere non nulla. Supponiamo che $\vec M$ sia costante dentro il cilindro, e diretto come l'asse. Vogliamo capire come sono fatti i campi $\vec B$ ed $\vec H$ all'interno e all'esterno del magnete, se l'unica sorgente dei campi è la magnetizzazione $\vec M$.\\
+Il problema può essere affrontato da due punti di vista diversi, a seconda che lo si voglia studiare in termini di $\vec B$ o di $\vec H$.
+
+La sorgente di $\vec B$ è solo la corrente superficiale di magnetizzazione che, per la (15.38), è data da $\mathcal F=cM$ e circola in verso antiorario attorno alla direzione di $\vec M$, perciò il magnete è equivalente ad un solenoide con le stesse dimensioni del cilindro magnetizzato. Quindi, in particolare, dentro il cilindro $\vec B$ non è uniforme e le sue linee di forza vanno nello stesso verso di quelle di $\vec M$, sono più dense al centro, risultano incurvate verso l'esterno, alcune di esse attraversano la superficie laterale e tutte si richiudono su se stesse. L'unica discontinuità di $\vec B$ si ha per la componente tangenziale attraverso la superficie laterale del cilindro.
+
+Le equazioni per \ $\vec H\equiv\vec B-4\pi\vec M$ \ sono
+\begin{equation}
+\left\{
+\begin{aligned}
+&\dive\vec H=-4\pi\dive\vec M\\
+&\rot\vec H=0
+\end{aligned}
+\right.
+\tag{15.40}
+\end{equation}
+da cui si vede che in questo caso (cioè in assenza di correnti esterne) $\vec H$ è, come $\vec E$, un campo irrotazionale in tutto lo spazio, quindi ammette un potenziale: \ $\vec H=-\grad\varphi_m$, e dalla 1$^\mathrm{a}$ delle (15.40) si ha
+\begin{equation}
+\Delta\,\varphi_m=4\pi\dive\vec M
+\tag{15.41}
+\end{equation}
+quindi le ``cariche magnetiche'' sorgenti di $\vec H$ sono date da \ $\rho_m=-\dive\vec M$.\\
+In effetti, siccome $\vec M$ è discontinuo attraverso la superficie del cilindro ($\vec M=0$ fuori), la (15.41) ha significato solo se pensiamo che $\vec M$ decresca rapidamente, ma con regolarità, dal valore che ha all'interno del cilindro al valore nullo fuori, altrimenti la (15.41), valida separatamente all'interno e all'esterno del cilindro, deve essere completata dalla
+condizione (derivante da $\dive\vec B=0$) che la componente normale di $\vec H$ ($\hat n$ verso l'esterno) subisce una discontinuità uguale a $4\pi M_n$, corrispondente ad una distribuzione superficiale di ``cariche magnetiche'' $\sigma_m=M_n$.\\
+Nel caso del cilindro uniformemente magnetizzato abbiamo una distribuzione superficiale di sorgenti (per $\vec H$) sulle basi del cilindro, positive sulla base verso cui è diretto $\vec M$ (il ``polo nord'' della calamita), negative sull'altra (``polo sud''). Quindi il campo $\vec H$ è identico, sia dentro il cilindro che fuori, al campo elettrico di un cilindro uniformemente polarizzato o, equivalentemente, di due distribuzioni superficiali di carica $\sigma$ e $-\sigma$ sulle due basi del cilindro. In particolare, dentro il cilindro $\vec H$ non è uniforme e le sue linee di forza vanno in verso opposto a quelle di $\vec M$ (dal ``polo nord'' al ``polo sud'') e sono incurvate verso l'interno, come quelle del campo elettrico dentro un condensatore nel quale le dimensioni delle armature sono confrontabili con la loro distanza (gli ``effetti di bordo''). La componente normale di $\vec H$ subisce una discontinuità in modulo uguale a $4\pi M$ attraverso le basi del cilindro e all'esterno $\vec B$ e $\vec H$ coincidono.
+
+\paragraph{Esempi}
+\begin{enumerate}
+\item Consideriamo due magneti, uno a forma di cilindro lungo e sottile, e l'altro a forma di cilindro largo e basso (figura 15.2). Supponiamo che la magnetizzazione, diretta lungo l'asse, sia la stessa nei due cilindri\\
+Nel primo caso (cilindro lungo e stretto) possiamo approssimare il campo magnetico $\vec B$ dentro al cilindro con il campo di un solenoide infinito nel quale $nI\equiv\mathcal F=cM$, quindi (all'interno e lontano dalle basi)
+\fig{fig15_2}{15.2}
+\begin{equation}
+B_z=\frac{4\pi In}{c}=4\pi M;\qquad\vec H=\vec B-4\pi\vec M=0.
+\tag{15.42}
+\end{equation}
+Oppure possiamo considerare il magnete come due distribuzioni superficiali di cariche magnetiche $\sigma_m=M$ e $\sigma_m=-M$ sulle due basi; se $a$ è il raggio del cilindro e $2L$ la sua lunghezza, siccome $a\ll L$, a grande distanza dalle basi il campo $\vec H$ è quello di due cariche magnetiche puntiformi \ $\pm q_m=\pm\pi a^2\sigma_m=\pm\pi a^2M$; così, per esempio, nel centro del magnete si ha
+\begin{equation}
+H_z=-\frac{2\pi a^2M}{L^2};\qquad B_z=4\pi M-\frac{2\pi a^2M}{L^2}\,\cdot
+\tag{15.43}
+\end{equation}
+Non c'è contraddizione fra la (15.42) e la (15.43) in quanto il 2$^\circ$ metodo fornisce, in prossimità del centro, la correzione di ordine $(a/L)^2$ all'approssimazione di solenoide infinito e la 2$^\mathrm{a}$ delle (15.43) è, allo stesso ordine, in accordo con la (7.28).\\
+Con il 1$^\circ$ metodo, quello della corrente superficiale, possiamo concludere che $B_z$ sull'asse e subito fuori del magnete vale con buona approssimazione $2\pi M$ (la metà del valore che ha nel centro) e quindi (o anche con il metodo delle cariche magnetiche) $H_z$ vicino alle basi e all'interno del magnete vale $-2\pi M$.\\
+Consideriamo ora il secondo magnete. Se $d$ è la distanza fra le basi (di raggio $b$), siccome $d\ll b$, all'interno e lontano dai bordi $\vec H$ è come il campo elettrico dentro a un condensatore a facce piane parallele infinite, cioè
+\begin{equation}
+H_z=-4\pi\sigma_m=-4\pi M;\qquad\vec B=\vec H+4\pi\vec M=0
+\tag{15.44}
+\end{equation}
+ed in questa approssimazione (condensatore ``infinito'') all'esterno del magnete $\vec H$ (e quindi anche $\vec B$) è nullo. In alternativa, sempre grazie al fatto che $d\ll b$, possiamo considerare il magnete come una spira di raggio $b$ percorsa dalla corrente $I=cMd$, quindi il campo magnetico $\vec B$ dentro e fuori, ma vicino al centro del magnete, per la (7.26) è
+\begin{equation}
+B_z=\frac{2\pi Md}{b};\qquad H_z^{\mathrm i}=-4\pi M+\frac{2\pi Md}{b}
+\tag{15.45}
+\end{equation}
+quindi in questo caso il metodo della corrente fornisce la correzione di ordine $d/b$ all'approssimazione del condensatore infinito.\\
+Per entrambi i magneti il momento magnetico totale è $\vec m=\vec M\cdot V$, dove $V$ è il volume del magnete, quindi se i due magneti hanno lo stesso volume generano \underline{a grande distanza} lo stesso campo (campo di dipolo); ovviamente a grande distanza ($r\gg L$, \ $r\gg b$) le approssimazioni di solenoide infinito o di condensatore infinito non sono valide.
+
+\item Consideriamo ora un magnete toroidale: per esempio il magnete lungo e stretto della figura 15.2 richiuso su se stesso in forma di anello (figura 15.3). Supponiamo che la magnetizzazione abbia solo la componente tangenziale $M_\theta$ (v.\ figura 7.6), costante.
+\fig{fig15_3}{15.3}
+Siccome $\dive\vec M=0$ (perché il flusso di $\vec M$ uscente da qualsiasi volume è nullo) e sulla superficie $M_n=0$, il campo $\vec H$ non ha sorgenti, quindi è ovunque nullo. Quindi dentro al magnete c'è solo il campo magnetico $\vec B=4\pi\vec M$ e all'esterno $\vec B=\vec H=0$. Il risultato è indipendente dalla forma della sezione del toro.\\
+Se il magnete è aperto, come nella figura 15.4, ma la distanza fra le due superfici esterne è piccola rispetto alle loro dimensioni, il campo magnetico $\vec B$ all'interno è praticamente uguale a quello del magnete della figura 15.3 e siccome $\vec B$ è continuo attraverso i ``poli'' del magnete, anche fra i poli vale (circa) $4\pi M$, come $H$.
+\fig{fig15_4}{15.4}
+\end{enumerate}
+
+È importante a questo punto farsi un'idea di quanto può valere la magnetizzazione $M$ in un magnete permanente. Partiamo dall'osservazione che i materiali ferromagnetici diventano paramagnetici al disopra della temperatura $\Theta$ di Curie, quindi si tratta di sostanze i cui atomi dispongono di un momento magnetico proprio; in secondo luogo sappiamo che una sostanza ferromagnetica in un campo magnetico non uniforme risente di una forza proporzionale al campo, e non al quadrato del campo come le sostanze diamagnetiche e paramagnetiche. Nel caso di queste ultime, come nel caso dei dielettrici, la proporzionalità al quadrato del campo deriva dal fatto che è il campo stesso che produce il momento magnetico sul quale poi esercita la forza. Questo fa supporre che nelle sostanze ferromagnetiche i momenti magnetici atomici risultino già quasi tutti allineati nella stessa direzione, nonostante l'effetto disallineante della temperatura. Il motivo per cui questo succede si è cominciato a capire solo intorno al 1930 (ma tutt'ora
+il problema non è completamente risolto), in quanto il meccanismo che favorisce così fortemente l'allineamento dei momenti magnetici non è attribuibile alla forza che si esercita fra due magneti atomici (che anzi, quando questi sono affiancati, tenderebbe a disporli antiparalleli), ma è di natura quantistica e ha le sue radici nel principio di esclusione di Pauli.\\
+Consideriamo il ferro magnetizzato. Il momento magnetico proprio di ogni atomo di ferro è uguale a due magnetoni di Bohr, il numero atomico del ferro è (circa) 56 (in 56 grammi di ferro ci sono $N_A=6\times10^{23}$ atomi) e la densità è $7.9\,\mathrm{g/cm}^3$, quindi la densità di magnetizzazione di saturazione, cioè se tutti i momenti magnetici sono allineati, è
+\begin{equation}
+M=\frac{7.9}{56}\cdot6\times10^{23}\cdot2\cdot0.9\times10^{-20}\simeq1500\,\mathrm{gauss}
+\tag{15.46}
+\end{equation}
+quindi il campo magnetico del ferro dovuto alla magnetizzazione è dell'ordine di
+\begin{equation}
+4\pi M\approx2\times10^4\,\mathrm{gauss}
+\tag{15.47}
+\end{equation}
+in accordo con l'esperienza. Siccome abbiamo visto che nelle sostanze diamagnetiche il momento magnetico indotto è dell'ordine di $10^{-5}\div10^{-6}$ magnetoni di Bohr $\mu_{\textsc b}$, questo è anche l'ordine di grandezza del rapporto fra la magnetizzazione di una sostanza diamagnetica (o anche paramagnetica a temperatura ambiente) e una ferromagnetica.\\
+Una magnetizzazione come quella data dalla (15.46) corrisponde ad una densità superficiale di corrente enorme:
+\begin{equation}
+\mathcal F=cM=4.5\times10^{13}\,\mathrm{ues}=1.5\times10^4\,\mathrm{A/cm}.
+\tag{15.48}
+\end{equation}
+Il campo magnetico dato dalla (15.47) è quello di saturazione, cioè praticamente il massimo che si può ottenere all'interno del ferro magnetizzato; il campo all'interno di una comune calamita, a parte il fatto che come abbiamo visto negli esempi precedenti dipende (anche) dalla sua forma, è dell'ordine di $10^4\,$gauss, pur sempre un valore ragguardevole. Inoltre, se prendiamo un pezzo di ferro, a meno che questo non sia stato preventivamente trattato in maniera opportuna (c'è ferro e ferro), non manifesta alcuna magnetizzazione (invece le forbici di acciaio, cioè ferro temprato, sono quasi sempre magnetizzate).\\
+Ma allora, nel ferro comune i momenti magnetici atomici sono allineati o no? Un pezzo di ferro, come le altre sostanze ferromagnetiche, è costituito da regioni, chiamate \textit{domini di Weiss}, nelle quali i momenti magnetici atomici sono effettivamente allineati (lungo particolari direzioni determinate dalla struttura cristallina del ferro), ma nel passaggio da un dominio di Weiss all'altro la direzione dell'allineamento cambia, ed il risultato sul piano macroscopico è l'assenza di magnetizzazione. Le dimensioni di queste regioni sono dell'ordine di qualche micron e possono anche essere viste al microscopio.\\
+Evidentemente, per qualche ragione (che ha a che fare con una sorta di competizione fra l'energia di superficie, quella che separa un dominio dall'altro, con l'energia di volume, quella associata al volume dei domini), la situazione in cui nei diversi domini i momenti magnetici atomici non sono allineati nella stessa direzione è energeticamente quella più favorevole; questa situazione può però essere modificata mediante l'applicazione di un campo magnetico esterno, il cui effetto è quello di rendere energeticamente più favorevoli domini sempre più grandi in cui i momenti magnetici atomici sono allineati con il campo esterno: è addirittura possibile registrare sperimentalmente il ``ru\-
+more magnetico'', opportunamente amplificato e trasformato in rumore acustico, che si produce quando un intero dominio (che contiene diversi miliardi di atomi) cambia bruscamente la propria magnetizzazione per allinearsi con i domini vicini, già allineati con il campo (\textit{effetto Barkhausen}). Il risultato, aumentando il campo esterno, è un progressivo estendersi delle dimensioni dei domini ``ben allineati'' a spese degli altri, e quindi la magnetizzazione del nostro campione.
+
+Il modo in cui i diversi materiali ferromagnetici si magnetizzano quando viene applicato un campo esterno dipende dal tipo di materiale, dal trattamento meccanico subito (p.es.\ la tempratura), la presenza di impurità, ecc. Senza addentrarci nella enorme casistica delle possibili situazioni, consideriamo due casi abbastanza emblematici, quello del ferro dolce, e quello dell'acciaio (che sono due rappresentanti della categoria dei materiali ``magneticamente dolci'' e di quelli ``magneticamente rigidi'').
+
+Supponiamo di avere due avvolgimenti toroidali sovrapposti, come quelli considerati nell'esempio 1 nel capitolo 8.7, entrambi avvolti su un supporto ferromagnetico sagomato in forma toroidale; nel primario, mediante un generatore di corrente, facciamo passare una corrente $I(t)$ inizialmente nulla e che aumentiamo gradualmente. Mediante un voltmetro misuriamo la f.e.m.\ indotta nel secondario; nella figura 15.5 è riportata la rappresentazione circuitale di questo sistema: le righe nere fra le due induttanze significano che primario e secondario sono avvolti sullo stesso supporto magnetico e la freccia attraverso il generatore di corrente significa che è possibile variare la corrente erogata.
+\fig{fig15_5}{15.5}
+La conoscenza della corrente comporta, grazie all'ultima delle (15.9) e al teorema della circuitazione, la conoscenza di $H$ nel supporto ferromagnetico: la (7.45) ora vale con $H$ al posto di $B$
+\begin{equation}
+H_\theta(t)=\frac{2NI(t)}{c\varrho}\,\cdot
+\tag{15.49}
+\end{equation}
+Se il supporto toroidale è sottile possiamo considerare $H_\theta$ costante sulla sua sezione.
+
+Variando la corrente nel primario si ha una f.e.m.\ indotta nel secondario che, siccome la 3$^\mathrm{a}$ delle (15.9) è uguale all'equazione nel vuoto, è sempre data dalla (8.2), e quindi è proporzionale a $\dot B$ (e non ad $\dot H$); la conoscenza di $\dot B(t)$ in ultima analisi permette di determinare $B$ ad ogni istante, e quindi $B$ in funzione di $H$; se il comportamento dei materiali ferromagnetici fosse lineare la curva $B=B(H)$ sarebbe una retta, e il coefficiente angolare di questa retta sarebbe la permeabilità magnetica $\mu$; sperimentalmente invece si ottengono curve del tipo di quella riportata nella figura 15.6 (\textit{curva di magnetizzazione}), qualunque sia la sostanza ferromagnetica (ferro dolce, acciaio, \dots).
+\fig{fig15_6}{15.6}
+Va notato che la scala sull'ordinata e quella sull'ascissa sono ben diverse, circa per un fattore $10^3$: il campo magnetico di saturazione $B_{\mathrm{sat}}$, quello che nella figura 15.6 corrisponde alla linea tratteggiata orizzontale, nel caso del ferro dolce e dell'acciaio è un campo dell'ordine di $15000\,$gauss, che si raggiunge quando il campo $H$ vale circa
+$30\,$oersted ($1\,$oersted $=1\,$gauss!) nel caso del ferro dolce, e (circa) $200\,$oersted nel caso dell'acciaio. Quindi possiamo dire che praticamente tutto il campo $\vec B_{\mathrm{sat}}$ è dovuto alla magnetizzazione: \ $\vec B_{\mathrm{sat}}\simeq4\pi\vec M_{\mathrm{sat}}$.\\
+Per la (15.49), se $\varrho=10\,$cm e $N=1000$ (possiamo realizzare il primario con un avvolgimento a più strati), si ottiene un campo $H$ di $200\,$oersted con una corrente $I$ di $10\,$A che, siccome le spire sono 1000 su una circonferenza di $\simeq60\,$cm, corrisponde ad una corrente superficiale di circa $170\,$A/cm: una discreta corrente, ma irrisoria rispetto a quella di magnetizzazione \big(v.\ (15.48)\big); la (relativamente) piccola corrente $I$ è servita solo a ``mettere in ordine'' i domini di Weiss.
+
+Fino a questo punto il comportamento del ferro dolce e dell'acciaio non è sostanzialmente diverso: l'acciaio è solo un po' più ``rigido'' nel raggiungere la saturazione.\\
+La vera differenza si manifesta se ora, dopo avere raggiunto $B_{\mathrm{sat}}$, diminuiamo la corrente $I$, e quindi il campo $H$. Nel caso dei materiali ``magneticamente (molto) dolci'' la curva di magnetizzazione della figura 15.6 viene percorsa all'inverso (in realtà solo approssimativamente), e quindi il processo di magnetizzazione è reversibile o, detto in altri termini, $\vec B$ è una funzione univoca di $\vec H$ e questa relazione funzionale è l'equazione costitutiva che bisogna aggiungere alle (15.9). In questi casi (materiali magneticamente dolci), almeno quando per piccoli valori di $H$ la curva $B(H)$ può essere approssimata con una retta, è possibile definire la permeabilità magnetica del mezzo dalla relazione
+\begin{equation}
+\vec B=\mu\vec H
+\tag{15.50}
+\end{equation}
+e, come è già abbastanza evidente dal grafico 15.6, i valori di $\mu$ sono molto grandi: possono variare da $\mu\simeq10$ a $\mu\simeq10^4$ e in casi speciali può addirittura arrivare a valori $\mu\simeq10^6$.
+
+Invece, nel caso dei materiali ``magneticamente rigidi'', se dopo avere raggiunto la saturazione (lungo la linea tratteggiata nella figura 15.7) diminuiamo il campo $H$, $B$ segue la curva indicata dalla freccia verso sinistra, e quindi diminuisce molto lentamente e non è nullo quando $H$ (cioè la corrente nel primario) è nulla: questa è il \textit{campo residuo} nel nostro campione, dovuto alla \textit{magnetizzazione residua}: il campione è quindi è diventato un magnete permanente, con un campo interno non molto inferiore al campo di saturazione, cioè circa $10^4\,$gauss. Per smagnetizzare il magnete è necessario invertire la corrente in modo da avere un campo $H$ in verso opposto: il valore $H_c$ che corrisponde nel grafico 15.7 a $B=0$ è detto \textit{forza coercitiva} e vale, nel caso dell'acciaio, circa $60\,$oersted.
+\fig{fig15_7}{15.7}
+La curva a tratto pieno nella figura 15.7, che si ottiene variando con continuità la corrente nel primario, è detta \textbf{ciclo di isteresi}; se poi, in un punto del ciclo di isteresi dove la pendenza è grande cerchiamo di invertire il processo (se la corrente stava diminuendo ora la facciamo aumentare), $B$ non ripercorre all'inverso la curva, ma segue un percorso diverso: il ciclo di isteresi non è reversibile (torneremo su questo punto nel paragrafo 7).\\
+Quindi $B$ non è una funzione univoca di $H$, in quanto dipende dai valori precedentemente assunti da $H$, cioè dalla storia passata. In questo caso non è possibile scrivere
+un'equazione costitutiva che lega fra loro $B$ e $H$.
+
+La ricerca per la realizzazione di materiali con ben precise caratteristiche magnetiche è molto attiva, soprattutto sotto la spinta di uno sviluppo tecnologico che fa sempre maggior uso di questi materiali: fra i materiali ``dolci'', necessari per la costruzione dei motori e dei trasformatori, citiamo i \textit{permalloy}, sostanzialmente leghe di nichel e ferro, che hanno un elevato campo magnetico residuo ($\simeq5000\,$gauss) e una piccolissima forza coercitiva ($\simeq4\times10^{-3}\,$oersted); fra i materiali ``rigidi'', necessari per le memorie magnetiche, i magneti permanenti, ecc., il citatissimo Alnico V, una lega che contiene in percentuali ben precise oltre all'alluminio, il nichel e il cobalto (da cui il nome), anche ferro e rame, che ha un campo residuo di $13000\,$gauss e una forza coercitiva di $550\,$oersted.
+
+\subsection{Schermaggio magnetico}
+
+Se vogliamo schermarci dal campo elettrico, ci mettiamo dentro la cavità di un conduttore (gabbia di Faraday): l'effetto schermante deriva dal fatto che in un conduttore il campo elettrico è nullo -- quindi il conduttore è una regione equipotenziale -- e dall'unicità della soluzione dell'equazione di Laplace, date le condizioni al contorno (problemi di Dirichlet e di Neumann).\\
+Esiste la possibilità di schermarci da un campo magnetico esterno, per esempio dal campo magnetico terrestre? Il problema è di notevole rilevanza pratica in quanto in diverse situazioni (funzionamento di apparecchiature elettroniche, misure in assenza di campi magnetici, \dots) è necessario creare regioni nelle quali la presenza, e quindi gli effetti, di campi magnetici esterni siano praticamente nulli. Vedremo che i materiali magneticamente dolci di elevata permeabilità magnetica ($\mu\to\infty$) si comportano, per quanto riguarda $\vec H$, come i conduttori nei confronti del campo elettrico: uno dei materiali particolarmente adatto a questo scopo è il \textit{Supermalloy} per il quale, per piccoli campi, si può scrivere la (15.50), con $\mu\simeq10^6$.\\
+L'idea è questa: siccome $B$ all'interno di un materiale magnetico (dolce) è dell'ordine del campo esterno $B_0$, ed $H=B/\mu$, se $\mu\to\infty$ ne segue che $H\to0$; se dentro il materiale $H=0$ siamo nella stessa situazione di un conduttore nei confronti del campo elettrico.\\
+Il punto più delicato è che dobbiamo convincerci che effettivamente dentro a un materiale di elevata permeabilità magnetica (e quindi facilmente magnetizzabile) $B$ ``resta finito'', cioè dell'ordine di $B_0$.\\
+Consideriamo per semplicità una sfera del nostro materiale in un campo esterno $\vec B_0\equiv\vec H_0$ uniforme: siccome le equazioni per $\vec H$ sono identiche a quelle del campo elettrico (in una regione priva di correnti di conduzione), il problema di determinare $\vec H$ all'interno della sfera magnetizzabile è identico a quello di determinare il campo elettrico dentro una sfera di dielettrico in un campo esterno, problema la cui soluzione è data dalla (14.47); quindi dentro la sfera magnetizzabile
+\begin{equation}
+\vec H=\frac{3}{2+\mu}\vec H_0\quad\Rightarrow\quad\vec B=\frac{3\mu}{2+\mu}\vec B_0
+\tag{15.51}
+\end{equation}
+da cui si vede che effettivamente se $\mu\to\infty$, \ $H\to0$, \ $B\to\,\approx B_0$.\\
+Supponiamo di mettere un corpo cavo di materiale magneticamente dolce con ele\-
+vata permeabilità magnetica in un campo esterno $\vec B_0$ (per esempio, una sfera cava). Nell'approssimazione $\mu\to\infty$ tutta la regione occupata dal materiale è una regione equipotenziale per il potenziale magnetico $\varphi_m$ (perché $H=0$), e quindi è equipotenziale anche la cavità (unicità della soluzione dell'equazione $\Delta\,\varphi_m=0$). Ma dentro la cavità, cioè nel vuoto, \ $\vec B=\vec H\ \Rightarrow\ B=0$ \ quindi, nel limite $\mu\to\infty$, abbiamo realizzato lo schermo magnetico.\\
+Nella regione occupata dal materiale (fra l'esterno e la cavità) il campo magnetico $\vec B$ non è nullo e come conseguenza del fatto che è un campo solenoidale ($\dive\vec B=0$) le sue linee di forza hanno un andamento molto particolare: siccome dentro $\vec H=0$, fuori $\vec H=\vec B$ e la componente tangenziale di $\vec H$ è continua attraverso la superficie, ne segue che $\vec H$, e quindi $\vec B$, è ortogonale alla superficie esterna del materiale (come il campo elettrico sulla superficie di un conduttore); entrando, la componente tangenziale di $\vec B$ subisce una discontinuità (a causa della corrente superficiale di magnetizzazione) che ha l'effetto di allontanare le linee di forza dalla normale e incanalarle nella regione fra la superficie esterna e quella interna; siccome la componente normale di $\vec B$ è continua e nella cavità $\vec B=0$, segue che le linee di forza di $\vec B$ che arrivano sulla superficie interna del materiale sono tangenti ad essa. Ne segue, specialmente se la regione occupata dal materiale è sottile (p.es.\ una corona sferica di raggi interno ed esterno quasi uguali) che tutte le linee di forza che entrano nel materiale si addensano nel piccolo volume a disposizione: questa concentrazione delle linee di forza nei materiali magnetici ad alta permeabilità permette di aumentare notevolmente i coefficienti di auto e mutua induzione di avvolgimenti realizzati attorno a supporti magnetici (chiamati \textit{nuclei magnetici}), in quanto la presenza del nucleo magnetico provoca un aumento dell'intensità del campo e una riduzione del \textit{flusso disperso} (cioè non concatenato dal circuito).
+
+\paragraph{Esempi}
+\begin{enumerate}
+\item Supponiamo di mettere una corona sferica di un materiale di permeabilità magnetica $\mu$ in un campo esterno uniforme $\vec B_0$. Vogliamo stimare l'intensità del campo magnetico all'interno della cavità. La soluzione esatta del problema è possibile ma complicata per cui, se ci accontentiamo di una stima, faremo delle approssimazioni.\\
+Se non ci fosse la cavità, il campo $\vec H_{\mathrm{sfera}}$ dentro la sfera sarebbe quello dato dalla (15.51). Se ora supponiamo che il raggio esterno della corona sia molto maggiore di quello interno, possiamo approssimare il campo $\vec H$ nella cavità come il campo in una cavità sferica in un mezzo infinito di permeabilità $\mu$ nel quale è presente (in assenza della cavità) il campo uniforme $\vec H_{\mathrm{sfera}}$: la soluzione, fatte le opportune sostituzioni è data dalla (14.49)
+\begin{equation}
+\vec H_{\mathrm{cav}}\equiv\vec B_{\mathrm{cav}}\simeq\frac{3\mu}{2\mu+1}\vec H_{\mathrm{sfera}}=\frac{9\mu}{(2+\mu)(2\mu+1)}\vec B_0\to\frac{9}{2\mu}\vec B_0
+\tag{15.52}
+\end{equation}
+(l'ultimo passaggio corrisponde al caso $\mu\gg1$).
+
+\item Ne capitolo 8.4 abbiamo calcolato il coefficiente di autoinduzione di un avvolgimento toroidale a spire rettangolari ($N$ spire, raggio interno $a$, esterno $b$, altezza $h$). Vediamo come si modifica il risultato, dato dalla (8.32), se le spire sono avvolte su un materiale ferromagnetico dolce per il quale vale la (15.50).
+La definizione di coefficiente di auto (o mutua) induzione è sempre la stessa: $\Phi(\vec B)/cI$, solo che ora la corrente $I$ determina $\vec H$ tramite l'ultima delle (15.9) \ $\rot\vec H=4\pi\vec J/c$, ed è dato dalla (15.49): la stessa espressione che si ha nel vuoto per $\vec B$ \big(v.\ (7.45)\big). Siccome assumiamo che valga la (15.50) si ha (se il materiale è omogeneo)
+\begin{equation}
+\Phi(\vec B)=\Phi(\mu\vec H)=\mu\Phi(\vec H)
+\tag{15.53}
+\end{equation}
+quindi il coefficiente di autoinduzione risulta $\mu$ volte quello nel vuoto:
+\begin{equation}
+L=\frac{2\mu N^2h}{c^2}\log\frac{b}{a}\,\cdot
+\tag{15.54}
+\end{equation}
+\end{enumerate}
+
+\subsection{L'energia magnetica}
+
+Come nel caso dei dielettrici, si arriva al concetto di energia del sistema campo + materia a partire dal lavoro che occorre fare sul sistema per instaurare il campo magnetico. Siccome nel caso dei dielettrici ci siamo limitati al caso in cui è valida l'approssimazione lineare, non sempre le conclusioni raggiunte in quel caso possono essere trasferite al caso magnetico, dato che le sostanze magneticamente interessanti di solito sono quelle ferromagnetiche.\\
+Come abbiamo già discusso nel caso dei dielettrici, le forze esterne sono quelle che i generatori devono esercitare contro le forze del campo sulle cariche ``vere'' per instaurare i campi: il lavoro fatto nell'unità di tempo (potenza) dalle forze esterne è dato da
+\begin{equation}
+W^\mathrm{est}(t)=-\int\vec E\cdot\vec J\,dV.
+\tag{15.55}
+\end{equation}
+La (15.55) formalmente coincide con $-W(t)$ dato dalla (11.3) (nella (11.3) $W$ è la potenza delle forze del campo), ma il contenuto è diverso. Nella (15.55) $\vec J$ è solo la corrente di conduzione (quella dovuta al moto delle cariche ``vere''), e non contiene le correnti microscopiche, quelle che compaiono nelle equazioni (14.4) per i campi microscopici e che, mediate, danno luogo alle correnti di polarizzazione e a quelle di magnetizzazione \big(equazione (15.5)\big). Nella (11.3), invece, $\vec J$ è tutta la corrente, sia quella di conduzione che le correnti microscopiche. Come abbiamo già rilevato a proposito della discussione fatta nel caso dei dielettrici, la (11.3) in pratica ha senso quando ha senso fare una chiara distinzione fra campo e materia (elettromagnetismo nel vuoto).
+
+Per determinare in generale quella che normalmente viene chiamata energia del sistema campo + materia
+\begin{equation}
+U(t)=\int_{-\infty}^tW^\mathrm{est}(t')\,dt'
+\tag{15.56}
+\end{equation}
+(ma che più correttamente fino a prova contraria dovremmo limitarci a chiamare ``lavoro fatto sul sistema''), si procede come nel capitolo 11.1. Occorre però usare le equazioni (15.9), dato che in esse $\vec J$ è la corrente di conduzione: moltiplichiamo scalarmente la 4$^\mathrm{a}$ e la 2$^\mathrm{a}$ delle (15.9) rispettivamente per $\vec E$ e per $\vec H$ e sottraiamole:
+\begin{equation}
+\vec E\cdot\rot\vec H-\vec H\cdot\rot\vec E=\frac{4\pi}{c}\vec E\cdot\vec J+\frac1c\Big(\vec E\cdot\frac{\partial\vec D}{\partial t}+\vec H\cdot\frac{\partial\vec B}{\partial t}\Big)
+\tag{15.57}
+\end{equation}
+quindi grazie all'identità (11.6) si ottiene
+\begin{equation}
+-\vec E\cdot\vec J=\frac{1}{4\pi}\Big(\vec E\cdot\frac{\partial\vec D}{\partial t}+\vec H\cdot\frac{\partial\vec B}{\partial t}\Big)+\frac{c}{4\pi}\dive(\vec E\wedge\vec H)
+\tag{15.58}
+\end{equation}
+e quindi
+\begin{equation}
+W^\mathrm{est}(t)=\frac{1}{4\pi}\int\Big(\vec E\cdot\frac{\partial\vec D}{\partial t}+\vec H\cdot\frac{\partial\vec B}{\partial t}\Big)\,dV.
+\tag{15.59}
+\end{equation}
+La (15.59), come le (15.9), è indipendente dalle equazioni costitutive che legano $\vec E$, $\vec B$ a $\vec D$ e $\vec H$ e anche dal fatto che queste esistano o meno; in generale non è possibile ricavare, integrando su $t$, l'energia del sistema $U(t)$ in termini dei campi all'istante $t$, perché abbiamo visto che ci sono casi in cui i campi ad un dato istante, e quindi anche l'energia del sistema, dipendono dalla storia precedente del sistema (fenomeno dell'isteresi). Se il comportamento del mezzo è lineare, allora $\vec B=\mu\vec H$, \ $\vec D=\epsilon\vec E$, per cui
+\begin{equation}
+\int\vec E\cdot\frac{\partial\vec D}{\partial t'}\,dt'=\frac12\vec E\cdot\vec D\,,\qquad\int\vec H\cdot\frac{\partial\vec B}{\partial t'}\,dt'=\frac12\vec H\cdot\vec B
+\tag{15.60}
+\end{equation}
+e in questo caso quindi
+\begin{equation}
+U(t)=\frac{1}{8\pi}\int\big(\vec E\cdot\vec D+\vec H\cdot\vec B\big)\,dV.
+\tag{15.61}
+\end{equation}
+La (15.61) si riduce alla (14.57) nel caso che sia presente solo un campo elettrico statico, e nel caso che sia presente solo un campo magnetico statico dà
+\begin{equation}
+U_M=\frac{1}{8\pi}\int\vec H\cdot\vec B\,dV.
+\tag{15.62}
+\end{equation}
+
+\paragraph{Esempio}
+\begin{quote}
+Riprendiamo in considerazione l'avvolgimento toroidale dell'esempio 2 del paragrafo precedente e calcoliamo il lavoro che un generatore deve fare per far circolare una corrente $I$ nel circuito.\\
+Si ha
+\begin{equation}
+\begin{split}
+&\frac{dU_M(t)}{dt}=W^\mathrm{est}(t)=-\mathcal E(t)I(t)=L\dot I(t)I(t)\quad\Rightarrow\\
+&U_M=\frac12LI^2=\frac{I^2}{2}\frac{2\mu N^2h}{c^2}\log\frac ba\,\cdot
+\end{split}
+\tag{15.63}
+\end{equation}
+Se invece usiamo la (15.62), per la (15.49) si ha
+\[
+U_M=\frac{\mu}{8\pi}\int H^2\,dV=\frac{\mu h}{8\pi}\int_0^{2\pi}d\phi\int_a^bH^2\varrho\,d\varrho=\frac{\mu hN^2I^2}{c^2}\log\frac ba
+\]
+che coincide con la (15.63).
+\end{quote}
+
+Nel capitolo 14.6 abbiamo messo in evidenza che la (14.57) rappresenta, per un dielettrico mantenuto a temperatura costante e per trasformazioni reversibili, la variazione $\Delta\,\mathcal F$ della sua energia libera $\mathcal F=\mathcal U-T\mathcal S$ tra lo stato con il campo e quello senza campo. Il problema del significato dell'energia magnetica $U_M$ si pone negli stessi termini e nel
+caso delle sostanze diamagnetiche o paramagnetiche le conclusioni sono le stesse come nel caso dei dielettrici, però in questi casi sappiamo che gli effetti della presenza della materia sul campo magnetico, e quindi sull'energia, sono di solito molto piccoli.
+
+Il caso importante è quello delle sostanze ferromagnetiche, anche perché in questi casi le trasformazioni possono essere irreversibili.\\
+Supponiamo di fare effettuare ad una sostanza ferromagnetica il ciclo di isteresi a contatto con l'ambiente, quindi in condizioni isoterme, nell'intervallo di tempo $t_1$, $t_2$. Il lavoro fatto sul sistema per la (15.59) è dato da
+\begin{equation}
+L^\mathrm{est}=\frac{1}{4\pi}\int_{t_1}^{t_2}dt\Big(\int\vec H\cdot\frac{\partial\vec B}{\partial t}\,dV\Big).
+\tag{15.64}
+\end{equation}
+Supponiamo, ma solo per semplicità, che $B$ ed $H$ siano costanti dentro il materiale, allora siccome nell'intervallo di tempo $(t_1,\,t_2)$ \ $\vec B$ ed $\vec H$ compiono un ciclo, se $V$ è il volume del campione, possiamo riscrivere la (15.64) come
+\begin{equation}
+L^\mathrm{est}=\frac{V}{4\pi}\oint\vec H\cdot d\vec B
+\tag{15.65}
+\end{equation}
+da cui si vede che, se $\vec B$ e $\vec H$ sono paralleli (come nel caso di un magnete toroidale) $L^\mathrm{est}$ è dato dall'area racchiusa dal ciclo di isteresi nel piano $(H,\,B)$, proprio come nel piano di Clapeyron $(V,\,p)$ il lavoro fatto sul sistema in un ciclo è l'area racchiusa dal ciclo ($L>0$ se il ciclo è percorso in senso antiorario). Poiché $L^\mathrm{est}\neq0$ e il ciclo è monotermo, necessariamente è irreversibile e $L^\mathrm{est}>0$ (postulato di Lord Kelvin).\\
+Siccome il sistema ha compiuto un ciclo, la sua energia libera (e anche la sua energia interna) non è cambiata, quindi il lavoro fatto eguaglia interamente il calore ceduto all'ambiente (il nucleo ferromagnetico si scalda e mediante l'opportuno sistema di raffreddamento il calore viene trasferito all'esterno).\\
+Quindi in questi casi (trasformazioni irreversibili) la (15.59) non rappresenta la variazione di qualche forma di energia (interna, libera, \dots), ma solo il lavoro fatto nell'unità di tempo sul sistema: sappiamo infatti che nei processi isotermi irreversibili la differenza fra il lavoro fatto e la variazione dell'energia libera è positivo ed è uguale a $T\Delta\,S$, dove l'entropia è quella totale del sistema e delle sorgenti; in un ciclo $T\Delta\,S$ è il calore scambiato con l'ambiente.
