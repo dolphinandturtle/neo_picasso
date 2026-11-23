@@ -228,6 +228,19 @@ def make_index():
         file.write("\\end{document}\n")
     build("picasso_index")
 
+def make_constants():
+    with open(os.path.join("src", "include.tex"), "r") as file:
+        tex_include = file.read()
+    with open(os.path.join("src", "constants.tex"), "r") as file:
+        tex_constants = file.read()
+    with open("picasso_constants.tex", "w") as file:
+        file.write(tex_include + '\n')
+        file.write("\\begin{document}\n")
+        file.write("\\pagenumbering{arabic}\n")
+        file.write(tex_constants + '\n')
+        file.write("\\end{document}\n")
+    build("picasso_constants")
+
 def make_all():
     with open(os.path.join("src", "include.tex"), "r") as file:
         tex_include = file.read()
@@ -265,6 +278,8 @@ def make_all():
         tex_ch15 = file.read()
     with open(os.path.join("src", "index.tex"), "r") as file:
         tex_index = file.read()
+    with open(os.path.join("src", "constants.tex"), "r") as file:
+        tex_constants = file.read()
     with open("picasso.tex", "w") as file:
         file.write(tex_include + '\n')
         file.write("\\begin{document}\n")
@@ -287,6 +302,7 @@ def make_all():
         file.write(tex_ch14 + '\n')
         file.write(tex_ch15 + '\n')
         file.write(tex_index + '\n')
+        file.write(tex_constants + '\n')
         file.write("\\end{document}\n")
     # the second pass fills the indeces
     build("picasso")
@@ -342,6 +358,9 @@ elif sys.argv[1] == "ch15":
 
 elif sys.argv[1] == "index":
     make_index()
+
+elif sys.argv[1] == "constants":
+    make_constants()
 
 elif sys.argv[1] == "clean":
     for fname in os.listdir():
