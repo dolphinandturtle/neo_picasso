@@ -159,6 +159,20 @@ def make_ch11():
         file.write("\\end{document}\n")
     build("picasso_ch11")
 
+def make_ch12():
+    with open(os.path.join("src", "include.tex"), "r") as file:
+        tex_include = file.read()
+    with open(os.path.join("src", "ch12.tex"), "r") as file:
+        tex_ch12 = file.read()
+    with open("picasso_ch12.tex", "w") as file:
+        file.write(tex_include + '\n')
+        file.write("\\begin{document}\n")
+        file.write("\\pagenumbering{arabic}\n")
+        file.write("\\setcounter{section}{11}\n")
+        file.write(tex_ch12 + '\n')
+        file.write("\\end{document}\n")
+    build("picasso_ch12")
+
 def make_all():
     with open(os.path.join("src", "include.tex"), "r") as file:
         tex_include = file.read()
@@ -186,6 +200,8 @@ def make_all():
         tex_ch10 = file.read()
     with open(os.path.join("src", "ch11.tex"), "r") as file:
         tex_ch11 = file.read()
+    with open(os.path.join("src", "ch12.tex"), "r") as file:
+        tex_ch12 = file.read()
     with open("picasso.tex", "w") as file:
         file.write(tex_include + '\n')
         file.write("\\begin{document}\n")
@@ -203,6 +219,7 @@ def make_all():
         file.write(tex_ch9 + '\n')
         file.write(tex_ch10 + '\n')
         file.write(tex_ch11 + '\n')
+        file.write(tex_ch12 + '\n')
         file.write("\\end{document}\n")
     # the second pass fills the indeces
     build("picasso")
@@ -243,6 +260,9 @@ elif sys.argv[1] == "ch10":
 
 elif sys.argv[1] == "ch11":
     make_ch11()
+
+elif sys.argv[1] == "ch12":
+    make_ch12()
 
 elif sys.argv[1] == "clean":
     for fname in os.listdir():
