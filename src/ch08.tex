@@ -1,0 +1,502 @@
+\section{I CAMPI DI CORRENTI LENTAMENTE VARIABILI}
+
+\subsection{Introduzione}
+
+Le (7.13) e (7.14) costituiscono le equazioni di Maxwell quando le sorgenti sono indipendenti dal tempo quindi, in particolare, quando le correnti sono stazionarie. Per fortuna ciò non significa che non appena si abbia a che fare con correnti variabili, necessariamente si debbano usare le equazioni di Maxwell in tutta la loro complessità, cioè le (6.53): la difficoltà della loro soluzione e la complessità del risultato raramente corrispondono ad un reale guadagno di informazioni e di conoscenza sullo svolgimento dei fenomeni. Abbiamo in mente situazioni in cui circuiti costituiti da fili conduttori, anziché essere percorsi da correnti stazionarie, sono alimentati da correnti che variano lentamente nel tempo: chiariremo cosa vuol dire ``variare lentamente'' e quali approssimazioni è lecito fare in questi casi. Trattandosi di circuiti chiusi (fa eccezione il caso in cui sono presenti dei condensatori e che discuteremo successivamente), è lecito assumere che siano percorsi da correnti a divergenza nulla, quelle che nel capitolo 3 abbiamo definito correnti lentamente variabili, la cui forma è data dalla (3.12).
+
+\subsection{L'approssimazione delle correnti lentamente variabili}
+
+Supponiamo che un certo numero di circuiti siano percorsi da correnti variabili $I(t)$; queste correnti generano un campo magnetico dipendente dal tempo: in tali condizioni la 2$^\mathrm{a}$ delle (6.53) dice che è presente anche un campo elettrico non conservativo: infatti dalla (6.53) e dal teorema di Stokes, se $\gamma$ è un'arbitraria linea chiusa ed $S$ una qualsiasi superficie avente $\gamma$ come contorno, si ha
+\begin{equation}
+\oint_\gamma\vec E\cdot d\vec l=-\frac{1}{c}\int_S\frac{\partial\vec B}{\partial t}\cdot d\vec S=-\frac{1}{c}\frac{d}{dt}\int_S\vec B\cdot d\vec S\equiv-\frac{1}{c}\frac{d\Phi_S(\vec B)}{dt}\,\cdot
+\tag{8.1}
+\end{equation}
+Il primo membro, per definizione \big(v.\ (3.33)\big), è la \textbf{forza elettromotrice indotta} \ $\mathcal E_\gamma$ nel circuito $\gamma$ (in generale una \underline{linea}, \underline{non} necessariamente un circuito conduttore), e quindi la (8.1) può essere scritta come
+\begin{equation}
+\mathcal E_\gamma=-\frac{1}{c}\frac{d\Phi_S(\vec B)}{dt}
+\tag{8.2}
+\end{equation}
+che costituisce la \textbf{legge dell'induzione di Faraday--Neumann}.\\
+La (8.1) o (8.2), essendo stata ottenuta direttamente dalle equazioni di Maxwell, vale in generale, qualunque sia l'origine del campo magnetico. Tuttavia, per poter essere utilizzata, richiede la conoscenza di $\vec B$ che a sua volta, vista l'ultima delle (6.53), dipende dal campo elettrico. Se l'origine del campo elettrico risiede esclusivamente nell'esistenza di un campo magnetico variabile \big(equazione (6.50)\big), cioè sono assenti cariche \ $(\dive\vec E=0)$, è presumibile che il contributo a $\vec B$ dovuto al campo elettrico \big(equazione (6.52)\big), almeno in particolari condizioni non sia altrettanto importante quanto quello dovuto alla corrente $\vec J$ in quanto, in un certo senso, è un effetto del secondo ordine:
+\begin{equation}
+I(t)\to\vec B(t)\to\vec E(t)\to\vec B(t)\to\cdots
+\tag{8.3}
+\end{equation}
+Il diagramma (8.3) è un diagramma circolare ($\vec B$ determina $\vec E$ che determina $\vec B$, che determina $\vec E$, e così via): risolvere esattamente le equazioni di Maxwell significa determinare quei campi $\vec B$ ed $\vec E$ tali che ad ogni passo del diagramma riproducono se stessi, senza cambiamenti; se però non sappiamo (o non vale la pena) risolvere esattamente le equazioni di Maxwell, proprio il diagramma (8.3) ci suggerisce un metodo di approssimazioni successive alla soluzione, cioè un \textbf{metodo iterativo}: il campo magnetico, chiamiamolo $\vec B_0$, viene determinato dalla (6.47) \ $(\dive\vec B=0)$ \ e dalla (6.52) nella quale (inizialmente) si ignora a 2$^\circ$ membro il termine contenente il campo elettrico:
+\begin{equation}
+\rot\vec B_0=\frac{4\pi}{c}\vec J+\frac{1}{c}\,\cancel{\frac{\partial\vec E}{\partial t}}
+\tag{8.4}
+\end{equation}
+e quindi la soluzione è identica a quella del caso statico, cioè la (7.23) o la (7.24), ma con le correnti $\vec J$ e $I$ dipendenti dal tempo; inseriamo ora il campo $\vec B_0$ così calcolato nella (6.50) \big(o nella (8.2)\big) per calcolare, utilizzando anche l'equazione \ $\dive\vec E=0$, il campo elettrico $\vec E_1$:
+\begin{equation}
+\rot\vec E_1=-\frac{1}{c}\frac{\partial\vec B_0}{\partial t}
+\tag{8.5}
+\end{equation}
+a questo punto si può proseguire quanto si vuole: si ricalcola il campo magnetico \ $\vec B_0+\vec B_1$ \ (e quindi $\vec B_1$ è la correzione da apportare a $\vec B_0$) risolvendo l'equazione
+\begin{equation}
+\rot(\vec B_0+\vec B_1)=\frac{4\pi}{c}\vec J+\frac{1}{c}\frac{\partial\vec E_1}{\partial t}\quad\ \Rightarrow\quad\ \rot\vec B_1=\frac{1}{c}\frac{\partial\vec E_1}{\partial t}
+\tag{8.6}
+\end{equation}
+e così via. In questo modo
+\begin{equation}
+\left\{\begin{aligned}
+&\vec B=\vec B_0+\vec B_1+\vec B_2+\cdots\,;\\
+&\vec E=\ 0\ +\vec E_1+\vec E_2+\cdots
+\end{aligned}\right.
+\tag{8.7}
+\end{equation}
+Il procedimento iterativo ha senso se le serie per $\vec B$ ed $\vec E$ convergono alla soluzione, e quindi se ogni termine della serie è minore del precedente; non è possibile stabilire a priori la convergenza della serie alla soluzione, tuttavia possiamo cercare di capire in quali condizioni i vari termini sono via via decrescenti: l'argomento che segue, essendo sostanzialmente basato sulla determinazione degli ordini di grandezza, è certo molto rozzo, ma se non altro ha il vantaggio della semplicità. Supponiamo che la corrente sia sinusoidale:
+\begin{equation}
+I(t)=I_0\sen\omega t
+\tag{8.8}
+\end{equation}
+e che $L$ sia la dimensione lineare della regione in cui sono presenti i circuiti conduttori e nella quale ci interessa determinare i campi. L'ordine di grandezza di una circuitazione è il prodotto del campo per $L$, quello di un flusso il campo per $L^2$; siccome la corrente è periodica, anche i campi sono periodici (con lo stesso periodo) per cui le derivate rispetto al tempo corrispondono alla moltiplicazione per $\omega$ \ $(\sen\omega t\to\omega\cos\omega t)$; dalla (8.4) (o dal teorema di Ampère) si ottiene allora
+\begin{equation}
+B_0\simeq\frac{I_0}{Lc}
+\tag{8.9}
+\end{equation}
+e quindi dalla (8.5) nella forma integrale (8.2)
+\begin{equation}
+E_1L\simeq\frac{\omega}{c}B_0L^2\quad\ \Rightarrow\quad\ E_1\simeq\frac{\omega L}{c}B_0
+\tag{8.10}
+\end{equation}
+e similmente, dalla (8.6)
+\begin{equation}
+B_1\simeq\frac{\omega E_1L^2}{Lc}\simeq\left(\frac{\omega L}{c}\right)^2B_0.
+\tag{8.11}
+\end{equation}
+La cosa importante che viene fuori dalle stime fatte sopra è che ogni termine della serie è di ordine $(\omega L/c)^2$ rispetto al precedente, e quindi che i campi risultano espressi come serie di potenze in $(\omega L/c)^2$; $L/c$ è il tempo che un segnale elettromagnetico impiega ad attraversare la regione di spazio nella quale siamo interessati a determinare i campi, e se questo tempo è molto minore del periodo $T\approx1/\omega$ della corrente (e dei campi), e in generale di un opportuno tempo $\tau$ caratteristico di variazione delle correnti \ ($\tau=T$ per correnti sinusoidali), allora il metodo iterativo ha senso e i primi termini delle serie (8.7) forniscono una buona approssimazione alla soluzione esatta: per esempio, se $L=3$\,m, \ $L/c=10^{-8}$\,s, mentre il periodo della corrente alternata a 50\,Hz è di $2\times10^{-2}$\,s.
+
+L'approssimazione delle correnti lentamente variabili consiste nel limitarsi al calcolo di $\vec B_0$ e $\vec E_1$, cioè nella determinazione dei campi fino all'ordine $L/c\tau$; la condizione di validità dell'approssimazione \ $(\tau\gg L/c)$ \ ha un significato intuitivo: la corrente all'istante $t$ determina, tramite l'equazione approssimata (8.4), i campi in ogni punto della regione considerata allo stesso istante $t$, quindi quello che stiamo trascurando è il ritardo dovuto alla propagazione dei segnali elettromagnetici, e ciò è lecito se questo tempo di propagazione è trascurabile rispetto al tempo che impiega la corrente a variare.\\
+Un modo equivalente di interpretare la condizione \ $L/cT\ll1$ \ nel caso di correnti sinusoidali, parte dalla considerazione che la propagazione con velocità $c$ di un segnale elettromagnetico di periodo $T$ comporta che il segnale, a parte la sua attenuazione con la distanza, ha una periodicità spaziale $\lambda=cT$, detta \textbf{\textit{lunghezza d'onda}}, che rappresenta la distanza su cui i campi variano rispetto alla propagazione istantanea (``propagazione per onde''): allora la condizione di validità dell'approssimazione delle correnti lentamente variabili è espressa da \ $\lambda\gg L$, cioè le ``dimensioni del circuito'' devono essere piccole rispetto alla lunghezza d'onda.
+
+Le equazioni dei campi nell'approssimazione delle correnti lentamente variabili sono quindi
+\begin{equation}
+\left\{\begin{aligned}
+&\rot\vec B=\frac{4\pi}{c}\vec J\\[2pt]
+&\dive\vec B=0\\[2pt]
+&\rot\vec E=-\frac{1}{c}\frac{\partial\vec B}{\partial t}\\[2pt]
+&\dive\vec E=0
+\end{aligned}\right.
+\tag{8.12}
+\end{equation}
+e corrispondono a trascurare nelle (6.53) il termine \ $(1/c)\,\partial\vec E/\partial t$. Maxwell definì la \textbf{corrente di spostamento}
+\begin{equation}
+\vec J_S\defeq\frac{1}{4\pi}\frac{\partial\vec E}{\partial t}
+\tag{8.13}
+\end{equation}
+per cui la (6.52) \big(o la 4$^\mathrm{a}$ delle (6.53)\big) può essere scritta come
+\begin{equation}
+\rot\vec B=\frac{4\pi}{c}(\vec J+\vec J_S)
+\tag{8.14}
+\end{equation}
+e l'approssimazione delle correnti lentamente variabili consiste quindi nel trascurare la corrente di spostamento rispetto alla corrente di conduzione $\vec J$: vedremo più avanti i casi in cui detta corrente di spostamento produce effetti rilevanti e quindi non può essere trascurata.\\
+La richiesta che nell'approssimazione che stiamo considerando le correnti, anche se variabili, siano a divergenza nulla è dettata da ragioni di coerenza delle equazioni utilizzate: come nel caso statico la 1$^\mathrm{a}$ delle (8.12), grazie all'identità (7.12), comporta \ $\dive\vec J(x,y,z,t)=0$, mentre in generale \ $\dive(\vec J+\vec J_S)=0$.
+
+Prima di concludere questo paragrafo vogliamo brevemente discutere un problema legato al passaggio della corrente nei conduttori, problema che si presenta anche nel caso di correnti stazionarie. Per determinare la corrente che scorre in un conduttore di data resistenza è sufficiente conoscere la f.e.m.\ nel circuito e non è rilevante sapere quanto vale il campo elettrico in ogni punto del circuito: può accadere, per esempio, che in certi tratti del circuito il campo elettrico esterno sia nullo, oppure ortogonale al circuito stesso, o addirittura eserciti sulle cariche una forza in direzione opposta a quella in cui scorre la corrente, ma in ogni caso la corrente (per esempio una corrente stazionaria) è la stessa attraverso tutte le sezioni del conduttore. Certamente in casi come questi non possiamo attribuire il moto delle cariche contro il campo elettrico, o in sua assenza, al ``moto per inerzia'' della cariche stesse, cioè all'energia cinetica acquisita nei tratti precedenti del conduttore: ad eccezione del caso dei superconduttori, le cariche verrebbero frenate immediatamente dall'effetto viscoso esercitato dal reticolo. Questo ci fa capire che nel conduttore (o sulla sua superficie) si deve realizzare una ridistribuzione delle cariche tale da garantire, tramite il campo elettrico da esse generato, una corrente costante lungo tutto il circuito. Infatti, all'interno del conduttore vale la (3.17) per cui una data corrente richiede un dato campo elettrico: se per esempio il conduttore è omogeneo e di sezione costante, lungo tutto il circuito il campo elettrico totale deve avere modulo costante, indipendentemente dalla forma del circuito e dalla distanza dal generatore di f.e.m., per esempio una pila.\\
+Normalmente, almeno nei casi di conduttori sottili e di correnti non troppo elevate (dipende anche dalla forma del circuito), sia le cariche indotte al loro interno che le modifiche prodotte ai campi esterni da queste cariche, sono molto modeste, e in effetti le abbiamo trascurate nello scrivere l'ultima delle (8.12). Gli effetti prodotti da queste cariche indotte vengono descritti dicendo che nel circuito si hanno delle ``capacità parassite'' (quando indesiderate), o altrimenti delle ``capacità distribuite''.
+
+\subsection{Il solenoide}
+
+Un solenoide ``infinito'' a spire circolari sovrapposte di raggio $a$ è percorso da una corrente lentamente variabile $I(t)$. Il campo magnetico è dato da
+\begin{equation}
+B_z(t)=\frac{4\pi nI(t)}{c}
+\tag{8.15}
+\end{equation}
+dentro al solenoide, ed è nullo fuori. Sia $\gamma$ una linea chiusa che concatena (una sola volta) il solenoide: il flusso di $\vec B$ attraverso (qualsiasi superficie che si appoggia a) $\gamma$,
+essendo il campo non nullo solo all'interno del solenoide, è dato da
+\begin{equation}
+\Phi(\vec B)=\frac{4\pi nI(t)}{c}\cdot\pi a^2
+\tag{8.16}
+\end{equation}
+e quindi per la (8.2) la f.e.m.\ indotta nel circuito $\gamma$ è
+\begin{equation}
+\mathcal E(t)=-\frac{4\pi^2na^2\,\dot I(t)}{c^2}
+\tag{8.17}
+\end{equation}
+indipendente dalla forma e dalle dimensioni di $\gamma$.\\
+Se $\gamma$ è un filo conduttore di resistenza $R$, in esso viene indotta una corrente $I_\gamma$ data da (legge di Ohm)
+\begin{equation}
+I_\gamma(t)=\frac{\mathcal E(t)}{R}=-\frac{4\pi^2na^2\,\dot I(t)}{R\,c^2}\,\cdot
+\tag{8.18}
+\end{equation}
+Il fatto che nel circuito conduttore $\gamma$ venga indotta una corrente, comporta che questa genera un campo magnetico $\vec B_\gamma$ che, variando nel tempo, a sua volta induce in $\gamma$ una f.e.m.\ (\textbf{forza elettromotrice autoindotta}), e quindi la (8.18) in linea di principio non è corretta, in quanto dovrebbe tenere conto sia della f.e.m.\ indotta dal campo del solenoide, sia della f.e.m.\ autoindotta, che per ora trascuriamo: questo problema verrà discusso più avanti.
+
+Il segno $-$ nella (8.18) significa che se $I(t)$ cresce \ $(\dot I>0)$, allora $I_\gamma<0$, quindi la componente parallela a $\vec B$ del campo magnetico $\vec B_\gamma$ prodotto dalla corrente $I_\gamma$ è opposta \underline{alla variazione} del campo del solenoide: \ $\vec B>0\Rightarrow\vec B_\gamma<0$, e viceversa se $\dot I<0$: ciò è espresso dalla
+
+\textbf{\textit{Legge di Lenz:}} \textit{il verso della corrente indotta in un circuito conduttore dalla variazione del campo magnetico concatenato con il circuito è tale da produrre un campo magnetico che si oppone alle variazioni del flusso del campo inducente.}
+
+Se $\gamma$ gira $N$ volte attorno al solenoide, la superficie che ha $\gamma$ come contorno taglia $N$ volte il solenoide, quindi il flusso di $\vec B$ e la f.e.m.\ indotta sono rispettivamente $N$ volte quelli dati dalla (8.16) e dalla (8.17).\\
+Se $\gamma$ è interno al solenoide, la f.e.m.\ è data dalla (8.17) dove al posto di $\pi a^2$ si sostituisce l'area che si ottiene proiettando $\gamma$ su un piano parallelo alle spire: in particolare, se $\gamma$ è un circuito circolare di raggio $\varrho$ parallelo alle spire,
+\begin{equation}
+\mathcal E_\gamma(t)=-\frac{4\pi^2n\varrho^2\,\dot I(t)}{c^2}\,\cdot
+\tag{8.19}
+\end{equation}
+Se $\gamma$ non è concatenato con il solenoide ed è ad esso esterno, (dove $\vec B$ è nullo), la f.e.m.\ è nulla.\\
+Nessuno dei risultati finora ottenuti dipende dalla forma delle spire del solenoide: basta sostituire $\pi a^2$ nelle (8.16)\,$\div$\,(8.18) con l'area delle spire.\\
+Quindi conosciamo la circuitazione del campo elettrico su ogni circuito $\gamma$; se vogliamo determinare il campo elettrico (questo sì dipende dalla forma delle spire) possiamo procedere in due modi, il primo di carattere generale, il secondo specifico del caso che stiamo considerando.
+\begin{enumerate}
+\item Nell'approssimazione delle correnti lentamente variabili le equazioni che determinano i campi sono le (8.12): $\vec E$ è determinato dalla 3$^\mathrm{a}$ e dalla 4$^\mathrm{a}$, che sono identiche alle prime due che determinano il campo magnetico, con $\vec E$ al posto di $\vec B$ e con $-\partial\vec B/\partial t$ al posto di $4\pi\vec J$, per cui in generale l'espressione del campo elettrico è uguale a quella del campo magnetico generato da una corrente uguale a \ $-(1/4\pi)\partial\vec B/\partial t$; nel caso del solenoide a spire circolari $\vec E$ è uguale al campo magnetico generato da una corrente $J_z$ uniformemente distribuita entro un cilindro, che per la (8.15) è data da \ $J_z=-n\dot I/c$; quindi, utilizzando la (7.30) (nella quale sostituiamo $\vec B$ con $\vec E$), si ha
+\begin{equation}
+E_\varrho=E_z=0;\quad\ E_\theta=\left\{\begin{array}{ll}
+-\dfrac{2\pi n\dot I\varrho}{c^2}&\quad\text{per }\varrho\le a\\[12pt]
+-\dfrac{2\pi a^2n\dot I}{\varrho\,c^2}&\quad\text{per }\varrho\ge a.
+\end{array}\right.
+\tag{8.20}
+\end{equation}
+\item Le sorgenti (la corrente nelle spire circolari) sono invarianti per rotazioni attorno all'asse del solenoide, traslazioni parallele all'asse e riflessioni rispetto ai piani paralleli alle spire; l'invarianza per riflessioni comporta $E_z=0$; la componente radiale, grazie all'invarianza per rotazioni e per traslazioni, è esclusa dal teorema di Gauss applicato ad un cilindro coassiale con il solenoide; resta solo la componente tangenziale che (invarianza per rotazioni) è costante su ogni circonferenza coassiale con il solenoide: presa per $\gamma$ una circonferenza di raggio $\varrho$, siccome \ $\mathcal E_\gamma=2\pi\varrho\,E_\theta$, dalle (8.17) e (8.19) si ottiene la (8.20).\\
+Si noti che abbiamo sfruttato le proprietà di simmetria delle sorgenti che in questo caso, anche per il campo elettrico, non sono le cariche bensì le correnti.
+\end{enumerate}
+Nella regione di spazio esterna al solenoide il campo elettrico è irrotazionale, ed in effetti abbiamo visto che la circuitazione di $\vec E$ è nulla su qualsiasi linea che non concatena il solenoide; pur tuttavia $\vec E$ non è conservativo. Infatti, preso un punto di riferimento $P_0$, se tentiamo di definire il potenziale tramite la (1.62), il valore di $\varphi(P)$ dipende dal percorso $\gamma$ fra $P_0$ e $P$: due percorsi $\gamma_1$ e $\gamma_2$ tali che $\gamma_2-\gamma_1$ concatena il solenoide $n$ volte (in figura 8.1 \ $n=1$\,) danno luogo a valori per $\varphi(P)$ che differiscono per $n\mathcal E$, dove $\mathcal E$ è dato dalla (8.17).
+\fig{fig8_1}{8.1}
+In effetti la regione di spazio esterna al solenoide non è semplicemente connessa: quanto sopra mostra che effettivamente il fatto che un campo sia irrotazionale in una regione dello spazio non è sufficiente a garantire che sia conservativo in detta regione. Quindi in presenza di campi elettrici non conservativi non ha più senso chiedersi quant'è la d.d.p.\ fra due punti dello spazio o fra due punti di un circuito, in quanto l'integrale del campo elettrico lungo un percorso fra i due punti dipende dal percorso stesso: l'espressione
+\[
+\int_{A\atop\gamma}^B\vec E\cdot d\vec l
+\]
+prende il nome di \textbf{tensione} fra i punti $A$ e $B$ \underline{lungo il percorso} $\gamma$: solo se il campo elettrico è conservativo non dipende da $\gamma$ e coincide con la differenza di potenziale \ $\varphi(A)-\varphi(B)$.
+
+Torniamo al solenoide. Abbiamo effettuato tutta la discussione nell'ipotesi di solenoide infinito: in effetti la condizione di validità dell'approssimazione delle correnti lentamente variabili impone condizioni sulla lunghezza $L$ del solenoide, \ $L\ll c\tau$, e anche sulle distanze fino alle quali è lecito utilizzare la (8.20), \ $\varrho\ll c\tau$.\\
+Ci piacerebbe a questo punto calcolare la corrente di spostamento $\vec J_S$ \big(definita dalla (8.13)\big) e determinare il suo contributo al campo magnetico del solenoide, cioè calcolare $\vec B_1$ per verificare la validità della stima (8.11): siccome questo calcolo lo sapremmo portare a termine solo per il solenoide infinito per il quale l'approssimazione delle correnti lentamente variabili non è applicabile, dobbiamo soprassedere. Infatti, se per il solenoide infinito calcoliamo la corrente totale di spostamento $I_S$ che attraversa un rettangolo con un lato sull'asse del solenoide di altezza $1/n$ (cioè di altezza uguale a quello a di una spira) ed il lato opposto a distanza $b\ge a$, dalla (8.20) si ottiene
+\begin{equation}
+I_S=\frac{1}{4\pi n}\int_0^b\frac{\partial E_\theta}{\partial t}\,d\varrho=-\frac{a^2\ddot I}{2c^2}\left(\frac{1}{2}+\log\frac{b}{a}\right)\cdot
+\tag{8.21}
+\end{equation}
+Se, per esempio, \ $I(t)=I_0\sen\omega t$, troviamo un rassicurante fattore $\omega^2a^2/c^2$ di proporzionalità fra $I_S$ e $I$, ma nel limite \ $b\to\infty$ \ $I_S$ diverge: come discusso sopra, la ragione è duplice, il solenoide \underline{infinito} e il limite su $b$ che non siamo autorizzati a fare.
+
+\subsection{I coefficienti di mutua induzione e di autoinduzione}
+
+Siano dati due circuiti conduttori $c_1$ e $c_2$, sia $I_1$ la corrente che circola in $c_1$ e $\Phi_{12}(\vec B_1)$ il flusso attraverso $c_2$ del campo $\vec B_1$ generato da $I_1$. Siccome $\vec B_1$, dato dalla (7.24), è proporzionale ad $I_1$, anche $\Phi_{12}$ è proporzionale ad $I_1$. Quindi possiamo porre
+\begin{equation}
+\Phi_{12}=cL_{12}\,I_1\quad\ \Rightarrow\quad\ L_{12}\defeq\frac{\Phi_{12}}{c\,I_1}\,\cdot
+\tag{8.22}
+\end{equation}
+Il coefficiente di proporzionalità $L_{12}$ (sovente indicato anche con $M$) è detto \textbf{coefficiente di mutua induzione} fra il circuito $c_1$ ed il circuito $c_2$. Se $I_1$ è una corrente lentamente variabile, la proporzionalità fra flusso e corrente vale per ogni $t$:
+\begin{equation}
+\Phi_{12}(t)=cL_{12}\,I_1(t)
+\tag{8.22'}
+\end{equation}
+in quanto, nell'approssimazione delle correnti lentamente variabili, si trascura il ritardo con cui il campo magnetico nella regione occupata dal circuito $c_2$ risente delle variazioni della corrente nel circuito $c_1$.\\
+In questa ipotesi, se $\mathcal E_2$ è la f.e.m.\ indotta nel circuito $c_2$, dalla (8.2) e dalla (8.22') si ha
+\begin{equation}
+\mathcal E_2=-\frac{1}{c}\frac{d\,\Phi_{12}(t)}{dt}=-L_{12}\,\dot I_1(t).
+\tag{8.23}
+\end{equation}
+Il circuito $c_1$ è detto \textbf{\textit{circuito inducente}} (o \textbf{\textit{primario}}), mentre $c_2$ è il \textbf{\textit{circuito indotto}} (o \textbf{\textit{secondario}}).\\
+Dimostreremo che, come dice il nome, il coefficiente di mutua induzione $M$ (o $L_{12}$) fra due circuiti è indipendente da quale è il circuito inducente e quale è il circuito indotto: ciò significa che se $\Phi_{12}$ è il flusso attraverso $c_2$ quando $c_1$ è percorso dalla corrente $I$, esso è anche il flusso attraverso $c_1$ quando $c_2$ è percorso dalla stessa corrente $I$, quindi
+\begin{equation}
+L_{12}=L_{21}\equiv M.
+\tag{8.24}
+\end{equation}
+La (8.24) è nota come \textbf{teorema di reciprocità} per i coefficienti di mutua induzione.\\
+Il calcolo del coefficiente di mutua induzione fra due circuiti normalmente non è semplice e non può essere effettuato con mezzi elementari, ad eccezione di alcuni pochi casi e grazie a particolari approssimazioni che possono essere fatte caso per caso: talvolta è di grande aiuto il teorema di reciprocità in quanto può essere molto più facile calcolare il coefficiente di mutua induzione quando il campo generato da uno dei due circuiti è più semplice di quello generato dall'altro, per cui in questo caso conviene considerare il primo come circuito inducente. Consideriamo per esempio la mutua induzione fra un solenoide ``infinito'' di raggio $a$ ed una spira che lo concatena; il campo del solenoide lo conosciamo, mentre quello della spira no (lo conosciamo solo sull'asse), per cui conviene considerare il solenoide come circuito inducente: siccome il flusso attraverso la spira è dato dalla (8.16), dalla (8.22) si ha subito
+\begin{equation}
+L_{12}=\frac{4\pi^2na^2}{c^2}
+\tag{8.25}
+\end{equation}
+ed è indipendente dalla forma e dalle dimensioni della spira.\\
+Il teorema di reciprocità afferma quindi che se una spira di forma qualsiasi concatena il solenoide ed è percorsa da una corrente $I$, il flusso attraverso il solenoide (cioè la somma dei flussi attraverso ogni spira del solenoide) del campo generato da $I$ è dato da
+\begin{equation}
+\Phi_{21}\equiv cL_{21}\,I=cL_{12}\,I=\frac{4\pi^2na^2I}{c}
+\tag{8.26}
+\end{equation}
+ed è un risultato molto importante, in quanto mai saremmo in grado di calcolare direttamente detto flusso!\\
+Possiamo verificare il teorema di reciprocità solo nell'ipotesi che la spira sia di forma circolare, coassiale con il solenoide, e di raggio $b$ molto maggiore di quello del solenoide, in modo da poter approssimare il campo della spira nel solenoide con il campo sull'asse della spira. In queste ipotesi il flusso attraverso le $n\Delta z$ spire del solenoide comprese fra $z$ e $z+\Delta z$, per la (7.26) (la spira ha raggio $b$) è
+\[
+\frac{2\pi Ib^2}{c(b^2+z^2)^{3/2}}\,\pi a^2n\,\Delta z
+\]
+e quindi il flusso attraverso l'intero solenoide è, in accordo con la (8.26),
+\begin{equation}
+\frac{2\pi^2Ib^2a^2n}{c}\int_{-\infty}^\infty\frac{dz}{(b^2+z^2)^{3/2}}=\frac{4\pi^2na^2I}{c}
+\tag{8.27}
+\end{equation}
+(l'integrale che compare nella (8.27) è uguale a quello che abbiamo calcolato per passare dalla (7.27) alla (7.28), e vale $2/b^2$).
+
+Nel SI la legge di Faraday--Neumann (8.2) si scrive senza il fattore $1/c$ a secondo membro, e il coefficiente $M$ di mutua induzione è definito come il rapporto fra il flusso e la corrente (senza il $c$ al denominatore) per cui la relazione \ $\mathcal E=-M\,\dot I$ \ è la stessa nel SI e nel sistema di Gauss e le dimensioni di $M$ sono tempo$^2$/lunghezza.\\
+Nel SI l'unità di misura per i coefficienti di mutua (e auto) induzione è l'\textbf{henry}:
+\begin{equation}
+1\,\mathrm{henry}=\frac{1\,\mathrm{volt}}{1\,\mathrm{ampère}/s}=\frac{1}{300\cdot3\times10^9}\,\mathrm{ues}=1.1\times10^{-12}\,\mathrm{ues}.
+\tag{8.28}
+\end{equation}
+Per avere un'idea degli ordini di grandezza calcoliamo $L_{12}$ dato dalla (8.25) nel caso abbastanza realistico di un solenoide di raggio 1\,cm e $n=50$\,spire/cm: si ha \ $L_{12}=2.2\times10^{-18}\,\mathrm{ues}=2\times10^{-6}\,\mathrm{henry}$, da cui si vede che l'unità elettrostatica risulta troppo grande in tutti i casi di interesse pratico; anche nel SI normalmente si usa il micro--henry ($\mu$H) e qualche volta il milli--henry.\\
+Conviene avere una regola pratica per calcolare direttamente il valore in henry di una espressione ricavata nel sistema di Gauss \big(come la (8.25)\big), in quanto il fattore $c^2$ che è sempre presente al denominatore delle espressioni dei coefficienti di induzione, viene poi cancellato dal fattore di ragguaglio, esso stesso proporzionale a $c^2$: dalla (8.28) si ha
+\[
+1\,\mathrm{ues}=9\times10^{11}\,\mathrm{henry}=(3\times10^{10})^2\cdot10^{-9}\,\mathrm{henry}
+\]
+per cui in tutte le espressioni per i coefficienti di induzione basta eliminare il $c^2$ al denominatore, esprimere le lunghezze in cm, e moltiplicare l'espressione per $10^{-9}$: per esempio, la (8.25) agli effetti del calcolo numerico si scrive
+\begin{equation}
+L_{12}[\mathrm{henry}]=4\pi^2\cdot n[\mathrm{cm}^{-1}]\cdot a^2[\mathrm{cm}^2]\cdot10^{-9}.
+\tag{8.29}
+\end{equation}
+Se il flusso magnetico concatenato con un circuito varia, nel circuito viene indotta una f.e.m., indipendentemente dal fatto che il campo sia stato generato da una corrente in un altro circuito, o nel circuito stesso: in quest'ultimo caso si parla di f.e.m.\ autoindotta e di \textbf{coefficiente di autoinduzione} $L$, definito -- come il coefficiente di mutua induzione -- come rapporto fra flusso e corrente moltiplicata per $c$.\\
+Consideriamo, ad esempio, un toro a spire rettangolari (il calcolo è più semplice) di raggio interno $a$, raggio esterno $b$ e altezza $h$; il campo, diverso da zero solo all'interno, è dato dalla (7.45), quindi il flusso attraverso una spira è dato da
+\begin{equation}
+\Phi(\vec B)_\mathrm{spira}=\frac{2INh}{c}\int_a^b\frac{d\varrho}{\varrho}=\frac{2INh}{c}\log\frac{b}{a}
+\tag{8.30}
+\end{equation}
+ed il flusso attraverso le $N$ spire del circuito
+\begin{equation}
+\Phi(\vec B)=\frac{2IN^2h}{c}\log\frac{b}{a}
+\tag{8.31}
+\end{equation}
+e quindi
+\begin{equation}
+L\equiv\frac{\Phi(\vec B)}{c\,I}=\frac{2N^2h}{c^2}\log\frac{b}{a}\,\cdot
+\tag{8.32}
+\end{equation}
+Se prendiamo \ $a=1$\,cm, \ $b=3.5$\,cm, \ $h=10$\,cm, \ $N=200$\,, si ha
+\begin{equation}
+L=2\cdot4\times10^4\cdot10\cdot1.25\cdot10^{-9}=10^{-3}\,\mathrm{H}.
+\tag{8.33}
+\end{equation}
+Si noti che se il raggio interno $a\to0$, il toro diventa un cilindro (figura 8.2) in cui la corrente $NI$ sale lungo il filo centrale che connette le due basi, diffonde in maniera isotropa sulle basi, e scende uniformemente lungo la superficie laterale; in questo caso però $L$ diverge logaritmicamente: la ragione sta nel fatto che in prossimità del filo il campo diverge come $1/\varrho$, e quindi diverge il flusso.
+\fig{fig8_2}{8.2}
+La divergenza è non fisica e viene eliminata se si tiene conto che un filo ha uno spessore finito ed inoltre, siccome il logaritmo è una funzione che varia molto lentamente, il risultato dipende poco dallo spessore del filo: nella (8.33), se $a$ passa da 1\,cm a 0.5\,mm, e quindi si riduce di un fattore 20, $L$ aumenta solo per un fattore 3.4.
+
+Se è vero che \underline{in pratica} il problema della divergenza del campo magnetico non si presenta mai in quanto i fili conduttori non sono linee ma regioni tridimensionali, tuttavia c'è il problema di capire se il coefficiente di autoinduzione è sempre ben definito, cioè se è sempre possibile scrivere
+\begin{equation}
+\mathcal E=-L\,\dot I
+\tag{8.34}
+\end{equation}
+e qual è il significato che bisogna attribuire alla (8.34), in quanto $\mathcal E$ è definita come la circuitazione del campo elettrico, e la circuitazione si calcola su una linea, e non su un filo con spessore, così pure il flusso è definito per superfici che hanno come contorno una linea. Siccome spesso, in fisica, un problema di natura matematica ne nasconde uno di natura fisica, vale la pena di cercare di capire quali approssimazioni stiamo implicitamente facendo, e se in particolari condizioni queste non nascondano un reale problema fisico.\\
+Supponiamo che la spira sia percorsa da una corrente stazionaria $\vec J$ e che
+\begin{equation}
+\vec J(x,y,z)=I\,\vec\jmath(x,y,z)
+\tag{8.35}
+\end{equation}
+dove $\vec\jmath\equiv\vec J/I$ è indipendente dalla corrente totale $I$, cioè supponiamo che il modo in cui la corrente è distribuita dentro il filo sia indipendente dall'intensità di corrente: ciò è senz'altro vero, salvo il caso non realistico che $I$ sia così intensa da dar luogo ad un apprezzabile auto--effetto Hall dentro il filo. Allora dalla (7.23) segue che $\vec B$, e quindi anche il suo flusso attraverso una data superficie, è proporzionale ad $I$. Consideriamo ora una linea chiusa $\gamma$ dentro la spira, p.es.\ una linea di forza di $\vec J$: il flusso $\Phi_\gamma$ di $\vec B$ concatenato con $\gamma$ è ben definito ($\vec B$ è ovunque finito) ed è proporzionale ad $I$, quindi \ $L_\gamma\equiv\Phi_\gamma/Ic$ \ è ben definito. Il problema è ora quello di capire quanto $L_\gamma$ dipende dal circuito $\gamma$ (interno alla spira). Se ci accontentiamo di un ordine di grandezza, possiamo dire che al variare di $\gamma$ la variazione relativa $\Delta\Phi/\Phi$ del flusso è (circa) uguale alla variazione relativa dell'area racchiusa da $\gamma$, e questa, se $l$ è la lunghezza della spira e $s$ lo spessore del filo di cui è costituita, è di ordine \ $s\cdot l/l^2=s/l$. Siccome questa è anche la variazione relativa di $L_\gamma$, possiamo concludere che se $s\ll l$ è ben definito il coefficiente di autoinduzione della spira. In queste condizioni \ $(s\ll l)$ \ e se la corrente è lentamente variabile anche la f.e.m.\ $\mathcal E_\gamma$ lungo $\gamma$ è (praticamente) indipendente da $\gamma$ e quindi possiamo scrivere la (8.34).\\
+Quanto sopra si basa sull'ipotesi, espressa dalla (8.35), che la distribuzione della corrente nella spira sia indipendente dalla corrente totale $I$, ma questa ipotesi certamente non è soddisfatta nel caso di correnti (rapidamente) variabili: infatti, per la (3.17) \ $(\vec J=\sigma_c\vec E\,)$, la distribuzione della corrente dipende dal campo elettrico autoindotto nella spira, e quindi dalla rapidità di variazione della corrente stessa. Nel caso di correnti lentamente variabili il campo elettrico autoindotto non varia apprezzabilmente su
+distanze dell'ordine dello spessore del filo, quindi anche la f.e.m.\ lungo le varie linee di forza di $\vec J$ è praticamente la stessa, ma il problema si presenta per le correnti rapidamente variabili quando, in effetti, non saremmo neppure autorizzati a scrivere la (8.34). In pratica, se si vuole continuare ad utilizzare la (8.34) anche per correnti non lentamente variabili, si è costretti a considerare $L$ non una costante ma una funzione della frequenza (caso di correnti sinusoidali \ $I(t)=I_0\sen\omega t$).\\
+Ben conoscono questo problema coloro che progettano e costruiscono circuiti che devono operare in regime di alte frequenze, che si esprimono dicendo che l'autoinduttanza di un circuito dipende dalla frequenza.
+
+\subsection{L'effetto Kelvin}
+
+Il fatto che la distribuzione della corrente entro il conduttore dipende dalla frequenza è ben esemplificato dall'\textit{effetto Kelvin} (o \textit{effetto pelle}): mentre per correnti stazionarie la distribuzione di $\vec J$ è praticamente uniforme all'interno dei conduttori, per alte frequenze $\vec J$ tende a concentrarsi al bordo del conduttore. La trattazione rigorosa non è semplice: dobbiamo accontentarci di una spiegazione qualitativa.\\
+Consideriamo un conduttore cilindrico percorso, in direzione dell'asse, da una corrente variabile; il campo magnetico generato dalla corrente è tangenziale e la variazione del campo magnetico produce un campo elettrico parallelo all'asse del cilindro (infatti è formalmente identico al campo magnetico generato da una corrente uguale a \ $-(1/4\pi)\partial\vec B/\partial t$). Quindi nasce una corrente indotta, ancora parallela all'asse del cilindro, il cui verso, per la legge di Lenz, è tale da opporsi alla causa che la ha prodotta, cioè alla variazione del flusso di $\vec B$ dentro al conduttore. Quindi il processo si evolve verso la riduzione di detto flusso: siccome la corrente totale $I$ nel conduttore è determinata dalla f.e.m.\ esterna, si ha una riduzione del flusso di $\vec B$ solo se la densità di corrente si distribuisce in modo da minimizzare $\vec B$ all'interno del conduttore, e ciò avviene se $\vec J$ è concentrata in prossimità del bordo.
+
+Anche questo è un tipico esempio di interazione fra i campi e le sorgenti che li determinano: la trattazione rigorosa del fenomeno consiste nel risolvere le equazioni di Maxwell con \ $\vec J=\sigma_c\vec E$ \ (legge di Ohm in forma locale): una volta determinato $\vec E$ dentro al conduttore, resta quindi anche determinata $\vec J$, che è l'incognita del problema. Non è difficile scrivere l'equazione per la corrente, anzi lo facciamo perché ci permette, senza bisogno di risolvere l'equazione, di individuare qual è la grandezza fisica che determina se una frequenza è alta o bassa.\\
+Prendiamo la rotazione di ambo i membri della 3$^\mathrm{a}$ equazione delle (8.12), utilizziamo la (7.20) per la doppia rotazione quindi, siccome \ $\dive\vec E=0$, si ha
+\begin{equation}
+-\Delta\,\vec E=-\frac{1}{c}\frac{\partial}{\partial t}\rot\vec B=-\frac{4\pi}{c^2}\frac{\partial\vec J}{\partial t}\quad\ \Rightarrow\quad\ \Delta\,\vec J=\frac{4\pi\sigma_c}{c^2}\frac{\partial\vec J}{\partial t}
+\tag{8.36}
+\end{equation}
+avendo sostituito $\vec E$ con $\sigma_c^{-1}\vec J$.\\
+La costante $\sigma_c/c^2$ ha le dimensioni di un tempo/(lunghezza)$^2$, come si riconosce dalla struttura dell'equazione, oppure ricordando che nel sistema di Gauss la conducibilità ha le dimensioni di un (tempo)$^{-1}$. Nel caso di campi sinusoidali la derivata rispetto al tempo a 2$^\circ$ membro della (8.36) porta un fattore $\omega$ a moltiplicare la suddetta costante
+\big(la (8.36), come tutte le equazioni lineari a coefficienti costanti, si risolve ponendo \ $\vec J(\vec r,t)=\vec J_0(\vec r\,)\,e^{i\omega t}$\big): ora $\sigma_c\omega/c^2$ ha le dimensioni di una (lunghezza)$^{-2}$, quindi poniamo
+\begin{equation}
+\delta\equiv\sqrt{c^2/\sigma_c\omega}\,.
+\tag{8.37}
+\end{equation}
+Siccome $\delta$ è l'unica lunghezza che interviene nell'equazione per $\vec J$, è il parametro che determina lo spessore della regione in cui è concentrata la corrente ($\delta$ è detta \textbf{\textit{lunghezza}} o \textbf{\textit{profondità di penetrazione}} del campo magnetico dentro il conduttore).\\
+La condizione che determina il regime di basse frequenze è quindi \ $\delta\gg s$ \ dove $s$ è lo spessore del filo conduttore. Per un filo di rame \ $(\sigma_c\approx10^{18}\,\mathrm{s}^{-1})$ \ dello spessore di 1\,mm dalla (8.37) si ha
+\begin{equation}
+\delta\gg s\quad\ \Rightarrow\quad\ \omega\ll\frac{c^2}{\sigma_cs^2}\approx10^5\,\mathrm{s}^{-1}.
+\tag{8.38}
+\end{equation}
+L'effetto pelle, che si ha per \ $\omega\gg c^2/\sigma_cs^2$, siccome riduce la zona del conduttore percorsa dalla corrente, fa sì che la resistenza di un conduttore aumenti con la frequenza: per ovviare a questo fatto i conduttori che devono portare correnti ad alta frequenza sono costituiti da molti fili sottili isolati l'uno dall'altro.
+
+\subsection{L'autoinduzione di un cavo coassiale}
+
+Un cavo coassiale è costituito da due superfici cilindriche conduttrici coassiali (figura 8.3): la corrente che scorre sul cilindro interno (nella direzione dell'asse) ritorna lungo il cilindro esterno. Vogliamo calcolare il coefficiente di autoinduzione del circuito che qui supponiamo corto \ $(h\ll c\tau)$ \ e chiuso dalle due corone circolari che costituiscono le basi del cavo.
+\fig{fig8_3}{8.3}
+Il problema preliminare è quello di capire cosa intendiamo in questo caso per coefficiente di autoinduzione, dal momento che il circuito non è costituito da un filo, assimilabile ad una linea. Se $L$ è definito dalla (8.32) \ $(\,L=\Phi/cI\,)$, quale è la superficie attraverso la quale dobbiamo calcolare il flusso? In casi come questi è bene avere presente che le definizioni vengono date perché siano utili ad un certo scopo, quindi conviene prima chiedersi qual è l'obiettivo, e poi regolarsi di conseguenza. L'obiettivo è quello di calcolare la f.e.m.\ autoindotta dovuta alle variazioni della corrente nel circuito; la f.e.m.\ è quella lungo una qualsiasi linea di forza di $\vec J$, e per ragioni di simmetria è indipendente dalla linea di forza scelta. Il sistema è identico (nel senso che il campo magnetico si calcola nello stesso modo) al circuito toroidale a spire rettangolari che abbiamo discusso nel paragrafo 4, la differenza è solo cosa intendiamo per corrente e cosa intendiamo per f.e.m.\ nei due casi: nel circuito toroidale la corrente è quella che scorre in ogni spira, mentre nel cavo coassiale la corrente è quella che scorre in ogni cilindro, cioè quella che nel circuito toroidale è $NI$, mentre la f.e.m.\ nel cavo coassiale è quella che nel toroide è la f.e.m.\ per spira $\mathcal E/N$. Quindi il coefficiente di autoinduzione del cavo coassiale è dato dalla (8.32) senza il fattore $N^2$.\\
+La conclusione è quindi che sistemi identici dal punto di vista del campo magnetico possono avere coefficienti di autoinduzione diversi, perché utilizzati in maniera diversa. Nel 2$^\circ$ esempio alla fine del prossimo paragrafo affronteremo lo stesso problema da un diverso punto di vista.
+
+\subsection{L'energia magnetica}
+
+Siano dati $n$ circuiti conduttori \ $c_1\cdots c_n$ \ percorsi da correnti costanti \ $I_1^0\cdots I_n^0$. Vogliamo determinare il lavoro che occorre fare per realizzare la suddetta distribuzione di correnti, oltre -- naturalmente -- a quello che corrisponde all'energia dissipata per effetto Joule. Ovviamente, per far circolare corrente nei circuiti, in alcuni di essi, o anche in tutti, devono essere presenti opportuni dispositivi, come generatori di f.e.m., o di corrente, o altro. Siccome, una volta realizzata la distribuzione di correnti, (in assenza di cariche) nello spazio è presente soltanto un campo magnetico, detto lavoro viene chiamato \textbf{energia magnetica} del sistema, ed è l'analogo dell'energia elettrostatica di una distribuzione di cariche.\\
+Contrariamente al caso elettrostatico, ora il lavoro non viene fatto contro le forze magnetiche, dato che la forza di Lorentz dovuta al campo magnetico è una forza a lavoro nullo, ma pur sempre contro le forze elettriche: per passare dalla configurazione in cui tutte le correnti sono nulle a quella finale, occorre far variare le correnti, quindi nei circuiti vengono indotte f.e.m.\ \ $\mathcal E_i(t)$ \ che -- per la legge di Lenz -- si oppongono alle variazioni delle correnti: i generatori che devono instaurare nei circuiti le correnti \ $I_i^0$, \ $i=1\cdots n$, devono fare lavoro contro il campo elettrico (non conservativo) responsabile delle f.e.m.\ $\mathcal E_i(t)$, cioè un lavoro opposto a quello che ogni $\mathcal E_i(t)$ fa sulle cariche circolanti nell'$i$--esimo circuito.\\
+La f.e.m.\ $\mathcal E_i(t)$ è la somma delle forze elettromotrici indotte nell'$i$--esimo circuito da tutti gli altri circuiti, più la f.e.m.\ autoindotta:
+\begin{equation}
+\mathcal E_i(t)=-\textstyle\sum_{j=1}^nL_{ij}\dot I_j(t)
+\tag{8.39}
+\end{equation}
+dove $L_{ii}$ sono i coefficienti di autoinduzione; la potenza che occorre sviluppare (lavoro per unità di tempo) è quindi
+\begin{equation}
+W(t)=-\textstyle\sum_i\mathcal E_i(t)I_i(t)=\sum_{ij}L_{ij}I_i(t)\dot I_j(t).
+\tag{8.40}
+\end{equation}
+Siccome \ $L_{ij}=L_{ji}$
+\begin{equation}
+W(t)=\frac{1}{2}\textstyle\sum_{ij}L_{ij}(I_i\dot I_j+\dot I_iI_j)=\dfrac{1}{2}\dfrac{d}{dt}\sum_{ij}L_{ij}I_iI_j
+\tag{8.41}
+\end{equation}
+per cui l'energia magnetica del sistema è
+\begin{equation}
+U=\int_{t_i}^{t_f}W(t)\,dt=\frac{1}{2}\textstyle\sum_{ij}L_{ij}I_i^0I_j^0.
+\tag{8.42}
+\end{equation}
+La simmetria dei coefficienti di mutua induzione, che abbiamo utilizzato per scrivere $W(t)$ come derivata rispetto al tempo, è condizione non solo sufficiente ma anche necessaria perché l'energia magnetica del sistema sia una ``funzione di stato'', cioè dipenda solo dai valori finali $I^0$ delle correnti, e non dalle $I(t)$: siccome dimostreremo in modo indipendente che, analogamente alla (1.94) per il caso elettrostatico,
+\begin{equation}
+U=\frac{1}{8\pi}\int\vec B^2\,dV
+\tag{8.43}
+\end{equation}
+(l'integrale è esteso a tutto lo spazio), cioè che l'energia dipende solo dal campo magnetico generato dalle correnti $I^0$, risulterà dimostrata la simmetria dei coefficienti di
+mutua induzione che quindi, grazie alla (8.42), sono dati da
+\begin{equation}
+L_{ij}=\frac{\partial^2U}{\partial I_i^0\partial I_j^0}\,;\qquad U=U(I_1^0\cdots I_n^0).
+\tag{8.44}
+\end{equation}
+L'analogia con un sistema elettrostatico di conduttori è evidente: le correnti prendono il posto delle cariche, ed i flussi $\Phi_i$ (divisi per $c$) attraverso i circuiti $c_i$ quello dei potenziali, per cui i coefficienti di induzione $L_{ij}$ sono l'analogo dei coefficienti di potenziale per un sistema di conduttori, e la (8.42) può essere riscritta in modo simile alla (2.8):
+\begin{equation}
+U=\frac{1}{2c}\sum_i\Phi_i\,I_i.
+\tag{8.45}
+\end{equation}
+
+\paragraph{Esempi}
+\begin{enumerate}
+\item Sia $c_1$ un avvolgimento toroidale costituito da $N_1$ spire, come quello considerato nel paragrafo 4, e $c_2$ un avvolgimento di $N_2$ spire, sovrapposto a $c_1$ come nei trasformatori in cui si hanno due avvolgimenti distinti sullo stesso supporto. I coefficienti di autoinduzione $L_{11}$ e $L_{22}$ sono, per la (8.32) dati da
+\begin{equation}
+L_{11}=\frac{2N_1^2h}{c^2}\log\frac{b}{a}\,;\quad\ L_{22}=\frac{2N_2^2h}{c^2}\log\frac{b}{a}
+\tag{8.46}
+\end{equation}
+mentre il coefficiente di mutua induzione è
+\begin{equation}
+L_{12}=L_{21}=\frac{2N_1N_2h}{c^2}\log\frac{b}{a}
+\tag{8.47}
+\end{equation}
+quindi l'energia magnetica del sistema quando $c_1$ è percorso dalla corrente $I_1$ e $c_2$ dalla corrente $I_2$ per la (8.42) è
+\begin{equation}
+U=(N_1^2I_1^2+N_2^2I_2^2+2N_1N_2I_1I_2)\frac{h}{c^2}\log\frac{b}{a}
+\tag{8.48}
+\end{equation}
+(se $I_1=I_2$, $U$ coincide, come è giusto che sia, con l'energia di un unico avvolgimento di $N_1+N_2$ spire, il cui coefficiente di autoinduzione è quindi \ $L=L_{11}+L_{22}+2L_{12}$).\\
+Il campo magnetico prodotto dai due avvolgimenti all'interno del toro è
+\begin{equation}
+B_\theta=\frac{2}{c\,\varrho}(N_1I_1+N_2I_2)
+\tag{8.49}
+\end{equation}
+e quindi l'energia calcolata con la (8.43) è
+\begin{equation}
+\begin{aligned}
+U&=\frac{1}{8\pi}\int B_\theta^2\,dV=\frac{1}{2\pi c^2}(N_1I_1+N_2I_2)^2\int_0^hdz\int_{\varrho=a}^{\varrho=b}\frac{1}{\varrho^2}\,\varrho\,d\theta d\varrho\\
+&=\frac{h}{c^2}(N_1I_1+N_2I_2)^2\log\frac{b}{a}
+\end{aligned}
+\tag{8.50}
+\end{equation}
+che coincide con la (8.48).
+\item Riprendiamo in esame il problema della definizione del coefficiente di autoinduzione del cavo coassiale. Siccome nell'approssimazione delle correnti lentamente variabili il campo magnetico è proporzionale alla corrente $I$ che circola nel sistema, l'energia magnetica data dalla (8.43) è proporzionale ad $I^2$, per cui la definizione
+\begin{equation}
+L\defeq\frac{\partial^2U}{\partial I^2}
+\tag{8.51}
+\end{equation}
+è una ``buona definizione'', cioè $L$ è indipendente da $I$ e dipende solo dalla geometria del circuito.\\
+Resta comunque il problema di stabilire se $L$ così definito permette di scrivere la f.e.m.\ \ $\mathcal E$ come $-L\dot I$, cioè se la (8.51) è una ``utile definizione''. Infatti se \ $W(t)=-\mathcal E(t)I(t)$ \ è la potenza fornita dal generatore per ``costruire'' il campo magnetico, dalla definizione di energia magnetica $U$ si ha che
+\begin{equation}
+-\mathcal E(t)I(t)=\frac{dU}{dt}
+\tag{8.52}
+\end{equation}
+ma dalla definizione (8.51) di $L$
+\begin{equation}
+U=\frac{1}{2}LI^2\quad\ \Rightarrow\quad\ \frac{dU}{dt}=LI\,\dot I
+\tag{8.53}
+\end{equation}
+e quindi, come sperato, segue la (8.34).\\
+Siccome
+\begin{equation}
+U=\frac{hI^2}{c^2}\log\frac{b}{a}
+\tag{8.54}
+\end{equation}
+si ritrova, ovviamente, per $L$ il risultato dato nel capitolo 8.6.
+\end{enumerate}
+È evidente il carattere generale della discussione di quest'ultimo esempio, che dimostra l'equivalenza della definizione dei coefficienti $L_{ij}$ data dalla (8.44) con quella data inizialmente in termini del rapporto fra il flusso e la corrente.
+
+\subsection{Circuiti induttivi}
+
+Il circuito di figura 8.4 (circuito $RL$) è costituito da una pila di f.e.m.\ $V_0$, una resistenza $R$, e quella che viene chiamata una \textbf{\textit{induttanza}}: in pratica una bobina con molte spire (solenoide, toro, \dots), in modo da avere un coefficiente di autoinduzione $L$ non trascurabile. La resistenza $R$ include l'eventuale resistenza interna della pila, e quella dell'induttanza; I è un interruttore a tre vie: nella posizione A la pila è inserita, nella posizione B la pila è disinserita ma il circuito è chiuso, mentre nella posizione C il circuito è aperto.
+\fig{fig8_4}{8.4}
+Portiamo l'interruttore nella posizione A; scelto arbitrariamente come verso di percorrenza del circuito che definisce il segno della corrente (e delle f.e.m.) quello che va esternamente dal polo positivo della pila a quello negativo, la f.e.m.\ $\mathcal E(t)$ nel circuito è la somma di $V_0$ e della f.e.m.\ autoindotta $-L\dot I$. L'equazione del circuito è l'espressione della legge di Ohm, come la (3.37) in cui la f.e.m.\ anziché essere dovuta ad un campo elettrico (non conservativo) presente in tutto il circuito, è dovuta ad un generatore esterno:
+\begin{equation}
+V_0-L\frac{dI(t)}{dt}=R\,I(t).
+\tag{8.55}
+\end{equation}
+Possiamo convincerci della (8.55) (già di per sè abbastanza evidente) in diversi modi; per esempio, il lavoro fatto nell'unità di tempo dalla f.e.m.\ esterna $V_0$ deve eguagliare la
+somma della variazione dell'energia magnetica e della potenza dissipata dalla resistenza per effetto Joule:
+\begin{equation}
+V_0I=\frac{d}{dt}\Big(\frac{1}{2}LI^2\Big)+R\,I^2
+\tag{8.56}
+\end{equation}
+oppure, in maniera più dettagliata (ma utile per il futuro), partendo direttamente dalla definizione di f.e.m.\ e dall'espressione locale (3.17) della legge di Ohm: supponiamo per semplicità che il circuito sia un unico tubo di flusso \underline{infinitesimo} di corrente e sia $\Delta S$ la sua sezione (eventualmente variabile da punto a punto). Per definizione
+\begin{equation}
+\mathcal E\equiv\oint(E_t+F_t^{n.c.})\,dl
+\tag{8.57}
+\end{equation}
+dove $\vec E$ è la somma del campo elettrico autoindotto e di quello dovuto alle cariche nella pila, ed $\vec F^\mathrm{n.c.}$ è la forza non conservativa per unità di carica all'interno della pila \big( $(1/q)\vec F_q^\mathrm{n.c.}$ nella (3.34)\big). La parte di integrale nella (8.57) interno alla pila dà la ``caduta di potenziale'' $rI$, dove $r$ è la resistenza interna della pila; l'integrale sulla parte di circuito esterno alla pila, grazie alla (3.17) dà
+\begin{equation}
+\int E_t\,dl=\int\varrho_cJ\,dl=\int J\Delta S\cdot\frac{\varrho_c}{\Delta S}\,dl=I\int\frac{\varrho_c}{\Delta S}\,dl=IR^\mathrm{est}
+\tag{8.58}
+\end{equation}
+dove \ $R^\mathrm{est}=R-r$ \ è la resistenza del circuito esterno alla pila. Quindi
+\[
+\mathcal E\equiv V_0-L\frac{dI(t)}{dt}=RI
+\]
+cioè la (8.55).
+
+La soluzione della (8.55) (soluzione particolare più soluzione generale) è
+\begin{equation}
+I(t)=\frac{V_0}{R}+A\,e^{-(R/L)\,t}
+\tag{8.59}
+\end{equation}
+e con la condizione iniziale $I(0)=0$ si ha
+\begin{equation}
+I(t)=\frac{V_0}{R}\left(1-e^{-(R/L)\,t}\right).
+\tag{8.60}
+\end{equation}
+$L/R$ ha le dimensioni di un tempo (indipendentemente dal sistema di unità) e dà la misura del tempo che impiega la corrente ad avvicinarsi al valore asintotico $V_0/R$: asintoticamente il circuito si comporta come un circuito puramente resistivo (corrente costante $\Rightarrow$ f.e.m.\ autoindotta nulla).\\
+L'energia magnetica del circuito in regime asintotico vale
+\begin{equation}
+U=\frac{1}{2}LI^2(\infty)=\frac{1}{2}L\left(\frac{V_0}{R}\right)^2\cdot
+\tag{8.61}
+\end{equation}
+Portiamo ora l'interruttore I nella posizione B; la nuova equazione del circuito è la (8.55) con $V_0=0$, e la soluzione con la condizione iniziale $I=V_0/R$ è
+\begin{equation}
+I(t)=\frac{V_0}{R}e^{-(R/L)\,t}
+\tag{8.62}
+\end{equation}
+e l'energia dissipata per effetto Joule nella resistenza è
+\begin{equation}
+E_\mathrm{J}=\int_0^\infty RI^2(t)\,dt=\frac{1}{2}L\left(\frac{V_0}{R}\right)^2
+\tag{8.63}
+\end{equation}
+che ovviamente coincide con l'energia immagazzinata nel circuito.\\
+In effetti l'interruttore I deve essere un po' più sofisticato di quello schematicamente riportato nella figura 8.4, in quanto deve consentire di disinserire la pila senza che il circuito resti temporaneamente aperto: cerchiamo infatti di capire cosa succede se portiamo l'interruttore nella posizione C. Siccome il circuito è aperto in esso non circola corrente, quindi l'energia magnetica è zero; ma allora dove è andata l'energia (8.61) immagazzinata nel circuito? Vediamo la cosa da un altro punto di vista: aprire il circuito significa far sì che la resistenza del circuito passi dal valore $R$ ad un valore praticamente infinito; in effetti questo passaggio non è istantaneo, ma per molte ragioni (l'aria fra i contatti dell'interruttore è debolmente conduttrice, il distacco dei contatti è rapido ma non istantaneo, \dots) avviene in un tempo breve ma non nullo. Comunque, il repentino aumento della resistenza del circuito comporta una repentina diminuzione della corrente e quindi, trattandosi di un circuito induttivo, un forte aumento della f.e.m.\ autoindotta e quindi un elevato campo elettrico fra i contatti dell'interruttore, in grado di ionizzare l'aria fra di essi e consentire il passaggio della corrente. Questo passaggio di cariche attraverso l'aria a sua volta produce eccitazione e ionizzazione degli atomi e si manifesta sotto forma di scarica (la classica scintilla che si vede quando si apre un interruttore di un circuito contenente elementi induttivi come i motori degli elettrodomestici). Questa scarica è nota come \textbf{\textit{extracorrente di apertura}} del circuito e può essere molto dannosa non solo per i contatti ma anche per l'uomo, dato che la f.e.m.\ può raggiungere valori veramente molto elevati, anche se solo per un breve intervallo di tempo. Per evitare le extracorrenti si mettono in atto particolari precauzioni, come l'aumento graduale della resistenza, condensatori in parallelo con l'interruttore \dots.\\
+Ritorneremo sull'argomento quando avremo discusso i circuiti in cui è presente anche un condensatore.
+
+Riprendiamo in considerazione il sistema costituito da due avvolgimenti toroidali sovrapposti che abbiamo introdotto nell'esempio 1 del paragrafo precedente. La rappresentazione circuitale di due induttanze fra le quali è importante la mutua induzione è quella della figura 8.5, in cui i due avvolgimenti vengono disegnati affacciati.
+\fig{fig8_5}{8.5}
+Supponiamo ora che uno dei due circuiti, diciamo $c_1$, sia collegato ad un generatore di f.e.m.\ \ $\mathcal E(t)=\mathcal E_0\cos\omega t$, mentre il secondo è chiuso su una resistenza $R_2$ (comprendente la resistenza dell'avvolgimento $c_2$); sia $R_1$ la resistenza dell'avvolgimento $c_1$.\\
+La f.e.m.\ nel circuito primario ($c_1$) è la somma della f.e.m.\ esterna $\mathcal E(t)$, di quella indotta da $c_2$ e di quella autoindotta, mentre la f.e.m.\ nel secondario è la somma di quella indotta da $c_1$ e di quella autoindotta. Quindi le equazioni del circuito sono
+\begin{equation}
+\left\{\begin{aligned}
+&\mathcal E(t)-L_{11}\dot I_1(t)-L_{12}\dot I_2(t)=R_1I_1(t)\\
+&\quad-L_{22}\dot I_2(t)-L_{21}\dot I_1(t)=R_2I_2(t)
+\end{aligned}\right.
+\tag{8.64}
+\end{equation}
+che costituiscono un sistema di equazioni accoppiate. La loro soluzione non è diffi-
+cile, tuttavia preferiamo discuterle nell'ipotesi che la resistenza $R_1$ del primario sia trascurabile, cioè
+\begin{equation}
+R_1I_1\ll L_{11}\dot I_1(t)\approx L_{11}\omega I_1\quad\ \Rightarrow\quad\ R_1\ll\omega L_{11}
+\tag{8.65}
+\end{equation}
+e che il secondario sia aperto, o equivalentemente $R_2=\infty$, per cui $I_2(t)=0$. In queste ipotesi la prima delle (8.64) diventa
+\begin{equation}
+L_{11}\dot I_1(t)=\mathcal E(t)
+\tag{8.66}
+\end{equation}
+e la f.e.m.\ nel secondario, che pensiamo chiuso da una linea (non da un conduttore), o equivalentemente dalla resistenza infinita, grazie alle (8.46) e (8.47), è
+\begin{equation}
+\mathcal E_2(t)=-L_{12}\dot I_1(t)=-\frac{L_{12}}{L_{11}}\,\mathcal E(t)=-\frac{N_2}{N_1}\,\mathcal E(t)
+\tag{8.67}
+\end{equation}
+quindi il rapporto fra la f.e.m.\ \underline{a circuito aperto} nel secondario e la f.e.m.\ del generatore che alimenta il primario è uguale al rapporto fra il numero di spire (rapporto di trasformazione). Su questo principio si basa il funzionamento del trasformatore, che permette di ottenere forze elettromotrici in rapporto (quasi) arbitrario rispetto a quella del generatore.\\
+Dalla (8.66), con \ $\mathcal E(t)=\mathcal E_0\cos\omega t$\,, si ha
+\begin{equation}
+I_1(t)=\frac{\mathcal E_0}{\omega L_{11}}\sen\omega t
+\tag{8.68}
+\end{equation}
+quindi la corrente è sfasata di 90$^\circ$ rispetto alla f.e.m.\ del generatore; la potenza erogata dal generatore (lavoro fatto nell'unità di tempo) è
+\begin{equation}
+W(t)=\mathcal E(t)I_1(t)=\frac{\mathcal E_0^2}{2\,\omega L_{11}}\sen2\omega t
+\tag{8.69}
+\end{equation}
+e quindi è nullo il lavoro fatto in un periodo, come è giusto che sia, dato che l'energia magnetica del sistema è anch'essa periodica (e quindi in un periodo non cambia) e non c'è dissipazione per effetto Joule. Se il secondario viene chiuso su una resistenza finita, la corrente nel primario risulta sfasata rispetto alla f.e.m.\ di un angolo $\phi$ diverso da 90$^\circ$, dipendente da $R_2$, per cui il lavoro fatto dal generatore in un periodo non è più nullo ed eguaglia l'energia dissipata da $R_2$. È interessante notare che l'energia dissipata nel secondario proviene dal lavoro fatto dal generatore sul primario, e che fra primario e secondario non c'è contatto diretto ma sono in interazione fra di loro solo attraverso il campo.
