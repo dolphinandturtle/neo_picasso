@@ -1,299 +1,130 @@
 import os
 import sys
 from subprocess import call
+from math import log10
 
 
-def build(jobname):
-    call(["pdflatex", "-jobname", jobname, jobname + ".tex"])
+CHAPTERS = {
+    1: "ch01.tex",
+    2: "ch02.tex",
+    3: "ch03.tex",
+    4: "ch04.tex",
+    5: "ch05.tex",
+    6: "ch06.tex",
+    7: "ch07.tex",
+    8: "ch08.tex",
+    9: "ch09.tex",
+    10: "ch10.tex",
+    11: "ch11.tex",
+    12: "ch12.tex",
+    13: "ch13.tex",
+    14: "ch14.tex",
+    15: "ch15.tex",
+}
 
-def make_ch1():
+COUNT_DIGITS = int(log10(max(CHAPTERS.keys()))) + 1
+
+def build(filename):
+    call(["pdflatex", filename])
+
+def make_chapter(n: int):
+    # check for chapter
+    if n not in CHAPTERS:
+        print(f"The {n}th chapter isn't available...")
+        return 1
+
+    # import tex code
     with open(os.path.join("src", "include.tex"), "r") as file:
         tex_include = file.read()
-    with open(os.path.join("src", "ch01.tex"), "r") as file:
-        tex_ch1 = file.read()
-    with open("picasso_ch01.tex", "w") as file:
+    with open(os.path.join("src", CHAPTERS[n]), "r") as file:
+        tex_ch = file.read()
+
+    # generate tex document
+    filename = "picasso_ch" + str(n).zfill(COUNT_DIGITS) + ".tex"
+    with open(filename, "w") as file:
         file.write(tex_include + '\n')
         file.write("\\begin{document}\n")
         file.write("\\pagenumbering{arabic}\n")
-        file.write(tex_ch1 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch01")
+        # keep correct chapter number even when compiled single
+        if n > 1:
+            file.write(f"\\setcounter{{section}}{{{n-1}}}\n")
 
-def make_ch2():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch02.tex"), "r") as file:
-        tex_ch2 = file.read()
-    with open("picasso_ch02.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{1}\n")
-        file.write(tex_ch2 + '\n')
+        file.write(tex_ch + '\n')
         file.write("\\end{document}\n")
-    build("picasso_ch02")
 
-def make_ch3():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch03.tex"), "r") as file:
-        tex_ch3 = file.read()
-    with open("picasso_ch03.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{2}\n")
-        file.write(tex_ch3 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch03")
-
-def make_ch4():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch04.tex"), "r") as file:
-        tex_ch4 = file.read()
-    with open("picasso_ch04.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{3}\n")
-        file.write(tex_ch4 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch04")
-
-def make_ch5():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch05.tex"), "r") as file:
-        tex_ch5 = file.read()
-    with open("picasso_ch05.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{4}\n")
-        file.write(tex_ch5 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch05")
-
-def make_ch6():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch06.tex"), "r") as file:
-        tex_ch6 = file.read()
-    with open("picasso_ch06.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{5}\n")
-        file.write(tex_ch6 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch06")
-
-def make_ch7():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch07.tex"), "r") as file:
-        tex_ch7 = file.read()
-    with open("picasso_ch07.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{6}\n")
-        file.write(tex_ch7 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch07")
-
-def make_ch8():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch08.tex"), "r") as file:
-        tex_ch8 = file.read()
-    with open("picasso_ch08.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{7}\n")
-        file.write(tex_ch8 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch08")
-
-def make_ch9():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch09.tex"), "r") as file:
-        tex_ch9 = file.read()
-    with open("picasso_ch09.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{8}\n")
-        file.write(tex_ch9 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch09")
-
-def make_ch10():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch10.tex"), "r") as file:
-        tex_ch10 = file.read()
-    with open("picasso_ch10.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{9}\n")
-        file.write(tex_ch10 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch10")
-
-def make_ch11():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch11.tex"), "r") as file:
-        tex_ch11 = file.read()
-    with open("picasso_ch11.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{10}\n")
-        file.write(tex_ch11 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch11")
-
-def make_ch12():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch12.tex"), "r") as file:
-        tex_ch12 = file.read()
-    with open("picasso_ch12.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{11}\n")
-        file.write(tex_ch12 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch12")
-
-def make_ch13():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch13.tex"), "r") as file:
-        tex_ch13 = file.read()
-    with open("picasso_ch13.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{12}\n")
-        file.write(tex_ch13 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch13")
-
-def make_ch14():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch14.tex"), "r") as file:
-        tex_ch14 = file.read()
-    with open("picasso_ch14.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{13}\n")
-        file.write(tex_ch14 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch14")
-
-def make_ch15():
-    with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
-    with open(os.path.join("src", "ch15.tex"), "r") as file:
-        tex_ch15 = file.read()
-    with open("picasso_ch15.tex", "w") as file:
-        file.write(tex_include + '\n')
-        file.write("\\begin{document}\n")
-        file.write("\\pagenumbering{arabic}\n")
-        file.write("\\setcounter{section}{14}\n")
-        file.write(tex_ch15 + '\n')
-        file.write("\\end{document}\n")
-    build("picasso_ch15")
+    build(filename)
 
 def make_index():
     with open(os.path.join("src", "include.tex"), "r") as file:
         tex_include = file.read()
     with open(os.path.join("src", "index.tex"), "r") as file:
         tex_index = file.read()
+
     with open("picasso_index.tex", "w") as file:
         file.write(tex_include + '\n')
         file.write("\\begin{document}\n")
         file.write("\\pagenumbering{arabic}\n")
         file.write(tex_index + '\n')
         file.write("\\end{document}\n")
-    build("picasso_index")
+
+    build("picasso_index.tex")
 
 def make_constants():
     with open(os.path.join("src", "include.tex"), "r") as file:
         tex_include = file.read()
     with open(os.path.join("src", "constants.tex"), "r") as file:
         tex_constants = file.read()
+
     with open("picasso_constants.tex", "w") as file:
         file.write(tex_include + '\n')
         file.write("\\begin{document}\n")
         file.write("\\pagenumbering{arabic}\n")
         file.write(tex_constants + '\n')
         file.write("\\end{document}\n")
-    build("picasso_constants")
+
+    build("picasso_constants.tex")
 
 def make_cover():
     with open(os.path.join("src", "include.tex"), "r") as file:
         tex_include = file.read()
     with open(os.path.join("src", "cover.tex"), "r") as file:
         tex_cover = file.read()
+
     with open("picasso_cover.tex", "w") as file:
         file.write(tex_include + '\n')
         file.write("\\begin{document}\n")
         file.write(tex_cover + '\n')
         file.write("\\end{document}\n")
-    build("picasso_cover")
+
+    build("picasso_cover.tex")
 
 def make_all():
+    # import tex code (headers + footers)
     with open(os.path.join("src", "include.tex"), "r") as file:
         tex_include = file.read()
     with open(os.path.join("src", "cover.tex"), "r") as file:
         tex_cover = file.read()
     with open(os.path.join("src", "frontmatter.tex"), "r") as file:
         tex_frontmatter = file.read()
-    with open(os.path.join("src", "ch01.tex"), "r") as file:
-        tex_ch1 = file.read()
-    with open(os.path.join("src", "ch02.tex"), "r") as file:
-        tex_ch2 = file.read()
-    with open(os.path.join("src", "ch03.tex"), "r") as file:
-        tex_ch3 = file.read()
-    with open(os.path.join("src", "ch04.tex"), "r") as file:
-        tex_ch4 = file.read()
-    with open(os.path.join("src", "ch05.tex"), "r") as file:
-        tex_ch5 = file.read()
-    with open(os.path.join("src", "ch06.tex"), "r") as file:
-        tex_ch6 = file.read()
-    with open(os.path.join("src", "ch07.tex"), "r") as file:
-        tex_ch7 = file.read()
-    with open(os.path.join("src", "ch08.tex"), "r") as file:
-        tex_ch8 = file.read()
-    with open(os.path.join("src", "ch09.tex"), "r") as file:
-        tex_ch9 = file.read()
-    with open(os.path.join("src", "ch10.tex"), "r") as file:
-        tex_ch10 = file.read()
-    with open(os.path.join("src", "ch11.tex"), "r") as file:
-        tex_ch11 = file.read()
-    with open(os.path.join("src", "ch12.tex"), "r") as file:
-        tex_ch12 = file.read()
-    with open(os.path.join("src", "ch13.tex"), "r") as file:
-        tex_ch13 = file.read()
-    with open(os.path.join("src", "ch14.tex"), "r") as file:
-        tex_ch14 = file.read()
-    with open(os.path.join("src", "ch15.tex"), "r") as file:
-        tex_ch15 = file.read()
     with open(os.path.join("src", "index.tex"), "r") as file:
         tex_index = file.read()
     with open(os.path.join("src", "constants.tex"), "r") as file:
         tex_constants = file.read()
+
+    # import tex code (unordered chapters)
+    tex_book_unordered = []
+    for n, filename in CHAPTERS.items():
+        with open(os.path.join("src", filename), "r") as file:
+            # keep correct chapter number even when missing chapters
+            code = f"\\setcounter{{section}}{{{n-1}}}\n" if n > 1 else ""
+
+            code += file.read()
+            tex_book_unordered.append((n, code))
+
+    # order chapters
+    tex_book = [code for n, code in sorted(tex_book_unordered, key=lambda x: x[0])]
+
+    # generate tex document
     with open("picasso.tex", "w") as file:
         file.write(tex_include + '\n')
         file.write("\\begin{document}\n")
@@ -301,75 +132,21 @@ def make_all():
         file.write("\\pagenumbering{roman}\n")
         file.write(tex_frontmatter + '\n')
         file.write("\\pagenumbering{arabic}\n")
-        file.write(tex_ch1 + '\n')
-        file.write(tex_ch2 + '\n')
-        file.write(tex_ch3 + '\n')
-        file.write(tex_ch4 + '\n')
-        file.write(tex_ch5 + '\n')
-        file.write(tex_ch6 + '\n')
-        file.write(tex_ch7 + '\n')
-        file.write(tex_ch8 + '\n')
-        file.write(tex_ch9 + '\n')
-        file.write(tex_ch10 + '\n')
-        file.write(tex_ch11 + '\n')
-        file.write(tex_ch12 + '\n')
-        file.write(tex_ch13 + '\n')
-        file.write(tex_ch14 + '\n')
-        file.write(tex_ch15 + '\n')
+        for tex_ch in tex_book:
+            file.write(tex_ch + '\n')
         file.write(tex_index + '\n')
         file.write(tex_constants + '\n')
         file.write("\\end{document}\n")
+
     # the second pass fills the indeces
-    build("picasso")
-    build("picasso")
+    build("picasso.tex")
+    build("picasso.tex")
 
 if len(sys.argv) < 2:
     make_all()
 
-elif sys.argv[1] == "ch1":
-    make_ch1()
-
-elif sys.argv[1] == "ch2":
-    make_ch2()
-
-elif sys.argv[1] == "ch3":
-    make_ch3()
-
-elif sys.argv[1] == "ch4":
-    make_ch4()
-
-elif sys.argv[1] == "ch5":
-    make_ch5()
-
-elif sys.argv[1] == "ch6":
-    make_ch6()
-
-elif sys.argv[1] == "ch7":
-    make_ch7()
-
-elif sys.argv[1] == "ch8":
-    make_ch8()
-
-elif sys.argv[1] == "ch9":
-    make_ch9()
-
-elif sys.argv[1] == "ch10":
-    make_ch10()
-
-elif sys.argv[1] == "ch11":
-    make_ch11()
-
-elif sys.argv[1] == "ch12":
-    make_ch12()
-
-elif sys.argv[1] == "ch13":
-    make_ch13()
-
-elif sys.argv[1] == "ch14":
-    make_ch14()
-
-elif sys.argv[1] == "ch15":
-    make_ch15()
+elif "ch" in sys.argv[1][:2]:
+    make_chapter(int(sys.argv[1][2:]))
 
 elif sys.argv[1] == "index":
     make_index()
