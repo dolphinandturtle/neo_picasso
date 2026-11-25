@@ -24,10 +24,20 @@ CHAPTERS = {
 
 COUNT_DIGITS = int(log10(max(CHAPTERS.keys()))) + 1
 
+def read_include(file, mode: str):
+    if mode not in {"lowres", "hires"}:
+        print("<read_include> Invalid 'mode' argument")
+        return 1
+
+    return file.read().replace(
+        r"\graphicspath{{fig/hires/}}",
+        f"\\graphicspath{{{{fig/{mode}/}}}}"
+    )
+
 def build(filename):
     call(["pdflatex", filename])
 
-def make_chapter(n: int):
+def make_chapter(n: int, mode: str):
     # check for chapter
     if n not in CHAPTERS:
         print(f"The {n}th chapter isn't available...")
@@ -35,7 +45,7 @@ def make_chapter(n: int):
 
     # import tex code
     with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
+        tex_include = read_include(file, mode)
     with open(os.path.join("src", CHAPTERS[n]), "r") as file:
         tex_ch = file.read()
 
@@ -54,9 +64,9 @@ def make_chapter(n: int):
 
     build(filename)
 
-def make_index():
+def make_index(mode: str):
     with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
+        tex_include = read_include(file, mode)
     with open(os.path.join("src", "index.tex"), "r") as file:
         tex_index = file.read()
 
@@ -69,9 +79,9 @@ def make_index():
 
     build("picasso_index.tex")
 
-def make_constants():
+def make_constants(mode: str):
     with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
+        tex_include = read_include(file, mode)
     with open(os.path.join("src", "constants.tex"), "r") as file:
         tex_constants = file.read()
 
@@ -84,9 +94,9 @@ def make_constants():
 
     build("picasso_constants.tex")
 
-def make_cover():
+def make_cover(mode: str):
     with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
+        tex_include = read_include(file, mode)
     with open(os.path.join("src", "cover.tex"), "r") as file:
         tex_cover = file.read()
 
@@ -98,10 +108,10 @@ def make_cover():
 
     build("picasso_cover.tex")
 
-def make_all():
+def make_all(mode: str):
     # import tex code (headers + footers)
     with open(os.path.join("src", "include.tex"), "r") as file:
-        tex_include = file.read()
+        tex_include = read_include(file, mode)
     with open(os.path.join("src", "cover.tex"), "r") as file:
         tex_cover = file.read()
     with open(os.path.join("src", "frontmatter.tex"), "r") as file:
@@ -142,20 +152,32 @@ def make_all():
     build("picasso.tex")
     build("picasso.tex")
 
-if len(sys.argv) < 2:
-    make_all()
+
+# default mode
+mode = "hires"
+
+# mode-setting (quality)
+if len(sys.argv) == 2 and sys.argv[1] in {"lowres", "hires"}:
+    mode = sys.argv[1]
+
+elif len(sys.argv) == 3 and sys.argv[2] in {"lowres", "hires"}:
+    mode = sys.argv[2]
+
+# command
+if len(sys.argv) == 1 or (len(sys.argv) == 2 and sys.argv[1] in {"lowres", "hires"}):
+    make_all(mode)
 
 elif "ch" in sys.argv[1][:2]:
-    make_chapter(int(sys.argv[1][2:]))
+    make_chapter(int(sys.argv[1][2:]), mode)
 
 elif sys.argv[1] == "index":
-    make_index()
+    make_index(mode)
 
 elif sys.argv[1] == "constants":
-    make_constants()
+    make_constants(mode)
 
 elif sys.argv[1] == "cover":
-    make_cover()
+    make_cover(mode)
 
 elif sys.argv[1] == "clean":
     for fname in os.listdir():
