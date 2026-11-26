@@ -2,404 +2,691 @@
 
 \subsection{L'equazione delle onde}
 
-In questo capitolo, lungi dal presentare una trattazione esauriente del problema generale della determinazione dei campi note le sorgenti, cercheremo di capire, soprattutto con l'ausilio di qualche semplice esempio, l'importantissimo fenomeno della propagazione dei campi elettromagnetici (\textit{onde elettromagnetiche}), e della loro produzione.\\
-Il punto di partenza sono (ovviamente) le equazioni di Maxwell (6.53); supponiamo di essere in una regione di spazio priva di sorgenti: le (6.53) si scrivono allora
+In questo capitolo, lungi dal presentare una trattazione esauriente del problema
+generale della determinazione dei campi note le sorgenti, cercheremo di capire,
+soprattutto con l'ausilio di qualche semplice esempio, l'importantissimo
+fenomeno della propagazione dei campi elettromagnetici (\textit{onde
+elettromagnetiche}), e della loro produzione.\\
+Il punto di partenza sono (ovviamente) le equazioni di Maxwell (6.53);
+supponiamo di essere in una regione di spazio priva di sorgenti: le (6.53) si
+scrivono allora
 \begin{equation}
-\left\{\begin{aligned}
-&\dive\vec E=0\\[4pt]
-&\rot\vec E+\frac{1}{c}\frac{\partial\vec B}{\partial t}=0\\[4pt]
-&\dive\vec B=0\\[4pt]
-&\rot\vec B=\frac{1}{c}\frac{\partial\vec E}{\partial t}
-\end{aligned}\right.
-\tag{12.1}
+  \left\{\begin{aligned}
+    &\dive\vec E=0\\[4pt]
+    &\rot\vec E+\frac{1}{c}\frac{\partial\vec B}{\partial t}=0\\[4pt]
+    &\dive\vec B=0\\[4pt]
+    &\rot\vec B=\frac{1}{c}\frac{\partial\vec E}{\partial t}
+  \end{aligned}\right.
+  \tag{12.1}
 \end{equation}
-(equazioni di Maxwell ``nel vuoto''). Le (12.1) sono tutto sommato abbastanza semplici, in quanto si tratta di un sistema lineare ed omogeneo di equazioni differenziali, anche se l'insieme delle soluzioni (cioè la \textit{soluzione generale}) costituisce uno spazio vettoriale a infinite dimensioni: la vera difficoltà nasce quando fra queste infinite soluzioni occorre individuare quella determinata dalle sorgenti, che stanno fuori della regione considerata. Limitiamoci allora a trovare alcune (semplici) soluzioni delle (12.1), poi cercheremo di capire quali sorgenti possono determinarle.\\
-Conviene riscrivere le (12.1) in modo diverso, prendendo la rotazione di ambo i membri della 2$^\mathrm{a}$ e della 4$^\mathrm{a}$ ed utilizzando l'identità (7.20) che, essendo (nel vuoto) sia $\vec E$ che $\vec B$ a divergenza nulla, si scrive
+(equazioni di Maxwell ``nel vuoto''). Le (12.1) sono tutto sommato abbastanza
+semplici, in quanto si tratta di un sistema lineare ed omogeneo di equazioni
+differenziali, anche se l'insieme delle soluzioni (cio\`e la \textit{soluzione
+generale}) costituisce uno spazio vettoriale a infinite dimensioni: la vera
+difficolt\`a nasce quando fra queste infinite soluzioni occorre individuare
+quella determinata dalle sorgenti, che stanno fuori della regione considerata.
+Limitiamoci allora a trovare alcune (semplici) soluzioni delle (12.1), poi
+cercheremo di capire quali sorgenti possono determinarle.\\
+Conviene riscrivere le (12.1) in modo diverso, prendendo la rotazione di ambo i
+membri della 2$^\mathrm{a}$ e della 4$^\mathrm{a}$ ed utilizzando l'identit\`a
+(7.20) che, essendo (nel vuoto) sia $\vec E$ che $\vec B$ a divergenza nulla, si
+scrive
 \begin{equation}
-\rot(\rot\vec E\,)=-\Delta\,\vec E\,;\quad\ \rot(\rot\vec B\,)=-\Delta\,\vec B
-\tag{12.2}
+  \rot(\rot\vec E\,)=-\Delta\,\vec E\,;\quad\ \rot(\rot\vec B\,)=-\Delta\,\vec B
+  \tag{12.2}
 \end{equation}
 e quindi
 \begin{equation}
-\begin{aligned}
-&\Delta\,\vec E-\frac{1}{c^2}\frac{\partial^2\vec E}{\partial t^2}=0\\
-&\Delta\,\vec B-\frac{1}{c^2}\frac{\partial^2\vec B}{\partial t^2}=0
-\end{aligned}
-\tag{12.3}
+  \begin{aligned}
+    &\Delta\,\vec E-\frac{1}{c^2}\frac{\partial^2\vec E}{\partial t^2}=0\\
+    &\Delta\,\vec B-\frac{1}{c^2}\frac{\partial^2\vec B}{\partial t^2}=0
+  \end{aligned}
+  \tag{12.3}
 \end{equation}
-che, rispetto alle (12.1), hanno il vantaggio di essere disaccoppiate. Le (12.3) non sono equivalenti alle (12.1) \big(non contengono l'informazione che $\vec E$ e $\vec B$ sono a divergenza nulla, e neppure il legame fra $\vec E$ e $\vec B$ stabilito dalle (12.1)\big), tuttavia sono importanti in quanto, come vedremo, determinano la propagazione ondosa dei campi, e per questa ragione equazioni della forma (12.3) sono note come \textbf{equazioni delle onde}.\\
-Ogni componente del campo elettrico e di quello magnetico obbedisce quindi all'equazione delle onde
+che, rispetto alle (12.1), hanno il vantaggio di essere disaccoppiate. Le (12.3)
+non sono equivalenti alle (12.1) \big(non contengono l'informazione che $\vec E$
+e $\vec B$ sono a divergenza nulla, e neppure il legame fra $\vec E$ e $\vec B$
+stabilito dalle (12.1)\big), tuttavia sono importanti in quanto, come vedremo,
+determinano la propagazione ondosa dei campi, e per questa ragione equazioni
+della forma (12.3) sono note come \textbf{equazioni delle onde}.\\
+Ogni componente del campo elettrico e di quello magnetico obbedisce quindi
+all'equazione delle onde
 \begin{equation}
-\Delta\,f-\frac{1}{c^2}\frac{\partial^2f}{\partial t^2}=0
-\tag{12.4}
+  \Delta\,f-\frac{1}{c^2}\frac{\partial^2f}{\partial t^2}=0
+  \tag{12.4}
 \end{equation}
-nota anche come \textbf{equazione di d'Alembert}; in analogia con l'equazione di Laplace, la (12.4) spesso viene scritta introducendo l'operatore $\Box$ \ di d'Alembert:
+nota anche come \textbf{equazione di d'Alembert}; in analogia con l'equazione di
+Laplace, la (12.4) spesso viene scritta introducendo l'operatore $\Box$ \ di
+d'Alembert:
 \begin{equation}
-\Box\,f=0\,;\qquad\quad\Box\equiv\Delta-\frac{1}{c^2}\frac{\partial^2}{\partial t^2}\,\cdot
-\tag{12.4'}
+  \Box\,f=0\,;\qquad\quad\Box\equiv\Delta
+  -\frac{1}{c^2}\frac{\partial^2}{\partial t^2}\,\cdot
+  \tag{12.4'}
 \end{equation}
 
 \subsection{Le onde piane}
 
-Per capire il fenomeno della propagazione dei campi, consideriamo l'equazione (12.4) e riduciamoci al \underline{caso unidimensionale}, andando a cercare quelle soluzioni che dipendono da una sola variabile spaziale ($x$), oltre che dal tempo: \ $f=f(x,t)$; queste soluzioni sono dette \textbf{onde piane}, in quanto per ogni $t$ sono costanti su ogni piano $x=$ costante. In questo caso la (12.4) diventa
+Per capire il fenomeno della propagazione dei campi, consideriamo l'equazione
+(12.4) e riduciamoci al \underline{caso unidimensionale}, andando a cercare
+quelle soluzioni che dipendono da una sola variabile spaziale ($x$), oltre che
+dal tempo: \ $f=f(x,t)$; queste soluzioni sono dette \textbf{onde piane}, in
+quanto per ogni $t$ sono costanti su ogni piano $x=$ costante. In questo caso la
+(12.4) diventa
 \begin{equation}
-\frac{\partial^2f(x,t)}{\partial x^2}-\frac{1}{c^2}\frac{\partial^2f(x,t)}{\partial t^2}=0.
-\tag{12.5}
+  \frac{\partial^2f(x,t)}{\partial x^2}
+  -\frac{1}{c^2}\frac{\partial^2f(x,t)}{\partial t^2}=0.
+  \tag{12.5}
 \end{equation}
 Per risolvere la (12.5) conviene effettuare il cambiamento di variabili
 \begin{equation}
-\left\{\begin{aligned}
-\xi&=x-ct\\
-\eta&=x+ct\,.
-\end{aligned}\right.
-\tag{12.6}
+  \left\{\begin{aligned}
+    \xi&=x-ct\\
+    \eta&=x+ct\,.
+  \end{aligned}\right.
+  \tag{12.6}
 \end{equation}
-Poiché
+Poich\'e
 \[
-\begin{aligned}
-&\frac{\partial f}{\partial x}=\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial x}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial x}=\frac{\partial f}{\partial\xi}+\frac{\partial f}{\partial\eta}\,,\qquad\frac{1}{c}\frac{\partial f}{\partial t}=\frac{\partial f}{\partial\xi}-\frac{\partial f}{\partial\eta}\qquad\Rightarrow\\
-&\frac{\partial^2f}{\partial x^2}=\frac{\partial^2f}{\partial\xi^2}+\frac{\partial^2f}{\partial\xi\partial\eta}+\frac{\partial^2f}{\partial\eta\partial\xi}+\frac{\partial^2f}{\partial\eta^2}\,,\qquad\frac{1}{c^2}\frac{\partial^2f}{\partial t^2}=\frac{\partial^2f}{\partial\xi^2}-2\frac{\partial^2f}{\partial\xi\partial\eta}+\frac{\partial^2f}{\partial\eta^2}
-\end{aligned}
+  \begin{aligned}
+    &\frac{\partial f}{\partial x}
+    =\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial x}
+    +\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial x}
+    =\frac{\partial f}{\partial\xi}+\frac{\partial f}{\partial\eta}\,,
+    \qquad\frac{1}{c}\frac{\partial f}{\partial t}
+    =\frac{\partial f}{\partial\xi}-\frac{\partial f}{\partial\eta}
+    \qquad\Rightarrow\\
+    &\frac{\partial^2f}{\partial x^2}=\frac{\partial^2f}{\partial\xi^2}
+    +\frac{\partial^2f}{\partial\xi\partial\eta}
+    +\frac{\partial^2f}{\partial\eta\partial\xi}
+    +\frac{\partial^2f}{\partial\eta^2}\,,
+    \qquad\frac{1}{c^2}\frac{\partial^2f}{\partial t^2}
+    =\frac{\partial^2f}{\partial\xi^2}
+    -2\frac{\partial^2f}{\partial\xi\partial\eta}
+    +\frac{\partial^2f}{\partial\eta^2}
+  \end{aligned}
 \]
 quindi in termini delle nuove variabili la (12.5) si scrive
 \begin{equation}
-\frac{\partial^2f}{\partial\xi\,\partial\eta}=0
-\tag{12.7}
+  \frac{\partial^2f}{\partial\xi\,\partial\eta}=0
+  \tag{12.7}
 \end{equation}
-la cui soluzione generale è
+la cui soluzione generale \`e
 \begin{equation}
-f(\xi,\eta)=f_+(\xi)+f_-(\eta)\equiv f_+(x-ct)+f_-(x+ct)
-\tag{12.8}
+  f(\xi,\eta)=f_+(\xi)+f_-(\eta)\equiv f_+(x-ct)+f_-(x+ct)
+  \tag{12.8}
 \end{equation}
 dove $f_-$ ed $f_+$ sono due funzioni \underline{arbitrarie}: infatti
 \begin{equation}
-\frac{\partial}{\partial\xi}\Big(\frac{\partial f}{\partial\eta}\Big)=0
-\tag{12.9}
+  \frac{\partial}{\partial\xi}\Big(\frac{\partial f}{\partial\eta}\Big)=0
+  \tag{12.9}
 \end{equation}
-comporta che \ $\partial f/\partial\eta$ \ è indipendente da $\xi$, cioè \ $\partial f/\partial\eta=g(\eta)$, che integrata dà la (12.8), dove $f_-$ è una primitiva di $g$, e $f_+$ è la costante arbitraria (rispetto a $\eta$), e quindi è un'arbitraria funzione di $\xi$.
+comporta che \ $\partial f/\partial\eta$ \ \`e indipendente da $\xi$, cio\`e
+\ $\partial f/\partial\eta=g(\eta)$, che integrata d\`a la (12.8), dove $f_-$
+\`e una primitiva di $g$, e $f_+$ \`e la costante arbitraria (rispetto a
+$\eta$), e quindi \`e un'arbitraria funzione di $\xi$.
 
-Quindi, nel caso unidimensionale, la soluzione generale della (12.5) è la sovrapposizione di un'arbitraria funzione $f_+$ che, avendo valore costante nei punti in cui $x-ct$ è costante, trasla con velocità $c$ nella direzione positiva dell'asse $x$ mantenendo inalterata la propria forma (figura 12.1), e di una funzione $f_-$ che trasla, sempre con velocità $c$, nella direzione negativa dell'asse $x$.
+Quindi, nel caso unidimensionale, la soluzione generale della (12.5) \`e la
+sovrapposizione di un'arbitraria funzione $f_+$ che, avendo valore costante nei
+punti in cui $x-ct$ \`e costante, trasla con velocit\`a $c$ nella direzione
+positiva dell'asse $x$ mantenendo inalterata la propria forma (figura 12.1), e
+di una funzione $f_-$ che trasla, sempre con velocit\`a $c$, nella direzione
+negativa dell'asse $x$.
 \fig{fig12_1}{12.1}
-La (12.5), se $c$ \ è una opportuna costante, descrive per esempio il moto delle (piccole) perturbazioni lungo una corda tesa (``equazione della corda vibrante''): in questo caso \ $y\equiv f(x,t)$ \ è lo spostamento all'istante t del generico punto $x$ della corda, in direzione ortogonale alla corda (``onde trasversali''), cioè la forma della corda all'istante $t$, e \ $c=\sqrt{\tau/\mu}$ \ ($\tau$ è la tensione della corda e $\mu$ la sua densità lineare di massa) è la velocità di propagazione delle perturbazioni lungo la corda.\\
-Descrive altresì la propagazione unidimensionale del suono in un mezzo (aria, acqua\dots): in questo caso $f(x,t)$ è (indifferentemente) la pressione nel punto $x$ (all'istante t), oppure la densità, o anche lo spostamento medio (in direzione dell'asse $x$) delle particelle del fluido rispetto alla loro posizione quando il mezzo è in quiete (``onde longitudinali'').
+La (12.5), se $c$ \ \`e una opportuna costante, descrive per esempio il moto
+delle (piccole) perturbazioni lungo una corda tesa (``equazione della corda
+vibrante''): in questo caso \ $y\equiv f(x,t)$ \ \`e lo spostamento all'istante
+t del generico punto $x$ della corda, in direzione ortogonale alla corda (``onde
+trasversali''), cio\`e la forma della corda all'istante $t$, e
+\ $c=\sqrt{\tau/\mu}$ \ ($\tau$ \`e la tensione della corda e $\mu$ la sua
+densit\`a lineare di massa) \`e la velocit\`a di propagazione delle
+perturbazioni lungo la corda.\\
+Descrive altres\`i la propagazione unidimensionale del suono in un mezzo (aria,
+acqua\dots): in questo caso $f(x,t)$ \`e (indifferentemente) la pressione nel
+punto $x$ (all'istante t), oppure la densit\`a, o anche lo spostamento medio (in
+direzione dell'asse $x$) delle particelle del fluido rispetto alla loro
+posizione quando il mezzo \`e in quiete (``onde longitudinali'').
 
 Torniamo alle (12.3) e cerchiamo soluzioni della forma
 \begin{equation}
-\vec E=\vec E(x-ct),\quad\ \vec B=\vec B(x-ct)
-\tag{12.10}
+  \vec E=\vec E(x-ct),\quad\ \vec B=\vec B(x-ct)
+  \tag{12.10}
 \end{equation}
-cioè \textit{onde piane progressive}, che siano anche soluzioni delle (12.1).\\
-Dalla 1$^\mathrm{a}$ e dalla 3$^\mathrm{a}$ delle (12.1) segue che -- a parte il caso di campi costanti che non ci interessa -- sono nulle le componenti $x$ di $\vec E$ e di $\vec B$, e quindi che le onde elettromagnetiche sono trasversali. Dalla 2$^\mathrm{a}$ delle (12.1), tenuto conto che $\vec E$ e $\vec B$ non dipendono da $y$ e da $z$, che $E_x=B_x=0$, e che per le onde progressive \ $\partial f/\partial t=-c\,\partial f/\partial x$, si ha
+cio\`e \textit{onde piane progressive}, che siano anche soluzioni delle
+(12.1).\\
+Dalla 1$^\mathrm{a}$ e dalla 3$^\mathrm{a}$ delle (12.1) segue che -- a parte il
+caso di campi costanti che non ci interessa -- sono nulle le componenti $x$ di
+$\vec E$ e di $\vec B$, e quindi che le onde elettromagnetiche sono trasversali.
+Dalla 2$^\mathrm{a}$ delle (12.1), tenuto conto che $\vec E$ e $\vec B$ non
+dipendono da $y$ e da $z$, che $E_x=B_x=0$, e che per le onde progressive
+\ $\partial f/\partial t=-c\,\partial f/\partial x$, si ha
 \begin{equation}
-\frac{\partial E_z}{\partial x}=\frac{1}{c}\frac{\partial B_y}{\partial t}=-\frac{\partial B_y}{\partial x}\,;\qquad\qquad\frac{\partial E_y}{\partial x}=-\frac{1}{c}\frac{\partial B_z}{\partial t}=\frac{\partial B_z}{\partial x}
-\tag{12.11}
+  \frac{\partial E_z}{\partial x}=\frac{1}{c}\frac{\partial B_y}{\partial t}
+  =-\frac{\partial B_y}{\partial x}\,;
+  \qquad\qquad\frac{\partial E_y}{\partial x}
+  =-\frac{1}{c}\frac{\partial B_z}{\partial t}=\frac{\partial B_z}{\partial x}
+  \tag{12.11}
 \end{equation}
-(la 4$^\mathrm{a}$ delle (12.1) porta allo stesso risultato) da cui si vede che le componenti $(E_z,B_y)$ sono indipendenti dalle componenti $(E_y,B_z)$. Possiamo allora porre
+(la 4$^\mathrm{a}$ delle (12.1) porta allo stesso risultato) da cui si vede che
+le componenti $(E_z,B_y)$ sono indipendenti dalle componenti $(E_y,B_z)$.
+Possiamo allora porre
 \begin{equation}
-E_y=B_z=0
-\tag{12.12}
+  E_y=B_z=0
+  \tag{12.12}
 \end{equation}
 per cui dalle (12.11) (sempre escludendo campi costanti) si ha
 \begin{equation}
-\vec E=\big(0,\,0,\,f(x-ct)\big);\quad\ \vec B=\big(0,\,-f(x-ct),\,0\big).
-\tag{12.13}
+  \vec E=\big(0,\,0,\,f(x-ct)\big);\quad\ \vec B=\big(0,\,-f(x-ct),\,0\big).
+  \tag{12.13}
 \end{equation}
-Una soluzione del tipo (12.13) è detta onda piana \textbf{polarizzata linearmente} in direzione dell'asse $z$, in quanto il campo elettrico è in ogni punto parallelo all'asse $z$.\\
+Una soluzione del tipo (12.13) \`e detta onda piana \textbf{polarizzata
+linearmente} in direzione dell'asse $z$, in quanto il campo elettrico \`e in
+ogni punto parallelo all'asse $z$.\\
 Analogamente, se invece delle (12.12) poniamo \ $E_z=B_y=0$, si ha
 \begin{equation}
-\vec E=\big(0,\,g(x-ct),\,0\big);\quad\ \vec B=\big(0,\,0,\,g(x-ct)\big).
-\tag{12.14}
+  \vec E=\big(0,\,g(x-ct),\,0\big);\quad\ \vec B=\big(0,\,0,\,g(x-ct)\big).
+  \tag{12.14}
 \end{equation}
-La soluzione (12.14) è un'onda piana polarizzata in direzione dell'asse $y$.\\
-Poiché le (12.1) sono lineari e omogenee, anche qualsiasi combinazione lineare delle (12.13) e delle (12.14) è soluzione delle (12.1):
+La soluzione (12.14) \`e un'onda piana polarizzata in direzione dell'asse $y$.\\
+Poich\'e le (12.1) sono lineari e omogenee, anche qualsiasi combinazione lineare
+delle (12.13) e delle (12.14) \`e soluzione delle (12.1):
 \begin{equation}
-\vec E=\big(0,\,g(x-ct),\,f(x-ct)\big);\quad\ \vec B=\big(0,\,-f(x-ct),\,g(x-ct)\big).
-\tag{12.15}
+  \vec E=\big(0,\,g(x-ct),\,f(x-ct)\big);
+  \quad\ \vec B=\big(0,\,-f(x-ct),\,g(x-ct)\big).
+  \tag{12.15}
 \end{equation}
 Si noti che $\vec E$ e $\vec B$ hanno lo stesso modulo e sono ortogonali:
 \begin{equation}
-\vec E^2-\vec B^2=0\,;\quad\ \vec E\cdot\vec B=0
-\tag{12.16}
+  \vec E^2-\vec B^2=0\,;\quad\ \vec E\cdot\vec B=0
+  \tag{12.16}
 \end{equation}
-cioè entrambi gli invarianti relativistici del campo elettromagnetico sono nulli.\\
-Per le onde che viaggiano in verso opposto all'asse $x$ la trattazione è simile, e si ottiene
+cio\`e entrambi gli invarianti relativistici del campo elettromagnetico sono
+nulli.\\
+Per le onde che viaggiano in verso opposto all'asse $x$ la trattazione \`e
+simile, e si ottiene
 \begin{equation}
-\vec E=\big(0,\,g(x+ct),\,f(x+ct)\big);\quad\ \vec B=\big(0,\,f(x+ct),\,-g(x+ct)\big).
-\tag{12.17}
+  \vec E=\big(0,\,g(x+ct),\,f(x+ct)\big);
+  \quad\ \vec B=\big(0,\,f(x+ct),\,-g(x+ct)\big).
+  \tag{12.17}
 \end{equation}
-Nel caso delle onde piane (progressive oppure regressive) il vettore di Poynting, (quindi sia la corrente di energia che la densità di quantità di moto) ha la direzione coincidente con la direzione di propagazione dell'onda ed inoltre energia e quantità di moto sono proporzionali; infatti dalle (12.15) e dalle (11.25)
+Nel caso delle onde piane (progressive oppure regressive) il vettore di
+Poynting, (quindi sia la corrente di energia che la densit\`a di quantit\`a di
+moto) ha la direzione coincidente con la direzione di propagazione dell'onda ed
+inoltre energia e quantit\`a di moto sono proporzionali; infatti dalle (12.15) e
+dalle (11.25)
 \begin{equation}
-\begin{aligned}
-&u(x,t)=\frac{1}{4\pi}\big(f^2(x-ct)+g^2(x-ct)\big);\qquad\vec S=(S,\,0,\,0),\quad S=cu(x,t)\quad\Rightarrow\\
-&U=cP\,.
-\end{aligned}
-\tag{12.18}
+  \begin{aligned}
+    &u(x,t)=\frac{1}{4\pi}\big(f^2(x-ct)+g^2(x-ct)\big);
+    \qquad\vec S=(S,\,0,\,0),\quad S=cu(x,t)\quad\Rightarrow\\
+    &U=cP\,.
+  \end{aligned}
+  \tag{12.18}
 \end{equation}
 
 \subsection{Dalle sorgenti ai campi: le soluzioni ritardate}
 
-Le (12.15) e (12.17), anche se sono solo delle soluzioni particolari delle equazioni di Maxwell, mettono in evidenza che le onde elettromagnetiche, e con esse la densità di energia e di quantità di moto, si propagano con velocità $c$; ora vogliamo andare oltre, e mostrare quali sorgenti possono produrre i campi descritti dalle (12.15) e (12.17); verificheremo anche che le sorgenti in un dato punto $Q$ ad un dato istante contribuiscono ai campi in un punto $P$ con un ritardo uguale al tempo $\overline{QP}\,/c$ che un segnale che viaggia con velocità $c$ impiega a propagarsi dal ``punto potenziante'' $Q$ al ``punto potenziato'' $P$ (il ritardo che viene trascurato quando si fa l'approssimazione delle correnti lentamente variabili).\\
-Siccome le onde piane che si propagano in direzione dell'asse $x$ sono invarianti per traslazioni parallele al piano $x=0$, prendiamo sorgenti con le stesse simmetrie: una lamina di corrente nel piano $x=0$
+Le (12.15) e (12.17), anche se sono solo delle soluzioni particolari delle
+equazioni di Maxwell, mettono in evidenza che le onde elettromagnetiche, e con
+esse la densit\`a di energia e di quantit\`a di moto, si propagano con
+velocit\`a $c$; ora vogliamo andare oltre, e mostrare quali sorgenti possono
+produrre i campi descritti dalle (12.15) e (12.17); verificheremo anche che le
+sorgenti in un dato punto $Q$ ad un dato istante contribuiscono ai campi in un
+punto $P$ con un ritardo uguale al tempo $\overline{QP}\,/c$ che un segnale che
+viaggia con velocit\`a $c$ impiega a propagarsi dal ``punto potenziante'' $Q$ al
+``punto potenziato'' $P$ (il ritardo che viene trascurato quando si fa
+l'approssimazione delle correnti lentamente variabili).\\
+Siccome le onde piane che si propagano in direzione dell'asse $x$ sono
+invarianti per traslazioni parallele al piano $x=0$, prendiamo sorgenti con le
+stesse simmetrie: una lamina di corrente nel piano $x=0$
 \begin{equation}
-\vec{\mathcal J}(t)=\vec{\mathcal J}_0\,f(t).
-\tag{12.19}
+  \vec{\mathcal J}(t)=\vec{\mathcal J}_0\,f(t).
+  \tag{12.19}
 \end{equation}
-Conviene calcolare il potenziale vettore $\vec A(x,y,z,t)$ la cui esistenza, anche nel caso dei campi variabili, è garantita dal fatto che $\vec B$ è solenoidale. Per dimostrare l'effetto ritardato delle sorgenti, calcoliamo il potenziale vettore con formula analoga alla (7.22), nella quale però la sorgente nel punto potenziante $(x',y',z')$ contribuisce al campo all'istante $t$ nel punto potenziato $(x,y,z)$ con il valore che ha all'istante $t-r/c$, dove $r$ è la distanza fra punto potenziante e punto potenziato (e quindi i vari punti potenzianti contribuiscono ad istanti diversi):
+Conviene calcolare il potenziale vettore $\vec A(x,y,z,t)$ la cui esistenza,
+anche nel caso dei campi variabili, \`e garantita dal fatto che $\vec B$ \`e
+solenoidale. Per dimostrare l'effetto ritardato delle sorgenti, calcoliamo il
+potenziale vettore con formula analoga alla (7.22), nella quale per\`o la
+sorgente nel punto potenziante $(x',y',z')$ contribuisce al campo all'istante
+$t$ nel punto potenziato $(x,y,z)$ con il valore che ha all'istante $t-r/c$,
+dove $r$ \`e la distanza fra punto potenziante e punto potenziato (e quindi i
+vari punti potenzianti contribuiscono ad istanti diversi):
 \begin{equation}
-\begin{aligned}
-&\vec A(x,y,z,t)=\frac{1}{c}\int_{x=0}\frac{\vec{\mathcal J}(t-r/c)}{r}\,dS\\
-&\Big(r\equiv\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}\ \Big)
-\end{aligned}
-\tag{12.20}
+  \begin{aligned}
+    &\vec A(x,y,z,t)=\frac{1}{c}
+    \int_{x=0}\frac{\vec{\mathcal J}(t-r/c)}{r}\,dS\\
+    &\Big(r\equiv\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}\ \Big)
+  \end{aligned}
+  \tag{12.20}
 \end{equation}
-poi dimostreremo che i campi così determinati sono la soluzione del problema.\\
-Per calcolare il potenziale vettore in un (generico) punto $P$ effettuiamo l'integrazione usando coordinate polari $\varrho,\phi$ nel piano delle sorgenti, con l'origine coincidente con la proiezione di $P$ su detto piano; $P$ ha quindi coordinate $(x,0,0)$ e $r=\sqrt{x^2+\rho^2}$:
+poi dimostreremo che i campi cos\`i determinati sono la soluzione del
+problema.\\
+Per calcolare il potenziale vettore in un (generico) punto $P$ effettuiamo
+l'integrazione usando coordinate polari $\varrho,\phi$ nel piano delle sorgenti,
+con l'origine coincidente con la proiezione di $P$ su detto piano; $P$ ha quindi
+coordinate $(x,0,0)$ e $r=\sqrt{x^2+\rho^2}$:
 \begin{equation}
-\vec A=\frac{\vec{\mathcal J}_0}{c}\int_0^\infty\frac{f\big(t-\sqrt{x^2+\varrho^2}/c\big)}{\sqrt{x^2+\varrho^2}}\,2\pi\varrho\,d\varrho\,.
-\tag{12.21}
+  \vec A=\frac{\vec{\mathcal J}_0}{c}\int_0^\infty
+  \frac{f\big(t-\sqrt{x^2+\varrho^2}/c\big)}{\sqrt{x^2+\varrho^2}}
+  \,2\pi\varrho\,d\varrho\,.
+  \tag{12.21}
 \end{equation}
 Posto
 \begin{equation}
-\xi=\sqrt{x^2+\varrho^2}\quad\ \Rightarrow\quad\ \frac{\varrho}{\sqrt{x^2+\varrho^2}}=\frac{d\xi}{d\varrho}
-\tag{12.22}
+  \xi=\sqrt{x^2+\varrho^2}\quad\ \Rightarrow
+  \quad\ \frac{\varrho}{\sqrt{x^2+\varrho^2}}=\frac{d\xi}{d\varrho}
+  \tag{12.22}
 \end{equation}
 e quindi
 \begin{equation}
-\vec A(x,t)=\frac{2\pi\vec{\mathcal J}_0}{c}\int_{|x|}^\infty f(t-\xi/c)\,d\xi\,.
-\tag{12.23}
+  \vec A(x,t)
+  =\frac{2\pi\vec{\mathcal J}_0}{c}\int_{|x|}^\infty f(t-\xi/c)\,d\xi\,.
+  \tag{12.23}
 \end{equation}
 Se prendiamo l'asse $y$ nella direzione di $\vec{\mathcal J}_0$, si ha
 \begin{equation}
-B_x=0,\ B_y=0,\ B_z=\frac{\partial A_y}{\partial x}=\left\{\begin{array}{ll}
--\dfrac{2\pi\mathcal J_0}{c}f(t-x/c)&\quad x>0\\[10pt]
-\phantom{-}\dfrac{2\pi\mathcal J_0}{c}f(t+x/c)&\quad x<0
-\end{array}\right.
-\tag{12.24}
+  B_x=0,\ B_y=0,\ B_z=\frac{\partial A_y}{\partial x}=\left\{\begin{array}{ll}
+    -\dfrac{2\pi\mathcal J_0}{c}f(t-x/c)&\quad x>0\\[10pt]
+    \phantom{-}\dfrac{2\pi\mathcal J_0}{c}f(t+x/c)&\quad x<0
+  \end{array}\right.
+  \tag{12.24}
 \end{equation}
-e quindi dalla (12.14) (per l'onda progressiva) e dalla (12.17) (per l'onda regressiva)
+e quindi dalla (12.14) (per l'onda progressiva) e dalla (12.17) (per l'onda
+regressiva)
 \begin{equation}
-E_x=0,\ E_z=0,\ E_y=\left\{\begin{array}{ll}
--\dfrac{2\pi\mathcal J_0}{c}f(t-x/c)&\quad x>0\\[10pt]
--\dfrac{2\pi\mathcal J_0}{c}f(t+x/c)&\quad x<0\,.
-\end{array}\right.
-\tag{12.25}
+  E_x=0,\ E_z=0,\ E_y=\left\{\begin{array}{ll}
+    -\dfrac{2\pi\mathcal J_0}{c}f(t-x/c)&\quad x>0\\[10pt]
+    -\dfrac{2\pi\mathcal J_0}{c}f(t+x/c)&\quad x<0\,.
+  \end{array}\right.
+  \tag{12.25}
 \end{equation}
-Si noti che la lamina di corrente è una superficie di discontinuità per $\vec B$, ma non per $\vec E$.\\
-Le (12.24) e (12.25) sono soluzioni per $x>0$ e per $x<0$; resta da dimostrare che effettivamente costituiscono la soluzione corrispondente alle sorgenti date: a questo scopo basta notare che il campo magnetico ha la corretta discontinuità \ $\Delta B_z=4\pi\mathcal J_0f(t)/c$ \ attraverso la lamina di corrente (la corrente di spostamento non contribuisce alla discontinuità).\\
-La soluzione trovata consiste quindi di un'onda piana polarizzata nella direzione della corrente, che si allontana (sia per $x>0$ che per $x<0$) dalle sorgenti.\\
-Vale la pena confrontare le (12.24), (12.25) con la soluzione calcolata nell'approssimazione delle correnti lentamente variabili, che dà luogo a campi indipendenti dalla distanza dal piano delle sorgenti \ $\big(f(t\pm x/c)\to f(t)\big)$.
+Si noti che la lamina di corrente \`e una superficie di discontinuit\`a per
+$\vec B$, ma non per $\vec E$.\\
+Le (12.24) e (12.25) sono soluzioni per $x>0$ e per $x<0$; resta da dimostrare
+che effettivamente costituiscono la soluzione corrispondente alle sorgenti date:
+a questo scopo basta notare che il campo magnetico ha la corretta
+discontinuit\`a \ $\Delta B_z=4\pi\mathcal J_0f(t)/c$ \ attraverso la lamina di
+corrente (la corrente di spostamento non contribuisce alla discontinuit\`a).\\
+La soluzione trovata consiste quindi di un'onda piana polarizzata nella
+direzione della corrente, che si allontana (sia per $x>0$ che per $x<0$) dalle
+sorgenti.\\
+Vale la pena confrontare le (12.24), (12.25) con la soluzione calcolata
+nell'approssimazione delle correnti lentamente variabili, che d\`a luogo a campi
+indipendenti dalla distanza dal piano delle sorgenti
+\ $\big(f(t\pm x/c)\to f(t)\big)$.
 
 \subsection{Le onde piane \textit{monocromatiche}}
 
-Le onde monocromatiche, non necessariamente piane, sono particolari onde che dipendono dal tempo in modo periodico esclusivamente tramite le funzioni $\sen\omega t$ e $\cos\omega t$:
+Le onde monocromatiche, non necessariamente piane, sono particolari onde che
+dipendono dal tempo in modo periodico esclusivamente tramite le funzioni
+$\sen\omega t$ e $\cos\omega t$:
 \begin{equation}
-F(x,y,z,t)=a(x,y,z)\sen\omega t+b(x,y,z)\cos\omega t
-\tag{12.26}
+  F(x,y,z,t)=a(x,y,z)\sen\omega t+b(x,y,z)\cos\omega t
+  \tag{12.26}
 \end{equation}
-e quindi, siccome \ $\partial^2F/\partial t^2=-\omega^2F$, le funzioni spaziali $a(x,y,z)$ e $b(x,y,z)$ \big(che genericamente indichiamo con $f(x,y,z)$\big) soddisfano (nel vuoto) l'equazione
+e quindi, siccome \ $\partial^2F/\partial t^2=-\omega^2F$, le funzioni spaziali
+$a(x,y,z)$ e $b(x,y,z)$ \big(che genericamente indichiamo con $f(x,y,z)$\big)
+soddisfano (nel vuoto) l'equazione
 \begin{equation}
-\Delta\,f+\frac{\omega^2}{c^2}f=0.
-\tag{12.27}
+  \Delta\,f+\frac{\omega^2}{c^2}f=0.
+  \tag{12.27}
 \end{equation}
-Siccome le onde piane sono funzioni di $(x\pm ct)$, le \textbf{onde piane monocromatiche} sono combinazioni lineari di seni e coseni dell'argomento $(\omega/c)(x\pm ct)$, e quindi sono tutte della forma
+Siccome le onde piane sono funzioni di $(x\pm ct)$, le \textbf{onde piane
+monocromatiche} sono combinazioni lineari di seni e coseni dell'argomento
+$(\omega/c)(x\pm ct)$, e quindi sono tutte della forma
 \begin{equation}
-F(x,t)=f_0\cos\big(\frac{\omega}{c}(x\pm ct)+\phi\big)\equiv f_0\cos\big(kx\pm\omega t+\phi\big);\qquad k=\frac{\omega}{c}
-\tag{12.28}
+  F(x,t)=f_0\cos\big(\frac{\omega}{c}(x\pm ct)+\phi\big)
+  \equiv f_0\cos\big(kx\pm\omega t+\phi\big);\qquad k=\frac{\omega}{c}
+  \tag{12.28}
 \end{equation}
-perciò esse non solo sono, per ogni fissato $x$, periodiche nel tempo con \textbf{periodo} \ $T=2\pi/\omega$, e quindi con \textbf{frequenza} \ $\nu=\omega/2\pi$, ma, per ogni $t$ fissato, sono funzioni periodiche in $x$ con \textbf{lunghezza d'onda}, cioè periodo spaziale, \ $\lambda=2\pi/k=2\pi c/\omega=c/\nu$:
+perci\`o esse non solo sono, per ogni fissato $x$, periodiche nel tempo con
+\textbf{periodo} \ $T=2\pi/\omega$, e quindi con \textbf{frequenza}
+\ $\nu=\omega/2\pi$, ma, per ogni $t$ fissato, sono funzioni periodiche in $x$
+con \textbf{lunghezza d'onda}, cio\`e periodo spaziale,
+\ $\lambda=2\pi/k=2\pi c/\omega=c/\nu$:
 \begin{equation}
-T=\frac{2\pi}{\omega}\,,\quad\ \nu=\frac{1}{T}=\frac{\omega}{2\pi}\,,\quad\ \lambda=\frac{c}{\nu}\,,\quad\ \nu=\frac{c}{\lambda}\,\cdot
-\tag{12.29}
+  T=\frac{2\pi}{\omega}\,,\quad\ \nu=\frac{1}{T}=\frac{\omega}{2\pi}\,,
+  \quad\ \lambda=\frac{c}{\nu}\,,\quad\ \nu=\frac{c}{\lambda}\,\cdot
+  \tag{12.29}
 \end{equation}
-La fase $\phi$ nella (12.28) non ha un significato fisico particolare, in quanto dipende dalla scelta dell'origine delle coordinate e/o dei tempi.\\
-Più in generale, se $\hat n$ è la direzione di propagazione dell'onda, possiamo scrivere
+La fase $\phi$ nella (12.28) non ha un significato fisico particolare, in quanto
+dipende dalla scelta dell'origine delle coordinate e/o dei tempi.\\
+Pi\`u in generale, se $\hat n$ \`e la direzione di propagazione dell'onda,
+possiamo scrivere
 \begin{equation}
-F(x,y,z,t)=f_0\cos\big(\vec k\cdot\vec r-\omega t+\phi\big),\qquad\vec k\equiv k\hat n
-\tag{12.30}
+  F(x,y,z,t)=f_0\cos\big(\vec k\cdot\vec r-\omega t+\phi\big),
+  \qquad\vec k\equiv k\hat n
+  \tag{12.30}
 \end{equation}
-ed il vettore $\vec k$ è detto \textbf{vettore d'onda}.\\
-Le onde elettromagnetiche piane monocromatiche (progressive in direzione dell'asse $x$) sono della forma
+ed il vettore $\vec k$ \`e detto \textbf{vettore d'onda}.\\
+Le onde elettromagnetiche piane monocromatiche (progressive in direzione
+dell'asse $x$) sono della forma
 \begin{equation}
-\vec E(x,t)=\big(0,\,E_{0y}\cos(kx-\omega t+\phi),\,E_{0z}\cos(kx-\omega t+\psi)\big).
-\tag{12.31}
+  \vec E(x,t)
+  =\big(0,\,E_{0y}\cos(kx-\omega t+\phi),\,E_{0z}\cos(kx-\omega t+\psi)\big).
+  \tag{12.31}
 \end{equation}
-Grazie alle (12.15) è sufficiente l'espressione del campo elettrico: $\vec B$ è univocamente determinato da $\vec E$ e, come in ogni onda piana, $\vec E$ ed $\vec B$ hanno lo stesso modulo ed insieme alla direzione di propagazione formano (nell'ordine) una terna ortogonale destrorsa. Per quanto detto sopra, $\phi$ e $\psi$ nella (12.31) non hanno separatamente significato fisico, ma lo ha solo la loro differenza.\\
-L'\textbf{intensità} $I$ dell'onda è definita come l'energia (media su un periodo) che attraversa nell'unità di tempo l'unità di superficie ortogonale alla direzione di propagazione; essa è quindi data dal modulo del vettore di Poynting mediato su un periodo; grazie al fatto che $\vec E$ e $\vec B$ sono ortogonali e hanno lo stesso modulo si ha
+Grazie alle (12.15) \`e sufficiente l'espressione del campo elettrico: $\vec B$
+\`e univocamente determinato da $\vec E$ e, come in ogni onda piana, $\vec E$ ed
+$\vec B$ hanno lo stesso modulo ed insieme alla direzione di propagazione
+formano (nell'ordine) una terna ortogonale destrorsa. Per quanto detto sopra,
+$\phi$ e $\psi$ nella (12.31) non hanno separatamente significato fisico, ma lo
+ha solo la loro differenza.\\
+L'\textbf{intensit\`a} $I$ dell'onda \`e definita come l'energia (media su un
+periodo) che attraversa nell'unit\`a di tempo l'unit\`a di superficie ortogonale
+alla direzione di propagazione; essa \`e quindi data dal modulo del vettore di
+Poynting mediato su un periodo; grazie al fatto che $\vec E$ e $\vec B$ sono
+ortogonali e hanno lo stesso modulo si ha
 \begin{equation}
-I\equiv\frac{1}{T}\int_t^{t+T}|\,\vec S\,|\,dt'=\frac{1}{T}\int_t^{t+T}\frac{c}{4\pi}\vec E^2\,dt'=\frac{c}{8\pi}\vec E_0^2;\quad\ \vec E_0\equiv(0,\,E_{0y},\,E_{0z})
-\tag{12.32}
+  I\equiv\frac{1}{T}\int_t^{t+T}|\,\vec S\,|\,dt'
+  =\frac{1}{T}\int_t^{t+T}\frac{c}{4\pi}\vec E^2\,dt'=\frac{c}{8\pi}\vec E_0^2;
+  \quad\ \vec E_0\equiv(0,\,E_{0y},\,E_{0z})
+  \tag{12.32}
 \end{equation}
-(la media di $\cos^2(\omega t+\phi)$ è 1/2).\\
-La traiettoria descritta dal vettore $\vec E$ in ogni fissato punto $\overline P$ dello spazio è data dalle equazioni parametriche
+(la media di $\cos^2(\omega t+\phi)$ \`e 1/2).\\
+La traiettoria descritta dal vettore $\vec E$ in ogni fissato punto
+$\overline P$ dello spazio \`e data dalle equazioni parametriche
 \begin{equation}
-\left\{\begin{aligned}
-&E_x(t)=0\\
-&E_y(t)=E_{0y}\cos(k\overline x-\omega t+\phi)\\
-&E_z(t)=E_{0z}\cos(k\overline x-\omega t+\psi)
-\end{aligned}\right.
-\tag{12.33}
+  \left\{\begin{aligned}
+    &E_x(t)=0\\
+    &E_y(t)=E_{0y}\cos(k\overline x-\omega t+\phi)\\
+    &E_z(t)=E_{0z}\cos(k\overline x-\omega t+\psi)
+  \end{aligned}\right.
+  \tag{12.33}
 \end{equation}
-che sono (in generale) le equazioni di un'ellisse, che viene interamente descritta in un periodo: se $\phi=\psi$ l'ellisse degenera in un segmento, cioè il campo elettrico (in ogni punto) oscilla nella direzione (parallela al piano $x=0$) che forma con l'asse $y$ l'angolo $\theta$ dato da \ $\tan\theta=E_{0z}/E_{0y}$, quindi l'onda è polarizzata linearmente (onda $\pi$), ed in questo caso la (12.31) assume la forma
+che sono (in generale) le equazioni di un'ellisse, che viene interamente
+descritta in un periodo: se $\phi=\psi$ l'ellisse degenera in un segmento,
+cio\`e il campo elettrico (in ogni punto) oscilla nella direzione (parallela al
+piano $x=0$) che forma con l'asse $y$ l'angolo $\theta$ dato da
+\ $\tan\theta=E_{0z}/E_{0y}$, quindi l'onda \`e polarizzata linearmente (onda
+$\pi$), ed in questo caso la (12.31) assume la forma
 \begin{equation}
-\vec E(x,t)=\vec E_0\cos(kx-\omega t+\phi),\qquad(\vec E_0\cdot\vec k=0)\qquad\qquad\text{(onda $\pi$)}.
-\tag{12.34}
+  \vec E(x,t)=\vec E_0\cos(kx-\omega t+\phi),\qquad(\vec E_0\cdot\vec
+  k=0)\qquad\qquad\text{(onda $\pi$)}.
+  \tag{12.34}
 \end{equation}
-Se \ $E_{0y}=E_{0z}$ \ e \ $\phi-\psi=\pm\pi/2$, l'ellisse si riduce ad un cerchio, percorso in verso orario (per un osservatore che vede l'onda propagarsi verso di lui) se \ $\phi-\psi=\pi/2$, e in verso antiorario se \ $\phi-\psi=-\pi/2$: nel primo caso si parla di polarizzazione circolare destra (onda $\sigma_+$), e nel secondo di polarizzazione circolare sinistra (onda $\sigma_-$):
+Se \ $E_{0y}=E_{0z}$ \ e \ $\phi-\psi=\pm\pi/2$, l'ellisse si riduce ad un
+cerchio, percorso in verso orario (per un osservatore che vede l'onda propagarsi
+verso di lui) se \ $\phi-\psi=\pi/2$, e in verso antiorario se
+\ $\phi-\psi=-\pi/2$: nel primo caso si parla di polarizzazione circolare destra
+(onda $\sigma_+$), e nel secondo di polarizzazione circolare sinistra (onda
+$\sigma_-$):
 \begin{equation}
-\vec E(x,t)=\frac{E_0}{\sqrt2}\big(0,\,\mp\sen(kx-\omega t+\phi),\,\cos(kx-\omega t+\phi)\big)\qquad\text{(onde $\sigma_\pm$)}.
-\tag{12.35}
+  \vec E(x,t)=\frac{E_0}{\sqrt2}\big(0,\,\mp\sen(kx-\omega
+  t+\phi),\,\cos(kx-\omega t+\phi)\big)\qquad\text{(onde $\sigma_\pm$)}.
+  \tag{12.35}
 \end{equation}
-In tutti gli altri casi si dice che l'onda è polarizzata ellitticamente.
-Le onde piane monocromatiche sono quindi caratterizzate dalla frequenza (o equivalentemente dalla lunghezza d'onda), dall'intensità, dalla direzione di propagazione e dalla polarizzazione.\\
-Le onde radio hanno lunghezze d'onda dell'ordine di 10\,m (onde corte), 100\,m (onde medie), 1000\,m (onde lunghe), mentre per le trasmissioni in modulazione di frequenza e per la televisione vengono utilizzate onde con frequenze attorno ai 100\,Mh \ ($\lambda\approx3$\,m); il radar utilizza onde centimetriche \ ($\nu\approx10^{10}$\,Hz); attorno ai $10^{14}$\,Hz abbiamo la radiazione infrarossa; la luce visibile ha lunghezza d'onda fra i 7000\,Å e i 3000\,Å. Più oltre (lunghezza d'onda minore) la luce ultravioletta, i raggi $X$ \ ($\nu\approx10^{18}$\,Hz) ed infine i raggi $\gamma$.
+In tutti gli altri casi si dice che l'onda \`e polarizzata ellitticamente.
+Le onde piane monocromatiche sono quindi caratterizzate dalla frequenza (o
+equivalentemente dalla lunghezza d'onda), dall'intensit\`a, dalla direzione di
+propagazione e dalla polarizzazione.\\
+Le onde radio hanno lunghezze d'onda dell'ordine di 10\,m (onde corte), 100\,m
+(onde medie), 1000\,m (onde lunghe), mentre per le trasmissioni in modulazione
+di frequenza e per la televisione vengono utilizzate onde con frequenze attorno
+ai 100\,Mh \ ($\lambda\approx3$\,m); il radar utilizza onde centimetriche
+\ ($\nu\approx10^{10}$\,Hz); attorno ai $10^{14}$\,Hz abbiamo la radiazione
+infrarossa; la luce visibile ha lunghezza d'onda fra i 7000\,\AA{} e i
+3000\,\AA{}. Pi\`u oltre (lunghezza d'onda minore) la luce ultravioletta, i
+raggi $X$ \ ($\nu\approx10^{18}$\,Hz) ed infine i raggi $\gamma$.
 
-Le onde piane sono ovviamente non fisiche, in quanto richiedono sorgenti distribuite in regioni di estensione infinita; a maggior ragione sono non fisiche le onde piane monocromatiche, che sono non nulle per ogni $t$, da $t=-\infty$ a $t=+\infty$ e quindi la stessa cosa deve valere per le sorgenti.\\
-Tuttavia, da un lato la loro non--fisicità non è diversa da quella dei solenoidi infiniti, dei fili rettilinei indefiniti \dots, e persino da quella dei campi statici che richiedono che la posizione delle sorgenti sia immutabile da un tempo infinito: esse quindi possono rappresentare una buona approssimazione in regioni limitate dello spazio lontane dalle sorgenti, e per intervalli di tempo finiti; d'altro lato, grazie alla linearità delle equazioni di Maxwell nel vuoto, la somma (finita, infinita anche con la potenza del continuo) di onde piane di diversa frequenza, intensità, direzione di propagazione e polarizzazione, è ancora soluzione delle equazioni di Maxwell, ed è possibile dimostrare che in questo modo si può ottenere qualsiasi soluzione.
+Le onde piane sono ovviamente non fisiche, in quanto richiedono sorgenti
+distribuite in regioni di estensione infinita; a maggior ragione sono non
+fisiche le onde piane monocromatiche, che sono non nulle per ogni $t$, da
+$t=-\infty$ a $t=+\infty$ e quindi la stessa cosa deve valere per le sorgenti.\\
+Tuttavia, da un lato la loro non--fisicit\`a non \`e diversa da quella dei
+solenoidi infiniti, dei fili rettilinei indefiniti \dots, e persino da quella
+dei campi statici che richiedono che la posizione delle sorgenti sia immutabile
+da un tempo infinito: esse quindi possono rappresentare una buona
+approssimazione in regioni limitate dello spazio lontane dalle sorgenti, e per
+intervalli di tempo finiti; d'altro lato, grazie alla linearit\`a delle
+equazioni di Maxwell nel vuoto, la somma (finita, infinita anche con la potenza
+del continuo) di onde piane di diversa frequenza, intensit\`a, direzione di
+propagazione e polarizzazione, \`e ancora soluzione delle equazioni di Maxwell,
+ed \`e possibile dimostrare che in questo modo si pu\`o ottenere qualsiasi
+soluzione.
 \fig{fig12_2}{12.2}
 
 \subsection{Un caso realistico: l'onda emessa da un'antenna}
 
-Una antenna è sostanzialmente un conduttore, che assumiamo rettilineo e di lunghezza $2l$, nel quale un generatore mantiene una corrente variabile (figura 12.2). Presa l'origine nel centro dell'antenna, e l'asse $z$ lungo la stessa, supponiamo che la corrente sia della forma
+Una antenna \`e sostanzialmente un conduttore, che assumiamo rettilineo e di
+lunghezza $2l$, nel quale un generatore mantiene una corrente variabile (figura
+12.2). Presa l'origine nel centro dell'antenna, e l'asse $z$ lungo la stessa,
+supponiamo che la corrente sia della forma
 \begin{equation}
-I(z,t)=I_0(z)f(t).
-\tag{12.36}
+  I(z,t)=I_0(z)f(t).
+  \tag{12.36}
 \end{equation}
-$I_0(z)$ si annulla agli estremi dell'antenna, e per esempio può essere della forma \ $I_0(z)=I_0\sen k(l-|z|)$.\\
-Vogliamo determinare i campi a grande distanza: a questo scopo calcoleremo il potenziale vettore, prendendo per esso l'espressione ``ritardata'' simile alla (12.20)
+$I_0(z)$ si annulla agli estremi dell'antenna, e per esempio pu\`o essere della
+forma \ $I_0(z)=I_0\sen k(l-|z|)$.\\
+Vogliamo determinare i campi a grande distanza: a questo scopo calcoleremo il
+potenziale vettore, prendendo per esso l'espressione ``ritardata'' simile alla
+(12.20)
 \begin{equation}
-A_z(\vec r,t)=\frac{1}{c}\int_{-l}^l\frac{I(z',t-|\vec r-\vec r\,'|/c)}{|\vec r-\vec r\,'|}\,dz'
-\tag{12.37}
+  A_z(\vec r,t)=\frac{1}{c}\int_{-l}^l\frac{I(z',t-|\vec r-\vec r\,'|/c)}
+  {|\vec r-\vec r\,'|}\,dz'
+  \tag{12.37}
 \end{equation}
-che non dimostriamo, ma che per lo meno abbiamo visto funzionare bene in un caso particolare (siccome la corrente è parallela all'asse $z$, le altre componenti di $\vec A$ sono nulle).\\
-Oltre all'approssimazione delle grandi distanze, che consiste nel sostituire $|\vec r-\vec r\,'|$ con
-$r$ al denominatore della (12.37), faremo un'altra approssimazione, nota come \textbf{approssimazione di dipolo}: poniamo
+che non dimostriamo, ma che per lo meno abbiamo visto funzionare bene in un caso
+particolare (siccome la corrente \`e parallela all'asse $z$, le altre componenti
+di $\vec A$ sono nulle).\\
+Oltre all'approssimazione delle grandi distanze, che consiste nel sostituire
+$|\vec r-\vec r\,'|$ con
+$r$ al denominatore della (12.37), faremo un'altra approssimazione, nota come
+\textbf{approssimazione di dipolo}: poniamo
 \begin{equation}
-f(t-|\vec r-\vec r\,'|/c)\approx f(t-r/c).
-\tag{12.38}
+  f(t-|\vec r-\vec r\,'|/c)\approx f(t-r/c).
+  \tag{12.38}
 \end{equation}
-Questa approssimazione richiede non solo che $r\gg l$, ma anche che la corrente vari poco nell'intervallo di tempo $l/c$ \ che la luce impiega a percorrere la distanza uguale alla lunghezza dell'antenna. Infatti, grazie allo sviluppo (1.75),
+Questa approssimazione richiede non solo che $r\gg l$, ma anche che la corrente
+vari poco nell'intervallo di tempo $l/c$ \ che la luce impiega a percorrere la
+distanza uguale alla lunghezza dell'antenna. Infatti, grazie allo sviluppo
+(1.75),
 \begin{equation}
-\begin{aligned}
-f(t-|\vec r-\vec r\,'|/c)&\approx f(t-r/c+\hat r\cdot\vec r\,'/c)\\
-&\approx f(t-r/c)+\frac{1}{c}\dot f(t-r/c)\,\hat r\cdot\vec r\,'
-\end{aligned}
-\tag{12.39}
+  \begin{aligned}
+    f(t-|\vec r-\vec r\,'|/c)&\approx f(t-r/c+\hat r\cdot\vec r\,'/c)\\
+    &\approx f(t-r/c)+\frac{1}{c}\dot f(t-r/c)\,\hat r\cdot\vec r\,'
+  \end{aligned}
+  \tag{12.39}
 \end{equation}
 e quindi deve essere
 \begin{equation}
-\dot f\cdot\frac{l}{c}\ll f.
-\tag{12.40}
+  \dot f\cdot\frac{l}{c}\ll f.
+  \tag{12.40}
 \end{equation}
-Questa è simile all'approssimazione delle correnti lentamente variabili, però è una richiesta molto più debole, in quanto ristretta solo alla regione dell'antenna, mentre invece i campi verranno calcolati a grande distanza, e quindi in una regione molto più ampia. Se -- per esempio -- la corrente nell'antenna è sinusoidale, cioè \ $f(t)=\cos\omega t$, la (12.40) equivale a \ $\omega l/c\ll1$, cioè \ $\lambda\gg l$.\\
-In definitiva, grazie alle approssimazioni fatte e alla (12.36), la (12.37) diventa
+Questa \`e simile all'approssimazione delle correnti lentamente variabili,
+per\`o \`e una richiesta molto pi\`u debole, in quanto ristretta solo alla
+regione dell'antenna, mentre invece i campi verranno calcolati a grande
+distanza, e quindi in una regione molto pi\`u ampia. Se -- per esempio -- la
+corrente nell'antenna \`e sinusoidale, cio\`e \ $f(t)=\cos\omega t$, la (12.40)
+equivale a \ $\omega l/c\ll1$, cio\`e \ $\lambda\gg l$.\\
+In definitiva, grazie alle approssimazioni fatte e alla (12.36), la (12.37)
+diventa
 \begin{equation}
-A_z(\vec r,t)=\frac{1}{rc}f(t-r/c)\int_{-l}^lI_0(z')\,dz'.
-\tag{12.41}
+  A_z(\vec r,t)=\frac{1}{rc}f(t-r/c)\int_{-l}^lI_0(z')\,dz'.
+  \tag{12.41}
 \end{equation}
-L'integrale nella (12.41) è una costante che ha le dimensioni della derivata rispetto al tempo di una carica per una lunghezza, cioè della derivata rispetto al tempo di un momento di dipolo, per cui indicheremo il prodotto di questa costante con $f(t)$ con $\dot p(t)$:
+L'integrale nella (12.41) \`e una costante che ha le dimensioni della derivata
+rispetto al tempo di una carica per una lunghezza, cio\`e della derivata
+rispetto al tempo di un momento di dipolo, per cui indicheremo il prodotto di
+questa costante con $f(t)$ con $\dot p(t)$:
 \begin{equation}
-A_z(\vec r,t)=\frac{\dot p(t-r/c)}{rc}\,\cdot
-\tag{12.42}
+  A_z(\vec r,t)=\frac{\dot p(t-r/c)}{rc}\,\cdot
+  \tag{12.42}
 \end{equation}
-Si noti che a grandi distanze il potenziale vettore è di ordine $1/r$, e \underline{non} $1/r^2$ \ come nel caso statico \big((7.50)\big): la ragione sta nel fatto che ora la corrente non è a divergenza nulla, per cui il suo integrale esteso al circuito non è nullo.\\
-Per calcolare $\vec B$ dobbiamo prendere la rotazione di $\vec A$: nel calcolo dobbiamo trascurare i termini $O(1/r^2)$ che provengono dalle derivate di $1/r$ nella (12.42), quindi il contributo al campo magnetico a grandi distanze proviene solo dalle derivate del numeratore nella (12.42); poiché \ $\partial r/\partial x_i=x_i/r$, si ha
+Si noti che a grandi distanze il potenziale vettore \`e di ordine $1/r$, e
+\underline{non} $1/r^2$ \ come nel caso statico \big((7.50)\big): la ragione sta
+nel fatto che ora la corrente non \`e a divergenza nulla, per cui il suo
+integrale esteso al circuito non \`e nullo.\\
+Per calcolare $\vec B$ dobbiamo prendere la rotazione di $\vec A$: nel calcolo
+dobbiamo trascurare i termini $O(1/r^2)$ che provengono dalle derivate di $1/r$
+nella (12.42), quindi il contributo al campo magnetico a grandi distanze
+proviene solo dalle derivate del numeratore nella (12.42); poich\'e
+\ $\partial r/\partial x_i=x_i/r$, si ha
 \begin{equation}
-\left\{\begin{aligned}
-B_x&=\phantom{-}\frac{\partial A_z}{\partial y}=-\frac{\ddot p(t-r/c)}{rc^2}\,\frac{y}{r}\\
-B_y&=-\frac{\partial A_z}{\partial x}=\phantom{-}\frac{\ddot p(t-r/c)}{rc^2}\,\frac{x}{r}\\
-B_z&=\phantom{-}0
-\end{aligned}\right.
-\tag{12.43}
+  \left\{\begin{aligned}
+    B_x&=\phantom{-}\frac{\partial A_z}{\partial y}
+    =-\frac{\ddot p(t-r/c)}{rc^2}\,\frac{y}{r}\\
+    B_y&=-\frac{\partial A_z}{\partial x}
+    =\phantom{-}\frac{\ddot p(t-r/c)}{rc^2}\,\frac{x}{r}\\
+    B_z&=\phantom{-}0
+  \end{aligned}\right.
+  \tag{12.43}
 \end{equation}
-che può essere scritta nella forma più compatta
+che pu\`o essere scritta nella forma pi\`u compatta
 \[
-\vec B(\vec r,t)=-\frac{\ddot p(t-r/c)}{rc^2}\,\hat r\wedge\hat\kappa
+  \vec B(\vec r,t)=-\frac{\ddot p(t-r/c)}{rc^2}\,\hat r\wedge\hat\kappa
 \]
 o anche, posto \ $\vec p\equiv p\,\hat\kappa$,
 \begin{equation}
-\vec B(\vec r,t)=\frac{1}{rc^2}\,\ddot{\vec p}(t-r/c)\wedge\hat r\,.
-\tag{12.44}
+  \vec B(\vec r,t)=\frac{1}{rc^2}\,\ddot{\vec p}(t-r/c)\wedge\hat r\,.
+  \tag{12.44}
 \end{equation}
-Il campo elettrico si calcola dall'equazione \ $\partial\vec E/\partial t=c\rot\vec B$, al solito trascurando i termini $O(1/r^2)$, ed escludendo la presenza di un campo statico:
+Il campo elettrico si calcola dall'equazione
+\ $\partial\vec E/\partial t=c\rot\vec B$, al solito trascurando i termini
+$O(1/r^2)$, ed escludendo la presenza di un campo statico:
 \begin{equation}
-\vec E(\vec r,t)=\frac{1}{rc^2}\,\big(\ddot{\vec p}(t-r/c)\wedge\hat r\big)\wedge\hat r\,.
-\tag{12.45}
+  \vec E(\vec r,t)=\frac{1}{rc^2}\,\big(\ddot{\vec p}(t-r/c)\wedge\hat r\big)
+  \wedge\hat r\,.
+  \tag{12.45}
 \end{equation}
-Ci sono molte cose da dire a proposito del risultato ottenuto, alcune delle quali hanno carattere generale:
+Ci sono molte cose da dire a proposito del risultato ottenuto, alcune delle
+quali hanno carattere generale:
 \begin{enumerate}
-\item i campi dovuti a sorgenti variabili, contenute in una regione limitata dello spazio, a grande distanza dalle sorgenti hanno caratteristiche diverse dai campi generati da sorgenti statiche (o stazionarie): questi ultimi decrescono almeno come $1/r^2$ nel caso del campo elettrico, e come $1/r^3$ nel caso di quello magnetico; lo sviluppo dei campi variabili in potenze inverse della distanza dalle sorgenti, invece, comincia (o meglio: può cominciare) con termini di ordine $1/r$, sia nel caso del campo elettrico che di quello magnetico. I termini di ordine $1/r$ costituiscono il \textbf{campo di radiazione};
-\item tanto $\vec E$ quanto $\vec B$ dati dalle (12.44) e (12.45) sono (dove non nulli) ortogonali fra di loro, hanno lo stesso modulo e sono tangenti alle sfere centrate sull'antenna, cioè sono ortogonali al vettore $\vec r$ dall'antenna al punto di osservazione (o ``punto potenziato''); $\vec E$ è diretto lungo i meridiani mentre il campo magnetico è diretto lungo i paralleli: come per le onde piane, $\vec E,\vec B$ e la direzione di osservazione $\hat r$ formano una terna destrorsa (figura 12.3); lungo ogni direzione di osservazione l'onda è polarizzata linearmente;
-\fig{fig12_3}{12.3}
-\item il vettore di Poynting, cioè la corrente di energia, è parallelo ad $\vec r$ e quindi le linee di forza di $\vec S$ sono rette: ciò si esprime dicendo che la propagazione delle onde elettromagnetiche (nel vuoto) è \textbf{rettilinea}.
+  \item i campi dovuti a sorgenti variabili, contenute in una regione limitata
+    dello spazio, a grande distanza dalle sorgenti hanno caratteristiche diverse
+    dai campi generati da sorgenti statiche (o stazionarie): questi ultimi
+    decrescono almeno come $1/r^2$ nel caso del campo elettrico, e come $1/r^3$
+    nel caso di quello magnetico; lo sviluppo dei campi variabili in potenze
+    inverse della distanza dalle sorgenti, invece, comincia (o meglio: pu\`o
+    cominciare) con termini di ordine $1/r$, sia nel caso del campo elettrico
+    che di quello magnetico. I termini di ordine $1/r$ costituiscono il
+    \textbf{campo di radiazione};
+  \item tanto $\vec E$ quanto $\vec B$ dati dalle (12.44) e (12.45) sono (dove
+    non nulli) ortogonali fra di loro, hanno lo stesso modulo e sono tangenti
+    alle sfere centrate sull'antenna, cio\`e sono ortogonali al vettore $\vec r$
+    dall'antenna al punto di osservazione (o ``punto potenziato''); $\vec E$ \`e
+    diretto lungo i meridiani mentre il campo magnetico \`e diretto lungo i
+    paralleli: come per le onde piane, $\vec E,\vec B$ e la direzione di
+    osservazione $\hat r$ formano una terna destrorsa (figura 12.3); lungo ogni
+    direzione di osservazione l'onda \`e polarizzata linearmente;
+    \fig{fig12_3}{12.3}
+  \item il vettore di Poynting, cio\`e la corrente di energia, \`e parallelo ad
+    $\vec r$ e quindi le linee di forza di $\vec S$ sono rette: ci\`o si esprime
+    dicendo che la propagazione delle onde elettromagnetiche (nel vuoto) \`e
+    \textbf{rettilinea}.
 \end{enumerate}
-Supponiamo ora che la corrente nell'antenna sia sinusoidale; in questo caso si ha \ $p(t)=p_0\sen\omega t$, e quindi
+Supponiamo ora che la corrente nell'antenna sia sinusoidale; in questo caso si
+ha \ $p(t)=p_0\sen\omega t$, e quindi
 \begin{equation}
-\left\{\begin{aligned}
-&\vec E(\vec r,t)=\frac{\omega^2}{rc^2}\sen(kr-\omega t)\,(\vec p_0\wedge\hat r)\wedge\hat r\\
-&\vec B(\vec r,t)=\frac{\omega^2}{rc^2}\sen(kr-\omega t)\,\vec p_0\wedge\hat r
-\end{aligned}\right.
-\tag{12.46}
+  \left\{\begin{aligned}
+    &\vec E(\vec r,t)=\frac{\omega^2}{rc^2}
+    \sen(kr-\omega t)\,(\vec p_0\wedge\hat r)\wedge\hat r\\
+    &\vec B(\vec r,t)=\frac{\omega^2}{rc^2}
+    \sen(kr-\omega t)\,\vec p_0\wedge\hat r
+  \end{aligned}\right.
+  \tag{12.46}
 \end{equation}
-quindi l'onda emessa dall'antenna è monocromatica (nell'approssimazione di dipolo).\\
-Siccome ($\theta$ è l'angolo fra $\vec r$ e $\vec p_0$)
+quindi l'onda emessa dall'antenna \`e monocromatica (nell'approssimazione di
+dipolo).\\
+Siccome ($\theta$ \`e l'angolo fra $\vec r$ e $\vec p_0$)
 \begin{equation}
-|\vec p_0\wedge\hat r|=|(\vec p_0\wedge\hat r)\wedge\hat r|=p_0\sen\theta
-\tag{12.47}
+  |\vec p_0\wedge\hat r|=|(\vec p_0\wedge\hat r)\wedge\hat r|=p_0\sen\theta
+  \tag{12.47}
 \end{equation}
 si ha
 \begin{equation}
-\begin{aligned}
-&\vec S\equiv\frac{c}{4\pi}\vec E\wedge\vec B=\frac{c}{4\pi}E\,B\,\hat r=\frac{p_0^2\omega^4\sen^2\theta}{4\pi r^2c^3}\,\sen^2(kr-\omega t)\,\hat r,\\
-&I(\vec r\,)=\overline{S(\vec r,t)}=\frac{p_0^2\omega^4\sen^2\theta}{8\pi r^2c^3}
-\end{aligned}
-\tag{12.48}
+  \begin{aligned}
+    &\vec S\equiv\frac{c}{4\pi}\vec E\wedge\vec B
+    =\frac{c}{4\pi}E\,B\,\hat r=\frac{p_0^2\omega^4\sen^2\theta}{4\pi r^2c^3}\,
+    \sen^2(kr-\omega t)\,\hat r,\\
+    &I(\vec r\,)=\overline{S(\vec r,t)}
+    =\frac{p_0^2\omega^4\sen^2\theta}{8\pi r^2c^3}
+  \end{aligned}
+  \tag{12.48}
 \end{equation}
-quindi l'emissione di energia da parte dell'antenna non è isotropa; è massima in direzione ortogonale all'antenna ed è nulla nella direzione parallela: un ricevitore allineato con l'antenna non riceve alcun segnale; inoltre, in una data posizione, la ricezione del segnale è migliore se l'antenna del ricevitore è parallela alla direzione di polarizzazione dell'onda.\\
-Nella figura 12.4 è riportata una rappresentazione grafica dell'intensità in funzione dell'angolo $\theta$ fra la direzione di osservazione e quella dell'antenna: $I(r,\theta)$ è proporzionale alla lunghezza del segmento fra l'origine e il punto d'incontro con la curva, sulla semiretta che forma un angolo $\theta$ con l'antenna.
+quindi l'emissione di energia da parte dell'antenna non \`e isotropa; \`e
+massima in direzione ortogonale all'antenna ed \`e nulla nella direzione
+parallela: un ricevitore allineato con l'antenna non riceve alcun segnale;
+inoltre, in una data posizione, la ricezione del segnale \`e migliore se
+l'antenna del ricevitore \`e parallela alla direzione di polarizzazione
+dell'onda.\\
+Nella figura 12.4 \`e riportata una rappresentazione grafica dell'intensit\`a in
+funzione dell'angolo $\theta$ fra la direzione di osservazione e quella
+dell'antenna: $I(r,\theta)$ \`e proporzionale alla lunghezza del segmento fra
+l'origine e il punto d'incontro con la curva, sulla semiretta che forma un
+angolo $\theta$ con l'antenna.
 \fig{fig12_4}{12.4}
-L'energia media (su un periodo) che nell'unità di tempo attraversa una sfera di raggio $r$ per la (12.48) è
+L'energia media (su un periodo) che nell'unit\`a di tempo attraversa una sfera
+di raggio $r$ per la (12.48) \`e
 \begin{equation}
-W=\frac{p_0^2\omega^4}{8\pi r^2c^3}2\pi r^2\int_{-1}^1\sen^2\theta\,d\cos\theta=\frac{p_0^2\omega^4}{3c^3}
-\tag{12.49}
+  W=\frac{p_0^2\omega^4}{8\pi r^2c^3}2\pi r^2
+  \int_{-1}^1\sen^2\theta\,d\cos\theta=\frac{p_0^2\omega^4}{3c^3}
+  \tag{12.49}
 \end{equation}
-ed è indipendente dal raggio (per $r\gg l$); ciò è dovuto al fatto che, essendo il campo di radiazione di ordine $1/r$, la corrente di energia è di ordine $1/r^2$, mentre la superficie della sfera è proporzionale a $r^2$: è quindi il campo di radiazione che è responsabile del trasporto di energia in regioni comunque lontane dalle sorgenti. Quindi la (12.49) è anche la potenza media che il generatore deve erogare all'antenna.
+ed \`e indipendente dal raggio (per $r\gg l$); ci\`o \`e dovuto al fatto che,
+essendo il campo di radiazione di ordine $1/r$, la corrente di energia \`e di
+ordine $1/r^2$, mentre la superficie della sfera \`e proporzionale a $r^2$: \`e
+quindi il campo di radiazione che \`e responsabile del trasporto di energia in
+regioni comunque lontane dalle sorgenti. Quindi la (12.49) \`e anche la potenza
+media che il generatore deve erogare all'antenna.
 
-Le (12.44) e (12.45) valgono in tutti i casi in cui si ha un sistema di cariche il cui momento di dipolo $\vec p$ varia nel tempo, con derivata seconda diversa da zero: per esempio una carica oscillante, o più in generale una carica accelerata. L'irraggiamento quindi richiede che le cariche abbiano un'accelerazione: in effetti sappiamo che una carica in moto uniforme genera un campo che decresce come $1/r^2$, e quindi non è un campo di radiazione.
+Le (12.44) e (12.45) valgono in tutti i casi in cui si ha un sistema di cariche
+il cui momento di dipolo $\vec p$ varia nel tempo, con derivata seconda diversa
+da zero: per esempio una carica oscillante, o pi\`u in generale una carica
+accelerata. L'irraggiamento quindi richiede che le cariche abbiano
+un'accelerazione: in effetti sappiamo che una carica in moto uniforme genera un
+campo che decresce come $1/r^2$, e quindi non \`e un campo di radiazione.
 
 \paragraph{Esempio}
 \begin{quote}
-Calcoliamo la potenza media irraggiata da un'antenna alimentata da un generatore che eroga una corrente sinusoidale di pulsazione \ $\omega=10^8\,\mathrm{s}^{-1}$ \ tale che
-\begin{equation}
-\int_{-l}^lI_0(z)\,dz=10\,\mathrm{A\,m}
-\tag{12.50}
-\end{equation}
-(per esempio un'antenna di 1\,m alimentata con una corrente media di 10\,A).\\
-Siccome
-\begin{equation}
-p(t)=p_0\sen\omega t\ \Rightarrow\ \dot p(t)=p_0\omega\cos\omega t\ \Rightarrow\ p_0\omega=\int_{-l}^lI_0(z)\,dz
-\tag{12.51}
-\end{equation}
-e dalla (12.49) si ottiene
-\begin{equation}
-W=\frac{(p_0\omega)^2\omega^2}{3c^3}=\frac{(3\times10^{10})^2\cdot10^4\cdot10^{16}}{3\cdot(3\times10^{10})^3}\simeq10^9\,\mathrm{erg}=100\,\mathrm{watt}.
-\tag{12.52}
-\end{equation}
-La lunghezza d'onda della radiazione emessa è
-\begin{equation}
-\lambda=\frac{2\pi c}{\omega}=20\,\mathrm{m}
-\tag{12.53}
-\end{equation}
-quindi se la lunghezza dell'antenna è dell'ordine del metro, l'approssimazione di dipolo può essere considerata accettabile.
+  Calcoliamo la potenza media irraggiata da un'antenna alimentata da un
+  generatore che eroga una corrente sinusoidale di pulsazione
+  \ $\omega=10^8\,\mathrm{s}^{-1}$ \ tale che
+  \begin{equation}
+    \int_{-l}^lI_0(z)\,dz=10\,\mathrm{A\,m}
+    \tag{12.50}
+  \end{equation}
+  (per esempio un'antenna di 1\,m alimentata con una corrente media di 10\,A).\\
+  Siccome
+  \begin{equation}
+    p(t)=p_0\sen\omega t\ \Rightarrow\ \dot p(t)=p_0\omega\cos\omega t
+    \ \Rightarrow\ p_0\omega=\int_{-l}^lI_0(z)\,dz
+    \tag{12.51}
+  \end{equation}
+  e dalla (12.49) si ottiene
+  \begin{equation}
+    W=\frac{(p_0\omega)^2\omega^2}{3c^3}
+    =\frac{(3\times10^{10})^2\cdot10^4\cdot10^{16}}{3\cdot(3\times10^{10})^3}
+    \simeq10^9\,\mathrm{erg}=100\,\mathrm{watt}.
+    \tag{12.52}
+  \end{equation}
+  La lunghezza d'onda della radiazione emessa \`e
+  \begin{equation}
+    \lambda=\frac{2\pi c}{\omega}=20\,\mathrm{m}
+    \tag{12.53}
+  \end{equation}
+  quindi se la lunghezza dell'antenna \`e dell'ordine del metro,
+  l'approssimazione di dipolo pu\`o essere considerata accettabile.
 \end{quote}
 
-Infine, vediamo esplicitamente in quali condizioni la soluzione data dalle (12.46) può essere approssimata con un'onda piana: $r$ al denominatore delle (12.46) può essere considerato costante ($r=r_0$) se all'interno della regione di osservazione esso varia poco rispetto alla distanza dalle sorgenti: \ $|r-r_0|\ll r_0$; prendiamo l'asse $x$ diretto dalle sorgenti alla regione di osservazione, e sia $d$ la dimensione trasversa all'asse $x$ di detta regione. All'interno della regione di osservazione ($x\approx r_0$), e se $d\ll r_0$, si ha
+Infine, vediamo esplicitamente in quali condizioni la soluzione data dalle
+(12.46) pu\`o essere approssimata con un'onda piana: $r$ al denominatore delle
+(12.46) pu\`o essere considerato costante ($r=r_0$) se all'interno della regione
+di osservazione esso varia poco rispetto alla distanza dalle sorgenti:
+\ $|r-r_0|\ll r_0$; prendiamo l'asse $x$ diretto dalle sorgenti alla regione di
+osservazione, e sia $d$ la dimensione trasversa all'asse $x$ di detta regione.
+All'interno della regione di osservazione ($x\approx r_0$), e se $d\ll r_0$, si
+ha
 \begin{equation}
-r\equiv\sqrt{x^2+y^2+z^2}\approx x\Big(1+\frac{y^2+z^2}{2x^2}\Big)
-\tag{12.54}
+  r\equiv\sqrt{x^2+y^2+z^2}\approx x\Big(1+\frac{y^2+z^2}{2x^2}\Big)
+  \tag{12.54}
 \end{equation}
-per cui \ $kr\approx kx\big(1+(y^2+z^2)/2x^2\big)$ \ e quindi, essendo \ $d^2\ll r_0^2$, possiamo porre nella (12.46)
+per cui \ $kr\approx kx\big(1+(y^2+z^2)/2x^2\big)$ \ e quindi, essendo
+\ $d^2\ll r_0^2$, possiamo porre nella (12.46)
 \begin{equation}
-\frac{\sen(kr-\omega t)}{r}\approx\frac{\sen(kx-\omega t)}{r_0}\,\cdot
-\tag{12.55}
+  \frac{\sen(kr-\omega t)}{r}\approx\frac{\sen(kx-\omega t)}{r_0}\,\cdot
+  \tag{12.55}
 \end{equation}
-In definitiva, come anticipato, se le dimensioni sia longitudinali ($\Delta x$) che trasverse ($d$) della regione di osservazione sono molto minori della distanza dalle sorgenti, la curvatura dei fronti d'onda e l'attenuazione con la distanza possono essere trascurate e l'onda descritta dalla (12.46) può essere approssimata con un'onda piana.
+In definitiva, come anticipato, se le dimensioni sia longitudinali ($\Delta x$)
+che trasverse ($d$) della regione di osservazione sono molto minori della
+distanza dalle sorgenti, la curvatura dei fronti d'onda e l'attenuazione con la
+distanza possono essere trascurate e l'onda descritta dalla (12.46) pu\`o essere
+approssimata con un'onda piana.

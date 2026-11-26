@@ -2,457 +2,922 @@
 
 \subsection{Introduzione}
 
-L'obiettivo di questo capitolo è la formulazione delle equazioni di Maxwell, che sono le equazioni fondamentali dell'elettromagnetismo in quanto permettono, in linea di principio, di determinare il campo elettro--magnetico, note le sorgenti.\\
-La strada che ci proponiamo di seguire è diversa da quella che storicamente ha portato alla formulazione dell'elettromagnetismo, basata sui fondamentali esperimenti di Oersted, di Ampère e di Faraday. Noi seguiremo questo procedimento: in primo luogo, sostanzialmente usando solo i principi dell'elettrostatica (e la relatività), dimostreremo l'esistenza di forze dipendenti dalla velocità della particella, convenientemente descritte dall'introduzione del campo magnetico $\vec B$; quindi determineremo le leggi di trasformazione del campo elettrico e di quello magnetico per cambiamenti di riferimento. Grazie al principio di relatività le equazioni dell'elettromagnetismo devono essere le stesse in tutti i riferimenti inerziali (l'etere non esiste!), cioè devono essere invarianti per le trasformazioni dei campi: vedremo come la richiesta di covarianza permetta di ricavare le equazioni cercate. Nei capitoli successivi, poi, esamineremo le conseguenze più importanti delle equazioni di Maxwell.
+L'obiettivo di questo capitolo \`e la formulazione delle equazioni di Maxwell,
+che sono le equazioni fondamentali dell'elettromagnetismo in quanto permettono,
+in linea di principio, di determinare il campo elettro--magnetico, note le
+sorgenti.\\
+La strada che ci proponiamo di seguire \`e diversa da quella che storicamente ha
+portato alla formulazione dell'elettromagnetismo, basata sui fondamentali
+esperimenti di Oersted, di Amp\`ere e di Faraday. Noi seguiremo questo
+procedimento: in primo luogo, sostanzialmente usando solo i principi
+dell'elettrostatica (e la relativit\`a), dimostreremo l'esistenza di forze
+dipendenti dalla velocit\`a della particella, convenientemente descritte
+dall'introduzione del campo magnetico $\vec B$; quindi determineremo le leggi di
+trasformazione del campo elettrico e di quello magnetico per cambiamenti di
+riferimento. Grazie al principio di relativit\`a le equazioni
+dell'elettromagnetismo devono essere le stesse in tutti i riferimenti inerziali
+(l'etere non esiste!), cio\`e devono essere invarianti per le trasformazioni dei
+campi: vedremo come la richiesta di covarianza permetta di ricavare le equazioni
+cercate. Nei capitoli successivi, poi, esamineremo le conseguenze pi\`u
+importanti delle equazioni di Maxwell.
 
-Per portare avanti questo programma dobbiamo essere disposti a fare un certo numero di ipotesi, o postulati. Ecco i postulati di cui avremo bisogno e che assumiamo validi in generale, qualunque sia il moto delle sorgenti:
+Per portare avanti questo programma dobbiamo essere disposti a fare un certo
+numero di ipotesi, o postulati. Ecco i postulati di cui avremo bisogno e che
+assumiamo validi in generale, qualunque sia il moto delle sorgenti:
 \begin{itemize}
-\item[$\mathbf p_1$] Principio di sovrapposizione: il campo generato da più sorgenti è uguale alla somma dei campi generati da ciascuna sorgente.
-\item[$\mathbf p_2$] La legge di trasformazione del campo elettrico per isometrie delle sorgenti e per coniugazione di carica; nel caso del campo elettrico statico queste sono espresse dalla (1.39) e dalla (1.44). In particolare, le proprietà di simmetria del campo conseguenti alle simmetrie delle sorgenti.
-\item[$\mathbf p_3$] Le leggi di trasformazione dei campi per cambiamenti di riferimento dipendono solo dai campi e non da quali sorgenti li hanno generati. Questo postulato dà al concetto di campo un significato autonomo, indipendente dalle sorgenti: la conoscenza del campo in una data regione dello spazio--tempo è sufficiente per determinarne le proprietà in detta regione.
-\item[$\mathbf p_4$] Il ``teorema di Gauss'' per cariche in moto: il flusso del campo elettrico attraverso una superficie chiusa è uguale a $4\pi$ volte la carica totale contenuta al suo interno, \underline{indipendentemente dal moto delle cariche}. In forma locale è espresso dall'equazione
-\begin{equation}
-\dive\vec E(x,y,z,t)=4\pi\rho(x,y,z,t).
-\tag{6.1}
-\end{equation}
+  \item[$\mathbf p_1$] Principio di sovrapposizione: il campo generato da pi\`u
+    sorgenti \`e uguale alla somma dei campi generati da ciascuna sorgente.
+  \item[$\mathbf p_2$] La legge di trasformazione del campo elettrico per
+    isometrie delle sorgenti e per coniugazione di carica; nel caso del campo
+    elettrico statico queste sono espresse dalla (1.39) e dalla (1.44). In
+    particolare, le propriet\`a di simmetria del campo conseguenti alle
+    simmetrie delle sorgenti.
+  \item[$\mathbf p_3$] Le leggi di trasformazione dei campi per cambiamenti di
+    riferimento dipendono solo dai campi e non da quali sorgenti li hanno
+    generati. Questo postulato d\`a al concetto di campo un significato
+    autonomo, indipendente dalle sorgenti: la conoscenza del campo in una data
+    regione dello spazio--tempo \`e sufficiente per determinarne le propriet\`a
+    in detta regione.
+  \item[$\mathbf p_4$] Il ``teorema di Gauss'' per cariche in moto: il flusso
+    del campo elettrico attraverso una superficie chiusa \`e uguale a $4\pi$
+    volte la carica totale contenuta al suo interno,
+    \underline{indipendentemente dal moto delle cariche}. In forma locale \`e
+    espresso dall'equazione
+    \begin{equation}
+      \dive\vec E(x,y,z,t)=4\pi\rho(x,y,z,t).
+      \tag{6.1}
+    \end{equation}
 \end{itemize}
-Più avanti avremo bisogno di un postulato analogo riguardante il campo magnetico: lo enunceremo a tempo debito.\\
-Il quarto postulato è il meno ovvio e richiede qualche parola di commento, in quanto può solo essere suggerito (non dimostrato!) dagli esperimenti; vediamo brevemente quali fatti lo suggeriscono: atomi e molecole sono sistemi neutri costituiti da cariche in moto (non solo gli elettroni, ma in maniera ancor più rilevante i protoni dentro i nuclei), e se la (6.1) non fosse valida potrebbe essere non nullo il flusso del campo elettrico uscente da una superficie contenente l'atomo (o la molecola). In effetti, ciò che si verifica sperimentalmente è che all'esterno dell'atomo il campo elettrico è nullo, e quindi anche il flusso: se così non fosse, un fascio di atomi ben collimato inviato fra le armature di un condensatore carico verrebbe deflesso, o quanto meno sparpagliato, in quanto il campo elettrico di ogni atomo eserciterebbe una forza sulle cariche delle armature, e quindi la quantità di moto dell'atomo dovrebbe variare. Esperimenti molto precisi effettuati con atomi di elio o di cesio non hanno evidenziato alcun apprezzabile effetto. La logica è un po' traballante, in quanto la conclusione (carica nulla $\to$ flusso nullo) si appoggia sull'ipotesi che gli atomi siano rigorosamente neutri, cioè che la carica dell'elettrone sia uguale (a parte il segno) a quella del protone: in effetti questi stessi esperimenti vengono interpretati come una prova dell'esatta neutralità degli atomi, però in questo caso viene assunta la validità della (6.1). La cosa più sensata che possiamo fare a questo punto, e non solo in relazione alla ``non giustificazione'' della (6.1), ma anche in relazione al fatto che stiamo accingendoci a ``costruire'' l'elettromagnetismo, è quella di riportare quanto già detto nella prima lezione del corso di fisica 1:\\
-``\dots\ il rapporto fra teoria ed esperienza è molto complesso: spesso è la teoria che ``nasce'' dai fatti osservati, talvolta invece essa precede gli esperimenti, anzi li suggerisce (tra i tanti possibili esempi: la Relatività Generale e la deflessione gravitazionale della luce, la Meccanica Quantistica relativistica e la scoperta del positrone). In questo complesso rapporto fra teoria ed esperienza, non sempre, anzi raramente, i fatti sperimentali ammettono una interpretazione univoca, e quindi portano univocamente alla formulazione di una teoria: nella maggior parte dei casi è troppo semplicistico dire ``il tale esperimento prova che \dots'': dietro ad una affermazione di questo tipo ci sono tutte le ragioni, vuoi teoriche, vuoi sperimentali, che hanno portato ad escludere tutte le altre possibili interpretazioni: la ``prova'' di una teoria risiede di solito in un complesso di esperimenti e di verifiche, nella sua coerenza interna e, aspetto non trascurabile, nella sua semplicità ed eleganza.''
+Pi\`u avanti avremo bisogno di un postulato analogo riguardante il campo
+magnetico: lo enunceremo a tempo debito.\\
+Il quarto postulato \`e il meno ovvio e richiede qualche parola di commento, in
+quanto pu\`o solo essere suggerito (non dimostrato!) dagli esperimenti; vediamo
+brevemente quali fatti lo suggeriscono: atomi e molecole sono sistemi neutri
+costituiti da cariche in moto (non solo gli elettroni, ma in maniera ancor pi\`u
+rilevante i protoni dentro i nuclei), e se la (6.1) non fosse valida potrebbe
+essere non nullo il flusso del campo elettrico uscente da una superficie
+contenente l'atomo (o la molecola). In effetti, ci\`o che si verifica
+sperimentalmente \`e che all'esterno dell'atomo il campo elettrico \`e nullo, e
+quindi anche il flusso: se cos\`i non fosse, un fascio di atomi ben collimato
+inviato fra le armature di un condensatore carico verrebbe deflesso, o quanto
+meno sparpagliato, in quanto il campo elettrico di ogni atomo eserciterebbe una
+forza sulle cariche delle armature, e quindi la quantit\`a di moto dell'atomo
+dovrebbe variare. Esperimenti molto precisi effettuati con atomi di elio o di
+cesio non hanno evidenziato alcun apprezzabile effetto. La logica \`e un po'
+traballante, in quanto la conclusione (carica nulla $\to$ flusso nullo) si
+appoggia sull'ipotesi che gli atomi siano rigorosamente neutri, cio\`e che la
+carica dell'elettrone sia uguale (a parte il segno) a quella del protone: in
+effetti questi stessi esperimenti vengono interpretati come una prova
+dell'esatta neutralit\`a degli atomi, per\`o in questo caso viene assunta la
+validit\`a della (6.1). La cosa pi\`u sensata che possiamo fare a questo punto,
+e non solo in relazione alla ``non giustificazione'' della (6.1), ma anche in
+relazione al fatto che stiamo accingendoci a ``costruire'' l'elettromagnetismo,
+\`e quella di riportare quanto gi\`a detto nella prima lezione del corso di
+fisica 1:\\
+``\dots\ il rapporto fra teoria ed esperienza \`e molto complesso: spesso \`e la
+teoria che ``nasce'' dai fatti osservati, talvolta invece essa precede gli
+esperimenti, anzi li suggerisce (tra i tanti possibili esempi: la Relativit\`a
+Generale e la deflessione gravitazionale della luce, la Meccanica Quantistica
+relativistica e la scoperta del positrone). In questo complesso rapporto fra
+teoria ed esperienza, non sempre, anzi raramente, i fatti sperimentali ammettono
+una interpretazione univoca, e quindi portano univocamente alla formulazione di
+una teoria: nella maggior parte dei casi \`e troppo semplicistico dire ``il tale
+esperimento prova che \dots'': dietro ad una affermazione di questo tipo ci sono
+tutte le ragioni, vuoi teoriche, vuoi sperimentali, che hanno portato ad
+escludere tutte le altre possibili interpretazioni: la ``prova'' di una teoria
+risiede di solito in un complesso di esperimenti e di verifiche, nella sua
+coerenza interna e, aspetto non trascurabile, nella sua semplicit\`a ed
+eleganza.''
 
 \subsection{Sorgenti fisse: forza su una carica in moto}
 
-Nell'ambito dell'elettrostatica abbiamo definito il campo elettrico come la forza che si esercita su una carica unitaria ferma (con le precisazioni discusse nel capitolo 1.2). D'ora in poi questa sarà assunta come definizione del campo elettrico in generale, indipendentemente dal fatto che le sorgenti del campo siano in quiete o no. Questa definizione è in accordo con l'espressione (4.4) della forza di Lorentz (che però non abbiamo ancora dimostrato, e quindi non siamo autorizzati a far riferimento ad essa, se non come regola mnemonica): infatti, se le sorgenti sono in moto sarà presente anche un campo magnetico, ma su una carica in quiete la forza è solo quella dovuta al campo elettrico.
+Nell'ambito dell'elettrostatica abbiamo definito il campo elettrico come la
+forza che si esercita su una carica unitaria ferma (con le precisazioni discusse
+nel capitolo 1.2). D'ora in poi questa sar\`a assunta come definizione del campo
+elettrico in generale, indipendentemente dal fatto che le sorgenti del campo
+siano in quiete o no. Questa definizione \`e in accordo con l'espressione (4.4)
+della forza di Lorentz (che per\`o non abbiamo ancora dimostrato, e quindi non
+siamo autorizzati a far riferimento ad essa, se non come regola mnemonica):
+infatti, se le sorgenti sono in moto sar\`a presente anche un campo magnetico,
+ma su una carica in quiete la forza \`e solo quella dovuta al campo elettrico.
 
-Il primo passo per realizzare il programma enunciato all'inizio di questo capitolo è la determinazione della forza che un campo elettrostatico generato da sorgenti \underline{in quiete} esercita su una carica \underline{in moto}.\\
-Per fare ciò, utilizzando la definizione di campo elettrico, prima determineremo la forza nel riferimento in cui la carica è (istantaneamente) in quiete (riferimento tangente) e, di conseguenza, le sorgenti sono in moto: a tal fine dovremo preliminarmente stabilire come si trasforma il campo elettrico quando si passa dal riferimento di quiete delle sorgenti ad un altro riferimento; a questo punto, siccome sappiamo come si trasformano le forze per cambiamenti di riferimento, siamo in grado di determinare la forza nel riferimento in cui le sorgenti sono in quiete (e la carica è in moto), ed il problema è risolto.
+Il primo passo per realizzare il programma enunciato all'inizio di questo
+capitolo \`e la determinazione della forza che un campo elettrostatico generato
+da sorgenti \underline{in quiete} esercita su una carica \underline{in moto}.\\
+Per fare ci\`o, utilizzando la definizione di campo elettrico, prima
+determineremo la forza nel riferimento in cui la carica \`e (istantaneamente) in
+quiete (riferimento tangente) e, di conseguenza, le sorgenti sono in moto: a tal
+fine dovremo preliminarmente stabilire come si trasforma il campo elettrico
+quando si passa dal riferimento di quiete delle sorgenti ad un altro
+riferimento; a questo punto, siccome sappiamo come si trasformano le forze per
+cambiamenti di riferimento, siamo in grado di determinare la forza nel
+riferimento in cui le sorgenti sono in quiete (e la carica \`e in moto), ed il
+problema \`e risolto.
 
-La legge di trasformazione del campo elettrico dal riferimento in cui le sorgenti sono in quiete ad un altro riferimento non è la legge generale di trasformazione del campo elettrico, che determineremo più avanti, in quanto stiamo assumendo che esista un riferimento in cui tutte le sorgenti sono in quiete (manca il campo magnetico).\\
-La strategia che seguiamo in questo caso e che seguiremo anche nel caso più generale è quella di considerare un sistema di sorgenti per il quale il campo nel riferimento in cui queste sono in quiete è noto, e i postulati $\mathbf p_1\ \dots\ \mathbf p_4$ ci consentono di determinare il campo in un riferimento in cui esse sono in moto: siccome per ipotesi ($\mathbf p_3$) le proprietà di trasformazione dei campi sono indipendenti dalle sorgenti, le leggi di trasformazione determinate in questi casi particolari hanno validità generale.\\
-Poiché ci aspettiamo che la componente del campo parallela alla velocità delle sorgenti si trasformi in modo diverso dalle componenti trasverse (come già succede per le forze), esamineremo separatamente i due casi.
+La legge di trasformazione del campo elettrico dal riferimento in cui le
+sorgenti sono in quiete ad un altro riferimento non \`e la legge generale di
+trasformazione del campo elettrico, che determineremo pi\`u avanti, in quanto
+stiamo assumendo che esista un riferimento in cui tutte le sorgenti sono in
+quiete (manca il campo magnetico).\\
+La strategia che seguiamo in questo caso e che seguiremo anche nel caso pi\`u
+generale \`e quella di considerare un sistema di sorgenti per il quale il campo
+nel riferimento in cui queste sono in quiete \`e noto, e i postulati
+$\mathbf p_1\ \dots\ \mathbf p_4$ ci consentono di determinare il campo in un
+riferimento in cui esse sono in moto: siccome per ipotesi ($\mathbf p_3$) le
+propriet\`a di trasformazione dei campi sono indipendenti dalle sorgenti, le
+leggi di trasformazione determinate in questi casi particolari hanno validit\`a
+generale.\\
+Poich\'e ci aspettiamo che la componente del campo parallela alla velocit\`a
+delle sorgenti si trasformi in modo diverso dalle componenti trasverse (come
+gi\`a succede per le forze), esamineremo separatamente i due casi.
 
-Supponiamo che in un riferimento $K^0$ sia data una distribuzione superficiale piana $\sigma_0$ di carica, ferma. Il campo elettrico $\vec E^0$ sappiamo che è ortogonale al piano e vale $\pm2\pi\sigma_0$ \big(v.\ (1.54)\big). Sia ora $K$ un riferimento rispetto al quale $K^0$ ha velocità uniforme $\vec v$ ortogonale al piano della distribuzione: in $K$ le sorgenti sono in moto (figura 6.1).
+Supponiamo che in un riferimento $K^0$ sia data una distribuzione superficiale
+piana $\sigma_0$ di carica, ferma. Il campo elettrico $\vec E^0$ sappiamo che
+\`e ortogonale al piano e vale $\pm2\pi\sigma_0$ \big(v.\ (1.54)\big). Sia ora
+$K$ un riferimento rispetto al quale $K^0$ ha velocit\`a uniforme $\vec v$
+ortogonale al piano della distribuzione: in $K$ le sorgenti sono in moto (figura
+6.1).
 \fig{fig6_1}{6.1}
-Vediamo quali informazioni si ottengono sul campo elettrico in $K$ utilizzando le proprietà di simmetria delle sorgenti e il postulato $\mathbf p_2$. Le sorgenti sono caratterizzate sia dalla densità superficiale $\sigma$ (in generale $\sigma\ne\sigma_0$) che dalla loro velocità $\vec v$, quindi il gruppo di invarianza delle sorgenti, che deve lasciare invariate entrambe, contiene le traslazioni parallele al piano e le rotazioni attorno agli assi paralleli a $\vec v$. L'invarianza per le rotazioni attorno a detti assi ci garantisce che il campo è (anche in $K$) ortogonale al piano della distribuzione e, come nel caso statico, il ``teorema di Gauss'' $\mathbf p_4$ permette di concludere che $\vec E$ è costante nei due semispazi separati dalla distribuzione, ma non che in essi il campo è lo stesso (in modulo), perché viene meno sia l'invarianza per riflessioni rispetto al piano, che quella per rotazioni di $\pi$ attorno alle rette del piano ($\vec v\mapsto-\vec v$): di conseguenza non siamo in grado, tramite il teorema di Gauss, di calcolare il campo dalle due parti della distribuzione.\\
-Aggiriamo il problema supponendo che in $K^0$ sia presente una seconda distribuzione piana $-\sigma_0$ parallela alla prima (condensatore). In $K^0$ il campo totale è non nullo solo all'interno, è ortogonale alle distribuzioni e vale $E^0=4\pi\sigma_0$. In $K$ (figura 6.2) le due distribuzioni hanno densità superficiali opposte $\sigma$ e $-\sigma$ (la carica è invariante per trasformazioni di Lorentz, ed è nulla in $K^0$) per cui, sempre per $\mathbf p_2$ (coniugazione di carica), questa seconda distribuzione produce un campo opposto a quello prodotto dalla prima, e il campo totale è la somma dei due campi ($\mathbf p_1$): anche in $K$, indipendentemente dai valori che assume dalle due parti di ogni singola distribuzione, il campo elettrico è nullo fuori dal condensatore, mentre all'interno è ortogonale alle distribuzioni e, per il ``teorema di Gauss'' (come nel caso statico), vale $4\pi\sigma$. Quanto vale $\sigma$? Sia $A$ l'area (poi è sottinteso che prenderemo $A\to\infty$) in $K^0$ di ciascuna distribuzione; la carica totale su una di esse è $Q=\sigma_0A$ ed è invariante, cioè è la stessa in $K$; anche l'area $A$ della distribuzione è la stessa in $K$ e in $K^0$, perché solo le dimensioni parallele alla velocità relativa $\vec v$ cambiano per trasformazioni di Lorentz (contrazione delle lunghezze), quindi $\sigma=\sigma_0$ e il campo, che ha solo la componente parallela a $\vec v$, è lo stesso nei due riferimenti:
+Vediamo quali informazioni si ottengono sul campo elettrico in $K$ utilizzando
+le propriet\`a di simmetria delle sorgenti e il postulato $\mathbf p_2$. Le
+sorgenti sono caratterizzate sia dalla densit\`a superficiale $\sigma$ (in
+generale $\sigma\ne\sigma_0$) che dalla loro velocit\`a $\vec v$, quindi il
+gruppo di invarianza delle sorgenti, che deve lasciare invariate entrambe,
+contiene le traslazioni parallele al piano e le rotazioni attorno agli assi
+paralleli a $\vec v$. L'invarianza per le rotazioni attorno a detti assi ci
+garantisce che il campo \`e (anche in $K$) ortogonale al piano della
+distribuzione e, come nel caso statico, il ``teorema di Gauss'' $\mathbf p_4$
+permette di concludere che $\vec E$ \`e costante nei due semispazi separati
+dalla distribuzione, ma non che in essi il campo \`e lo stesso (in modulo),
+perch\'e viene meno sia l'invarianza per riflessioni rispetto al piano, che
+quella per rotazioni di $\pi$ attorno alle rette del piano
+($\vec v\mapsto-\vec v$): di conseguenza non siamo in grado, tramite il teorema
+di Gauss, di calcolare il campo dalle due parti della distribuzione.\\
+Aggiriamo il problema supponendo che in $K^0$ sia presente una seconda
+distribuzione piana $-\sigma_0$ parallela alla prima (condensatore). In $K^0$ il
+campo totale \`e non nullo solo all'interno, \`e ortogonale alle distribuzioni e
+vale $E^0=4\pi\sigma_0$. In $K$ (figura 6.2) le due distribuzioni hanno
+densit\`a superficiali opposte $\sigma$ e $-\sigma$ (la carica \`e invariante
+per trasformazioni di Lorentz, ed \`e nulla in $K^0$) per cui, sempre per
+$\mathbf p_2$ (coniugazione di carica), questa seconda distribuzione produce un
+campo opposto a quello prodotto dalla prima, e il campo totale \`e la somma dei
+due campi ($\mathbf p_1$): anche in $K$, indipendentemente dai valori che assume
+dalle due parti di ogni singola distribuzione, il campo elettrico \`e nullo
+fuori dal condensatore, mentre all'interno \`e ortogonale alle distribuzioni e,
+per il ``teorema di Gauss'' (come nel caso statico), vale $4\pi\sigma$. Quanto
+vale $\sigma$? Sia $A$ l'area (poi \`e sottinteso che prenderemo $A\to\infty$)
+in $K^0$ di ciascuna distribuzione; la carica totale su una di esse \`e
+$Q=\sigma_0A$ ed \`e invariante, cio\`e \`e la stessa in $K$; anche l'area $A$
+della distribuzione \`e la stessa in $K$ e in $K^0$, perch\'e solo le dimensioni
+parallele alla velocit\`a relativa $\vec v$ cambiano per trasformazioni di
+Lorentz (contrazione delle lunghezze), quindi $\sigma=\sigma_0$ e il campo, che
+ha solo la componente parallela a $\vec v$, \`e lo stesso nei due riferimenti:
 \begin{equation}
-E_\parallel=E_\parallel^0.
-\tag{6.2}
+  E_\parallel=E_\parallel^0.
+  \tag{6.2}
 \end{equation}
 \fig{fig6_2}{6.2}
 Quindi, in generale (grazie a $\mathbf p_3$)
 
-\textit{la componente del campo elettrico parallela alla velocità $\vec v$ delle sorgenti è la stessa nel riferimento di quiete delle sorgenti e in un riferimento in cui le sorgenti sono in moto.}
+\textit{la componente del campo elettrico parallela alla velocit\`a $\vec v$
+delle sorgenti \`e la stessa nel riferimento di quiete delle sorgenti e in un
+riferimento in cui le sorgenti sono in moto.}
 
-(A posteriori, grazie alla (6.2), possiamo quindi concludere che il campo di una distribuzione piana in moto in una direzione ortogonale al piano è lo stesso nei due semispazi, perché lo è nel riferimento di quiete delle sorgenti).
+(A posteriori, grazie alla (6.2), possiamo quindi concludere che il campo di una
+distribuzione piana in moto in una direzione ortogonale al piano \`e lo stesso
+nei due semispazi, perch\'e lo \`e nel riferimento di quiete delle sorgenti).
 
-Vediamo ora il comportamento della componente di $\vec E$ ortogonale al moto delle sorgenti: supponiamo che la distribuzione superficiale piana si muova rispetto a $K$ con velocità uniforme $\vec v$ parallela alla distribuzione (figura 6.3).
+Vediamo ora il comportamento della componente di $\vec E$ ortogonale al moto
+delle sorgenti: supponiamo che la distribuzione superficiale piana si muova
+rispetto a $K$ con velocit\`a uniforme $\vec v$ parallela alla distribuzione
+(figura 6.3).
 \fig{fig6_3}{6.3}
-Rispetto al caso statico viene meno (perché $\vec v$ non resta invariata) soltanto l'invarianza delle sorgenti per rotazioni attorno agli assi ortogonali alla distribuzione, che garantiva l'ortogonalità di $\vec E$ a detto piano; l'invarianza per riflessioni rispetto a qualsiasi piano ortogonale alla distribuzione e parallelo a $\vec v$ esclude la componente parallela al piano e ortogonale a $\vec v$, ma non è possibile, sulla base delle simmetrie, escludere la componente parallela a $\vec v$. Tuttavia essa è esclusa dalla (6.2), in quanto se in $K$ il campo avesse una componente parallela alla velocità essa sarebbe presente anche nel riferimento di quiete della distribuzione. Quindi, come nel caso statico, il campo è opposto dalle due parti della distribuzione (p.es.\ invarianza per riflessioni rispetto al piano della distribuzione) e vale $\pm2\pi\sigma$ \ (Gauss).\\
-Se $A$ è l'area della distribuzione nel riferimento $K^0$ di quiete delle sorgenti, in $K$ l'area della distribuzione è \ $A/\gamma(v)$ \ per la contrazione della dimensione parallela a $\vec v$, e quindi
+Rispetto al caso statico viene meno (perch\'e $\vec v$ non resta invariata)
+soltanto l'invarianza delle sorgenti per rotazioni attorno agli assi ortogonali
+alla distribuzione, che garantiva l'ortogonalit\`a di $\vec E$ a detto piano;
+l'invarianza per riflessioni rispetto a qualsiasi piano ortogonale alla
+distribuzione e parallelo a $\vec v$ esclude la componente parallela al piano e
+ortogonale a $\vec v$, ma non \`e possibile, sulla base delle simmetrie,
+escludere la componente parallela a $\vec v$. Tuttavia essa \`e esclusa dalla
+(6.2), in quanto se in $K$ il campo avesse una componente parallela alla
+velocit\`a essa sarebbe presente anche nel riferimento di quiete della
+distribuzione. Quindi, come nel caso statico, il campo \`e opposto dalle due
+parti della distribuzione (p.es.\ invarianza per riflessioni rispetto al piano
+della distribuzione) e vale $\pm2\pi\sigma$ \ (Gauss).\\
+Se $A$ \`e l'area della distribuzione nel riferimento $K^0$ di quiete delle
+sorgenti, in $K$ l'area della distribuzione \`e \ $A/\gamma(v)$ \ per la
+contrazione della dimensione parallela a $\vec v$, e quindi
 \begin{equation}
-\sigma=\gamma(v)\sigma_0
-\tag{6.3}
+  \sigma=\gamma(v)\sigma_0
+  \tag{6.3}
 \end{equation}
-dunque in $K$ il campo è $\gamma(v)$ volte il campo in $K^0$. In questo caso il campo è ortogonale alla velocità di $K$ rispetto a $K^0$:
+dunque in $K$ il campo \`e $\gamma(v)$ volte il campo in $K^0$. In questo caso
+il campo \`e ortogonale alla velocit\`a di $K$ rispetto a $K^0$:
 \begin{equation}
-E_\perp=\gamma(v)E_\perp^0.
-\tag{6.4}
+  E_\perp=\gamma(v)E_\perp^0.
+  \tag{6.4}
 \end{equation}
 Quindi, in generale
 
-\textit{la componente del campo elettrico ortogonale alla velocità $\vec v$ delle sorgenti aumenta del fattore $\gamma(v)$ rispetto al suo valore nel riferimento di quiete delle sorgenti.}
+\textit{la componente del campo elettrico ortogonale alla velocit\`a $\vec v$
+delle sorgenti aumenta del fattore $\gamma(v)$ rispetto al suo valore nel
+riferimento di quiete delle sorgenti.}
 
-Finalmente possiamo determinare la forza che un campo elettrico generato da sorgenti in quiete esercita su una carica in moto.\\
-Sia $K$ il riferimento ``del laboratorio'' (cioè quello in cui ci interessa vedere come vanno le cose): in $K$ le sorgenti del campo sono in quiete ed una carica $q$ si sta muovendo (ad un certo istante) con velocità $\vec v$. Sia $K'$ il riferimento tangente (riferimento di quiete istantanea di $q$), e quindi in esso le sorgenti sono in moto con velocità $-\vec v$. In $K'$, per la definizione di campo elettrico e per le (6.2), (6.4)
+Finalmente possiamo determinare la forza che un campo elettrico generato da
+sorgenti in quiete esercita su una carica in moto.\\
+Sia $K$ il riferimento ``del laboratorio'' (cio\`e quello in cui ci interessa
+vedere come vanno le cose): in $K$ le sorgenti del campo sono in quiete ed una
+carica $q$ si sta muovendo (ad un certo istante) con velocit\`a $\vec v$. Sia
+$K'$ il riferimento tangente (riferimento di quiete istantanea di $q$), e quindi
+in esso le sorgenti sono in moto con velocit\`a $-\vec v$. In $K'$, per la
+definizione di campo elettrico e per le (6.2), (6.4)
 \begin{equation}
-F_\parallel'=qE_\parallel'=qE_\parallel\,;\qquad\qquad F_\perp'=qE_\perp'=\gamma(v)qE_\perp
-\tag{6.5}
+  F_\parallel'=qE_\parallel'=qE_\parallel\,;
+  \qquad\qquad F_\perp'=qE_\perp'=\gamma(v)qE_\perp
+  \tag{6.5}
 \end{equation}
 quindi, per le (5.36), nel riferimento $K$ del laboratorio
 \[
-F_\parallel=F_\parallel'=qE_\parallel\,;\quad\ F_\perp=\frac{1}{\gamma}F_\perp'=qE_\perp
+  F_\parallel=F_\parallel'=qE_\parallel\,;
+  \quad\ F_\perp=\frac{1}{\gamma}F_\perp'=qE_\perp
 \]
 e quindi (sorgenti in quiete, carica in moto)
 \begin{equation}
-\vec F=q\vec E
-\tag{6.6}
+  \vec F=q\vec E
+  \tag{6.6}
 \end{equation}
-in accordo con l'espressione (4.4) della forza di Lorentz in quanto, essendo le sorgenti in quiete, non c'è campo magnetico.
+in accordo con l'espressione (4.4) della forza di Lorentz in quanto, essendo le
+sorgenti in quiete, non c'\`e campo magnetico.
 
 \subsection{Il campo magnetico}
 
-Dimostrare l'esistenza del campo magnetico significa dimostrare che nella situazione generale in cui le sorgenti sono in moto, è possibile definire un vettore $\vec B$ tale che la forza che si esercita su una carica in moto può essere scritta nella forma (4.4) (forza di Lorentz). Noi dimostreremo che ciò avviene in un caso particolare (distribuzione superficiale in moto), quindi, una volta determinate le leggi generali di trasformazione dei campi elettrico e magnetico per cambiamenti di riferimento, saremo in grado di dimostrare la (4.4) in generale.\\
-Sia data, nel riferimento $K$ del laboratorio, una distribuzione superficiale piana $\sigma$ in moto con velocità $\vec u$ parallela alla distribuzione. Una carica $q$ è in moto con velocità $\vec v$. Vogliamo determinare la forza che si esercita sulla carica, nel riferimento del laboratorio. Non possiamo utilizzare la (6.6) in quanto nel riferimento del laboratorio tanto le sorgenti quanto la carica sono in moto, ma possiamo utilizzarla nel riferimento di quiete delle sorgenti, poi la legge di trasformazione delle forze ci permette di trasportare il risultato nel riferimento del laboratorio.
+Dimostrare l'esistenza del campo magnetico significa dimostrare che nella
+situazione generale in cui le sorgenti sono in moto, \`e possibile definire un
+vettore $\vec B$ tale che la forza che si esercita su una carica in moto pu\`o
+essere scritta nella forma (4.4) (forza di Lorentz). Noi dimostreremo che ci\`o
+avviene in un caso particolare (distribuzione superficiale in moto), quindi, una
+volta determinate le leggi generali di trasformazione dei campi elettrico e
+magnetico per cambiamenti di riferimento, saremo in grado di dimostrare la (4.4)
+in generale.\\
+Sia data, nel riferimento $K$ del laboratorio, una distribuzione superficiale
+piana $\sigma$ in moto con velocit\`a $\vec u$ parallela alla distribuzione. Una
+carica $q$ \`e in moto con velocit\`a $\vec v$. Vogliamo determinare la forza
+che si esercita sulla carica, nel riferimento del laboratorio. Non possiamo
+utilizzare la (6.6) in quanto nel riferimento del laboratorio tanto le sorgenti
+quanto la carica sono in moto, ma possiamo utilizzarla nel riferimento di quiete
+delle sorgenti, poi la legge di trasformazione delle forze ci permette di
+trasportare il risultato nel riferimento del laboratorio.
 \fig{fig6_4}{6.4}
-Sia $y=0$ il piano della distribuzione, e l'asse $x$ parallelo a $\vec u$ (figura 6.4). Sia $K'$ il riferimento di quiete delle sorgenti, in moto con velocità $\vec u$ rispetto a $K$. In $K'$ per la (6.6) si ha
+Sia $y=0$ il piano della distribuzione, e l'asse $x$ parallelo a $\vec u$
+(figura 6.4). Sia $K'$ il riferimento di quiete delle sorgenti, in moto con
+velocit\`a $\vec u$ rispetto a $K$. In $K'$ per la (6.6) si ha
 \begin{equation}
-\vec F\,'=q\vec E\,':\qquad F_x'=0;\quad\ F_y'=\pm2\pi\sigma'q;\quad\ F_z'=0\,;\qquad\ \sigma'=\frac{1}{\gamma(u)}\,\sigma
-\tag{6.7}
+  \vec F\,'=q\vec E\,':\qquad F_x'=0;\quad\ F_y'=\pm2\pi\sigma'q;
+  \quad\ F_z'=0\,;\qquad\ \sigma'=\frac{1}{\gamma(u)}\,\sigma
+  \tag{6.7}
 \end{equation}
-($+$ o $-$ a seconda che $y\gtrless0$) e la carica $q$ ha velocità $\vec v\,'$ che si ottiene componendo $\vec v$ con la velocità $-\vec u$ di $K$ rispetto a $K'$: \ $\vec v\,'=\vec v\circ(-\vec u)$.\\
-La forza nel riferimento $K$ si ottiene dalle (5.34) (la velocità di $K$ rispetto a $K'$ è $-u$):
+($+$ o $-$ a seconda che $y\gtrless0$) e la carica $q$ ha velocit\`a $\vec v\,'$
+che si ottiene componendo $\vec v$ con la velocit\`a $-\vec u$ di $K$ rispetto a
+$K'$: \ $\vec v\,'=\vec v\circ(-\vec u)$.\\
+La forza nel riferimento $K$ si ottiene dalle (5.34) (la velocit\`a di $K$
+rispetto a $K'$ \`e $-u$):
 \begin{equation}
-\begin{aligned}
-\gamma(v)F_x&=\gamma(u)\Big(0+\frac{u}{c}\gamma(v')\frac{\vec F\,'\cdot\vec v\,'}{c}\Big)=\pm q\frac{u}{c^2}2\pi\,\gamma(u)\sigma'\,\gamma(v')v_y'\\
-&=\pm q\frac{u}{c^2}2\pi\sigma\,\gamma(v)v_y\\
-\gamma(v)F_y&=\gamma(v')F_y'=\pm q\gamma(v')2\pi\sigma'\\
-F_z&=0
-\end{aligned}
-\tag{6.8}
+  \begin{aligned}
+    \gamma(v)F_x&=\gamma(u)
+    \Big(0+\frac{u}{c}\gamma(v')\frac{\vec F\,'\cdot\vec v\,'}{c}\Big)
+    =\pm q\frac{u}{c^2}2\pi\,\gamma(u)\sigma'\,\gamma(v')v_y'\\
+    &=\pm q\frac{u}{c^2}2\pi\sigma\,\gamma(v)v_y\\
+    \gamma(v)F_y&=\gamma(v')F_y'=\pm q\gamma(v')2\pi\sigma'\\
+    F_z&=0
+  \end{aligned}
+  \tag{6.8}
 \end{equation}
-avendo fatto uso nell'equazione per $F_x$ dell'ultima delle (6.7) e della seconda delle (4.74): \ $\gamma(v')v_y'=\gamma(v)v_y$; \ $\gamma(v')$, che compare nell'equazione per $F_y$, si ottiene dall'identità (4.73) con gli opportuni cambiamenti di notazioni:
+avendo fatto uso nell'equazione per $F_x$ dell'ultima delle (6.7) e della
+seconda delle (4.74): \ $\gamma(v')v_y'=\gamma(v)v_y$; \ $\gamma(v')$, che
+compare nell'equazione per $F_y$, si ottiene dall'identit\`a (4.73) con gli
+opportuni cambiamenti di notazioni:
 \begin{equation}
-\gamma(v')=\gamma(u)\gamma(v)\big(1-\frac{uv_x}{c^2}\big)
-\tag{6.9}
+  \gamma(v')=\gamma(u)\gamma(v)\big(1-\frac{uv_x}{c^2}\big)
+  \tag{6.9}
 \end{equation}
 per cui si ottiene
 \begin{equation}
-F_x=\pm\frac{2\pi\sigma u}{c}\,q\frac{v_y}{c};\quad\ F_y=\pm2\pi\sigma q\mp\frac{2\pi\sigma u}{c}\,q\frac{v_x}{c};\quad\ F_z=0.
-\tag{6.10}
+  F_x=\pm\frac{2\pi\sigma u}{c}\,q\frac{v_y}{c};\quad\ F_y=\pm2\pi\sigma q
+  \mp\frac{2\pi\sigma u}{c}\,q\frac{v_x}{c};\quad\ F_z=0.
+  \tag{6.10}
 \end{equation}
-Essendo \big(grazie alla (6.4)\big) \ $\vec E=(0,\,\pm2\pi\sigma,\,0)$ \ e definito
+Essendo \big(grazie alla (6.4)\big) \ $\vec E=(0,\,\pm2\pi\sigma,\,0)$ \ e
+definito
 \begin{equation}
-\vec B\defeq\Big(0,\,0,\,\pm\frac{2\pi\sigma u}{c}\Big)
-\tag{6.11}
+  \vec B\defeq\Big(0,\,0,\,\pm\frac{2\pi\sigma u}{c}\Big)
+  \tag{6.11}
 \end{equation}
-(al solito: il segno $+$ per $y>0$ e $-$ per $y<0$) si ha (per ora solo in questo caso particolare)
+(al solito: il segno $+$ per $y>0$ e $-$ per $y<0$) si ha (per ora solo in
+questo caso particolare)
 \begin{equation}
-\vec F=q\vec E+q\frac{\vec v}{c}\wedge\vec B.
-\tag{6.12}
+  \vec F=q\vec E+q\frac{\vec v}{c}\wedge\vec B.
+  \tag{6.12}
 \end{equation}
-Quanto sopra mostra, come a suo tempo affermato, che il campo magnetico è una entità non disgiunta dal campo elettrico, e che anzi è una conseguenza della legge di Coulomb (in $K'$ c'è solo un campo elettrostatico) e delle leggi di trasformazione del campo elettrico. La cosa è ancora più evidente se in $K$ invece di avere solo la distribuzione $\sigma$ in moto con velocità $\vec u$, abbiamo anche una distribuzione $-\sigma$ con velocità $-\vec u$, sovrapposta alla precedente. Allora per il principio di sovrapposizione in $K$ non c'è campo elettrico, mentre il campo magnetico è presente ed è il doppio di quello dato dalla (6.11): infatti $\vec B$ non dipende separatamente dalla densità di carica e dalla sua velocità, ma dalla corrente, in questo caso dalla \textbf{corrente superficiale} \ $\vec{\mathcal J}=2\sigma\vec u$ \ (in generale \ $\vec{\mathcal J}=\sum_i\sigma_i\vec u_i$\,). Ora non c'è più un riferimento di quiete delle sorgenti; per individuare l'origine della forza dovuta al campo magnetico in questo caso, supponiamo (solo per semplicità) che la carica $q$ abbia velocità $\vec v$ parallela e concorde ad $\vec u$ e $y>0$. Nel riferimento del laboratorio $K$ sulla carica si esercita una forza $\vec F$ che per la (6.12) è parallela all'asse $y$ ed è data da
+Quanto sopra mostra, come a suo tempo affermato, che il campo magnetico \`e una
+entit\`a non disgiunta dal campo elettrico, e che anzi \`e una conseguenza della
+legge di Coulomb (in $K'$ c'\`e solo un campo elettrostatico) e delle leggi di
+trasformazione del campo elettrico. La cosa \`e ancora pi\`u evidente se in $K$
+invece di avere solo la distribuzione $\sigma$ in moto con velocit\`a $\vec u$,
+abbiamo anche una distribuzione $-\sigma$ con velocit\`a $-\vec u$, sovrapposta
+alla precedente. Allora per il principio di sovrapposizione in $K$ non c'\`e
+campo elettrico, mentre il campo magnetico \`e presente ed \`e il doppio di
+quello dato dalla (6.11): infatti $\vec B$ non dipende separatamente dalla
+densit\`a di carica e dalla sua velocit\`a, ma dalla corrente, in questo caso
+dalla \textbf{corrente superficiale} \ $\vec{\mathcal J}=2\sigma\vec u$ \ (in
+generale \ $\vec{\mathcal J}=\sum_i\sigma_i\vec u_i$\,). Ora non c'\`e pi\`u un
+riferimento di quiete delle sorgenti; per individuare l'origine della forza
+dovuta al campo magnetico in questo caso, supponiamo (solo per semplicit\`a) che
+la carica $q$ abbia velocit\`a $\vec v$ parallela e concorde ad $\vec u$ e
+$y>0$. Nel riferimento del laboratorio $K$ sulla carica si esercita una forza
+$\vec F$ che per la (6.12) \`e parallela all'asse $y$ ed \`e data da
 \begin{equation}
-F_y=-\frac{4\pi\sigma u}{c}\,q\frac{v}{c}
-\tag{6.13}
+  F_y=-\frac{4\pi\sigma u}{c}\,q\frac{v}{c}
+  \tag{6.13}
 \end{equation}
-quindi nel riferimento $K^0$ in cui $q$ è in quiete, per la seconda delle (5.36), su $q$ si esercita la forza
+quindi nel riferimento $K^0$ in cui $q$ \`e in quiete, per la seconda delle
+(5.36), su $q$ si esercita la forza
 \begin{equation}
-F_y^0=\gamma(v)F_y=-\gamma(v)\frac{4\pi\sigma u}{c}\,q\frac{v}{c}\,\cdot
-\tag{6.14}
+  F_y^0=\gamma(v)F_y=-\gamma(v)\frac{4\pi\sigma u}{c}\,q\frac{v}{c}\,\cdot
+  \tag{6.14}
 \end{equation}
-Da dove viene questa forza? È vero che in $K^0$ c'è un campo magnetico, ma poiché in questo riferimento la particella è ferma, per definizione di campo elettrico questa forza non può che essere dovuta ad un campo elettrico. In effetti in $K^0$ le due distribuzioni superficiali hanno rispettivamente velocità \ $u'=u\circ(-v)$ \ e \ $u''=(-u)\circ(-v)$ \ e quindi per la (6.3) la densità di carica non è nulla (come in $K$), ma vale \big(usiamo la (6.9)\big)
+Da dove viene questa forza? \`E vero che in $K^0$ c'\`e un campo magnetico, ma
+poich\'e in questo riferimento la particella \`e ferma, per definizione di campo
+elettrico questa forza non pu\`o che essere dovuta ad un campo elettrico. In
+effetti in $K^0$ le due distribuzioni superficiali hanno rispettivamente
+velocit\`a \ $u'=u\circ(-v)$ \ e \ $u''=(-u)\circ(-v)$ \ e quindi per la (6.3)
+la densit\`a di carica non \`e nulla (come in $K$), ma vale \big(usiamo la
+(6.9)\big)
 \begin{equation}
-\begin{aligned}
-\overline\sigma=\sigma'+\sigma''&=\big(\gamma(u')-\gamma(u'')\big)\sigma_0=\gamma(u)\gamma(v)\big[(1-uv/c^2)-(1+uv/c^2)\big]\sigma_0\\
-&=-2\gamma(v)\sigma\frac{uv}{c^2}
-\end{aligned}
-\tag{6.15}
+  \begin{aligned}
+    \overline\sigma=\sigma'+\sigma''&=\big(\gamma(u')-\gamma(u'')\big)\sigma_0
+    =\gamma(u)\gamma(v)\big[(1-uv/c^2)-(1+uv/c^2)\big]\sigma_0\\
+    &=-2\gamma(v)\sigma\frac{uv}{c^2}
+  \end{aligned}
+  \tag{6.15}
 \end{equation}
-quindi, essendo il campo elettrico $E^0=2\pi\overline\sigma$, la forza sulla carica $q$ è
+quindi, essendo il campo elettrico $E^0=2\pi\overline\sigma$, la forza sulla
+carica $q$ \`e
 \begin{equation}
-F_y^0=-\gamma(v)\frac{4\pi\sigma u}{c}\,q\frac{v}{c}
-\tag{6.16}
+  F_y^0=-\gamma(v)\frac{4\pi\sigma u}{c}\,q\frac{v}{c}
+  \tag{6.16}
 \end{equation}
-in accordo con la (6.14). Quindi, ancora, la forza $\vec F$ è conseguenza della legge di Coulomb nel riferimento di quiete della carica $q$.
+in accordo con la (6.14). Quindi, ancora, la forza $\vec F$ \`e conseguenza
+della legge di Coulomb nel riferimento di quiete della carica $q$.
 
-Concludiamo questo paragrafo con il calcolo dell'eventuale campo magnetico prodotto da una distribuzione superficiale piana $\sigma$ in moto (nel riferimento $K$ del laboratorio) con velocità $\vec u$ ortogonale al piano della distribuzione (figura 6.5). Procediamo in modo simile a quello che ci ha portato alla (6.11): sia $q$ una carica in moto con velocità $\vec v$ in $K$ e quindi con velocità $\vec v\,'=\vec v\circ(-\vec u)$ nel riferimento $K'$ di quiete delle sorgenti. Presi gli assi $x$ di $K$ e $K'$ paralleli a $\vec u$, in $K'$ (sorgenti in quiete, carica in moto)
+Concludiamo questo paragrafo con il calcolo dell'eventuale campo magnetico
+prodotto da una distribuzione superficiale piana $\sigma$ in moto (nel
+riferimento $K$ del laboratorio) con velocit\`a $\vec u$ ortogonale al piano
+della distribuzione (figura 6.5). Procediamo in modo simile a quello che ci ha
+portato alla (6.11): sia $q$ una carica in moto con velocit\`a $\vec v$ in $K$ e
+quindi con velocit\`a $\vec v\,'=\vec v\circ(-\vec u)$ nel riferimento $K'$ di
+quiete delle sorgenti. Presi gli assi $x$ di $K$ e $K'$ paralleli a $\vec u$, in
+$K'$ (sorgenti in quiete, carica in moto)
 \fig{fig6_5}{6.5}
 \begin{equation}
-\vec F'=q\vec E'=(\pm2\pi\sigma q,\,0,\,0)
-\tag{6.17}
+  \vec F'=q\vec E'=(\pm2\pi\sigma q,\,0,\,0)
+  \tag{6.17}
 \end{equation}
 quindi in $K$
 \begin{equation}
-\begin{aligned}
-&\gamma(v)F_x=\gamma(u)\Big(\gamma(v')F_x'+\frac{u}{c^2}\gamma(v')F_x'v_x'\Big)=\gamma(u)\gamma(v')\Big(1+\frac{uv_x'}{c^2}\Big)F_x'\\
-&\gamma(v)F_y=\gamma(v')F_y'=0\,;\qquad\qquad\gamma(v)F_z=\gamma(v')F_z'=0
-\end{aligned}
-\tag{6.18}
+  \begin{aligned}
+    &\gamma(v)F_x
+    =\gamma(u)\Big(\gamma(v')F_x'+\frac{u}{c^2}\gamma(v')F_x'v_x'\Big)
+    =\gamma(u)\gamma(v')\Big(1+\frac{uv_x'}{c^2}\Big)F_x'\\
+    &\gamma(v)F_y=\gamma(v')F_y'=0\,;\qquad\qquad\gamma(v)F_z=\gamma(v')F_z'=0
+  \end{aligned}
+  \tag{6.18}
 \end{equation}
-per cui, essendo \ $\vec v=\vec v\,'\circ\vec u$, dalla solita identità (4.73) \ $\gamma(v)=\gamma(u)\gamma(v')(1+uv_x'/c^2)$ \ e dalla (6.2) si ottiene
+per cui, essendo \ $\vec v=\vec v\,'\circ\vec u$, dalla solita identit\`a (4.73)
+\ $\gamma(v)=\gamma(u)\gamma(v')(1+uv_x'/c^2)$ \ e dalla (6.2) si ottiene
 \begin{equation}
-\vec F=\vec F'=q\vec E\,'=q\vec E
-\tag{6.19}
+  \vec F=\vec F'=q\vec E\,'=q\vec E
+  \tag{6.19}
 \end{equation}
 e quindi la distribuzione considerata non produce campo magnetico in $K$.
 
 \subsection{La legge di trasformazione delle sorgenti}
 
-Abbiamo visto che le sorgenti del campo elettromagnetico sono le cariche e le correnti; nei paragrafi precedenti abbiamo anche visto come cambiano le densità superficiali di carica quando si passa dal riferimento di quiete delle sorgenti ad un altro riferimento; ora vogliamo trovare la legge di trasformazione delle sorgenti, cioè delle cariche e delle correnti, fra due riferimenti qualsiasi, nel caso generale in cui eventualmente non esiste un riferimento in cui le sorgenti sono in quiete.\\
-Sappiamo che in generale la densità di corrente, definita dalla (3.3'), è dovuta a più distribuzioni di carica $\rho_i$, ciascuna con il proprio campo di velocità $\vec u_i$; supponiamo, per cominciare, che la densità di corrente $\vec J$ sia dovuta ad un'unica distribuzione di carica $\rho$ con campo di velocità $\vec u$: \ $\vec J=\rho\vec u$.\\
-Sia, nel riferimento $K$, $\rho(x,y,z,t)$ la densità di carica nel punto $P$ di coordinate $(x,y,z)$ al tempo $t$, $\vec u(x,y,z,t)$ la sua velocità e sia $\Delta V$ un volumetto (``infinitesimo'') contenente $P$; fissiamo l'attenzione sulla carica $q=\rho\Delta V$ contenuta in $\Delta V$ all'istante $t$: nel riferimento $K^0$ in moto rispetto a $K$ con velocità $\vec u$ (nel quale la carica considerata è istantaneamente in quiete), questa stessa carica (la carica è invariante) occupa il volume $\Delta V_0$. Siccome nel passaggio da $K^0$ a $K$ la dimensione parallela a $\vec u$ si contrae del fattore $\gamma(u)$, si ha
+Abbiamo visto che le sorgenti del campo elettromagnetico sono le cariche e le
+correnti; nei paragrafi precedenti abbiamo anche visto come cambiano le
+densit\`a superficiali di carica quando si passa dal riferimento di quiete delle
+sorgenti ad un altro riferimento; ora vogliamo trovare la legge di
+trasformazione delle sorgenti, cio\`e delle cariche e delle correnti, fra due
+riferimenti qualsiasi, nel caso generale in cui eventualmente non esiste un
+riferimento in cui le sorgenti sono in quiete.\\
+Sappiamo che in generale la densit\`a di corrente, definita dalla (3.3'), \`e
+dovuta a pi\`u distribuzioni di carica $\rho_i$, ciascuna con il proprio campo
+di velocit\`a $\vec u_i$; supponiamo, per cominciare, che la densit\`a di
+corrente $\vec J$ sia dovuta ad un'unica distribuzione di carica $\rho$ con
+campo di velocit\`a $\vec u$: \ $\vec J=\rho\vec u$.\\
+Sia, nel riferimento $K$, $\rho(x,y,z,t)$ la densit\`a di carica nel punto $P$
+di coordinate $(x,y,z)$ al tempo $t$, $\vec u(x,y,z,t)$ la sua velocit\`a e sia
+$\Delta V$ un volumetto (``infinitesimo'') contenente $P$; fissiamo l'attenzione
+sulla carica $q=\rho\Delta V$ contenuta in $\Delta V$ all'istante $t$: nel
+riferimento $K^0$ in moto rispetto a $K$ con velocit\`a $\vec u$ (nel quale la
+carica considerata \`e istantaneamente in quiete), questa stessa carica (la
+carica \`e invariante) occupa il volume $\Delta V_0$. Siccome nel passaggio da
+$K^0$ a $K$ la dimensione parallela a $\vec u$ si contrae del fattore
+$\gamma(u)$, si ha
 \begin{equation}
-\Delta V_0=\gamma(u)\Delta V;\quad\ \Rightarrow\quad\ \rho\equiv\frac{q}{\Delta V}=\gamma(u)\frac{q}{\Delta V_0}\equiv\gamma(u)\rho_0
-\tag{6.20}
+  \Delta V_0=\gamma(u)\Delta V;
+  \quad\ \Rightarrow\quad\ \rho\equiv\frac{q}{\Delta V}
+  =\gamma(u)\frac{q}{\Delta V_0}\equiv\gamma(u)\rho_0
+  \tag{6.20}
 \end{equation}
-in accordo con la (6.3); \ $\rho$, $\vec u$ e $\rho_0$ \ sono calcolate in corrispondenza allo stesso evento $E$, che ha coordinate $(x,y,z,t)$ in $K$, e $(x_0,y_0,z_0,t_0)$ in $K^0$.\\
-Dalla (6.20) \ $\vec J=\rho\vec u=\rho_0\gamma(u)\vec u$, \ quindi \ $(c\rho,\,\vec J\,)=\rho_0\cdot\big(c\gamma(u),\,\gamma(u)\vec u\,\big)$; siccome $\rho_0$, per definizione, è invariante (come la massa e l'intervallo di tempo proprio), e \ $\big(c\gamma(u),\gamma(u)\vec u\,\big)$ \ sono le componenti della quadrivelocità, \ $(c\rho,\,\vec J\,)$ \ si trasforma come un quadrivettore (la \textbf{quadricorrente}): se $K'$ è un riferimento in moto con velocità $\vec v\parallel x,x'$ \ rispetto a $K$ si ha
+in accordo con la (6.3); \ $\rho$, $\vec u$ e $\rho_0$ \ sono calcolate in
+corrispondenza allo stesso evento $E$, che ha coordinate $(x,y,z,t)$ in $K$, e
+$(x_0,y_0,z_0,t_0)$ in $K^0$.\\
+Dalla (6.20) \ $\vec J=\rho\vec u=\rho_0\gamma(u)\vec u$, \ quindi
+\ $(c\rho,\,\vec J\,)=\rho_0\cdot\big(c\gamma(u),\,\gamma(u)\vec u\,\big)$;
+siccome $\rho_0$, per definizione, \`e invariante (come la massa e l'intervallo
+di tempo proprio), e \ $\big(c\gamma(u),\gamma(u)\vec u\,\big)$ \ sono le
+componenti della quadrivelocit\`a, \ $(c\rho,\,\vec J\,)$ \ si trasforma come un
+quadrivettore (la \textbf{quadricorrente}): se $K'$ \`e un riferimento in moto
+con velocit\`a $\vec v\parallel x,x'$ \ rispetto a $K$ si ha
 \begin{equation}
-\left\{\begin{aligned}
-\rho'&=\gamma(v)\big(\rho-\frac{v}{c^2}J_x\big)\\
-J_x'&=\gamma(v)\big(J_x-v\rho\big)\\
-J_y'&=J_y\\
-J_z'&=J_z\,.
-\end{aligned}\right.
-\tag{6.21}
+  \left\{\begin{aligned}
+    \rho'&=\gamma(v)\big(\rho-\frac{v}{c^2}J_x\big)\\
+    J_x'&=\gamma(v)\big(J_x-v\rho\big)\\
+    J_y'&=J_y\\
+    J_z'&=J_z\,.
+  \end{aligned}\right.
+  \tag{6.21}
 \end{equation}
-I due membri delle (6.21) vanno calcolati in corrispondenza dello stesso evento, cioè i primi membri sono funzioni di $(x',y',z',t')$, mentre i secondi membri sono funzioni di $(x,y,z,t)$, e la relazione fra le due quaterne di coordinate è data dalle (4.39) e (4.40).
+I due membri delle (6.21) vanno calcolati in corrispondenza dello stesso evento,
+cio\`e i primi membri sono funzioni di $(x',y',z',t')$, mentre i secondi membri
+sono funzioni di $(x,y,z,t)$, e la relazione fra le due quaterne di coordinate
+\`e data dalle (4.39) e (4.40).
 
-Se la densità di corrente è dovuta a più distribuzioni di carica, cioè è data dalla (3.3'), le (6.21) valgono per ogni \ $\rho_i$, $\vec J_i$\,, ed essendo lineari valgono anche per la loro somma. Quindi in definitiva le (6.21) costituiscono la legge di trasformazione delle sorgenti nel caso generale.\\
-Se le sorgenti sono distribuzioni superficiali di carica $\sigma$ e di corrente $\vec{\mathcal J}$ su un piano parallelo alla velocità di $K'$ rispetto a $K$ (piano $x,y$), allora siccome $\sigma=\rho\Delta s$, \ $\vec{\mathcal J}=\vec J\Delta s$, dove $\Delta s$ è lo ``spessore'' della distribuzione, ed è ortogonale a $\vec v$ (e quindi lo stesso in $K$ e in $K'$), moltiplicando ambo i membri delle (6.21) per $\Delta s$ si ha
+Se la densit\`a di corrente \`e dovuta a pi\`u distribuzioni di carica, cio\`e
+\`e data dalla (3.3'), le (6.21) valgono per ogni \ $\rho_i$, $\vec J_i$\,, ed
+essendo lineari valgono anche per la loro somma. Quindi in definitiva le (6.21)
+costituiscono la legge di trasformazione delle sorgenti nel caso generale.\\
+Se le sorgenti sono distribuzioni superficiali di carica $\sigma$ e di corrente
+$\vec{\mathcal J}$ su un piano parallelo alla velocit\`a di $K'$ rispetto a $K$
+(piano $x,y$), allora siccome $\sigma=\rho\Delta s$,
+\ $\vec{\mathcal J}=\vec J\Delta s$, dove $\Delta s$ \`e lo ``spessore'' della
+distribuzione, ed \`e ortogonale a $\vec v$ (e quindi lo stesso in $K$ e in
+$K'$), moltiplicando ambo i membri delle (6.21) per $\Delta s$ si ha
 \begin{equation}
-\left\{\begin{aligned}
-\sigma'&=\gamma(v)\big(\sigma-\frac{v}{c^2}\mathcal J_x\big)\\
-\mathcal J_x'&=\gamma(v)\big(\mathcal J_x-v\sigma\big)\\
-\mathcal J_y'&=\mathcal J_y\\
-\mathcal J_z'&=\mathcal J_z=0\,.
-\end{aligned}\right.
-\tag{6.22}
+  \left\{\begin{aligned}
+    \sigma'&=\gamma(v)\big(\sigma-\frac{v}{c^2}\mathcal J_x\big)\\
+    \mathcal J_x'&=\gamma(v)\big(\mathcal J_x-v\sigma\big)\\
+    \mathcal J_y'&=\mathcal J_y\\
+    \mathcal J_z'&=\mathcal J_z=0\,.
+  \end{aligned}\right.
+  \tag{6.22}
 \end{equation}
 
 \subsection{La legge di trasformazione dei campi}
 
-Per determinare la legge di trasformazione dei campi dobbiamo considerare una situazione in cui in un punto $P$ di coordinate $(x,y,z)$ e all'istante $t$ di un riferimento $K$ sono dati un arbitrario campo elettrico $\vec E(x,y,z,t)$ ed un arbitrario campo magnetico $\vec B(x,y,z,t)$, e quindi determinare in un riferimento $K'$ in moto rispetto a $K$ campo elettrico e magnetico \ $\vec E\,'(x',y',z',t')$, \ $\vec B\,'(x',y',z',t')$\,. Grazie al postulato $\mathbf p_3$, non ha importanza quali sorgenti utilizziamo per generare i campi, mentre invece è importante che questi siano arbitrari, altrimenti non potremmo essere sicuri di avere determinato la legge generale di trasformazione: per esempio, la legge di trasformazione del campo elettrico dal riferimento di quiete delle sorgenti ad un altro riferimento non fornisce la legge generale di trasformazione del campo elettrico, proprio perché nel riferimento di quiete delle sorgenti non c'è il campo magnetico (se vogliamo determinare la legge di trasformazione dei vettori nello spazio tridimensionale per rotazioni attorno ad un asse, certamente non ci limitiamo a considerare solo vettori paralleli all'asse!).
+Per determinare la legge di trasformazione dei campi dobbiamo considerare una
+situazione in cui in un punto $P$ di coordinate $(x,y,z)$ e all'istante $t$ di
+un riferimento $K$ sono dati un arbitrario campo elettrico $\vec E(x,y,z,t)$ ed
+un arbitrario campo magnetico $\vec B(x,y,z,t)$, e quindi determinare in un
+riferimento $K'$ in moto rispetto a $K$ campo elettrico e magnetico
+\ $\vec E\,'(x',y',z',t')$, \ $\vec B\,'(x',y',z',t')$\,. Grazie al postulato
+$\mathbf p_3$, non ha importanza quali sorgenti utilizziamo per generare i
+campi, mentre invece \`e importante che questi siano arbitrari, altrimenti non
+potremmo essere sicuri di avere determinato la legge generale di trasformazione:
+per esempio, la legge di trasformazione del campo elettrico dal riferimento di
+quiete delle sorgenti ad un altro riferimento non fornisce la legge generale di
+trasformazione del campo elettrico, proprio perch\'e nel riferimento di quiete
+delle sorgenti non c'\`e il campo magnetico (se vogliamo determinare la legge di
+trasformazione dei vettori nello spazio tridimensionale per rotazioni attorno ad
+un asse, certamente non ci limitiamo a considerare solo vettori paralleli
+all'asse!).
 
-Dobbiamo scegliere un sistema di sorgenti per le quali siamo in grado di determinare i campi non solo in $K$, ma anche nel riferimento $K'$; presi (come al solito) gli assi $x$ e $x'$ nella direzione e verso della velocità $\vec v$ di $K'$ rispetto a $K$, consideriamo allora in $K$ le seguenti sorgenti: tre distribuzioni superficiali statiche \ $\sigma_1$, $\sigma_2$, $\sigma_3$ \ rispettivamente nei tre piani \ $x=0$, $y=0$, $z=0$, e tre correnti superficiali neutre (cioè p.es.\ ciascuna è costituita da due densità superficiali di carica opposte in moto con velocità opposte), di cui due \ $(\mathcal J_y^{\,4},\,\mathcal J_x^{\,5})$ \ nel piano $z=0$, rispettivamente parallele all'asse $y$ e all'asse $x$, e la terza \ $(\mathcal J_x^{\,6})$ \ nel piano $y=0$ e parallela all'asse $x$ (figura 6.6).
+Dobbiamo scegliere un sistema di sorgenti per le quali siamo in grado di
+determinare i campi non solo in $K$, ma anche nel riferimento $K'$; presi (come
+al solito) gli assi $x$ e $x'$ nella direzione e verso della velocit\`a $\vec v$
+di $K'$ rispetto a $K$, consideriamo allora in $K$ le seguenti sorgenti: tre
+distribuzioni superficiali statiche \ $\sigma_1$, $\sigma_2$, $\sigma_3$
+\ rispettivamente nei tre piani \ $x=0$, $y=0$, $z=0$, e tre correnti
+superficiali neutre (cio\`e p.es.\ ciascuna \`e costituita da due densit\`a
+superficiali di carica opposte in moto con velocit\`a opposte), di cui due
+\ $(\mathcal J_y^{\,4},\,\mathcal J_x^{\,5})$ \ nel piano $z=0$, rispettivamente
+parallele all'asse $y$ e all'asse $x$, e la terza \ $(\mathcal J_x^{\,6})$ \ nel
+piano $y=0$ e parallela all'asse $x$ (figura 6.6).
 \fig{fig6_6}{6.6}
-In $K$ il campo elettrico è esclusivamente determinato dalle tre distribuzioni \ $\sigma_1,\sigma_2,\sigma_3$, e se consideriamo per esempio un punto con $x>0,y>0,z>0$, è dato da
+In $K$ il campo elettrico \`e esclusivamente determinato dalle tre distribuzioni
+\ $\sigma_1,\sigma_2,\sigma_3$, e se consideriamo per esempio un punto con
+$x>0,y>0,z>0$, \`e dato da
 \begin{equation}
-\vec E=2\pi(\sigma_1,\,\sigma_2,\,\sigma_3)
-\tag{6.23}
+  \vec E=2\pi(\sigma_1,\,\sigma_2,\,\sigma_3)
+  \tag{6.23}
 \end{equation}
-e, data l'arbitrarietà di $\sigma_1,\sigma_2,\sigma_3$, è completamente arbitrario.\\
-Abbiamo visto \big(equazione (6.11)\big) che una corrente superficiale piana $\vec{\mathcal J}$ \ (\textbf{lamina di corrente}) produce un campo magnetico parallelo al piano e ortogonale a $\vec{\mathcal J}$, dato da \ $\vec B=(2\pi/c)\vec{\mathcal J}\wedge\hat n$ \ dove $\hat n$ è la normale al piano, dalla parte in cui si calcola $\vec B$ (che infatti è opposto dalle due parti del piano). Allora, sempre in un punto con $x>0,y>0,z>0$, le tre lamine di corrente producono il campo
+e, data l'arbitrariet\`a di $\sigma_1,\sigma_2,\sigma_3$, \`e completamente
+arbitrario.\\
+Abbiamo visto \big(equazione (6.11)\big) che una corrente superficiale piana
+$\vec{\mathcal J}$ \ (\textbf{lamina di corrente}) produce un campo magnetico
+parallelo al piano e ortogonale a $\vec{\mathcal J}$, dato da
+\ $\vec B=(2\pi/c)\vec{\mathcal J}\wedge\hat n$ \ dove $\hat n$ \`e la normale
+al piano, dalla parte in cui si calcola $\vec B$ (che infatti \`e opposto dalle
+due parti del piano). Allora, sempre in un punto con $x>0,y>0,z>0$, le tre
+lamine di corrente producono il campo
 \begin{equation}
-\vec B=\frac{2\pi}{c}\big(\mathcal J_y^{\,4},\,-\mathcal J_x^{\,5},\,\mathcal J_x^{\,6}\big).
-\tag{6.24}
+  \vec B=\frac{2\pi}{c}
+  \big(\mathcal J_y^{\,4},\,-\mathcal J_x^{\,5},\,\mathcal J_x^{\,6}\big).
+  \tag{6.24}
 \end{equation}
-A questo punto dobbiamo determinare i campi in $K'$: per il principio di sovrapposizione si ottengono sommando i campi prodotti da ciascuna delle sei distribuzioni considerate. Cominciamo con la distribuzione $\sigma_1$ nel piano $x=0$. Già sappiamo \big(equazione (6.2)\big) che il campo elettrico in $K'$ è uguale a quello in $K$:
+A questo punto dobbiamo determinare i campi in $K'$: per il principio di
+sovrapposizione si ottengono sommando i campi prodotti da ciascuna delle sei
+distribuzioni considerate. Cominciamo con la distribuzione $\sigma_1$ nel piano
+$x=0$. Gi\`a sappiamo \big(equazione (6.2)\big) che il campo elettrico in $K'$
+\`e uguale a quello in $K$:
 \begin{equation}
-\vec E_1'=\vec E_1=2\pi(\sigma_1,\,0,\,0)
-\tag{6.25}
+  \vec E_1'=\vec E_1=2\pi(\sigma_1,\,0,\,0)
+  \tag{6.25}
 \end{equation}
-e che \big(equazione (6.19)\big) la distribuzione considerata non produce campo magnetico in $K'$:
+e che \big(equazione (6.19)\big) la distribuzione considerata non produce campo
+magnetico in $K'$:
 \begin{equation}
-\vec E_1'=\vec E_1=(E_x,\,0,\,0)\,;\qquad\quad\vec B_1'=0.
-\tag{6.26}
+  \vec E_1'=\vec E_1=(E_x,\,0,\,0)\,;\qquad\quad\vec B_1'=0.
+  \tag{6.26}
 \end{equation}
-Consideriamo ora la distribuzione $\sigma_2$ nel piano $y=0$. Per la (6.4) \big(o equivalentemente dalle (6.22)\big) in $K'$ abbiamo una distribuzione $\sigma_2'=\gamma(v)\sigma_2$ in moto in direzione dell'asse $x$ con velocità $-v$, quindi anche una corrente superficiale $\mathcal J_x^{\prime\,2}=-v\sigma_2'$, per cui
+Consideriamo ora la distribuzione $\sigma_2$ nel piano $y=0$. Per la (6.4)
+\big(o equivalentemente dalle (6.22)\big) in $K'$ abbiamo una distribuzione
+$\sigma_2'=\gamma(v)\sigma_2$ in moto in direzione dell'asse $x$ con velocit\`a
+$-v$, quindi anche una corrente superficiale
+$\mathcal J_x^{\prime\,2}=-v\sigma_2'$, per cui
 \begin{equation}
-\begin{aligned}
-&\vec E_2'=\gamma(v)\vec E_2=(0,\,\gamma E_y,\,0)\,;\\
-&\vec B_2'=\frac{2\pi}{c}(0,\,0,\,-\gamma(v)\sigma_2v)=(0,\,0,\,-\beta\gamma E_y).
-\end{aligned}
-\tag{6.27}
+  \begin{aligned}
+    &\vec E_2'=\gamma(v)\vec E_2=(0,\,\gamma E_y,\,0)\,;\\
+    &\vec B_2'=\frac{2\pi}{c}(0,\,0,\,-\gamma(v)\sigma_2v)
+    =(0,\,0,\,-\beta\gamma E_y).
+  \end{aligned}
+  \tag{6.27}
 \end{equation}
 I campi prodotti in $K'$ da $\sigma_3$ si ottengono in modo analogo:
 \begin{equation}
-\vec E_3'=\gamma(v)\vec E_3=(0,\,0,\,\gamma E_z)\,;\quad\ \vec B_3'=\frac{2\pi}{c}(0,\,\gamma(v)\sigma_3v,\,0)=(0,\,\beta\gamma E_z,\,0).
-\tag{6.28}
+  \vec E_3'=\gamma(v)\vec E_3=(0,\,0,\,\gamma E_z)\,;
+  \quad\ \vec B_3'=\frac{2\pi}{c}(0,\,\gamma(v)\sigma_3v,\,0)
+  =(0,\,\beta\gamma E_z,\,0).
+  \tag{6.28}
 \end{equation}
-Ed ora calcoliamo i campi prodotti in $K'$ dalle lamine di corrente. Dalle (6.22) si ha
+Ed ora calcoliamo i campi prodotti in $K'$ dalle lamine di corrente. Dalle
+(6.22) si ha
 \begin{equation}
-\sigma_4'=0\,;\qquad\mathcal J_x^{\prime\,4}=0\,;\quad\ \mathcal J_y^{\prime\,4}=\mathcal J_y^{\,4}
-\tag{6.29}
+  \sigma_4'=0\,;\qquad\mathcal J_x^{\prime\,4}=0\,;
+  \quad\ \mathcal J_y^{\prime\,4}=\mathcal J_y^{\,4}
+  \tag{6.29}
 \end{equation}
 e quindi
 \begin{equation}
-\vec E_4'=0\,;\qquad\vec B_4'=(B_x,\,0,\,0).
-\tag{6.30}
+  \vec E_4'=0\,;\qquad\vec B_4'=(B_x,\,0,\,0).
+  \tag{6.30}
 \end{equation}
 Sempre dalle (6.22) si ha
 \begin{equation}
-\sigma_5'=\gamma(v)\big(0-\frac{v}{c^2}\mathcal J_x^{\,5}\big)=-\gamma(v)\frac{v}{c^2}\mathcal J_x^{\,5}\,;\qquad\mathcal J_x^{\prime\,5}=\gamma(v)\mathcal J_x^{\,5}
-\tag{6.31}
+  \sigma_5'=\gamma(v)\big(0-\frac{v}{c^2}\mathcal J_x^{\,5}\big)
+  =-\gamma(v)\frac{v}{c^2}\mathcal J_x^{\,5}\,;
+  \qquad\mathcal J_x^{\prime\,5}=\gamma(v)\mathcal J_x^{\,5}
+  \tag{6.31}
 \end{equation}
-e quindi in $K'$ è presente, oltre al campo magnetico prodotto da \ $\mathcal J_x^{\prime\,5}$, anche un campo elettrico di modulo $2\pi\sigma_5'$ parallelo all'asse $z$ (la distribuzione è nel piano $z=0$):
+e quindi in $K'$ \`e presente, oltre al campo magnetico prodotto da
+\ $\mathcal J_x^{\prime\,5}$, anche un campo elettrico di modulo $2\pi\sigma_5'$
+parallelo all'asse $z$ (la distribuzione \`e nel piano $z=0$):
 \begin{equation}
-\vec E_5'=2\pi\big(0,\,0,\,-\gamma(v)\frac{v}{c^2}\mathcal J_x^{\,5}\big)=(0,\,0,\,\beta\gamma B_y)\,;\qquad\vec B_5'=(0,\,\gamma B_y,\,0).
-\tag{6.32}
+  \vec E_5'=2\pi\big(0,\,0,\,-\gamma(v)\frac{v}{c^2}\mathcal J_x^{\,5}\big)
+  =(0,\,0,\,\beta\gamma B_y)\,;\qquad\vec B_5'=(0,\,\gamma B_y,\,0).
+  \tag{6.32}
 \end{equation}
-Infine, in modo analogo si ottengono i campi prodotti in $K'$ da $\mathcal J_x^{\,6}$ (nel piano $y=0$):
+Infine, in modo analogo si ottengono i campi prodotti in $K'$ da
+$\mathcal J_x^{\,6}$ (nel piano $y=0$):
 \begin{equation}
-\vec E_6'=2\pi\big(0,\,-\gamma(v)\frac{v}{c^2}\mathcal J_x^{\,6},\,0\big)=(0,\,-\beta\gamma B_z,\,0)\,;\qquad\vec B_6'=(0,\,0,\,\gamma B_z).
-\tag{6.33}
+  \vec E_6'=2\pi\big(0,\,-\gamma(v)\frac{v}{c^2}\mathcal J_x^{\,6},\,0\big)
+  =(0,\,-\beta\gamma B_z,\,0)\,;\qquad\vec B_6'=(0,\,0,\,\gamma B_z).
+  \tag{6.33}
 \end{equation}
-Riassumiamo per comodità il risultato delle (6.26)--(6.28), (6.30), (6.32) e (6.33):
+Riassumiamo per comodit\`a il risultato delle (6.26)--(6.28), (6.30), (6.32) e
+(6.33):
 \begin{equation}
-\begin{array}{r@{\;}c@{\;}c@{\quad}c@{\quad}c@{\;}c@{\qquad\qquad}r@{\;}c@{\;}c@{\quad}c@{\quad}c@{\;}c}
-\vec E_1'=&(&E_x&0&0&)&\vec B_1'=&(&0&0&0&)\\
-\vec E_2'=&(&0&\gamma E_y&0&)&\vec B_2'=&(&0&0&-\beta\gamma E_y&)\\
-\vec E_3'=&(&0&0&\gamma E_z&)&\vec B_3'=&(&0&\beta\gamma E_z&0&)\\
-\vec E_4'=&(&0&0&0&)&\vec B_4'=&(&B_x&0&0&)\\
-\vec E_5'=&(&0&0&\beta\gamma B_y&)&\vec B_5'=&(&0&\gamma B_y&0&)\\
-\vec E_6'=&(&0&-\beta\gamma B_z&0&)&\vec B_6'=&(&0&0&\gamma B_z&)
-\end{array}
-\tag{6.34}
+  \begin{array}{r@{\;}c@{\;}c@{\quad}c@{\quad}c@{\;}c@{\qquad\qquad}r@{\;}c@{
+  \;}c@{\quad}c@{\quad}c@{\;}c}
+    \vec E_1'=&(&E_x&0&0&)&\vec B_1'=&(&0&0&0&)\\
+    \vec E_2'=&(&0&\gamma E_y&0&)&\vec B_2'=&(&0&0&-\beta\gamma E_y&)\\
+    \vec E_3'=&(&0&0&\gamma E_z&)&\vec B_3'=&(&0&\beta\gamma E_z&0&)\\
+    \vec E_4'=&(&0&0&0&)&\vec B_4'=&(&B_x&0&0&)\\
+    \vec E_5'=&(&0&0&\beta\gamma B_y&)&\vec B_5'=&(&0&\gamma B_y&0&)\\
+    \vec E_6'=&(&0&-\beta\gamma B_z&0&)&\vec B_6'=&(&0&0&\gamma B_z&)
+  \end{array}
+  \tag{6.34}
 \end{equation}
-Poiché \ $\vec E\,'=\vec E_1'+\cdots+\vec E_6'$ \ e \ $\vec B\,'=\vec B_1'+\cdots+\vec B_6'$, \ dalle (6.34) si ha la legge di trasformazione cercata:
+Poich\'e \ $\vec E\,'=\vec E_1'+\cdots+\vec E_6'$ \ e
+\ $\vec B\,'=\vec B_1'+\cdots+\vec B_6'$, \ dalle (6.34) si ha la legge di
+trasformazione cercata:
 \begin{equation}
-\left\{\begin{aligned}
-E_x'&=E_x\\
-E_y'&=\gamma(v)(E_y-\beta B_z)\\
-E_z'&=\gamma(v)(E_z+\beta B_y)
-\end{aligned}\right.
-\qquad\qquad\qquad
-\left\{\begin{aligned}
-B_x'&=B_x\\
-B_y'&=\gamma(v)(B_y+\beta E_z)\\
-B_z'&=\gamma(v)(B_z-\beta E_y)
-\end{aligned}\right.
-\tag{6.35}
+  \left\{\begin{aligned}
+    E_x'&=E_x\\
+    E_y'&=\gamma(v)(E_y-\beta B_z)\\
+    E_z'&=\gamma(v)(E_z+\beta B_y)
+  \end{aligned}\right.
+  \qquad\qquad\qquad
+  \left\{\begin{aligned}
+    B_x'&=B_x\\
+    B_y'&=\gamma(v)(B_y+\beta E_z)\\
+    B_z'&=\gamma(v)(B_z-\beta E_y)
+  \end{aligned}\right.
+  \tag{6.35}
 \end{equation}
 e le inverse, che si ottengono cambiando $\beta$ in $-\beta$.\\
-È sottinteso che i due membri delle (6.35) vanno calcolati in corrispondenza dello stesso evento, cioè i primi membri sono funzioni di $(x',y',z',t')$, mentre i secondi membri sono funzioni di $(x,y,z,t)$.
+\`E sottinteso che i due membri delle (6.35) vanno calcolati in corrispondenza
+dello stesso evento, cio\`e i primi membri sono funzioni di $(x',y',z',t')$,
+mentre i secondi membri sono funzioni di $(x,y,z,t)$.
 
-Le trasformazioni del campo elettromagnetico sono diverse da quelle dei quadrivettori, se non altro per il fatto che le componenti di un quadrivettore sono quattro, mentre quelle del campo elettromagnetico sono sei (si tratta di un tensore antisimmetrico); per questo motivo il campo elettromagnetico ammette due invarianti (grandezze che hanno lo stesso valore in tutti i riferimenti):
+Le trasformazioni del campo elettromagnetico sono diverse da quelle dei
+quadrivettori, se non altro per il fatto che le componenti di un quadrivettore
+sono quattro, mentre quelle del campo elettromagnetico sono sei (si tratta di un
+tensore antisimmetrico); per questo motivo il campo elettromagnetico ammette due
+invarianti (grandezze che hanno lo stesso valore in tutti i riferimenti):
 \begin{equation}
-\vec E^2-\vec B^2\,;\qquad\quad\vec E\cdot\vec B
-\tag{6.36}
+  \vec E^2-\vec B^2\,;\qquad\quad\vec E\cdot\vec B
+  \tag{6.36}
 \end{equation}
-come si può verificare direttamente utilizzando le (6.35).
+come si pu\`o verificare direttamente utilizzando le (6.35).
 
-Se esiste un riferimento $K'$ in cui il campo magnetico $\vec B\,'$ è nullo (e quindi in $K'$ le sorgenti sono in quiete), dalle seconde delle (6.35) si ottiene che nel riferimento del laboratorio $K$
+Se esiste un riferimento $K'$ in cui il campo magnetico $\vec B\,'$ \`e nullo (e
+quindi in $K'$ le sorgenti sono in quiete), dalle seconde delle (6.35) si
+ottiene che nel riferimento del laboratorio $K$
 \begin{equation}
-B_x=0\,,\quad\ B_y=-\beta E_z\,,\quad\ B_z=\beta E_y\quad\ \Rightarrow\quad\ \vec B=\frac{\vec v}{c}\wedge\vec E
-\tag{6.37}
+  B_x=0\,,\quad\ B_y=-\beta E_z\,,\quad\ B_z=\beta E_y
+  \quad\ \Rightarrow\quad\ \vec B=\frac{\vec v}{c}\wedge\vec E
+  \tag{6.37}
 \end{equation}
-($\vec v$ è la velocità di $K'$ rispetto al laboratorio); analogamente, se in $K'$ c'è solo un campo magnetico (generato da correnti neutre: \ $\vec E\,'=0$), allora in $K$
+($\vec v$ \`e la velocit\`a di $K'$ rispetto al laboratorio); analogamente, se
+in $K'$ c'\`e solo un campo magnetico (generato da correnti neutre:
+\ $\vec E\,'=0$), allora in $K$
 \begin{equation}
-\vec E=-\frac{\vec v}{c}\wedge\vec B.
-\tag{6.38}
+  \vec E=-\frac{\vec v}{c}\wedge\vec B.
+  \tag{6.38}
 \end{equation}
-La presenza di un campo elettrico in $K$ è dovuta al fatto che, per le (6.21) \big(o le (6.22)\,\big), anche se in $K'$ è nulla la densità di carica, non è nulla nel riferimento del laboratorio.
+La presenza di un campo elettrico in $K$ \`e dovuta al fatto che, per le (6.21)
+\big(o le (6.22)\,\big), anche se in $K'$ \`e nulla la densit\`a di carica, non
+\`e nulla nel riferimento del laboratorio.
 
 \subsection{La forza di Lorentz}
 
-Finalmente siamo in grado di dimostrare che la forza che si esercita su una carica in moto è sempre data dalla (4.4): sia $\vec v$ la velocità (ad un certo istante) della carica $q$ nel riferimento $K$ e sia $K'$ il riferimento tangente alla carica, con $\vec v\parallel x,x'$. Siccome in $K'$ la carica è (momentaneamente) ferma, per definizione di campo elettrico e per le (6.35)
+Finalmente siamo in grado di dimostrare che la forza che si esercita su una
+carica in moto \`e sempre data dalla (4.4): sia $\vec v$ la velocit\`a (ad un
+certo istante) della carica $q$ nel riferimento $K$ e sia $K'$ il riferimento
+tangente alla carica, con $\vec v\parallel x,x'$. Siccome in $K'$ la carica \`e
+(momentaneamente) ferma, per definizione di campo elettrico e per le (6.35)
 \begin{equation}
-\vec F\,'=q\vec E\,'=\left\{\begin{aligned}
-&qE_x\\
-&\gamma\,q(E_y-\beta B_z)\\
-&\gamma\,q(E_z+\beta B_y).
-\end{aligned}\right.
-\tag{6.39}
+  \vec F\,'=q\vec E\,'=\left\{\begin{aligned}
+    &qE_x\\
+    &\gamma\,q(E_y-\beta B_z)\\
+    &\gamma\,q(E_z+\beta B_y).
+  \end{aligned}\right.
+  \tag{6.39}
 \end{equation}
-Dalle (5.36) (la componente $x$ è quella parallela a $\vec v$, le componenti $y$ e $z$ sono quelle trasverse)
+Dalle (5.36) (la componente $x$ \`e quella parallela a $\vec v$, le componenti
+$y$ e $z$ sono quelle trasverse)
 \begin{equation}
-\vec F=\left\{\begin{aligned}
-&qE_x\\
-&qE_y-q\beta B_z\\
-&qE_z+q\beta B_y
-\end{aligned}\right.
-\qquad\quad\Rightarrow\qquad\quad\vec F=q\vec E+q\frac{\vec v}{c}\wedge\vec B.
-\tag{6.40}
+  \vec F=\left\{\begin{aligned}
+    &qE_x\\
+    &qE_y-q\beta B_z\\
+    &qE_z+q\beta B_y
+  \end{aligned}\right.
+  \qquad\quad\Rightarrow\qquad\quad\vec F=q\vec E+q\frac{\vec v}{c}\wedge\vec B.
+  \tag{6.40}
 \end{equation}
-L'introduzione del campo magnetico ci permette quindi di determinare la forza su una carica in moto senza bisogno ogni volta di ricorrere al riferimento tangente alla carica e alle leggi di trasformazione delle forze.
+L'introduzione del campo magnetico ci permette quindi di determinare la forza su
+una carica in moto senza bisogno ogni volta di ricorrere al riferimento tangente
+alla carica e alle leggi di trasformazione delle forze.
 
 \subsection{Il campo elettromagnetico di una carica in moto uniforme}
 
-Una semplice applicazione delle (6.35) consiste nel determinare i campi elettrico e magnetico generati da una carica puntiforme $q$ in moto rettilineo uniforme con velocità $\vec v$. Prendiamo l'asse $x$ coincidente con la traiettoria della carica, e l'origine nel punto occupato all'istante $t=0$. Se $K^0$ è il riferimento di quiete di $q$, per le (6.2) e (6.4) \big(o equivalentemente per le (6.35)\big) si ha
+Una semplice applicazione delle (6.35) consiste nel determinare i campi
+elettrico e magnetico generati da una carica puntiforme $q$ in moto rettilineo
+uniforme con velocit\`a $\vec v$. Prendiamo l'asse $x$ coincidente con la
+traiettoria della carica, e l'origine nel punto occupato all'istante $t=0$. Se
+$K^0$ \`e il riferimento di quiete di $q$, per le (6.2) e (6.4) \big(o
+equivalentemente per le (6.35)\big) si ha
 \begin{equation}
-\begin{aligned}
-E_x(x,y,z,t)&=E_x^0(x_0,y_0,z_0)&&=\frac{q\,x_0}{(x_0^2+y_0^2+z_0^2)^{3/2}}\\
-E_y(x,y,z,t)&=\gamma(v)E_y^0(x_0,y_0,z_0)&&=\frac{\gamma(v)\,q\,y_0}{(x_0^2+y_0^2+z_0^2)^{3/2}}\\
-E_z(x,y,z,t)&=\gamma(v)E_z^0(x_0,y_0,z_0)&&=\frac{\gamma(v)\,q\,z_0}{(x_0^2+y_0^2+z_0^2)^{3/2}}
-\end{aligned}
-\tag{6.41}
+  \begin{aligned}
+    E_x(x,y,z,t)&=E_x^0(x_0,y_0,z_0)
+    &&=\frac{q\,x_0}{(x_0^2+y_0^2+z_0^2)^{3/2}}\\
+    E_y(x,y,z,t)&=\gamma(v)E_y^0(x_0,y_0,z_0)
+    &&=\frac{\gamma(v)\,q\,y_0}{(x_0^2+y_0^2+z_0^2)^{3/2}}\\
+    E_z(x,y,z,t)&=\gamma(v)E_z^0(x_0,y_0,z_0)
+    &&=\frac{\gamma(v)\,q\,z_0}{(x_0^2+y_0^2+z_0^2)^{3/2}}
+  \end{aligned}
+  \tag{6.41}
 \end{equation}
 dove \ $x_0=\gamma(v)(x-vt)$; \quad $y_0=y$; \quad $z_0=z$; \quad quindi
 \begin{equation}
-\begin{aligned}
-E_x(x,y,z,t)&=\frac{\gamma(v)\,q\,(x-vt)}{\big[\gamma(v)^2(x-vt)^2+y^2+z^2\big]^{3/2}}\\
-E_y(x,y,z,t)&=\frac{\gamma(v)\,q\,y}{\big[\gamma(v)^2(x-vt)^2+y^2+z^2\big]^{3/2}}\\
-E_z(x,y,z,t)&=\frac{\gamma(v)\,q\,z}{\big[\gamma(v)^2(x-vt)^2+y^2+z^2\big]^{3/2}}\,\cdot
-\end{aligned}
-\tag{6.42}
+  \begin{aligned}
+    E_x(x,y,z,t)
+    &=\frac{\gamma(v)\,q\,(x-vt)}{\big[\gamma(v)^2(x-vt)^2+y^2+z^2\big]^{3/2}}\\
+    E_y(x,y,z,t)
+    &=\frac{\gamma(v)\,q\,y}{\big[\gamma(v)^2(x-vt)^2+y^2+z^2\big]^{3/2}}\\
+    E_z(x,y,z,t)
+    &=\frac{\gamma(v)\,q\,z}{\big[\gamma(v)^2(x-vt)^2+y^2+z^2\big]^{3/2}}\,\cdot
+  \end{aligned}
+  \tag{6.42}
 \end{equation}
-Possiamo studiare il campo all'istante $t=0$, dato che si sposta rigidamente con velocità $v$ mantenendo inalterata la forma:
+Possiamo studiare il campo all'istante $t=0$, dato che si sposta rigidamente con
+velocit\`a $v$ mantenendo inalterata la forma:
 \begin{equation}
-\vec E(t=0)=\frac{\gamma\,q}{(\gamma^2x^2+y^2+z^2)^{3/2}}\,\vec r
-\tag{6.43}
+  \vec E(t=0)=\frac{\gamma\,q}{(\gamma^2x^2+y^2+z^2)^{3/2}}\,\vec r
+  \tag{6.43}
 \end{equation}
-da cui si vede che $\vec E$ è radiale ma \underline{non} a simmetria sferica, in quanto il suo modulo dipende non solo dalla distanza $r$ dall'origine (dove si trova la carica), ma anche dall'angolo $\theta$ fra $\vec r$ e $\vec v$, cioè l'asse $x$:
+da cui si vede che $\vec E$ \`e radiale ma \underline{non} a simmetria sferica,
+in quanto il suo modulo dipende non solo dalla distanza $r$ dall'origine (dove
+si trova la carica), ma anche dall'angolo $\theta$ fra $\vec r$ e $\vec v$,
+cio\`e l'asse $x$:
 \begin{equation}
-\vec E^2=\frac{\gamma^2q^2r^2}{\gamma^6\big[x^2+(1-\beta^2)(y^2+z^2)\big]^3}\ \Rightarrow\ E(r,\theta)=\frac{q}{r^2}\frac{1-\beta^2}{(1-\beta^2\sen^2\theta)^{3/2}}
-\tag{6.44}
+  \vec E^2=\frac{\gamma^2q^2r^2}{\gamma^6\big[x^2+(1-\beta^2)(y^2+z^2)\big]^3}
+  \ \Rightarrow
+  \ E(r,\theta)=\frac{q}{r^2}\frac{1-\beta^2}{(1-\beta^2\sen^2\theta)^{3/2}}
+  \tag{6.44}
 \end{equation}
-e quindi vale $q/(\gamma r)^2$ \ per $\theta=0$ e $\theta=\pi$, e \ $\gamma q/r^2$ \ per $\theta=\pm\pi/2$: il campo è più intenso per il fattore $\gamma^3$ nella direzione ortogonale al moto rispetto alla direzione longitudinale.\\
-È un campo \underline{non conservativo}; per dimostrarlo basta calcolare la circuitazione lungo il circuito rappresentato nella figura 6.7: lungo la linea di forza $\theta=\theta_1$ fra $r_1$ e $r_2$, poi lungo l'arco di circonferenza fra $\theta_1$ e $\theta_2$, poi lungo la linea di forza $\theta=\theta_2$ fra $r_2$ e $r_1$, ed infine il circuito viene chiuso con l'arco di circonferenza fra $\theta_2$ e $\theta_1$; gli archi di circonferenza non contribuiscono alla circuitazione perché $\vec E$ è radiale, nei tratti lungo le due linee di forza \ $E(r,\theta_2)>E(r,\theta_1)$ \ (se $\theta_2>\theta_1$), per cui la circuitazione è non nulla.
+e quindi vale $q/(\gamma r)^2$ \ per $\theta=0$ e $\theta=\pi$, e
+\ $\gamma q/r^2$ \ per $\theta=\pm\pi/2$: il campo \`e pi\`u intenso per il
+fattore $\gamma^3$ nella direzione ortogonale al moto rispetto alla direzione
+longitudinale.\\
+\`E un campo \underline{non conservativo}; per dimostrarlo basta calcolare la
+circuitazione lungo il circuito rappresentato nella figura 6.7: lungo la linea
+di forza $\theta=\theta_1$ fra $r_1$ e $r_2$, poi lungo l'arco di circonferenza
+fra $\theta_1$ e $\theta_2$, poi lungo la linea di forza $\theta=\theta_2$ fra
+$r_2$ e $r_1$, ed infine il circuito viene chiuso con l'arco di circonferenza
+fra $\theta_2$ e $\theta_1$; gli archi di circonferenza non contribuiscono alla
+circuitazione perch\'e $\vec E$ \`e radiale, nei tratti lungo le due linee di
+forza \ $E(r,\theta_2)>E(r,\theta_1)$ \ (se $\theta_2>\theta_1$), per cui la
+circuitazione \`e non nulla.
 \fig{fig6_7}{6.7}
-Per calcolare il campo magnetico possiamo utilizzare la (6.37): $\vec B$ è in ogni punto ortogonale sia ad $\vec E$, e quindi ad $\vec r$, che a $\vec v$, cioè all'asse $x$. Quindi le linee di forza di $\vec B$ sono circonferenze parallele al piano $yz$, con centro sull'asse $x$: lungo una linea di forza il modulo del campo magnetico è costante.\\
-Se $v/c\approx1$, tutto il campo sia elettrico che magnetico è praticamente concentrato vicino al piano ortogonale al moto passante per la carica.
+Per calcolare il campo magnetico possiamo utilizzare la (6.37): $\vec B$ \`e in
+ogni punto ortogonale sia ad $\vec E$, e quindi ad $\vec r$, che a $\vec v$,
+cio\`e all'asse $x$. Quindi le linee di forza di $\vec B$ sono circonferenze
+parallele al piano $yz$, con centro sull'asse $x$: lungo una linea di forza il
+modulo del campo magnetico \`e costante.\\
+Se $v/c\approx1$, tutto il campo sia elettrico che magnetico \`e praticamente
+concentrato vicino al piano ortogonale al moto passante per la carica.
 
 \paragraph{Esempio}
 \begin{quote}
-Una carica $q_1$ si muove con velocità costante $v$ lungo l'asse $x$, e una carica $q_2$ è ferma nel punto $x=0$, $y=d$. Vogliamo calcolare, nell'istante in cui $q_1$ passa per l'origine, la forza che ogni carica esercita sull'altra, per vedere se in questo caso il 3$^\circ$ principio della dinamica newtoniana è soddisfatto.\\
-La forza su $q_1$ (sorgente in quiete, carica in moto) è
-\begin{equation}
-\vec F_{21}=-\frac{q_1q_2}{d^2}\,\hat\jmath
-\tag{6.45}
-\end{equation}
-($\hat\jmath$ è il versore dell'asse $y$); la forza su $q_2$ si ottiene dalla (6.44) con $\theta=\pi/2$ (definizione di campo elettrico):
-\begin{equation}
-\vec F_{12}=\gamma(v)\frac{q_1q_2}{d^2}\,\hat\jmath
-\tag{6.46}
-\end{equation}
-quindi $\vec F_{12}\ne-\vec F_{21}$. In questo caso, quindi, la conservazione della quantità di moto vale per l'intero sistema costituito dalle due cariche e dal campo elettromagnetico da esse generato.
+  Una carica $q_1$ si muove con velocit\`a costante $v$ lungo l'asse $x$, e una
+  carica $q_2$ \`e ferma nel punto $x=0$, $y=d$. Vogliamo calcolare,
+  nell'istante in cui $q_1$ passa per l'origine, la forza che ogni carica
+  esercita sull'altra, per vedere se in questo caso il 3$^\circ$ principio della
+  dinamica newtoniana \`e soddisfatto.\\
+  La forza su $q_1$ (sorgente in quiete, carica in moto) \`e
+  \begin{equation}
+    \vec F_{21}=-\frac{q_1q_2}{d^2}\,\hat\jmath
+    \tag{6.45}
+  \end{equation}
+  ($\hat\jmath$ \`e il versore dell'asse $y$); la forza su $q_2$ si ottiene
+  dalla (6.44) con $\theta=\pi/2$ (definizione di campo elettrico):
+  \begin{equation}
+    \vec F_{12}=\gamma(v)\frac{q_1q_2}{d^2}\,\hat\jmath
+    \tag{6.46}
+  \end{equation}
+  quindi $\vec F_{12}\ne-\vec F_{21}$. In questo caso, quindi, la conservazione
+  della quantit\`a di moto vale per l'intero sistema costituito dalle due
+  cariche e dal campo elettromagnetico da esse generato.
 \end{quote}
 
 \subsection{Le equazioni di Maxwell}
 
-Abbiamo visto in un caso particolare, quello in cui si ha una corrente superficiale costante, la necessità di introdurre il campo magnetico per poter esprimere in modo semplice la forza che si esercita su una carica in moto: ovviamente questo risultato vale anche in tutti i casi ottenibili da questo per sovrapposizione, e anzi più in generale quando ogni sorgente (carica puntiforme, distribuzione di volume, \dots) si muove di moto rettilineo uniforme, per cui per ciascuna di esse esiste un riferimento \underline{di quiete} (non il riferimento tangente, che esiste sempre), in generale diverso da sorgente a sorgente. Noi abbiamo preso questo fatto come l'indicazione che quando si hanno sorgenti in moto (arbitrario) esiste il campo magnetico, con la proprietà (per ora l'unica che conosciamo) di trasformarsi in base alle (6.35): dall'esistenza di $\vec B$ e dalle (6.35) abbiamo ricavato la (6.40), e questo non è un risultato di poco conto!\\
-Sappiamo quindi che le cariche in movimento generano il campo magnetico, e qual è il suo significato, ma -- a parte i casi citati -- non dobbiamo illuderci che sia sempre possibile determinarlo così come abbiamo ottenuto la (6.11), anche perché in generale non siamo neppure in grado di determinare il campo elettrico generato da sorgenti in moto. Quindi la teoria non è ancora completa: il problema che dobbiamo affrontare è quello di stabilire le equazioni che ci permettano, date le sorgenti, di determinare i campi elettrico e magnetico, e per fare questo è necessario introdurre un nuovo postulato.
+Abbiamo visto in un caso particolare, quello in cui si ha una corrente
+superficiale costante, la necessit\`a di introdurre il campo magnetico per poter
+esprimere in modo semplice la forza che si esercita su una carica in moto:
+ovviamente questo risultato vale anche in tutti i casi ottenibili da questo per
+sovrapposizione, e anzi pi\`u in generale quando ogni sorgente (carica
+puntiforme, distribuzione di volume, \dots) si muove di moto rettilineo
+uniforme, per cui per ciascuna di esse esiste un riferimento \underline{di
+quiete} (non il riferimento tangente, che esiste sempre), in generale diverso da
+sorgente a sorgente. Noi abbiamo preso questo fatto come l'indicazione che
+quando si hanno sorgenti in moto (arbitrario) esiste il campo magnetico, con la
+propriet\`a (per ora l'unica che conosciamo) di trasformarsi in base alle
+(6.35): dall'esistenza di $\vec B$ e dalle (6.35) abbiamo ricavato la (6.40), e
+questo non \`e un risultato di poco conto!\\
+Sappiamo quindi che le cariche in movimento generano il campo magnetico, e qual
+\`e il suo significato, ma -- a parte i casi citati -- non dobbiamo illuderci
+che sia sempre possibile determinarlo cos\`i come abbiamo ottenuto la (6.11),
+anche perch\'e in generale non siamo neppure in grado di determinare il campo
+elettrico generato da sorgenti in moto. Quindi la teoria non \`e ancora
+completa: il problema che dobbiamo affrontare \`e quello di stabilire le
+equazioni che ci permettano, date le sorgenti, di determinare i campi elettrico
+e magnetico, e per fare questo \`e necessario introdurre un nuovo postulato.
 
-Abbiamo alcuni esempi di campo magnetico, quello determinato da una corrente superficiale costante, e quello dovuto ad una carica in moto uniforme. Il primo è un campo costante (opposto dalle due parti del piano su cui scorre la corrente), ed il secondo è dato dalla (6.37), con $\vec E$ dato dalla (6.43): in entrambi i casi si verifica che $\dive\vec B=0$, ovvero che il flusso di $\vec B$ attraverso qualsiasi superficie chiusa è uguale a zero. Del resto, come abbiamo già messo in evidenza a suo tempo, è sperimentalmente accertato che non esistono cariche magnetiche sorgenti di flusso; prendiamo questo fatto come l'ulteriore postulato da aggiungere ai quattro citati all'inizio di questo capitolo:
+Abbiamo alcuni esempi di campo magnetico, quello determinato da una corrente
+superficiale costante, e quello dovuto ad una carica in moto uniforme. Il primo
+\`e un campo costante (opposto dalle due parti del piano su cui scorre la
+corrente), ed il secondo \`e dato dalla (6.37), con $\vec E$ dato dalla (6.43):
+in entrambi i casi si verifica che $\dive\vec B=0$, ovvero che il flusso di
+$\vec B$ attraverso qualsiasi superficie chiusa \`e uguale a zero. Del resto,
+come abbiamo gi\`a messo in evidenza a suo tempo, \`e sperimentalmente accertato
+che non esistono cariche magnetiche sorgenti di flusso; prendiamo questo fatto
+come l'ulteriore postulato da aggiungere ai quattro citati all'inizio di questo
+capitolo:
 \begin{itemize}
-\item[$\mathbf p_5$] Non esistenza della cariche magnetiche: le linee di forza del campo magnetico non scaturiscono da (o scompaiono in) ``poli magnetici'', ma si richiudono su se stesse (al finito o all'infinito), e di conseguenza \textbf{è nullo il flusso di $\vec B$ uscente da qualsiasi superficie chiusa}. In forma locale questo postulato è espresso dall'equazione
-\begin{equation}
-\dive\vec B(x,y,z,t)=0.
-\tag{6.47}
-\end{equation}
+  \item[$\mathbf p_5$] Non esistenza della cariche magnetiche: le linee di forza
+    del campo magnetico non scaturiscono da (o scompaiono in) ``poli
+    magnetici'', ma si richiudono su se stesse (al finito o all'infinito), e di
+    conseguenza \textbf{\`e nullo il flusso di $\vec B$ uscente da qualsiasi
+    superficie chiusa}. In forma locale questo postulato \`e espresso
+    dall'equazione
+    \begin{equation}
+      \dive\vec B(x,y,z,t)=0.
+      \tag{6.47}
+    \end{equation}
 \end{itemize}
-Il principio di relatività stabilisce che la (6.1) e la (6.47) devono essere vere in qualsiasi riferimento (inerziale): \ $\dive\vec B(x,y,z,t)=0\ \Leftrightarrow\ \dive\vec B\,'(x',y',z',t')=0$ \ e analogamente \ $\dive\vec E(x,y,z,t)=4\pi\rho(x,y,z,t)\ \Leftrightarrow\ \dive\vec E\,'(x',y',z',t')=4\pi\rho'(x',y',z',t')$\,, essendo i campi nei diversi riferimenti legati dalle (6.35) e le coordinate di un evento legate dalle (4.40) \ \big($x=\gamma(v)(x'+vt')$, \ $y=y'$, \ $z=z'$, \ $t=\gamma(v)(t'+vx'/c^2)$\big); vediamo allora quali sono le implicazioni di questa affermazione. Si ha
+Il principio di relativit\`a stabilisce che la (6.1) e la (6.47) devono essere
+vere in qualsiasi riferimento (inerziale):
+\ $\dive\vec B(x,y,z,t)=0\ \Leftrightarrow\ \dive\vec B\,'(x',y',z',t')=0$ \ e
+analogamente \ $\dive\vec E(x,y,z,t)=4\pi\rho(x,y,z,t)
+\ \Leftrightarrow\ \dive\vec E\,'(x',y',z',t')=4\pi\rho'(x',y',z',t')$\,,
+essendo i campi nei diversi riferimenti legati dalle (6.35) e le coordinate di
+un evento legate dalle (4.40) \ \big($x=\gamma(v)(x'+vt')$, \ $y=y'$,
+\ $z=z'$, \ $t=\gamma(v)(t'+vx'/c^2)$\big); vediamo allora quali sono le
+implicazioni di questa affermazione. Si ha
 \begin{equation}
-\begin{aligned}
-\frac{\partial B_x'}{\partial x'}&=\frac{\partial B_x}{\partial x}\frac{\partial x}{\partial x'}+\frac{\partial B_x}{\partial t}\frac{\partial t}{\partial x'}=\gamma(v)\left(\frac{\partial B_x}{\partial x}+\beta\frac{1}{c}\frac{\partial B_x}{\partial t}\right)\\
-\frac{\partial B_y'}{\partial y'}&=\gamma(v)\left(\frac{\partial B_y}{\partial y}+\beta\frac{\partial E_z}{\partial y}\right)\\
-\frac{\partial B_z'}{\partial z'}&=\gamma(v)\left(\frac{\partial B_z}{\partial z}-\beta\frac{\partial E_y}{\partial z}\right)
-\end{aligned}
-\tag{6.48}
+  \begin{aligned}
+    \frac{\partial B_x'}{\partial x'}
+    &=\frac{\partial B_x}{\partial x}\frac{\partial x}{\partial x'}
+    +\frac{\partial B_x}{\partial t}\frac{\partial t}{\partial x'}
+    =\gamma(v)\left(\frac{\partial B_x}{\partial x}
+    +\beta\frac{1}{c}\frac{\partial B_x}{\partial t}\right)\\
+    \frac{\partial B_y'}{\partial y'}
+    &=\gamma(v)\left(\frac{\partial B_y}{\partial y}
+    +\beta\frac{\partial E_z}{\partial y}\right)\\
+    \frac{\partial B_z'}{\partial z'}
+    &=\gamma(v)\left(\frac{\partial B_z}{\partial z}
+    -\beta\frac{\partial E_y}{\partial z}\right)
+  \end{aligned}
+  \tag{6.48}
 \end{equation}
 e quindi
 \begin{equation}
-\begin{aligned}
-&0=\dive\vec B\,'=\gamma(v)\left\{\dive\vec B+\beta\left[\frac{1}{c}\frac{\partial B_x}{\partial t}+(\rot\vec E)_x\right]\right\}\quad\ \Rightarrow\\
-&\frac{1}{c}\frac{\partial B_x}{\partial t}+(\rot\vec E)_x=0.
-\end{aligned}
-\tag{6.49}
+  \begin{aligned}
+    &0=\dive\vec B\,'=\gamma(v)\left\{\dive\vec B
+    +\beta\left[\frac{1}{c}\frac{\partial B_x}{\partial t}+(\rot\vec E)_x\right]
+    \right\}\quad\ \Rightarrow\\
+    &\frac{1}{c}\frac{\partial B_x}{\partial t}+(\rot\vec E)_x=0.
+  \end{aligned}
+  \tag{6.49}
 \end{equation}
-Se poi $K'$ si muove rispetto a $K$ in direzione dell'asse $y$ o dell'asse $z$, si ottengono le altre due componenti dell'equazione
+Se poi $K'$ si muove rispetto a $K$ in direzione dell'asse $y$ o dell'asse $z$,
+si ottengono le altre due componenti dell'equazione
 \begin{equation}
-\rot\vec E+\frac{1}{c}\frac{\partial\vec B}{\partial t}=0
-\tag{6.50}
+  \rot\vec E+\frac{1}{c}\frac{\partial\vec B}{\partial t}=0
+  \tag{6.50}
 \end{equation}
-che costituisce la condizione necessaria e sufficiente perché \ $\dive\vec B=0\ \Leftrightarrow\ \dive\vec B\,'=0$.\\
+che costituisce la condizione necessaria e sufficiente perch\'e
+\ $\dive\vec B=0\ \Leftrightarrow\ \dive\vec B\,'=0$.\\
 Analogamente, grazie alla prima delle (6.21),
 \begin{equation}
-\begin{aligned}
-4\pi\rho'&=4\pi\gamma(v)\big(\rho-\beta\frac{1}{c}J_x\big)=\dive\vec E\,'\\
-&=\gamma(v)\left\{\dive\vec E+\beta\left[\frac{1}{c}\frac{\partial E_x}{\partial t}-(\rot\vec B)_x\right]\right\}
-\end{aligned}
-\tag{6.51}
+  \begin{aligned}
+    4\pi\rho'&=4\pi\gamma(v)\big(\rho-\beta\frac{1}{c}J_x\big)=\dive\vec E\,'\\
+    &=\gamma(v)\left\{\dive\vec E
+    +\beta\left[\frac{1}{c}\frac{\partial E_x}{\partial t}
+    -(\rot\vec B)_x\right]\right\}
+  \end{aligned}
+  \tag{6.51}
 \end{equation}
 da cui come prima si ottiene
 \begin{equation}
-\rot\vec B=\frac{4\pi}{c}\vec J+\frac{1}{c}\frac{\partial\vec E}{\partial t}\,\cdot
-\tag{6.52}
+  \rot\vec B=\frac{4\pi}{c}\vec J
+  +\frac{1}{c}\frac{\partial\vec E}{\partial t}\,\cdot
+  \tag{6.52}
 \end{equation}
-Le (6.1), (6.47), (6.50) e (6.52) sono le \textbf{equazioni di Maxwell}, che riscriviamo riunendole in un'unica tabella:
+Le (6.1), (6.47), (6.50) e (6.52) sono le \textbf{equazioni di Maxwell}, che
+riscriviamo riunendole in un'unica tabella:
 \begin{equation}
-\left\{\begin{aligned}
-&\dive\vec E=4\pi\rho\\[4pt]
-&\rot\vec E+\frac{1}{c}\frac{\partial\vec B}{\partial t}=0\\[4pt]
-&\dive\vec B=0\\[4pt]
-&\rot\vec B=\frac{4\pi}{c}\vec J+\frac{1}{c}\frac{\partial\vec E}{\partial t}\,\cdot
-\end{aligned}\right.
-\tag{6.53}
+  \left\{\begin{aligned}
+    &\dive\vec E=4\pi\rho\\[4pt]
+    &\rot\vec E+\frac{1}{c}\frac{\partial\vec B}{\partial t}=0\\[4pt]
+    &\dive\vec B=0\\[4pt]
+    &\rot\vec B=\frac{4\pi}{c}\vec J
+    +\frac{1}{c}\frac{\partial\vec E}{\partial t}\,\cdot
+  \end{aligned}\right.
+  \tag{6.53}
 \end{equation}
-Esse, insieme all'espressione della forza di Lorentz, determinano i campi, note le sorgenti, e la loro interazione con le sorgenti stesse e quindi costituiscono le equazioni fondamentali dell'elettromagnetismo. Se le sorgenti sono descritte da densità di carica e di corrente, conviene definire la densità di forza (di Lorentz) $\vec f(x,y,z,t)$ come la forza che si esercita sulla carica contenuta in un volumetto (infinitesimo) $\Delta V$, diviso per $\Delta V$:
+Esse, insieme all'espressione della forza di Lorentz, determinano i campi, note
+le sorgenti, e la loro interazione con le sorgenti stesse e quindi costituiscono
+le equazioni fondamentali dell'elettromagnetismo. Se le sorgenti sono descritte
+da densit\`a di carica e di corrente, conviene definire la densit\`a di forza
+(di Lorentz) $\vec f(x,y,z,t)$ come la forza che si esercita sulla carica
+contenuta in un volumetto (infinitesimo) $\Delta V$, diviso per $\Delta V$:
 \begin{equation}
-\vec f=\rho\vec E+\frac{1}{c}\vec J\wedge\vec B.
-\tag{6.54}
+  \vec f=\rho\vec E+\frac{1}{c}\vec J\wedge\vec B.
+  \tag{6.54}
 \end{equation}
-Non c'è fisico che, conoscendone il significato, la portata e la storia, resti indifferente davanti all'eleganza e alla semplicità formale delle (6.53), (6.54).\\
-La semplicità delle equazioni di Maxwell è solo un fatto estetico: dal punto di vista matematico si tratta di un sistema di equazioni differenziali nelle sei incognite \ $E_x,E_y,E_z;\ B_x,B_y,B_z$\,, lineari solo se le sorgenti sono assegnate, e la loro soluzione esatta, ad eccezione di pochi casi semplici di distribuzione delle sorgenti, rappresenta un problema proibitivo. Nei prossimi capitoli, partendo dalle situazioni più elementari, impareremo a determinarne la soluzione in casi particolarmente significativi, a capire il significato e l'importanza dei vari termini che entrano nelle (6.53) e quali approssimazioni sono lecite e si rendono necessarie in particolari condizioni.
+Non c'\`e fisico che, conoscendone il significato, la portata e la storia, resti
+indifferente davanti all'eleganza e alla semplicit\`a formale delle (6.53),
+(6.54).\\
+La semplicit\`a delle equazioni di Maxwell \`e solo un fatto estetico: dal punto
+di vista matematico si tratta di un sistema di equazioni differenziali nelle sei
+incognite \ $E_x,E_y,E_z;\ B_x,B_y,B_z$\,, lineari solo se le sorgenti sono
+assegnate, e la loro soluzione esatta, ad eccezione di pochi casi semplici di
+distribuzione delle sorgenti, rappresenta un problema proibitivo. Nei prossimi
+capitoli, partendo dalle situazioni pi\`u elementari, impareremo a determinarne
+la soluzione in casi particolarmente significativi, a capire il significato e
+l'importanza dei vari termini che entrano nelle (6.53) e quali approssimazioni
+sono lecite e si rendono necessarie in particolari condizioni.

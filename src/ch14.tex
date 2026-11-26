@@ -2,608 +2,1403 @@
 
 \subsection{Fenomenologia}
 
-Nei capitoli 1 e 2 abbiamo discusso l'elettrostatica nel vuoto e in presenza di conduttori: l'elettrostatica in presenza di materiali non conduttori (\textbf{dielettrici}) è molto meno semplice a causa della grande varietà di comportamenti della materia quando soggetta ad un campo elettrico, dipendenti dal tipo di materiale considerato. In questa sede limitiamo la discussione al caso più semplice, quello in cui gli effetti del campo sulla materia sono proporzionali al campo stesso, cioè al caso della \textbf{approssimazione lineare}.
+Nei capitoli 1 e 2 abbiamo discusso l'elettrostatica nel vuoto e in presenza di
+conduttori: l'elettrostatica in presenza di materiali non conduttori
+(\textbf{dielettrici}) \`e molto meno semplice a causa della grande variet\`a di
+comportamenti della materia quando soggetta ad un campo elettrico, dipendenti
+dal tipo di materiale considerato. In questa sede limitiamo la discussione al
+caso pi\`u semplice, quello in cui gli effetti del campo sulla materia sono
+proporzionali al campo stesso, cio\`e al caso della \textbf{approssimazione
+lineare}.
 
-Cominciamo con l'osservazione (sperimentale) che se un condensatore di capacità $C_0$ viene riempito con un materiale omogeneo non conduttore (olio, plastica, vetro, \dots) la sua capacità aumenta di un fattore (di solito dell'ordine dell'unità) dipendente dal tipo di materiale; questo fattore viene indicato con $\epsilon$, ed è detto \textbf{costante dielettrica} del materiale:
+Cominciamo con l'osservazione (sperimentale) che se un condensatore di
+capacit\`a $C_0$ viene riempito con un materiale omogeneo non conduttore (olio,
+plastica, vetro, \dots) la sua capacit\`a aumenta di un fattore (di solito
+dell'ordine dell'unit\`a) dipendente dal tipo di materiale; questo fattore viene
+indicato con $\epsilon$, ed \`e detto \textbf{costante dielettrica} del
+materiale:
 \begin{equation}
-C=\epsilon\,C_0
-\tag{14.1}
+  C=\epsilon\,C_0
+  \tag{14.1}
 \end{equation}
-(il suffisso $_0$ indica le quantità nel vuoto).\\
-Ciò significa che, a parità di d.d.p.\ $V$ fra le armature del condensatore, in presenza del dielettrico la carica sulle armature è maggiore per il fattore $\epsilon$, oppure, a parità di carica sulle armature (p.es.\ il condensatore è stato preventivamente caricato, poi sconnesso dalla batteria e quindi riempito di dielettrico), la d.d.p.\ diminuisce del fattore $\epsilon$:
+(il suffisso $_0$ indica le quantit\`a nel vuoto).\\
+Ci\`o significa che, a parit\`a di d.d.p.\ $V$ fra le armature del condensatore,
+in presenza del dielettrico la carica sulle armature \`e maggiore per il fattore
+$\epsilon$, oppure, a parit\`a di carica sulle armature (p.es.\ il condensatore
+\`e stato preventivamente caricato, poi sconnesso dalla batteria e quindi
+riempito di dielettrico), la d.d.p.\ diminuisce del fattore $\epsilon$:
 \begin{equation}
-V=V_0\ \Rightarrow\ Q=\epsilon\,Q_0;\qquad Q=Q_0\ \Rightarrow\ V=\frac{1}{\epsilon}V_0.
-\tag{14.2}
+  V=V_0\ \Rightarrow\ Q=\epsilon\,Q_0;
+  \qquad Q=Q_0\ \Rightarrow\ V=\frac{1}{\epsilon}V_0.
+  \tag{14.2}
 \end{equation}
-Ciò è conseguenza del comportamento del dielettrico in presenza del campo elettrico fra le armature del condensatore: come vedremo, l'effetto del campo è quello (nel caso di un materiale omogeneo) di indurre sulle superfici del materiale delle cariche, dette \textbf{cariche di polarizzazione} che, nel caso in cui il dielettrico si trova fra le armature del condensatore, sono di segno opposto a quelle delle armature con cui sono a contatto: questo spiega l'aumento della capacità in quanto, a parità di carica $Q$ trasferita (dalla batteria) da una armatura all'altra, il campo elettrico nel condensatore viene ridotto dalla presenza delle cariche di polarizzazione, e quindi viene ridotta anche la d.d.p.: dalle (14.2) si ricava che, se $Q'$ sono le cariche di polarizzazione affacciate all'armatura con carica $Q$, poiché $Q+Q'$ deve dar luogo ad una d.d.p.\ \ $V=V_0/\epsilon$, deve essere
+Ci\`o \`e conseguenza del comportamento del dielettrico in presenza del campo
+elettrico fra le armature del condensatore: come vedremo, l'effetto del campo
+\`e quello (nel caso di un materiale omogeneo) di indurre sulle superfici del
+materiale delle cariche, dette \textbf{cariche di polarizzazione} che, nel caso
+in cui il dielettrico si trova fra le armature del condensatore, sono di segno
+opposto a quelle delle armature con cui sono a contatto: questo spiega l'aumento
+della capacit\`a in quanto, a parit\`a di carica $Q$ trasferita (dalla batteria)
+da una armatura all'altra, il campo elettrico nel condensatore viene ridotto
+dalla presenza delle cariche di polarizzazione, e quindi viene ridotta anche la
+d.d.p.: dalle (14.2) si ricava che, se $Q'$ sono le cariche di polarizzazione
+affacciate all'armatura con carica $Q$, poich\'e $Q+Q'$ deve dar luogo ad una
+d.d.p.\ \ $V=V_0/\epsilon$, deve essere
 \begin{equation}
-Q+Q'=\frac{1}{\epsilon}Q\quad\ \Rightarrow\quad\ Q'=-\frac{\epsilon-1}{\epsilon}Q.
-\tag{14.3}
+  Q+Q'=\frac{1}{\epsilon}Q
+  \quad\ \Rightarrow\quad\ Q'=-\frac{\epsilon-1}{\epsilon}Q.
+  \tag{14.3}
 \end{equation}
-La situazione è, in un certo senso, simile a quella di un conduttore con l'importante differenza che siccome in un conduttore ci sono cariche libere, le cariche sulla superficie devono annullare il campo elettrico all'interno mentre in un dielettrico non si hanno cariche libere per cui il campo interno non deve necessariamente essere nullo (e in effetti non lo è): le cariche sulla superficie di un dielettrico non nascono dalla migrazione di cariche libere, ma dall'orientamento (o dalla deformazione) delle molecole per effetto del campo all'interno del dielettrico stesso.
+La situazione \`e, in un certo senso, simile a quella di un conduttore con
+l'importante differenza che siccome in un conduttore ci sono cariche libere, le
+cariche sulla superficie devono annullare il campo elettrico all'interno mentre
+in un dielettrico non si hanno cariche libere per cui il campo interno non deve
+necessariamente essere nullo (e in effetti non lo \`e): le cariche sulla
+superficie di un dielettrico non nascono dalla migrazione di cariche libere, ma
+dall'orientamento (o dalla deformazione) delle molecole per effetto del campo
+all'interno del dielettrico stesso.
 
 \subsection{Posizione del problema}
 
-Per sviluppare la teoria dei dielettrici non è necessario introdurre nessun nuovo principio, ma solo ipotesi sul comportamento del dielettrico; infatti, da un punto di vista di principio, un dielettrico non è altro che un insieme di elettroni e nuclei (in moto) legati fra di loro sotto forma di molecole e queste cariche giocano il duplice ruolo sia di sorgenti del campo che di oggetto di azioni da parte di esso: esse generano campi, detti \textbf{campi microscopici} \ $\vec E_\mathrm{micr}$, $\vec B_\mathrm{micr}$, che obbediscono alle equazioni di Maxwell (6.53) in cui le sorgenti sono sia le cariche e le correnti macroscopiche (conduttori carichi, spire percorse da corrente, \dots) che le cariche e le correnti microscopiche:
+Per sviluppare la teoria dei dielettrici non \`e necessario introdurre nessun
+nuovo principio, ma solo ipotesi sul comportamento del dielettrico; infatti, da
+un punto di vista di principio, un dielettrico non \`e altro che un insieme di
+elettroni e nuclei (in moto) legati fra di loro sotto forma di molecole e queste
+cariche giocano il duplice ruolo sia di sorgenti del campo che di oggetto di
+azioni da parte di esso: esse generano campi, detti \textbf{campi microscopici}
+\ $\vec E_\mathrm{micr}$, $\vec B_\mathrm{micr}$, che obbediscono alle equazioni
+di Maxwell (6.53) in cui le sorgenti sono sia le cariche e le correnti
+macroscopiche (conduttori carichi, spire percorse da corrente, \dots) che le
+cariche e le correnti microscopiche:
 \begin{equation}
-\left\{\begin{aligned}
-&\dive\vec E_\mathrm{micr}=4\pi(\rho+\rho_\mathrm{micr})\\[4pt]
-&\rot\vec E_\mathrm{micr}+\frac{1}{c}\frac{\partial\vec B_\mathrm{micr}}{\partial t}=0\\[4pt]
-&\dive\vec B_\mathrm{micr}=0\\[4pt]
-&\rot\vec B_\mathrm{micr}=\frac{4\pi}{c}(\vec J+\vec J_\mathrm{micr})+\frac{1}{c}\frac{\partial\vec E_\mathrm{micr}}{\partial t}\,.
-\end{aligned}\right.
-\tag{14.4}
+  \left\{\begin{aligned}
+    &\dive\vec E_\mathrm{micr}=4\pi(\rho+\rho_\mathrm{micr})\\[4pt]
+    &\rot\vec E_\mathrm{micr}
+    +\frac{1}{c}\frac{\partial\vec B_\mathrm{micr}}{\partial t}=0\\[4pt]
+    &\dive\vec B_\mathrm{micr}=0\\[4pt]
+    &\rot\vec B_\mathrm{micr}=\frac{4\pi}{c}(\vec J+\vec J_\mathrm{micr})
+    +\frac{1}{c}\frac{\partial\vec E_\mathrm{micr}}{\partial t}\,.
+  \end{aligned}\right.
+  \tag{14.4}
 \end{equation}
-Il problema è prima di tutto quello di definire i campi macroscopici come medie dei campi microscopici, e ciò si effettua come abbiamo discusso nel capitolo 1.3. Se supponiamo che le correnti macroscopiche siano assenti (e quindi le cariche macroscopiche sono ferme), è lecito fare l'ipotesi che il campo magnetico macroscopico $\vec B$, media di $\vec B_{micr}$, sia nullo: questa è un'ipotesi sul tipo di materiale che prendiamo in considerazione, il quale non deve avere comportamento ferromagnetico (presenza di campo magnetico anche in assenza di correnti macroscopiche). Di conseguenza, il campo elettrico macroscopico $\vec E$, media di $\vec E_\mathrm{micr}$, è un campo \textbf{statico} che obbedisce alle equazioni
+Il problema \`e prima di tutto quello di definire i campi macroscopici come
+medie dei campi microscopici, e ci\`o si effettua come abbiamo discusso nel
+capitolo 1.3. Se supponiamo che le correnti macroscopiche siano assenti (e
+quindi le cariche macroscopiche sono ferme), \`e lecito fare l'ipotesi che il
+campo magnetico macroscopico $\vec B$, media di $\vec B_{micr}$, sia nullo:
+questa \`e un'ipotesi sul tipo di materiale che prendiamo in considerazione, il
+quale non deve avere comportamento ferromagnetico (presenza di campo magnetico
+anche in assenza di correnti macroscopiche). Di conseguenza, il campo elettrico
+macroscopico $\vec E$, media di $\vec E_\mathrm{micr}$, \`e un campo
+\textbf{statico} che obbedisce alle equazioni
 \begin{equation}
-\left\{\begin{aligned}
-&\dive\vec E=4\pi(\rho+\rho')\\
-&\rot\vec E=0
-\end{aligned}\right.
-\tag{14.5}
+  \left\{\begin{aligned}
+    &\dive\vec E=4\pi(\rho+\rho')\\
+    &\rot\vec E=0
+  \end{aligned}\right.
+  \tag{14.5}
 \end{equation}
-dove $\rho$ è la densità delle cariche macroscopiche (o ``cariche libere''), per intenderci quelle sui conduttori o sulle bacchette di vetro strofinate\dots, mentre $\rho'$ è la media di $\rho_\mathrm{micr}$, cioè la densità media delle ``cariche legate'' agli atomi o alle molecole.\\
-In effetti, dalla discussione del paragrafo precedente, sappiamo che saranno presenti anche delle distribuzioni superficiali di carica $\sigma_\mathrm{micr}$, che non compaiono nelle (14.4), e la cui media indichiamo con $\sigma'$.\\
-In assenza di sorgenti esterne (e quindi di campi elettrici esterni) supponiamo che $\rho'$ e $\sigma'$ siano nulli: anche questa è conseguenza dell'ipotesi di comportamento lineare del dielettrico, cioè è una ipotesi sul tipo di dielettrico, dato che esistono sostanze (dette ``ferroelettriche'', in quanto sono l'analogo elettrico delle sostanze ferromagnetiche) nelle quali è presente un campo elettrico anche in assenza di sorgenti esterne.\\
-Il problema, a questo punto, è quello della determinazione di $\rho'$ (e di $\sigma'$), in quanto $\rho$ per ipotesi è assegnata.
+dove $\rho$ \`e la densit\`a delle cariche macroscopiche (o ``cariche libere''),
+per intenderci quelle sui conduttori o sulle bacchette di vetro strofinate\dots,
+mentre $\rho'$ \`e la media di $\rho_\mathrm{micr}$, cio\`e la densit\`a media
+delle ``cariche legate'' agli atomi o alle molecole.\\
+In effetti, dalla discussione del paragrafo precedente, sappiamo che saranno
+presenti anche delle distribuzioni superficiali di carica
+$\sigma_\mathrm{micr}$, che non compaiono nelle (14.4), e la cui media
+indichiamo con $\sigma'$.\\
+In assenza di sorgenti esterne (e quindi di campi elettrici esterni) supponiamo
+che $\rho'$ e $\sigma'$ siano nulli: anche questa \`e conseguenza dell'ipotesi
+di comportamento lineare del dielettrico, cio\`e \`e una ipotesi sul tipo di
+dielettrico, dato che esistono sostanze (dette ``ferroelettriche'', in quanto
+sono l'analogo elettrico delle sostanze ferromagnetiche) nelle quali \`e
+presente un campo elettrico anche in assenza di sorgenti esterne.\\
+Il problema, a questo punto, \`e quello della determinazione di $\rho'$ (e di
+$\sigma'$), in quanto $\rho$ per ipotesi \`e assegnata.
 
 \subsection{La polarizzazione dei dielettrici}
 
-Supponiamo che le molecole del dielettrico non siano ionizzate, per cui la carica di ciascuna di esse è nulla, tuttavia può essere non nullo il loro momento di dipolo $\vec p$.
-In linea di principio possono essere non nulli anche i multipoli di ordine superiore (quadrupolo, \dots), ma normalmente vengono ignorati in quanto portano contributi trascurabili.\\
-Definiamo la \textbf{densità di polarizzazione} $\vec P(x,y,z)$ come
+Supponiamo che le molecole del dielettrico non siano ionizzate, per cui la
+carica di ciascuna di esse \`e nulla, tuttavia pu\`o essere non nullo il loro
+momento di dipolo $\vec p$.
+In linea di principio possono essere non nulli anche i multipoli di ordine
+superiore (quadrupolo, \dots), ma normalmente vengono ignorati in quanto portano
+contributi trascurabili.\\
+Definiamo la \textbf{densit\`a di polarizzazione} $\vec P(x,y,z)$ come
 \begin{equation}
-\vec P(x,y,z)=\frac{\sum_i\vec p_i}{\Delta V}
-\tag{14.6}
+  \vec P(x,y,z)=\frac{\sum_i\vec p_i}{\Delta V}
+  \tag{14.6}
 \end{equation}
-dove la somma è estesa a tutte le molecole contenute nel volume macroscopicamente ``infinitesimo'' $\Delta V$ centrato nel punto $x,y,z$. Al solito, $\Delta V$ deve contenere un gran numero di molecole per cui $\vec P$ è una densità di polarizzazione \underline{media}, e quindi macroscopica: $\vec P\,\Delta V$ è il momento di dipolo totale delle cariche contenute nel volume $\Delta V$, per cui se $\vec P(x,y,z)$ non è ovunque nullo dà luogo ad un campo elettrico macroscopico il cui potenziale è dato dalla somma dei potenziali (di dipolo) dovuti ai singoli volumetti $\Delta V$:
+dove la somma \`e estesa a tutte le molecole contenute nel volume
+macroscopicamente ``infinitesimo'' $\Delta V$ centrato nel punto $x,y,z$. Al
+solito, $\Delta V$ deve contenere un gran numero di molecole per cui $\vec P$
+\`e una densit\`a di polarizzazione \underline{media}, e quindi macroscopica:
+$\vec P\,\Delta V$ \`e il momento di dipolo totale delle cariche contenute nel
+volume $\Delta V$, per cui se $\vec P(x,y,z)$ non \`e ovunque nullo d\`a luogo
+ad un campo elettrico macroscopico il cui potenziale \`e dato dalla somma dei
+potenziali (di dipolo) dovuti ai singoli volumetti $\Delta V$:
 \begin{equation}
-\varphi(\vec r\,)=\int_V\frac{\vec P(\vec r\,')\cdot(\vec r-\vec r\,')}{|\vec r-\vec r\,'|^3}\,dV.
-\tag{14.7}
+  \varphi(\vec r\,)=\int_V\frac{\vec P(\vec r\,')\cdot(\vec r-\vec r\,')}
+  {|\vec r-\vec r\,'|^3}\,dV.
+  \tag{14.7}
 \end{equation}
-Esistono molecole, come ad esempio HCl, H$_2$O, NH$_3$, CO, \dots, che possiedono un momento di dipolo proprio $\vec p$ (cioè anche in assenza di campi esterni) dovuto ad una ridistribuzione degli elettroni quando due o più atomi si legano a formare una molecola: per esempio, nel caso della molecola di H$_2$O, che ha una struttura triangolare, con un angolo di 105$^\circ$ fra i due lati O--H, gli elettroni dei due atomi di idrogeno si spostano verso l'ossigeno, dando luogo ad un momento di dipolo diretto come in figura 14.1; molecole di questo tipo sono dette \textbf{molecole polari} ed il loro momento di dipolo è dell'ordine della carica dell'elettrone ($4.8\times10^{-10}$\,ues) per le dimensioni atomiche ($\approx10^{-8}$\,cm).
+Esistono molecole, come ad esempio HCl, H$_2$O, NH$_3$, CO, \dots, che
+possiedono un momento di dipolo proprio $\vec p$ (cio\`e anche in assenza di
+campi esterni) dovuto ad una ridistribuzione degli elettroni quando due o pi\`u
+atomi si legano a formare una molecola: per esempio, nel caso della molecola di
+H$_2$O, che ha una struttura triangolare, con un angolo di 105$^\circ$ fra i due
+lati O--H, gli elettroni dei due atomi di idrogeno si spostano verso l'ossigeno,
+dando luogo ad un momento di dipolo diretto come in figura 14.1; molecole di
+questo tipo sono dette \textbf{molecole polari} ed il loro momento di dipolo \`e
+dell'ordine della carica dell'elettrone ($4.8\times10^{-10}$\,ues) per le
+dimensioni atomiche ($\approx10^{-8}$\,cm).
 \fig{fig14_1}{14.1}
-Al contrario, molecole come CO$_2$, O$_2$, N$_2$, \dots\ in assenza di campi esterni non hanno momento di dipolo (per ragioni di simmetria), e sono dette \textbf{molecole non polari} (la differenza fra una molecola come il CO$_2$ e l'H$_2$O è che nella prima i tre atomi sono allineati, con il carbonio al centro).
+Al contrario, molecole come CO$_2$, O$_2$, N$_2$, \dots\ in assenza di campi
+esterni non hanno momento di dipolo (per ragioni di simmetria), e sono dette
+\textbf{molecole non polari} (la differenza fra una molecola come il CO$_2$ e
+l'H$_2$O \`e che nella prima i tre atomi sono allineati, con il carbonio al
+centro).
 
-In ogni caso, in assenza di campo esterno (e quindi $\rho=0$), \ $\vec P=0$: infatti se $\vec P$ non fosse nullo, per la (14.7) darebbe luogo ad un campo macroscopico non nullo, cosa che abbiamo escluso per ipotesi. Ciò significa che per le sostanze che prendiamo in considerazione i momenti molecolari $\vec p_i$ (se non sono nulli) in ogni volume $\Delta V$ sono orientati a caso, ed è solo sotto l'azione di un campo esterno che possono essere distribuiti in maniera non isotropa e quindi dar luogo ad una densità di polarizzazione non nulla. Il meccanismo è simile a quello che determina una corrente in un conduttore: gli elettroni di conduzione, che in assenza di campi esterni hanno velocità termiche distribuite in modo casuale, per effetto di un campo elettrico acquistano una velocità media non nulla nella direzione del campo.
+In ogni caso, in assenza di campo esterno (e quindi $\rho=0$), \ $\vec P=0$:
+infatti se $\vec P$ non fosse nullo, per la (14.7) darebbe luogo ad un campo
+macroscopico non nullo, cosa che abbiamo escluso per ipotesi. Ci\`o significa
+che per le sostanze che prendiamo in considerazione i momenti molecolari
+$\vec p_i$ (se non sono nulli) in ogni volume $\Delta V$ sono orientati a caso,
+ed \`e solo sotto l'azione di un campo esterno che possono essere distribuiti in
+maniera non isotropa e quindi dar luogo ad una densit\`a di polarizzazione non
+nulla. Il meccanismo \`e simile a quello che determina una corrente in un
+conduttore: gli elettroni di conduzione, che in assenza di campi esterni hanno
+velocit\`a termiche distribuite in modo casuale, per effetto di un campo
+elettrico acquistano una velocit\`a media non nulla nella direzione del campo.
 
-Anche nel caso delle molecole non polari $\vec P$ può essere diverso da zero solo in presenza di campi esterni che deformano la distribuzione delle cariche all'interno di ogni molecola: per capire il meccanismo e avere un'idea degli ordini di grandezza, consideriamo il seguente modello di atomo, che è una versione classica e semplificata dell'atomo di
-idrogeno secondo la meccanica quantistica: una sfera di raggio $a$ con carica totale $-e$ uniformemente distribuita al suo interno, con al centro una carica puntiforme $+e$ libera di muoversi (il nucleo). Supponiamo che l'atomo venga posto in un campo elettrico esterno $\vec E$ e che la distribuzione sferica non venga deformata dalla presenza di $\vec E$.\\
-Per effetto del campo esterno la posizione di equilibrio del nucleo non è più al centro della distribuzione, ma a distanza $r_0$ dal centro che per la (1.49) è data da
+Anche nel caso delle molecole non polari $\vec P$ pu\`o essere diverso da zero
+solo in presenza di campi esterni che deformano la distribuzione delle cariche
+all'interno di ogni molecola: per capire il meccanismo e avere un'idea degli
+ordini di grandezza, consideriamo il seguente modello di atomo, che \`e una
+versione classica e semplificata dell'atomo di
+idrogeno secondo la meccanica quantistica: una sfera di raggio $a$ con carica
+totale $-e$ uniformemente distribuita al suo interno, con al centro una carica
+puntiforme $+e$ libera di muoversi (il nucleo). Supponiamo che l'atomo venga
+posto in un campo elettrico esterno $\vec E$ e che la distribuzione sferica non
+venga deformata dalla presenza di $\vec E$.\\
+Per effetto del campo esterno la posizione di equilibrio del nucleo non \`e
+pi\`u al centro della distribuzione, ma a distanza $r_0$ dal centro che per la
+(1.49) \`e data da
 \begin{equation}
-e\vec E-e^2\frac{\vec r_0}{a^3}=0\quad\ \Rightarrow\quad\ r_0=\frac{a^3E}{e}
-\tag{14.8}
+  e\vec E-e^2\frac{\vec r_0}{a^3}=0\quad\ \Rightarrow\quad\ r_0=\frac{a^3E}{e}
+  \tag{14.8}
 \end{equation}
 e quindi il campo $\vec E$ induce nell'atomo un momento di dipolo dato da
 \begin{equation}
-\vec p=e\vec r_0=a^3\vec E\equiv\alpha_e\vec E.
-\tag{14.9}
+  \vec p=e\vec r_0=a^3\vec E\equiv\alpha_e\vec E.
+  \tag{14.9}
 \end{equation}
-Il coefficiente $\alpha_e$ di proporzionalità fra il campo che agisce sull'atomo (o in generale sulla molecola) e il momento di dipolo indotto è detto \textbf{polarizzabilità} dell'atomo: ha le dimensioni (nel sistema di Gauss) di un volume, e il suo ordine di grandezza, come dice la (14.9), è il volume dell'atomo (o della molecola).\\
-Se prendiamo $a\approx10^{-8}$\,cm, lo spostamento $r_0$ che dà luogo al momento di dipolo indotto, dalla (14.8) per un campo di 100\,ues ($=3\times10^4$\,V/cm) è
+Il coefficiente $\alpha_e$ di proporzionalit\`a fra il campo che agisce
+sull'atomo (o in generale sulla molecola) e il momento di dipolo indotto \`e
+detto \textbf{polarizzabilit\`a} dell'atomo: ha le dimensioni (nel sistema di
+Gauss) di un volume, e il suo ordine di grandezza, come dice la (14.9), \`e il
+volume dell'atomo (o della molecola).\\
+Se prendiamo $a\approx10^{-8}$\,cm, lo spostamento $r_0$ che d\`a luogo al
+momento di dipolo indotto, dalla (14.8) per un campo di 100\,ues
+($=3\times10^4$\,V/cm) \`e
 \begin{equation}
-r_0\approx\frac{100\cdot10^{-24}}{4.8\times10^{-10}}\approx10^{-13}\,\mathrm{cm}
-\tag{14.10}
+  r_0\approx\frac{100\cdot10^{-24}}{4.8\times10^{-10}}
+  \approx10^{-13}\,\mathrm{cm}
+  \tag{14.10}
 \end{equation}
-cioè circa 5 ordini di grandezza inferiore alle dimensioni dell'atomo: quindi il momento di dipolo indotto è sempre molto minore del momento di dipolo proprio delle molecole polari.
+cio\`e circa 5 ordini di grandezza inferiore alle dimensioni dell'atomo: quindi
+il momento di dipolo indotto \`e sempre molto minore del momento di dipolo
+proprio delle molecole polari.
 
-La proporzionalità fra momento di dipolo indotto e campo elettrico inducente espressa dalla (14.9) è solo approssimata: nel modello che abbiamo discusso segue sia dall'aver supposto uniforme la distribuzione di carica negativa dentro la sfera che dall'averne trascurato la deformazione: in queste ipotesi il campo elettrico dovuto alla distribuzione negativa, e quindi la forza sulla carica positiva, è attrattiva e proporzionale alla sua distanza dal centro (v.\ figura 1.9b), quindi il sistema è equivalente ad un oscillatore armonico soggetto ad una forza costante (il campo elettrico esterno); in generale, quindi, la proporzionalità fra momento di dipolo indotto e campo esterno è valida nell'approssimazione che nella meccanica è detta ``delle piccole oscillazioni'', cioè per piccole deviazioni rispetto alla configurazione di equilibrio, e quindi per ``piccoli'' campi esterni. Ciò significa che in generale, invece della semplice relazione espressa dalla (14.9), avremo
+La proporzionalit\`a fra momento di dipolo indotto e campo elettrico inducente
+espressa dalla (14.9) \`e solo approssimata: nel modello che abbiamo discusso
+segue sia dall'aver supposto uniforme la distribuzione di carica negativa dentro
+la sfera che dall'averne trascurato la deformazione: in queste ipotesi il campo
+elettrico dovuto alla distribuzione negativa, e quindi la forza sulla carica
+positiva, \`e attrattiva e proporzionale alla sua distanza dal centro
+(v.\ figura 1.9b), quindi il sistema \`e equivalente ad un oscillatore armonico
+soggetto ad una forza costante (il campo elettrico esterno); in generale,
+quindi, la proporzionalit\`a fra momento di dipolo indotto e campo esterno \`e
+valida nell'approssimazione che nella meccanica \`e detta ``delle piccole
+oscillazioni'', cio\`e per piccole deviazioni rispetto alla configurazione di
+equilibrio, e quindi per ``piccoli'' campi esterni. Ci\`o significa che in
+generale, invece della semplice relazione espressa dalla (14.9), avremo
 \begin{equation}
-\vec p=\alpha_e\vec E+O(E^2).
-\tag{14.11}
+  \vec p=\alpha_e\vec E+O(E^2).
+  \tag{14.11}
 \end{equation}
-Per stimare l'ordine di grandezza dei termini $O(E^2)$, e quindi i limiti di validità dell'approssimazione lineare, riscriviamo la (14.11) nel modo seguente
+Per stimare l'ordine di grandezza dei termini $O(E^2)$, e quindi i limiti di
+validit\`a dell'approssimazione lineare, riscriviamo la (14.11) nel modo
+seguente
 \begin{equation}
-\vec p=\alpha_e\vec E(1+\beta E+\cdots)
-\tag{14.12}
+  \vec p=\alpha_e\vec E(1+\beta E+\cdots)
+  \tag{14.12}
 \end{equation}
-dove $\beta$ ha le dimensioni dell'inverso di un campo elettrico: esso quindi non può che essere dell'ordine di grandezza dell'inverso del campo elettrico all'interno dell'atomo, che sappiamo essere dell'ordine di $10^9$\,V/cm per cui, per campi esterni ragionevoli, $\beta E\ll1$.
+dove $\beta$ ha le dimensioni dell'inverso di un campo elettrico: esso quindi
+non pu\`o che essere dell'ordine di grandezza dell'inverso del campo elettrico
+all'interno dell'atomo, che sappiamo essere dell'ordine di $10^9$\,V/cm per cui,
+per campi esterni ragionevoli, $\beta E\ll1$.
 
-C'è un altro problema legato alla (14.9): in generale, sempre trascurando i termini $O(E^2)$, la relazione fra $\vec p$ ed $\vec E$ non è una relazione di semplice proporzionalità, ma è una relazione lineare:
+C'\`e un altro problema legato alla (14.9): in generale, sempre trascurando i
+termini $O(E^2)$, la relazione fra $\vec p$ ed $\vec E$ non \`e una relazione di
+semplice proporzionalit\`a, ma \`e una relazione lineare:
 \begin{equation}
-p_i=\textstyle\sum_i\alpha_{ij}E_j
-\tag{14.13}
+  p_i=\textstyle\sum_i\alpha_{ij}E_j
+  \tag{14.13}
 \end{equation}
-e la matrice $\alpha_{ij}$ prende il nome di \textbf{tensore di polarizzabilità} del sistema. Ciò significa che il momento indotto dipende dalle direzione del campo elettrico e in generale $\vec p$ ed $\vec E$ non sono paralleli. La cosa si capisce bene se si pensa ad una molecola come il CO$_2$ che ha una struttura lineare con i due atomi di ossigeno da parti opposte dell'atomo di carbonio (O--C--O): lo spostamento relativo delle cariche positive e negative può essere (ed è) diverso a seconda che il campo elettrico sia parallelo o ortogonale alla direzione dei tre atomi, e quindi in questi due casi abbiamo
+e la matrice $\alpha_{ij}$ prende il nome di \textbf{tensore di
+polarizzabilit\`a} del sistema. Ci\`o significa che il momento indotto dipende
+dalle direzione del campo elettrico e in generale $\vec p$ ed $\vec E$ non sono
+paralleli. La cosa si capisce bene se si pensa ad una molecola come il CO$_2$
+che ha una struttura lineare con i due atomi di ossigeno da parti opposte
+dell'atomo di carbonio (O--C--O): lo spostamento relativo delle cariche positive
+e negative pu\`o essere (ed \`e) diverso a seconda che il campo elettrico sia
+parallelo o ortogonale alla direzione dei tre atomi, e quindi in questi due casi
+abbiamo
 \begin{equation}
-p_\parallel=\alpha_\parallel E;\quad\ p_\perp=\alpha_\perp E.
-\tag{14.14}
+  p_\parallel=\alpha_\parallel E;\quad\ p_\perp=\alpha_\perp E.
+  \tag{14.14}
 \end{equation}
-Si può dimostrare che la matrice $\alpha_{ij}$, come quella dei coefficienti di capacità e quella dei coefficienti di mutua induzione, è simmetrica (e la dimostrazione si basa sullo stesso principio), per cui per ogni molecola esistono tre direzioni ortogonali (gli autovettori) in corrispondenza delle quali il campo elettrico ed il momento di dipolo indotto sono proporzionali, cioè paralleli; i coefficienti di proporzionalità, cioè gli autovalori della matrice, sono le polarizzabilità della molecola corrispondenti ai campi in dette direzioni. Per semplicità di discussione noi ci limiteremo a considerare il caso isotropo, cioè quello in cui vale la (14.9).
+Si pu\`o dimostrare che la matrice $\alpha_{ij}$, come quella dei coefficienti
+di capacit\`a e quella dei coefficienti di mutua induzione, \`e simmetrica (e la
+dimostrazione si basa sullo stesso principio), per cui per ogni molecola
+esistono tre direzioni ortogonali (gli autovettori) in corrispondenza delle
+quali il campo elettrico ed il momento di dipolo indotto sono proporzionali,
+cio\`e paralleli; i coefficienti di proporzionalit\`a, cio\`e gli autovalori
+della matrice, sono le polarizzabilit\`a della molecola corrispondenti ai campi
+in dette direzioni. Per semplicit\`a di discussione noi ci limiteremo a
+considerare il caso isotropo, cio\`e quello in cui vale la (14.9).
 
-Il problema del calcolo della polarizzabilità delle molecole polari, definita come il rapporto fra il momento di dipolo \underline{medio} (nel solito volumetto $\Delta V$) ed il campo elettrico $\vec E$ agente sulla molecola è un problema di meccanica statistica: il campo elettrico esercita su ogni molecola dotata di momento di dipolo proprio $\vec p_0$ un momento $\vec M$; se $\vec E$ viene considerato uniforme sulla molecola, $\vec M$ non dipende dal polo (il risultante delle forze esercitate dal campo è nullo) quindi, schematizzando il dipolo come due cariche $q$ e $-q$ a distanza $d$ e preso come polo la carica negativa, si ha
+Il problema del calcolo della polarizzabilit\`a delle molecole polari, definita
+come il rapporto fra il momento di dipolo \underline{medio} (nel solito
+volumetto $\Delta V$) ed il campo elettrico $\vec E$ agente sulla molecola \`e
+un problema di meccanica statistica: il campo elettrico esercita su ogni
+molecola dotata di momento di dipolo proprio $\vec p_0$ un momento $\vec M$; se
+$\vec E$ viene considerato uniforme sulla molecola, $\vec M$ non dipende dal
+polo (il risultante delle forze esercitate dal campo \`e nullo) quindi,
+schematizzando il dipolo come due cariche $q$ e $-q$ a distanza $d$ e preso come
+polo la carica negativa, si ha
 \begin{equation}
-\vec M=q\vec d\wedge\vec E=\vec p_0\wedge\vec E
-\tag{14.15}
+  \vec M=q\vec d\wedge\vec E=\vec p_0\wedge\vec E
+  \tag{14.15}
 \end{equation}
-per cui la posizione di equilibrio (stabile) della molecola è quella per cui $\vec p_0$ ed $\vec E$ sono paralleli e concordi. Ovviamente, a causa dell'agitazione termica, le molecole manifesteranno soltanto una debole tendenza all'allineamento con il campo, ed evidentemente il grado di allineamento deve diminuire al crescere della temperatura.\\
-Per stimare la polarizzabilità delle molecole polari senza fare ricorso ai metodi della meccanica statistica usiamo un argomento dimensionale. La polarizzabilità $\alpha_e$ ha le dimensioni di un volume, e deve essere funzione del momento di dipolo proprio $p_0$ (che ha le dimensioni di una carica per una lunghezza) e dell'energia termica $kT$ ($k$ è la costante di Boltzmann), quindi
+per cui la posizione di equilibrio (stabile) della molecola \`e quella per cui
+$\vec p_0$ ed $\vec E$ sono paralleli e concordi. Ovviamente, a causa
+dell'agitazione termica, le molecole manifesteranno soltanto una debole tendenza
+all'allineamento con il campo, ed evidentemente il grado di allineamento deve
+diminuire al crescere della temperatura.\\
+Per stimare la polarizzabilit\`a delle molecole polari senza fare ricorso ai
+metodi della meccanica statistica usiamo un argomento dimensionale. La
+polarizzabilit\`a $\alpha_e$ ha le dimensioni di un volume, e deve essere
+funzione del momento di dipolo proprio $p_0$ (che ha le dimensioni di una carica
+per una lunghezza) e dell'energia termica $kT$ ($k$ \`e la costante di
+Boltzmann), quindi
 \begin{equation}
-L^3=[p_0]^a\,[kT]^b=Q^a\,L^a\,[E]^b
-\tag{14.16}
+  L^3=[p_0]^a\,[kT]^b=Q^a\,L^a\,[E]^b
+  \tag{14.16}
 \end{equation}
-e tenuto conto che $Q^2/L$ è un'energia, dalla (14.16) si ha \ $a=2$, $b=-1$, quindi
+e tenuto conto che $Q^2/L$ \`e un'energia, dalla (14.16) si ha \ $a=2$, $b=-1$,
+quindi
 \begin{equation}
-\alpha_e\approx\frac{p_0^2}{kT}\,\cdot
-\tag{14.17}
+  \alpha_e\approx\frac{p_0^2}{kT}\,\cdot
+  \tag{14.17}
 \end{equation}
-Se prendiamo $p_0=e\,a$, con $a=10^{-8}$\,cm e \ $kT=(1/40)\,\mathrm{eV}=(1/40)\cdot1.6\times10^{-12}$\,erg (corrispondente a $T=300$\,K), si ottiene $\alpha_e\approx10^{-21}\,\mathrm{cm}^3$. È un valore troppo grande rispetto a quello dato dalla (14.9) per le molecole non polari; è vero che normalmente la polarizzabilità delle molecole polari è maggiore di quelle non polari, ma non certamente di tre ordini di grandezza: la ragione è che, da un lato, il calcolo di $\alpha_e$ dà un fattore 3 al denominatore del 2$^\circ$ membro della (14.17), ma soprattutto abbiamo sovrastimato per un fattore vicino a 10 il valore di $p_0$, che nella (14.17) compare al quadrato.
+Se prendiamo $p_0=e\,a$, con $a=10^{-8}$\,cm e
+\ $kT=(1/40)\,\mathrm{eV}=(1/40)\cdot1.6\times10^{-12}$\,erg (corrispondente a
+$T=300$\,K), si ottiene $\alpha_e\approx10^{-21}\,\mathrm{cm}^3$. \`E un valore
+troppo grande rispetto a quello dato dalla (14.9) per le molecole non polari;
+\`e vero che normalmente la polarizzabilit\`a delle molecole polari \`e maggiore
+di quelle non polari, ma non certamente di tre ordini di grandezza: la ragione
+\`e che, da un lato, il calcolo di $\alpha_e$ d\`a un fattore 3 al denominatore
+del 2$^\circ$ membro della (14.17), ma soprattutto abbiamo sovrastimato per un
+fattore vicino a 10 il valore di $p_0$, che nella (14.17) compare al quadrato.
 
 \subsection{Le cariche di polarizzazione}
 
-La densità di polarizzazione $\vec P$ è legata in maniera semplice al momento di dipolo (indotto o medio) $\vec p$ delle molecole e alla loro densità $n$ ($n$ è il numero di molecole per unità di volume): dalla (14.6), moltiplicando numeratore e denominatore del 2$^\circ$ membro per $n$, si ha
+La densit\`a di polarizzazione $\vec P$ \`e legata in maniera semplice al
+momento di dipolo (indotto o medio) $\vec p$ delle molecole e alla loro
+densit\`a $n$ ($n$ \`e il numero di molecole per unit\`a di volume): dalla
+(14.6), moltiplicando numeratore e denominatore del 2$^\circ$ membro per $n$, si
+ha
 \begin{equation}
-\vec P=n\vec p.
-\tag{14.18}
+  \vec P=n\vec p.
+  \tag{14.18}
 \end{equation}
-Inoltre, grazie alla (14.7), la conoscenza di $\vec P$ determina completamente il campo (medio) dovuto alla polarizzazione delle molecole del dielettrico e quindi le sorgenti $\rho'$ e $\sigma'$ che generano detto campo: $\rho'$ potrebbe venir determinato calcolando il laplaciano del potenziale dato dalla (14.7), e $\sigma'$ dalla discontinuità del campo elettrico attraverso la superficie del volume $V$ occupato dal dielettrico; poiché c'è qualche problema nel calcolo del laplaciano di un'espressione divergente come \ $(\vec r-\vec r\,')/|\vec r-\vec r\,'|^3$, seguiamo una strada più semplice (ma equivalente): dalla definizione di $\vec P$ segue che, se $V$ è il volume di una porzione arbitraria del dielettrico e $S$ la superficie,
+Inoltre, grazie alla (14.7), la conoscenza di $\vec P$ determina completamente
+il campo (medio) dovuto alla polarizzazione delle molecole del dielettrico e
+quindi le sorgenti $\rho'$ e $\sigma'$ che generano detto campo: $\rho'$
+potrebbe venir determinato calcolando il laplaciano del potenziale dato dalla
+(14.7), e $\sigma'$ dalla discontinuit\`a del campo elettrico attraverso la
+superficie del volume $V$ occupato dal dielettrico; poich\'e c'\`e qualche
+problema nel calcolo del laplaciano di un'espressione divergente come
+\ $(\vec r-\vec r\,')/|\vec r-\vec r\,'|^3$, seguiamo una strada pi\`u semplice
+(ma equivalente): dalla definizione di $\vec P$ segue che, se $V$ \`e il volume
+di una porzione arbitraria del dielettrico e $S$ la superficie,
 \begin{equation}
-\int_VP_i\,dV=\int_Vx_i\rho'\,dV+\int_Sx_i\sigma'\,dS.
-\tag{14.19}
+  \int_VP_i\,dV=\int_Vx_i\rho'\,dV+\int_Sx_i\sigma'\,dS.
+  \tag{14.19}
 \end{equation}
-Dall'identità (v.\ 1.93))
+Dall'identit\`a (v.\ 1.93))
 \begin{equation}
-P_i=-x_i\dive\vec P+\dive(x_i\vec P)
-\tag{14.20}
+  P_i=-x_i\dive\vec P+\dive(x_i\vec P)
+  \tag{14.20}
 \end{equation}
 e dal teorema della divergenza, si ha
 \begin{equation}
-\int_VP_i\,dV=-\int_Vx_i\dive\vec P\,dV+\int_Sx_i\vec P\cdot\hat n\,dS.
-\tag{14.21}
+  \int_VP_i\,dV=-\int_Vx_i\dive\vec P\,dV+\int_Sx_i\vec P\cdot\hat n\,dS.
+  \tag{14.21}
 \end{equation}
-Per convincerci che gli integrandi negli integrali di superficie nelle (14.19) e (14.21) sono uguali fra loro, e quindi anche quelli di volume, prendiamo per $V$ un tubo di flusso infinitesimo di $\vec P$ con una base ortogonale a $\vec P$ (la base $A$ nella figura 14.2). La superficie delle basi sia infinitesima di ordine $\epsilon^2$ e la lunghezza del tubo sia anch'essa di ordine $\epsilon^2$. Poniamo l'asse $x$ parallelo a $\vec P$ e, siccome nelle (14.19) e (14.21) l'origine delle coordinate è arbitrario (la carica totale è nulla), prendiamo l'origine sulla base $A$ e calcoliamo i secondi membri delle (14.19) e (14.21) per $i=1$ ($x_1\equiv x$). Gli integrali di superficie si effettuano sulla base $B$ (sulla base $A$ è $x=0$) e sulla superficie laterale: i primi sono di ordine $\epsilon^4$, mentre sulla superficie laterale è nullo quello nella (14.21) e quello nella (14.19) sarebbe, se non fosse nullo (come risulterà fra poco), di ordine $\epsilon^5$; quelli di volume sono di ordine $\epsilon^6$:
+Per convincerci che gli integrandi negli integrali di superficie nelle (14.19) e
+(14.21) sono uguali fra loro, e quindi anche quelli di volume, prendiamo per $V$
+un tubo di flusso infinitesimo di $\vec P$ con una base ortogonale a $\vec P$
+(la base $A$ nella figura 14.2). La superficie delle basi sia infinitesima di
+ordine $\epsilon^2$ e la lunghezza del tubo sia anch'essa di ordine
+$\epsilon^2$. Poniamo l'asse $x$ parallelo a $\vec P$ e, siccome nelle (14.19) e
+(14.21) l'origine delle coordinate \`e arbitrario (la carica totale \`e nulla),
+prendiamo l'origine sulla base $A$ e calcoliamo i secondi membri delle (14.19) e
+(14.21) per $i=1$ ($x_1\equiv x$). Gli integrali di superficie si effettuano
+sulla base $B$ (sulla base $A$ \`e $x=0$) e sulla superficie laterale: i primi
+sono di ordine $\epsilon^4$, mentre sulla superficie laterale \`e nullo quello
+nella (14.21) e quello nella (14.19) sarebbe, se non fosse nullo (come
+risulter\`a fra poco), di ordine $\epsilon^5$; quelli di volume sono di ordine
+$\epsilon^6$:
 \fig{fig14_2}{14.2}
 \[
-(\dive\vec P+\rho')\cdot O(\epsilon^6)+(0-\sigma'_\mathrm{lat})\cdot O(\epsilon^5)+(P_n-\sigma'_B)\cdot O(\epsilon^4)=0
+  (\dive\vec P+\rho')\cdot O(\epsilon^6)
+  +(0-\sigma'_\mathrm{lat})\cdot O(\epsilon^5)
+  +(P_n-\sigma'_B)\cdot O(\epsilon^4)=0
 \]
-da cui (si divida tutto per $\epsilon^4$ e poi si prenda il limite per $\epsilon\to0$):
+da cui (si divida tutto per $\epsilon^4$ e poi si prenda il limite per
+$\epsilon\to0$):
 \begin{equation}
-\rho'(x,y,z)=-\dive\vec P(x,y,z),\qquad\sigma'(x,y,z)=\vec P(x,y,z)\cdot\hat n.
-\tag{14.22}
+  \rho'(x,y,z)=-\dive\vec P(x,y,z),
+  \qquad\sigma'(x,y,z)=\vec P(x,y,z)\cdot\hat n.
+  \tag{14.22}
 \end{equation}
-Il risultato espresso dalle (14.22) può essere capito in termini qualitativi: si pensi ad una lastra di dielettrico polarizzata perpendicolarmente alle faccie (figura 14.3); l'allineamento dei dipoli molecolari comporta la presenza di cariche sulle faccie della lastra, positive sulla faccia verso cui è diretto $\vec P$ (quella superiore nella figura 14.3), negative sull'altra; è anche chiaro che se la densità di polarizzazione è uniforme, all'interno del dielettrico la densità di carica (media) $\rho'$ è nulla. Supponiamo ora che la densità di polarizzazione non sia uniforme, e sia $\Delta V$ un volumetto contenente carica totale nulla (quindi molecole intere): il flusso di $\vec P$ uscente dal volumetto, per la seconda delle (14.22), è la carica totale $Q_S$ sulla superficie del volumetto; per la definizione di divergenza \big(v.\ (1.21)\big), $Q_S=\Delta V\dive\vec P$; siccome la carica totale del volumetto è nulla, \ $\rho'\Delta V=-Q_S=-\Delta V\dive\vec P$, cioè la prima delle (14.22).
+Il risultato espresso dalle (14.22) pu\`o essere capito in termini qualitativi:
+si pensi ad una lastra di dielettrico polarizzata perpendicolarmente alle faccie
+(figura 14.3); l'allineamento dei dipoli molecolari comporta la presenza di
+cariche sulle faccie della lastra, positive sulla faccia verso cui \`e diretto
+$\vec P$ (quella superiore nella figura 14.3), negative sull'altra; \`e anche
+chiaro che se la densit\`a di polarizzazione \`e uniforme, all'interno del
+dielettrico la densit\`a di carica (media) $\rho'$ \`e nulla. Supponiamo ora che
+la densit\`a di polarizzazione non sia uniforme, e sia $\Delta V$ un volumetto
+contenente carica totale nulla (quindi molecole intere): il flusso di $\vec P$
+uscente dal volumetto, per la seconda delle (14.22), \`e la carica totale $Q_S$
+sulla superficie del volumetto; per la definizione di divergenza
+\big(v.\ (1.21)\big), $Q_S=\Delta V\dive\vec P$; siccome la carica totale del
+volumetto \`e nulla, \ $\rho'\Delta V=-Q_S=-\Delta V\dive\vec P$, cio\`e la
+prima delle (14.22).
 \fig{fig14_3}{14.3}
 Grazie alla prima delle (14.22) le (14.5) possono essere scritte
 \begin{equation}
-\left\{\begin{aligned}
-&\dive(\vec E+4\pi\vec P)=4\pi\rho\\
-&\rot\vec E=0
-\end{aligned}\right.
-\tag{14.23}
+  \left\{\begin{aligned}
+    &\dive(\vec E+4\pi\vec P)=4\pi\rho\\
+    &\rot\vec E=0
+  \end{aligned}\right.
+  \tag{14.23}
 \end{equation}
-alle quali va aggiunta la condizione che la discontinuità della componente normale del campo elettrico attraverso la superficie del dielettrico (se non sono presenti cariche superficiali libere) per la 2$^\mathrm{a}$ delle (14.22) e per la (1.87) è data da
+alle quali va aggiunta la condizione che la discontinuit\`a della componente
+normale del campo elettrico attraverso la superficie del dielettrico (se non
+sono presenti cariche superficiali libere) per la 2$^\mathrm{a}$ delle (14.22) e
+per la (1.87) \`e data da
 \begin{equation}
-\Delta E_n=-4\pi P_n.
-\tag{14.24}
+  \Delta E_n=-4\pi P_n.
+  \tag{14.24}
 \end{equation}
-(il segno $-$, si veda la discussione a proposito della (1.87), è dovuto al fatto che calcoliamo la differenza fra il campo nel dielettrico e quello nel vuoto, mentre $\hat n$ è diretta verso l'esterno del dielettrico).\\
-Abbiamo quindi sostituito il problema della determinazione delle cariche di polarizzazione $\rho'$ e $\sigma'$ con quello della determinazione della densità di polarizzazione $\vec P$.
+(il segno $-$, si veda la discussione a proposito della (1.87), \`e dovuto al
+fatto che calcoliamo la differenza fra il campo nel dielettrico e quello nel
+vuoto, mentre $\hat n$ \`e diretta verso l'esterno del dielettrico).\\
+Abbiamo quindi sostituito il problema della determinazione delle cariche di
+polarizzazione $\rho'$ e $\sigma'$ con quello della determinazione della
+densit\`a di polarizzazione $\vec P$.
 
-Il prossimo passo consiste nel dimostrare che $\vec P$ e $\vec E$ sono proporzionali:
+Il prossimo passo consiste nel dimostrare che $\vec P$ e $\vec E$ sono
+proporzionali:
 \begin{equation}
-\vec P(x,y,z)=\chi_e\vec E(x,y,z)
-\tag{14.25}
+  \vec P(x,y,z)=\chi_e\vec E(x,y,z)
+  \tag{14.25}
 \end{equation}
-dove, in generale, la costante di proporzionalità $\chi_e$, chiamata \textbf{suscettività elettrica} del mezzo, è una funzione del punto.\\
-Trattiamo solo il caso di un dielettrico composto da molecole non polari, perché la trattazione è concettualmente molto più semplice, ma il risultato (cioè la proporzionalità fra $\vec P$ ed $\vec E$) è valido anche nel caso di molecole polari.\\
+dove, in generale, la costante di proporzionalit\`a $\chi_e$, chiamata
+\textbf{suscettivit\`a elettrica} del mezzo, \`e una funzione del punto.\\
+Trattiamo solo il caso di un dielettrico composto da molecole non polari,
+perch\'e la trattazione \`e concettualmente molto pi\`u semplice, ma il
+risultato (cio\`e la proporzionalit\`a fra $\vec P$ ed $\vec E$) \`e valido
+anche nel caso di molecole polari.\\
 Partiamo dalla definizione (14.6) di $\vec P$ e dalla (14.9):
 \begin{equation}
-\vec P(x,y,z)=\frac{1}{\Delta V}\textstyle\sum_i\vec p_i=\dfrac{n\alpha_e}{n\Delta V}\sum_i\vec E_i
-\tag{14.26}
+  \vec P(x,y,z)=\frac{1}{\Delta V}\textstyle\sum_i\vec p_i
+  =\dfrac{n\alpha_e}{n\Delta V}\sum_i\vec E_i
+  \tag{14.26}
 \end{equation}
-dove $\vec E_i$ è il campo elettrico microscopico che agisce sull'$i$--esima molecola, dovuto non solo alle sorgenti esterne ma anche a tutte le molecole del mezzo, eccettuata la $i$--esima:
-$\vec E_i$ quindi non è tutto il campo microscopico, in quanto gli manca il contributo $\vec E_i'$ della $i$--esima molecola. Se nella (14.26) aggiungiamo e togliamo $\vec E_i'$ ad ogni termine della somma si ha
+dove $\vec E_i$ \`e il campo elettrico microscopico che agisce sull'$i$--esima
+molecola, dovuto non solo alle sorgenti esterne ma anche a tutte le molecole del
+mezzo, eccettuata la $i$--esima:
+$\vec E_i$ quindi non \`e tutto il campo microscopico, in quanto gli manca il
+contributo $\vec E_i'$ della $i$--esima molecola. Se nella (14.26) aggiungiamo e
+togliamo $\vec E_i'$ ad ogni termine della somma si ha
 \begin{equation}
-\vec P=n\alpha_e\Big(\frac{1}{n\Delta V}\textstyle\sum_i\vec E_{micr,i}-\dfrac{1}{n\Delta V}\sum_i\vec E_i'\Big).
-\tag{14.27}
+  \vec P=n\alpha_e\Big(\frac{1}{n\Delta V}\textstyle\sum_i\vec E_{micr,i}
+  -\dfrac{1}{n\Delta V}\sum_i\vec E_i'\Big).
+  \tag{14.27}
 \end{equation}
-Il primo termine dentro parentesi (se $\Delta V$ contiene un gran numero di molecole) è la media di $\vec E_\mathrm{micr}$ e quindi, per definizione, il campo macroscopico $\vec E(x,y,z)$; il secondo termine è la media $\vec E\,'$ del campo prodotto da una molecola nel volume occupato dalla molecola: infatti è indifferente, ai fini del calcolo della media, fare la media dei valori assunti dal campo nei diversi punti del volume occupato da una molecola, oppure la media dei valori assunti in un punto di tanti volumi ciascuno occupato da una molecola, ognuna disposta a caso nel proprio volume; è come lanciare un solo dado tante volte o tanti dadi una volta sola.\\
+Il primo termine dentro parentesi (se $\Delta V$ contiene un gran numero di
+molecole) \`e la media di $\vec E_\mathrm{micr}$ e quindi, per definizione, il
+campo macroscopico $\vec E(x,y,z)$; il secondo termine \`e la media $\vec E\,'$
+del campo prodotto da una molecola nel volume occupato dalla molecola: infatti
+\`e indifferente, ai fini del calcolo della media, fare la media dei valori
+assunti dal campo nei diversi punti del volume occupato da una molecola, oppure
+la media dei valori assunti in un punto di tanti volumi ciascuno occupato da una
+molecola, ognuna disposta a caso nel proprio volume; \`e come lanciare un solo
+dado tante volte o tanti dadi una volta sola.\\
 La (14.27) si scrive quindi
 \begin{equation}
-\vec P=n\alpha_e(\vec E-\vec E\,')
-\tag{14.28}
+  \vec P=n\alpha_e(\vec E-\vec E\,')
+  \tag{14.28}
 \end{equation}
-e il problema è ora quello di calcolare $\vec E\,'$. Il volume a disposizione di una molecola è $v=1/n$ e se $\varphi$ è il potenziale del campo $\vec E$ della molecola si ha
+e il problema \`e ora quello di calcolare $\vec E\,'$. Il volume a disposizione
+di una molecola \`e $v=1/n$ e se $\varphi$ \`e il potenziale del campo $\vec E$
+della molecola si ha
 \begin{equation}
-\vec E\,'\defeq\frac{1}{v}\int_v\vec E\,dv=-\frac{1}{v}\int_v\grad\varphi\,dv.
-\tag{14.29}
+  \vec E\,'\defeq\frac{1}{v}\int_v\vec E\,dv=-\frac{1}{v}\int_v\grad\varphi\,dv.
+  \tag{14.29}
 \end{equation}
-Utilizziamo un artificio che consiste nel trasformare l'integrale di volume in un integrale di superficie: consideriamo la componente $z$ dell'equazione (14.29)
+Utilizziamo un artificio che consiste nel trasformare l'integrale di volume in
+un integrale di superficie: consideriamo la componente $z$ dell'equazione
+(14.29)
 \begin{equation}
-E_z'=-\frac{1}{v}\int_v\frac{\partial\varphi}{\partial z}\,dv
-\tag{14.30}
+  E_z'=-\frac{1}{v}\int_v\frac{\partial\varphi}{\partial z}\,dv
+  \tag{14.30}
 \end{equation}
-e definiamo il campo vettoriale \ $\vec\phi\equiv\varphi\,\hat\kappa$ \ ($\hat\kappa$ è il versore dell'asse $z$), quindi la (14.30) diventa
+e definiamo il campo vettoriale \ $\vec\phi\equiv\varphi\,\hat\kappa$
+\ ($\hat\kappa$ \`e il versore dell'asse $z$), quindi la (14.30) diventa
 \begin{equation}
-E_z'=-\frac{1}{v}\int_v\dive\vec\phi\,dv=-\frac{1}{v}\int_s\vec\phi\cdot\hat n\,ds=-\frac{1}{v}\int_s\varphi\,n_z\,ds.
-\tag{14.31}
+  E_z'=-\frac{1}{v}\int_v\dive\vec\phi\,dv
+  =-\frac{1}{v}\int_s\vec\phi\cdot\hat n\,ds=-\frac{1}{v}\int_s\varphi\,n_z\,ds.
+  \tag{14.31}
 \end{equation}
-Se supponiamo che $v$ sia grande rispetto alle dimensioni della molecola, possiamo utilizzare per il potenziale sulla superficie $s$ lo sviluppo (1.78) a grandi distanze, tenendo solo il primo termine non nullo, che è quello di dipolo; allora
+Se supponiamo che $v$ sia grande rispetto alle dimensioni della molecola,
+possiamo utilizzare per il potenziale sulla superficie $s$ lo sviluppo (1.78) a
+grandi distanze, tenendo solo il primo termine non nullo, che \`e quello di
+dipolo; allora
 \begin{equation}
-\int_s\varphi\,n_z\,ds=\int_s\frac{\vec p\cdot\hat r}{r^2}\,n_z\,ds.
-\tag{14.32}
+  \int_s\varphi\,n_z\,ds=\int_s\frac{\vec p\cdot\hat r}{r^2}\,n_z\,ds.
+  \tag{14.32}
 \end{equation}
-Per il calcolo dell'integrale usiamo le coordinate polari: si ha \ $n_z=\cos\theta$, \ $ds=r^2\sen\theta\,d\theta\,d\phi$, \ $\hat r=(\sen\theta\cos\phi,\,\sen\theta\sen\phi,\,\cos\theta)$, quindi
+Per il calcolo dell'integrale usiamo le coordinate polari: si ha
+\ $n_z=\cos\theta$, \ $ds=r^2\sen\theta\,d\theta\,d\phi$,
+\ $\hat r=(\sen\theta\cos\phi,\,\sen\theta\sen\phi,\,\cos\theta)$, quindi
 \begin{equation}
-\begin{aligned}
-\int_s\varphi\,n_z\,ds&=\int_s\frac{p_x\sen\theta\cos\phi+p_y\sen\theta\sen\phi+p_z\cos\theta}{r^2}\,\cos\theta\,r^2\sen\theta\,d\theta\,d\phi=\\
-&=\int_{-1}^1d\cos\theta\int_0^{2\pi}(p_x\sen\theta\cos\phi+p_y\sen\theta\sen\phi+p_z\cos\theta)\,\cos\theta\,d\phi
-\end{aligned}
-\tag{14.33}
+  \begin{aligned}
+    \int_s\varphi\,n_z\,ds
+    &=\int_s\frac{p_x\sen\theta\cos\phi+p_y\sen\theta\sen\phi+p_z\cos\theta}
+    {r^2}\,\cos\theta\,r^2\sen\theta\,d\theta\,d\phi=\\
+    &=\int_{-1}^1d\cos\theta\int_0^{2\pi}(p_x\sen\theta\cos\phi
+    +p_y\sen\theta\sen\phi+p_z\cos\theta)\,\cos\theta\,d\phi
+  \end{aligned}
+  \tag{14.33}
 \end{equation}
-L'integrale su $\phi$ dei termini proporzionali a $p_x$ e a $p_y$ è zero, mentre quello del termine proporzionale a $p_z$ porta un fattore $2\pi$. Infine, con l'integrazione su $\theta$ si ottiene
+L'integrale su $\phi$ dei termini proporzionali a $p_x$ e a $p_y$ \`e zero,
+mentre quello del termine proporzionale a $p_z$ porta un fattore $2\pi$. Infine,
+con l'integrazione su $\theta$ si ottiene
 \begin{equation}
-\int_s\varphi\,n_z\,ds=2\pi\int_{-1}^1p_z\cos^2\theta\,d\cos\theta=\frac{4\pi}{3}p_z\quad\ \Rightarrow\quad\ E_z'=-\frac{1}{v}\frac{4\pi}{3}p_z
-\tag{14.34}
+  \int_s\varphi\,n_z\,ds=2\pi\int_{-1}^1p_z\cos^2\theta\,d\cos\theta
+  =\frac{4\pi}{3}p_z\quad\ \Rightarrow\quad\ E_z'=-\frac{1}{v}\frac{4\pi}{3}p_z
+  \tag{14.34}
 \end{equation}
 e risultati analoghi per le altre componenti, quindi ($n=1/v$)
 \begin{equation}
-\vec E\,'=-n\frac{4\pi}{3}\vec p=-\frac{4\pi}{3}\vec P.
-\tag{14.35}
+  \vec E\,'=-n\frac{4\pi}{3}\vec p=-\frac{4\pi}{3}\vec P.
+  \tag{14.35}
 \end{equation}
-Il risultato vale quindi per volumi $v$ di forma qualsiasi (p.es.\ cubica, se il dielettrico ha una struttura cristallina con celle cubiche), ma per materiali di densità non troppo elevata ($n\ll10^{24}\,\mathrm{cm}^{-3}$), però è esatto, cioè indipendente dall'approssimazione di dipolo, se si assume per $v$ la forma sferica, ipotesi ragionevole nel caso di un liquido, dato che in un liquido ogni molecola si trova (in media) circondata isotropicamente dalle altre molecole.
+Il risultato vale quindi per volumi $v$ di forma qualsiasi (p.es.\ cubica, se il
+dielettrico ha una struttura cristallina con celle cubiche), ma per materiali di
+densit\`a non troppo elevata ($n\ll10^{24}\,\mathrm{cm}^{-3}$), per\`o \`e
+esatto, cio\`e indipendente dall'approssimazione di dipolo, se si assume per $v$
+la forma sferica, ipotesi ragionevole nel caso di un liquido, dato che in un
+liquido ogni molecola si trova (in media) circondata isotropicamente dalle altre
+molecole.
 
 Se ora inseriamo la (14.35) nella (14.28) si ottiene
 \begin{equation}
-\vec P=\frac{n\alpha_e}{1-(4\pi/3)n\alpha_e}\,\vec E
-\tag{14.36}
+  \vec P=\frac{n\alpha_e}{1-(4\pi/3)n\alpha_e}\,\vec E
+  \tag{14.36}
 \end{equation}
-che dimostra la (14.25) ed è nota come \textit{formula di Mossotti--Clausius} per la suscettività elettrica. Se il mezzo è omogeneo tanto $n$ quanto $\alpha_e$ sono indipendenti dal punto, e $\chi_e$ è quindi costante.\\
-L'aspetto più importante della (14.36) è la proporzionalità fra $\vec P$ ed $\vec E$, non tanto la relazione fra la polarizzabilità $\alpha_e$ e la suscettività elettrica $\chi_e$: certamente la validità della (14.36) è limitata alle sostanze non polari per le quali $(4\pi/3)n\alpha_e<1$ ed effettivamente in questi casi l'accordo fra teoria ed esperienza è abbastanza buono; se $n\alpha_e\ll1$, come nel caso dei gas, dalla (14.36) si ha \ $\chi_e\simeq n\alpha_e$, cioè è trascurabile il campo medio molecolare $\vec E\,'$, in quanto è grande il volume molecolare $v$.
+che dimostra la (14.25) ed \`e nota come \textit{formula di Mossotti--Clausius}
+per la suscettivit\`a elettrica. Se il mezzo \`e omogeneo tanto $n$ quanto
+$\alpha_e$ sono indipendenti dal punto, e $\chi_e$ \`e quindi costante.\\
+L'aspetto pi\`u importante della (14.36) \`e la proporzionalit\`a fra $\vec P$
+ed $\vec E$, non tanto la relazione fra la polarizzabilit\`a $\alpha_e$ e la
+suscettivit\`a elettrica $\chi_e$: certamente la validit\`a della (14.36) \`e
+limitata alle sostanze non polari per le quali $(4\pi/3)n\alpha_e<1$ ed
+effettivamente in questi casi l'accordo fra teoria ed esperienza \`e abbastanza
+buono; se $n\alpha_e\ll1$, come nel caso dei gas, dalla (14.36) si ha
+\ $\chi_e\simeq n\alpha_e$, cio\`e \`e trascurabile il campo medio molecolare
+$\vec E\,'$, in quanto \`e grande il volume molecolare $v$.
 
 \subsection{Le equazioni dell'elettrostatica nella materia}
 
-Le (14.23) e (14.24) insieme alla (14.25) determinano completamente sia il campo elettrico che il campo $\vec P$ in presenza di dielettrici dei quali sia nota la suscettività: è consuetudine definire l'\textbf{induzione dielettrica} $\vec D$ come
+Le (14.23) e (14.24) insieme alla (14.25) determinano completamente sia il campo
+elettrico che il campo $\vec P$ in presenza di dielettrici dei quali sia nota la
+suscettivit\`a: \`e consuetudine definire l'\textbf{induzione dielettrica}
+$\vec D$ come
 \begin{equation}
-\vec D\defeq\vec E+4\pi\vec P=\vec E+4\pi\chi_e\vec E\equiv\epsilon\vec E,\qquad\quad\epsilon\defeq1+4\pi\chi_e
-\tag{14.37}
+  \vec D\defeq\vec E+4\pi\vec P=\vec E+4\pi\chi_e\vec E\equiv\epsilon\vec E,
+  \qquad\quad\epsilon\defeq1+4\pi\chi_e
+  \tag{14.37}
 \end{equation}
-($\epsilon$ è la costante dielettrica già introdotta nel 1$^\circ$ paragrafo), e quindi riscrivere le (14.23) come
+($\epsilon$ \`e la costante dielettrica gi\`a introdotta nel 1$^\circ$
+paragrafo), e quindi riscrivere le (14.23) come
 \begin{equation}
-\left\{\begin{aligned}
-&\dive\vec D=4\pi\rho\\
-&\rot\vec E=0\\
-&\vec D=\epsilon\vec E\,.
-\end{aligned}\right.
-\tag{14.38}
+  \left\{\begin{aligned}
+    &\dive\vec D=4\pi\rho\\
+    &\rot\vec E=0\\
+    &\vec D=\epsilon\vec E\,.
+  \end{aligned}\right.
+  \tag{14.38}
 \end{equation}
-Le condizioni che devono essere soddisfatte sulla superficie di separazione fra un dielettrico (sulla quale siano presenti solo le cariche di polarizzazione) ed il vuoto sono determinate dalla (14.24) e dalle (14.38): dalla (14.24) si ha (il suffisso $_0$ indica le quantità nel vuoto; nel vuoto $\chi_e=0$, \ $\epsilon=1$)
+Le condizioni che devono essere soddisfatte sulla superficie di separazione fra
+un dielettrico (sulla quale siano presenti solo le cariche di polarizzazione) ed
+il vuoto sono determinate dalla (14.24) e dalle (14.38): dalla (14.24) si ha (il
+suffisso $_0$ indica le quantit\`a nel vuoto; nel vuoto $\chi_e=0$,
+\ $\epsilon=1$)
 \begin{equation}
-E_n+4\pi P_n=E_{0n}\ \Rightarrow\ D_n=D_{0n}
-\tag{14.39}
+  E_n+4\pi P_n=E_{0n}\ \Rightarrow\ D_n=D_{0n}
+  \tag{14.39}
 \end{equation}
-cioè la componente normale del vettore $\vec D$ è continua. Di conseguenza, mentre il flusso del campo elettrico attraverso una superficie chiusa è $4\pi$ volte la carica \underline{totale} contenuta
-\big(v.\ (14.5)\big), il flusso di $\vec D$, per la (14.39) e la 1$^\mathrm{a}$ delle (14.38), è $4\pi$ volte la sola carica libera: sbrigativamente si può dire che il flusso di $\vec E$ ``vede'' tutte le cariche, mentre il flusso di $\vec D$ ``vede'' solo le cariche libere.\\
-Dalla 2$^\mathrm{a}$ delle (14.38) (il campo elettrico è conservativo) segue la continuità delle componenti tangenziali di $\vec E$; in generale attraverso la superficie di separazione fra due dielettrici (uno dei quali può essere il vuoto) grazie anche alla 3$^\mathrm{a}$ delle (14.38) si ha
+cio\`e la componente normale del vettore $\vec D$ \`e continua. Di conseguenza,
+mentre il flusso del campo elettrico attraverso una superficie chiusa \`e $4\pi$
+volte la carica \underline{totale} contenuta
+\big(v.\ (14.5)\big), il flusso di $\vec D$, per la (14.39) e la 1$^\mathrm{a}$
+delle (14.38), \`e $4\pi$ volte la sola carica libera: sbrigativamente si pu\`o
+dire che il flusso di $\vec E$ ``vede'' tutte le cariche, mentre il flusso di
+$\vec D$ ``vede'' solo le cariche libere.\\
+Dalla 2$^\mathrm{a}$ delle (14.38) (il campo elettrico \`e conservativo) segue
+la continuit\`a delle componenti tangenziali di $\vec E$; in generale attraverso
+la superficie di separazione fra due dielettrici (uno dei quali pu\`o essere il
+vuoto) grazie anche alla 3$^\mathrm{a}$ delle (14.38) si ha
 \begin{equation}
-\left\{\begin{aligned}
-&D_n^{(1)}=D_n^{(2)}\ \Rightarrow\ \epsilon_1E_n^{(1)}=\epsilon_2E_n^{(2)}\\
-&E_t^{(1)}=E_t^{(2)}\ \Rightarrow\ \epsilon_2D_t^{(1)}=\epsilon_1D_t^{(2)}.
-\end{aligned}\right.
-\tag{14.40}
+  \left\{\begin{aligned}
+    &D_n^{(1)}=D_n^{(2)}\ \Rightarrow\ \epsilon_1E_n^{(1)}=\epsilon_2E_n^{(2)}\\
+    &E_t^{(1)}=E_t^{(2)}\ \Rightarrow\ \epsilon_2D_t^{(1)}=\epsilon_1D_t^{(2)}.
+  \end{aligned}\right.
+  \tag{14.40}
 \end{equation}
-Segue dalle (14.40) che le linee di forza del campo elettrico vengono rifratte quando attraversano la superficie di un dielettrico: infatti, se chiamiamo $\theta$ l'angolo che il vettore $\vec E$ forma con la normale alla superficie, si ha \ $\tan\theta=E_t/E_n$ \ per cui nel passaggio da un dielettrico ad un altro ($\epsilon_2>\epsilon_1$ nella figura 14.4)
+Segue dalle (14.40) che le linee di forza del campo elettrico vengono rifratte
+quando attraversano la superficie di un dielettrico: infatti, se chiamiamo
+$\theta$ l'angolo che il vettore $\vec E$ forma con la normale alla superficie,
+si ha \ $\tan\theta=E_t/E_n$ \ per cui nel passaggio da un dielettrico ad un
+altro ($\epsilon_2>\epsilon_1$ nella figura 14.4)
 \fig{fig14_4}{14.4}
 \begin{equation}
-\frac{\tan\theta_1}{\tan\theta_2}=\frac{E_n^{(2)}}{E_n^{(1)}}=\frac{\epsilon_1}{\epsilon_2}\,\cdot
-\tag{14.41}
+  \frac{\tan\theta_1}{\tan\theta_2}
+  =\frac{E_n^{(2)}}{E_n^{(1)}}=\frac{\epsilon_1}{\epsilon_2}\,\cdot
+  \tag{14.41}
 \end{equation}
-Si noti che mentre il campo elettrico è conservativo anche in presenza di materia, l'induzione dielettrica lo è solo nel caso in cui $\epsilon$ è costante, il che non vuol dire soltanto che i dielettrici devono essere omogenei, ma anche che il dielettrico deve riempire completamente tutto lo spazio (oppure la cavità entro cui si trova il sistema), altrimenti le superfici di separazione fra un dielettrico ed il vuoto o un altro dielettrico sono superfici di discontinuità per la costante dielettrica $\epsilon$ e \ $\rot\vec D\equiv\rot(\epsilon\vec E)\ne\epsilon\rot\vec E$: in effetti le (14.40) dicono che attraverso la superficie di un dielettrico le componenti tangenziali di $\vec D$ non sono continue, come accadrebbe se $\vec D$ fosse conservativo.
+Si noti che mentre il campo elettrico \`e conservativo anche in presenza di
+materia, l'induzione dielettrica lo \`e solo nel caso in cui $\epsilon$ \`e
+costante, il che non vuol dire soltanto che i dielettrici devono essere
+omogenei, ma anche che il dielettrico deve riempire completamente tutto lo
+spazio (oppure la cavit\`a entro cui si trova il sistema), altrimenti le
+superfici di separazione fra un dielettrico ed il vuoto o un altro dielettrico
+sono superfici di discontinuit\`a per la costante dielettrica $\epsilon$ e
+\ $\rot\vec D\equiv\rot(\epsilon\vec E)\ne\epsilon\rot\vec E$: in effetti le
+(14.40) dicono che attraverso la superficie di un dielettrico le componenti
+tangenziali di $\vec D$ non sono continue, come accadrebbe se $\vec D$ fosse
+conservativo.
 
-Le cariche di polarizzazione $\sigma'$ sono date dalla discontinuità della componente normale del campo elettrico; per quanto riguarda le cariche di polarizzazione $\rho'$ normalmente queste sono presenti solo se il dielettrico non è omogeneo: infatti dalla 1$^\mathrm{a}$ delle (14.22) si ha
+Le cariche di polarizzazione $\sigma'$ sono date dalla discontinuit\`a della
+componente normale del campo elettrico; per quanto riguarda le cariche di
+polarizzazione $\rho'$ normalmente queste sono presenti solo se il dielettrico
+non \`e omogeneo: infatti dalla 1$^\mathrm{a}$ delle (14.22) si ha
 \begin{equation}
-\begin{aligned}
-\rho'&=-\dive\vec P=-\dive(\chi_e\vec E)=-\dive\big(\frac{\chi_e}{\epsilon}\vec D\big)\\
-&=-\frac{\chi_e}{\epsilon}\dive\vec D-\grad\big(\frac{\chi_e}{\epsilon}\big)\cdot\vec D
-\end{aligned}
-\tag{14.42}
+  \begin{aligned}
+    \rho'&=-\dive\vec P=-\dive(\chi_e\vec E)
+    =-\dive\big(\frac{\chi_e}{\epsilon}\vec D\big)\\
+    &=-\frac{\chi_e}{\epsilon}\dive\vec D
+    -\grad\big(\frac{\chi_e}{\epsilon}\big)\cdot\vec D
+  \end{aligned}
+  \tag{14.42}
 \end{equation}
-quindi intanto si vede che se il dielettrico è omogeneo \ $\grad(\chi_e/\epsilon)=0$ \ e \ $\rho'=-4\pi(\chi_e/\epsilon)\rho$, cioè che $\rho'$ è diverso da zero solo dove sono presenti cariche libere di volume: ma di solito in un dielettrico non si hanno cariche libere (a parte il caso di un gas o di un liquido ionizzato) in quanto queste si trovano sui conduttori; inoltre, poiché normalmente i dielettrici sono omogenei, si vede che la presenza di cariche di polarizzazione $\rho'$ è un fatto inconsueto.
+quindi intanto si vede che se il dielettrico \`e omogeneo
+\ $\grad(\chi_e/\epsilon)=0$ \ e \ $\rho'=-4\pi(\chi_e/\epsilon)\rho$, cio\`e
+che $\rho'$ \`e diverso da zero solo dove sono presenti cariche libere di
+volume: ma di solito in un dielettrico non si hanno cariche libere (a parte il
+caso di un gas o di un liquido ionizzato) in quanto queste si trovano sui
+conduttori; inoltre, poich\'e normalmente i dielettrici sono omogenei, si vede
+che la presenza di cariche di polarizzazione $\rho'$ \`e un fatto inconsueto.
 
-Consideriamo ora il caso in cui un dielettrico omogeneo (aria, olio, \dots) riempie tutto lo spazio, oppure la regione in cui è confinato il campo elettrico (come in un buon condensatore o dentro ad una gabbia di Faraday).\\
-In questo caso, siccome \ $\dive(\epsilon\vec E)=\epsilon\dive\vec E$, le (14.38) assumono la forma
+Consideriamo ora il caso in cui un dielettrico omogeneo (aria, olio, \dots)
+riempie tutto lo spazio, oppure la regione in cui \`e confinato il campo
+elettrico (come in un buon condensatore o dentro ad una gabbia di Faraday).\\
+In questo caso, siccome \ $\dive(\epsilon\vec E)=\epsilon\dive\vec E$, le
+(14.38) assumono la forma
 \begin{equation}
-\left\{\begin{aligned}
-&\dive\vec E=4\pi\,\frac{\rho}{\epsilon}\\
-&\rot\vec E=0
-\end{aligned}\right.
-\tag{14.43}
+  \left\{\begin{aligned}
+    &\dive\vec E=4\pi\,\frac{\rho}{\epsilon}\\
+    &\rot\vec E=0
+  \end{aligned}\right.
+  \tag{14.43}
 \end{equation}
-che sono identiche alle equazioni nel vuoto, con le sorgenti ridotte per il fattore $\epsilon$.\\
-Di conseguenza, a parità di sorgenti $(\rho,\,\sigma)$, il campo elettrico $\vec E$ ed il potenziale $\varphi$ in presenza del dielettrico sono $1/\epsilon$ volte il campo elettrico $\vec E_0$ ed il potenziale $\varphi_0$ nel vuoto. Così, per esempio, se abbiamo dei conduttori immersi in un fluido dielettrico, se $\sigma$ è la densità di carica ``libera'' sulla superficie di un conduttore e $\sigma'$ quella di polarizzazione sulla superficie del dielettrico a contatto con quella del conduttore, si ha ($\vec E_0$ e $\sigma_0$ sono rispettivamente il campo e la densità di carica senza il dielettrico, a parità di carica totale)
+che sono identiche alle equazioni nel vuoto, con le sorgenti ridotte per il
+fattore $\epsilon$.\\
+Di conseguenza, a parit\`a di sorgenti $(\rho,\,\sigma)$, il campo elettrico
+$\vec E$ ed il potenziale $\varphi$ in presenza del dielettrico sono
+$1/\epsilon$ volte il campo elettrico $\vec E_0$ ed il potenziale $\varphi_0$
+nel vuoto. Cos\`i, per esempio, se abbiamo dei conduttori immersi in un fluido
+dielettrico, se $\sigma$ \`e la densit\`a di carica ``libera'' sulla superficie
+di un conduttore e $\sigma'$ quella di polarizzazione sulla superficie del
+dielettrico a contatto con quella del conduttore, si ha ($\vec E_0$ e $\sigma_0$
+sono rispettivamente il campo e la densit\`a di carica senza il dielettrico, a
+parit\`a di carica totale)
 \begin{equation}
-\begin{aligned}
-&\vec E=\frac{1}{\epsilon}\vec E_0\quad\ \Rightarrow\quad\ \vec D=\vec E_0\quad\ \Rightarrow\quad\ 4\pi\sigma=4\pi\sigma_0\ \Rightarrow\ \sigma=\sigma_0\\
-&\vec D=\epsilon\vec E\quad\ \Rightarrow\quad\ 4\pi\sigma=4\pi\epsilon(\sigma+\sigma')\ \Rightarrow\ \sigma'=-\frac{\epsilon-1}{\epsilon}\sigma=-4\pi\chi_e\frac{\sigma}{\epsilon}
-\end{aligned}
-\tag{14.44}
+  \begin{aligned}
+    &\vec E=\frac{1}{\epsilon}\vec E_0
+    \quad\ \Rightarrow\quad\ \vec D=\vec E_0\quad\ \Rightarrow
+    \quad\ 4\pi\sigma=4\pi\sigma_0\ \Rightarrow\ \sigma=\sigma_0\\
+    &\vec D=\epsilon\vec E
+    \quad\ \Rightarrow\quad\ 4\pi\sigma=4\pi\epsilon(\sigma+\sigma')
+    \ \Rightarrow\ \sigma'=-\frac{\epsilon-1}{\epsilon}\sigma
+    =-4\pi\chi_e\frac{\sigma}{\epsilon}
+  \end{aligned}
+  \tag{14.44}
 \end{equation}
 quindi $\sigma'$ e $\sigma$ sono proporzionali ma di segno opposto.\\
-Invece a parità di campo e potenziale le cariche sui conduttori sono $\epsilon$ volte maggiori che nel vuoto.
+Invece a parit\`a di campo e potenziale le cariche sui conduttori sono
+$\epsilon$ volte maggiori che nel vuoto.
 
 \paragraph{Esempi}
 \begin{enumerate}
-\item Fra le armature di un condensatore a facce piane parallele ``infinite'' a distanza $d$ è presente una lastra di dielettrico di spessore $s$ e costante dielettrica $\epsilon$. Una batteria mantiene fra le armature una d.d.p.\ $V$.
-\fig{fig14_5}{14.5}
-Il campo elettrico è uniforme e ortogonale alle armature ed è diverso da zero solo dentro il condensatore. Le prime due affermazioni seguono (come in assenza del dielettrico) dall'invarianza per traslazioni e per rotazioni attorno agli assi ortogonali alle armature, mentre l'ultima deve essere giustificata perché mentre nel vuoto la dimostrazione si basa sul fatto che il campo di ciascuna armatura è uguale e opposto dalle due parti della distribuzione, ora a causa della presenza del dielettrico da una parte sola di ogni armatura vengono meno le simmetrie che permettono di collegare il campo dalle parti opposte di ogni singola armatura. Comunque la dimostrazione è semplice, perché il campo elettrico è la sovrapposizione dei campi di quattro distribuzioni superficiali uniformi, le due distribuzioni $\sigma$ e $-\sigma$ sulle armature e $\sigma'$, $-\sigma'$ sulle superfici del dielettrico ed il risultato è campo nullo fuori dal condensatore: siccome agli effetti del calcolo del campo elettrico l'unica cosa del dielettrico che ci interessa sono solo le sorgenti $\rho'$ e $\sigma'$, la lastra è equivalente a due distribuzioni $\sigma'$ e $-\sigma'$ nel vuoto.\\
-L'induzione dielettrica $D$ è costante fra le armature del condensatore e vale $4\pi\sigma$ (Gauss), perciò $E=4\pi\sigma$ nel vuoto e $E=4\pi\sigma/\epsilon$ nel dielettrico, quindi
-\[
-V=4\pi\sigma(d-s)+4\pi\sigma\frac{s}{\epsilon}=4\pi\sigma\Big(d-s\frac{\epsilon-1}{\epsilon}\Big)\ \Rightarrow\ 4\pi\sigma=V\frac{\epsilon}{\epsilon d-(\epsilon-1)s}\,\cdot
-\]
-$\sigma'$, la carica di polarizzazione sulla superficie della lastra affacciata alla distribuzione $\sigma$, si calcola come differenza fra il campo elettrico nella lastra ed il campo
-nel vuoto:
-\begin{equation}
-4\pi\sigma'=4\pi\frac{\sigma}{\epsilon}-4\pi\sigma=4\pi\sigma\frac{1-\epsilon}{\epsilon};\qquad\sigma'=-\frac{\epsilon-1}{\epsilon}\sigma=-\frac{4\pi\chi_e}{\epsilon}\sigma
-\tag{14.45}
-\end{equation}
-in accordo con la (14.44). Quindi se $\sigma>0$, $\sigma'<0$.\\
-La capacità del condensatore, se $S$ è l'area delle armature ($d\ll\sqrt S$), è
-\begin{equation}
-C\equiv\frac{Q}{V}=\frac{\sigma S}{V}=\frac{\epsilon S}{4\pi\big(\epsilon d-(\epsilon-1)s\big)}\,\cdot
-\tag{14.46}
-\end{equation}
-Se il dielettrico riempie tutto il condensatore ($s=d$), ritroviamo la (14.1) \ $C=\epsilon\,C_0$.
-\item In un mezzo omogeneo che riempie tutto lo spazio è presente una carica ``puntiforme'' $q$: in pratica la carica ``puntiforme'' deve essere una sferetta di dimensioni grandi rispetto a quelle delle molecole del mezzo, altrimenti se fosse p.es.\ un protone o un elettrone o anche un atomo ionizzato, non avrebbe senso la descrizione macroscopica in termini di campo medio. Inoltre supponiamo che il mezzo sia un liquido o un solido in modo che la presenza della sferetta carica non ne alteri apprezzabilmente la densità nelle sue vicinanze.\\
-Dal teorema di Gauss applicato ad una superficie contenente la sferetta, se $q'$ è la carica totale di polarizzazione a contatto con la sferetta si ha
-\[
-\Phi(\vec D)=4\pi q,\quad\ \Phi(\vec E)=4\pi(q+q')\quad\ \Rightarrow\quad\ q=\epsilon(q+q')\quad\ \Rightarrow\quad\ q'=-\frac{4\pi\chi_e}{\epsilon}q.
-\]
-Se poi la sferetta è (macroscopicamente) puntiforme, il campo ($\vec E$ o $\vec D$) vicino ad essa è poco influenzato dall'eventuale presenza di altre cariche (a distanza grande rispetto alle sue dimensioni), e quindi la carica $q'$ è uniformemente distribuita con densità $\sigma'=q'/4\pi a^2$, dove $a$ è il raggio della sferetta.
-\item Una sfera di dielettrico omogeneo si trova in un campo esterno uniforme $\vec E_0$. Vogliamo determinare il campo elettrico totale \ $\vec E=\vec E_0+\vec E\,'$, dove $\vec E\,'$ è il campo prodotto dalla sfera.
-\fig{fig14_6}{14.6}
-Il problema è simile a quello di una sfera conduttrice in un campo uniforme, che abbiamo discusso nel capitolo 2.6, ma è più complicato perché la condizione di campo nullo dentro la sfera conduttrice è ora sostituita dalle condizioni (14.40) sulla superficie della sfera e da $\vec E\to\vec E_0$ a grandi distanze. Siccome un conduttore può essere pensato come un dielettrico con $\epsilon=\infty$, e nel caso della sfera conduttrice il campo che essa produce al suo interno è uniforme (opposto ad $\vec E_0$), possiamo sperare che anche nel caso della sfera non conduttrice essa si polarizzi in modo da produrre al suo interno un campo uniforme parallelo ad $\vec E_0$. In questa ipotesi (da verificare a posteriori), $\vec P$ è uniforme nella sfera e per la (14.22) sulla superficie si ha \ $\sigma'(\theta)=\vec P\cdot\hat n=P\cos\theta$. Dalla (2.40) sappiamo che questa distribuzione produce dentro la sfera il campo \ $\vec E\,'=-(4\pi/3)\vec P$. Ma \ $\vec P=\chi_e\vec E=\chi_e(\vec E_0+\vec E\,')$, quindi ($4\pi\chi_e=\epsilon-1$)
-\begin{equation}
-\vec E\,'=\frac{1-\epsilon}{3}(\vec E_0+\vec E\,')\quad\ \Rightarrow\quad\ \vec E\,'=\frac{1-\epsilon}{2+\epsilon}\vec E_0\quad\ \Rightarrow\quad\ \vec E=\frac{3}{2+\epsilon}\vec E_0.
-\tag{14.47}
-\end{equation}
-Il campo $\vec E\,'$ prodotto all'esterno dalla distribuzione $\sigma'$, come nel caso della sfera conduttrice, è uguale a quello di un dipolo puntiforme posto nel centro della sfera, di momento \ $\vec p=(4\pi/3)R^3\vec P$ \ ($R$ è il raggio della sfera), per cui dalla (14.47)
-\begin{equation}
-\vec P=\frac{1}{4\pi}\frac{3(\epsilon-1)}{\epsilon+2}\vec E_0\quad\ \Rightarrow\quad\ \vec p=\frac{\epsilon-1}{\epsilon+2}R^3\vec E_0.
-\tag{14.48}
-\end{equation}
-Resta da controllare che le (14.40) sono soddisfatte. Per la componente tangenziale basta fare la verifica solo per il campo $\vec E\,'$, perché $\vec E_0$ è continuo. Sulla superficie della sfera, dall'interno, si ha (prendiamo la tangente $\hat t$ nel verso in cui $\theta$ cresce)
-\[
-E_t'=E'\sen\theta=\frac{\epsilon-1}{2+\epsilon}E_0\sen\theta
-\]
-e sulla superficie esterna
-\[
-E_t'=-\frac{1}{R}\frac{\partial}{\partial\theta}\Big(\frac{p\cos\theta}{R^2}\Big)=\frac{p\sen\theta}{R^3}=\frac{\epsilon-1}{2+\epsilon}E_0\sen\theta.
-\]
-Per la componente normale, dall'interno
-\[
-E_n^i=E_0\cos\theta-E'\cos\theta=E_0\cos\theta+\frac{1-\epsilon}{2+\epsilon}E_0\cos\theta=\frac{3}{2+\epsilon}E_0\cos\theta
-\]
-e dall'esterno
-\[
-E_n^e=E_0\cos\theta-\frac{\partial}{\partial r}\Big(\frac{p\cos\theta}{r^2}\Big)_{r=R}=E_0\cos\theta+2\frac{\epsilon-1}{2+\epsilon}E_0\cos\theta=\frac{3\epsilon}{2+\epsilon}E_0\cos\theta
-\]
-quindi, poiché \ $\epsilon E_n^i=E_n^e$, le (14.40) sono soddisfatte.
-\item Consideriamo ora una cavità sferica di raggio $R$ in un dielettrico omogeneo nel quale è presente un campo esterno $\vec E^0$ uniforme (in assenza della cavità). La somiglianza con il problema precedente è evidente: ora abbiamo una sfera ``di vuoto'' in un mezzo denso.\\
-Il campo elettrico è completamente determinato dalle (14.38) e dalle (14.40), quindi dalle sorgenti esterne ``vere'' che determinano il campo $\vec E^0$ (per esempio due distribuzioni superficiali di cariche fisse $\sigma$ e $-\sigma$) e dalle condizioni al contorno (14.40). Rispetto al problema precedente cambiano solo queste ultime, perché ora il dielettrico è all'esterno della sfera, ed il vuoto all'interno: prima avevamo \ $E_n^e=\epsilon E_n^i$, ora abbiamo \ $\epsilon E_n^e=E_n^i$, cioè \ $E_n^e=(1/\epsilon)E_n^i$, quindi la soluzione si ottiene sostituendo in quella ottenuta precedentemente $\epsilon$ con $1/\epsilon$ (si potrebbe dire che il vuoto ha costante dielettrica $1/\epsilon$ rispetto al mezzo). Quindi, in particolare, dentro la cavità abbiamo
-\begin{equation}
-\vec E=\frac{3\epsilon}{2\epsilon+1}\vec E^0.
-\tag{14.49}
-\end{equation}
+  \item Fra le armature di un condensatore a facce piane parallele ``infinite''
+    a distanza $d$ \`e presente una lastra di dielettrico di spessore $s$ e
+    costante dielettrica $\epsilon$. Una batteria mantiene fra le armature una
+    d.d.p.\ $V$.
+    \fig{fig14_5}{14.5}
+    Il campo elettrico \`e uniforme e ortogonale alle armature ed \`e diverso da
+    zero solo dentro il condensatore. Le prime due affermazioni seguono (come in
+    assenza del dielettrico) dall'invarianza per traslazioni e per rotazioni
+    attorno agli assi ortogonali alle armature, mentre l'ultima deve essere
+    giustificata perch\'e mentre nel vuoto la dimostrazione si basa sul fatto
+    che il campo di ciascuna armatura \`e uguale e opposto dalle due parti della
+    distribuzione, ora a causa della presenza del dielettrico da una parte sola
+    di ogni armatura vengono meno le simmetrie che permettono di collegare il
+    campo dalle parti opposte di ogni singola armatura. Comunque la
+    dimostrazione \`e semplice, perch\'e il campo elettrico \`e la
+    sovrapposizione dei campi di quattro distribuzioni superficiali uniformi, le
+    due distribuzioni $\sigma$ e $-\sigma$ sulle armature e $\sigma'$,
+    $-\sigma'$ sulle superfici del dielettrico ed il risultato \`e campo nullo
+    fuori dal condensatore: siccome agli effetti del calcolo del campo elettrico
+    l'unica cosa del dielettrico che ci interessa sono solo le sorgenti $\rho'$
+    e $\sigma'$, la lastra \`e equivalente a due distribuzioni $\sigma'$ e
+    $-\sigma'$ nel vuoto.\\
+    L'induzione dielettrica $D$ \`e costante fra le armature del condensatore e
+    vale $4\pi\sigma$ (Gauss), perci\`o $E=4\pi\sigma$ nel vuoto e
+    $E=4\pi\sigma/\epsilon$ nel dielettrico, quindi
+    \[
+      V=4\pi\sigma(d-s)+4\pi\sigma\frac{s}{\epsilon}
+      =4\pi\sigma\Big(d-s\frac{\epsilon-1}{\epsilon}\Big)\ \Rightarrow
+      \ 4\pi\sigma=V\frac{\epsilon}{\epsilon d-(\epsilon-1)s}\,\cdot
+    \]
+    $\sigma'$, la carica di polarizzazione sulla superficie della lastra
+    affacciata alla distribuzione $\sigma$, si calcola come differenza fra il
+    campo elettrico nella lastra ed il campo
+    nel vuoto:
+    \begin{equation}
+      4\pi\sigma'=4\pi\frac{\sigma}{\epsilon}-4\pi\sigma
+      =4\pi\sigma\frac{1-\epsilon}{\epsilon};
+      \qquad\sigma'=-\frac{\epsilon-1}{\epsilon}\sigma
+      =-\frac{4\pi\chi_e}{\epsilon}\sigma
+      \tag{14.45}
+    \end{equation}
+    in accordo con la (14.44). Quindi se $\sigma>0$, $\sigma'<0$.\\
+    La capacit\`a del condensatore, se $S$ \`e l'area delle armature
+    ($d\ll\sqrt S$), \`e
+    \begin{equation}
+      C\equiv\frac{Q}{V}=\frac{\sigma S}{V}
+      =\frac{\epsilon S}{4\pi\big(\epsilon d-(\epsilon-1)s\big)}\,\cdot
+      \tag{14.46}
+    \end{equation}
+    Se il dielettrico riempie tutto il condensatore ($s=d$), ritroviamo la
+    (14.1) \ $C=\epsilon\,C_0$.
+  \item In un mezzo omogeneo che riempie tutto lo spazio \`e presente una carica
+    ``puntiforme'' $q$: in pratica la carica ``puntiforme'' deve essere una
+    sferetta di dimensioni grandi rispetto a quelle delle molecole del mezzo,
+    altrimenti se fosse p.es.\ un protone o un elettrone o anche un atomo
+    ionizzato, non avrebbe senso la descrizione macroscopica in termini di campo
+    medio. Inoltre supponiamo che il mezzo sia un liquido o un solido in modo
+    che la presenza della sferetta carica non ne alteri apprezzabilmente la
+    densit\`a nelle sue vicinanze.\\
+    Dal teorema di Gauss applicato ad una superficie contenente la sferetta, se
+    $q'$ \`e la carica totale di polarizzazione a contatto con la sferetta si ha
+    \[
+      \Phi(\vec D)=4\pi q,
+      \quad\ \Phi(\vec E)=4\pi(q+q')\quad\ \Rightarrow\quad\ q=\epsilon(q+q')
+      \quad\ \Rightarrow\quad\ q'=-\frac{4\pi\chi_e}{\epsilon}q.
+    \]
+    Se poi la sferetta \`e (macroscopicamente) puntiforme, il campo ($\vec E$ o
+    $\vec D$) vicino ad essa \`e poco influenzato dall'eventuale presenza di
+    altre cariche (a distanza grande rispetto alle sue dimensioni), e quindi la
+    carica $q'$ \`e uniformemente distribuita con densit\`a
+    $\sigma'=q'/4\pi a^2$, dove $a$ \`e il raggio della sferetta.
+  \item Una sfera di dielettrico omogeneo si trova in un campo esterno uniforme
+    $\vec E_0$. Vogliamo determinare il campo elettrico totale
+    \ $\vec E=\vec E_0+\vec E\,'$, dove $\vec E\,'$ \`e il campo prodotto dalla
+    sfera.
+    \fig{fig14_6}{14.6}
+    Il problema \`e simile a quello di una sfera conduttrice in un campo
+    uniforme, che abbiamo discusso nel capitolo 2.6, ma \`e pi\`u complicato
+    perch\'e la condizione di campo nullo dentro la sfera conduttrice \`e ora
+    sostituita dalle condizioni (14.40) sulla superficie della sfera e da
+    $\vec E\to\vec E_0$ a grandi distanze. Siccome un conduttore pu\`o essere
+    pensato come un dielettrico con $\epsilon=\infty$, e nel caso della sfera
+    conduttrice il campo che essa produce al suo interno \`e uniforme (opposto
+    ad $\vec E_0$), possiamo sperare che anche nel caso della sfera non
+    conduttrice essa si polarizzi in modo da produrre al suo interno un campo
+    uniforme parallelo ad $\vec E_0$. In questa ipotesi (da verificare a
+    posteriori), $\vec P$ \`e uniforme nella sfera e per la (14.22) sulla
+    superficie si ha \ $\sigma'(\theta)=\vec P\cdot\hat n=P\cos\theta$. Dalla
+    (2.40) sappiamo che questa distribuzione produce dentro la sfera il campo
+    \ $\vec E\,'=-(4\pi/3)\vec P$. Ma
+    \ $\vec P=\chi_e\vec E=\chi_e(\vec E_0+\vec E\,')$, quindi
+    ($4\pi\chi_e=\epsilon-1$)
+    \begin{equation}
+      \vec E\,'=\frac{1-\epsilon}{3}(\vec E_0+\vec E\,')
+      \quad\ \Rightarrow\quad\ \vec E\,'=\frac{1-\epsilon}{2+\epsilon}\vec E_0
+      \quad\ \Rightarrow\quad\ \vec E=\frac{3}{2+\epsilon}\vec E_0.
+      \tag{14.47}
+    \end{equation}
+    Il campo $\vec E\,'$ prodotto all'esterno dalla distribuzione $\sigma'$,
+    come nel caso della sfera conduttrice, \`e uguale a quello di un dipolo
+    puntiforme posto nel centro della sfera, di momento
+    \ $\vec p=(4\pi/3)R^3\vec P$ \ ($R$ \`e il raggio della sfera), per cui
+    dalla (14.47)
+    \begin{equation}
+      \vec P=\frac{1}{4\pi}\frac{3(\epsilon-1)}{\epsilon+2}\vec E_0
+      \quad\ \Rightarrow\quad\ \vec p=\frac{\epsilon-1}{\epsilon+2}R^3\vec E_0.
+      \tag{14.48}
+    \end{equation}
+    Resta da controllare che le (14.40) sono soddisfatte. Per la componente
+    tangenziale basta fare la verifica solo per il campo $\vec E\,'$, perch\'e
+    $\vec E_0$ \`e continuo. Sulla superficie della sfera, dall'interno, si ha
+    (prendiamo la tangente $\hat t$ nel verso in cui $\theta$ cresce)
+    \[
+      E_t'=E'\sen\theta=\frac{\epsilon-1}{2+\epsilon}E_0\sen\theta
+    \]
+    e sulla superficie esterna
+    \[
+      E_t'=-\frac{1}{R}\frac{\partial}{\partial\theta}
+      \Big(\frac{p\cos\theta}{R^2}\Big)
+      =\frac{p\sen\theta}{R^3}=\frac{\epsilon-1}{2+\epsilon}E_0\sen\theta.
+    \]
+    Per la componente normale, dall'interno
+    \[
+      E_n^i=E_0\cos\theta-E'\cos\theta
+      =E_0\cos\theta+\frac{1-\epsilon}{2+\epsilon}E_0\cos\theta
+      =\frac{3}{2+\epsilon}E_0\cos\theta
+    \]
+    e dall'esterno
+    \[
+      E_n^e=E_0\cos\theta
+      -\frac{\partial}{\partial r}\Big(\frac{p\cos\theta}{r^2}\Big)_{r=R}
+      =E_0\cos\theta+2\frac{\epsilon-1}{2+\epsilon}E_0\cos\theta
+      =\frac{3\epsilon}{2+\epsilon}E_0\cos\theta
+    \]
+    quindi, poich\'e \ $\epsilon E_n^i=E_n^e$, le (14.40) sono soddisfatte.
+  \item Consideriamo ora una cavit\`a sferica di raggio $R$ in un dielettrico
+    omogeneo nel quale \`e presente un campo esterno $\vec E^0$ uniforme (in
+    assenza della cavit\`a). La somiglianza con il problema precedente \`e
+    evidente: ora abbiamo una sfera ``di vuoto'' in un mezzo denso.\\
+    Il campo elettrico \`e completamente determinato dalle (14.38) e dalle
+    (14.40), quindi dalle sorgenti esterne ``vere'' che determinano il campo
+    $\vec E^0$ (per esempio due distribuzioni superficiali di cariche fisse
+    $\sigma$ e $-\sigma$) e dalle condizioni al contorno (14.40). Rispetto al
+    problema precedente cambiano solo queste ultime, perch\'e ora il dielettrico
+    \`e all'esterno della sfera, ed il vuoto all'interno: prima avevamo
+    \ $E_n^e=\epsilon E_n^i$, ora abbiamo \ $\epsilon E_n^e=E_n^i$, cio\`e
+    \ $E_n^e=(1/\epsilon)E_n^i$, quindi la soluzione si ottiene sostituendo in
+    quella ottenuta precedentemente $\epsilon$ con $1/\epsilon$ (si potrebbe
+    dire che il vuoto ha costante dielettrica $1/\epsilon$ rispetto al mezzo).
+    Quindi, in particolare, dentro la cavit\`a abbiamo
+    \begin{equation}
+      \vec E=\frac{3\epsilon}{2\epsilon+1}\vec E^0.
+      \tag{14.49}
+    \end{equation}
 \end{enumerate}
 
 \subsection{L'energia del dielettrico}
 
-L'energia di un sistema di cariche in presenza di materiali dielettrici è definita -- come nell'elettrostatica nel vuoto -- come il lavoro che occorre fare per realizzare la configurazione finale. Questo lavoro normalmente è quello fatto da una pila per spostare cariche da un conduttore ad un altro (come quando si carica un condensatore), oppure da noi,
-p.es.\ per spostare conduttori (come allontanare o avvicinare le armature di un condensatore \dots): in ogni caso si tratta di lavoro fatto, contro le forze del campo elettrico $\vec E$, sulle cariche ``vere'' (o ``libere''), le uniche sulle quali possiamo agire direttamente dall'esterno.\\
-Vedremo che l'espressione dell'energia in termini del potenziale è sempre data dalle (1.89)\,$\div$\,(1.92) (nelle quali $q$, $\rho$, $\sigma$ sono le cariche ``vere''), tuttavia il risultato è tutt'altro che scontato, tant'è vero che vale solo nell'approssimazione lineare ($\vec D$ proporzionale a $\vec E$): si pensi per esempio a un materiale ferroelettrico; se, dopo averlo polarizzato, si rimuovono le sorgenti esterne, la polarizzazione non si annulla, quindi è presente (in tutto lo spazio) un campo elettrico e l'energia del sistema è non nulla, in contrasto con le (1.89)\,$\div$\,(1.92), dato che le cariche libere sono assenti.\\
-È quindi istruttivo vedere come si riottengono le (1.89)\,$\div$\,(1.92) in presenza di dielettrici e qual è il ruolo della linearità, sulla falsariga del metodo seguito nel capitolo 1.11, anziché in modo più semplice, ma più formale.
+L'energia di un sistema di cariche in presenza di materiali dielettrici \`e
+definita -- come nell'elettrostatica nel vuoto -- come il lavoro che occorre
+fare per realizzare la configurazione finale. Questo lavoro normalmente \`e
+quello fatto da una pila per spostare cariche da un conduttore ad un altro (come
+quando si carica un condensatore), oppure da noi,
+p.es.\ per spostare conduttori (come allontanare o avvicinare le armature di un
+condensatore \dots): in ogni caso si tratta di lavoro fatto, contro le forze del
+campo elettrico $\vec E$, sulle cariche ``vere'' (o ``libere''), le uniche sulle
+quali possiamo agire direttamente dall'esterno.\\
+Vedremo che l'espressione dell'energia in termini del potenziale \`e sempre data
+dalle (1.89)\,$\div$\,(1.92) (nelle quali $q$, $\rho$, $\sigma$ sono le cariche
+``vere''), tuttavia il risultato \`e tutt'altro che scontato, tant'\`e vero che
+vale solo nell'approssimazione lineare ($\vec D$ proporzionale a $\vec E$): si
+pensi per esempio a un materiale ferroelettrico; se, dopo averlo polarizzato, si
+rimuovono le sorgenti esterne, la polarizzazione non si annulla, quindi \`e
+presente (in tutto lo spazio) un campo elettrico e l'energia del sistema \`e non
+nulla, in contrasto con le (1.89)\,$\div$\,(1.92), dato che le cariche libere
+sono assenti.\\
+\`E quindi istruttivo vedere come si riottengono le (1.89)\,$\div$\,(1.92) in
+presenza di dielettrici e qual \`e il ruolo della linearit\`a, sulla falsariga
+del metodo seguito nel capitolo 1.11, anzich\'e in modo pi\`u semplice, ma pi\`u
+formale.
 
-Cominciamo con il calcolo del lavoro necessario per portare un certo numero di cariche puntiformi nella configurazione finale: la differenza rispetto al caso in cui il dielettrico è assente sta nel fatto che mentre nel caso del vuoto ogni carica viene portata nella sua posizione finale nel campo di sorgenti fisse, cioè delle cariche già portate, ora questo non è più vero perché il campo elettrico generato dal dielettrico dipende dalla posizione della carica trasportata, in quanto ne dipende la polarizzazione indotta.\\
-Limitiamoci a considerare il caso in cui il sistema è costituito da un materiale dielettrico e da due cariche puntiformi $q_1$ e $q_2$ in posizioni $P_1$ e $P_2$ (figura 14.7). Se vale la (1.89) (e questa è la nostra tesi) il lavoro necessario per realizzare questa configurazione è
+Cominciamo con il calcolo del lavoro necessario per portare un certo numero di
+cariche puntiformi nella configurazione finale: la differenza rispetto al caso
+in cui il dielettrico \`e assente sta nel fatto che mentre nel caso del vuoto
+ogni carica viene portata nella sua posizione finale nel campo di sorgenti
+fisse, cio\`e delle cariche gi\`a portate, ora questo non \`e pi\`u vero
+perch\'e il campo elettrico generato dal dielettrico dipende dalla posizione
+della carica trasportata, in quanto ne dipende la polarizzazione indotta.\\
+Limitiamoci a considerare il caso in cui il sistema \`e costituito da un
+materiale dielettrico e da due cariche puntiformi $q_1$ e $q_2$ in posizioni
+$P_1$ e $P_2$ (figura 14.7). Se vale la (1.89) (e questa \`e la nostra tesi) il
+lavoro necessario per realizzare questa configurazione \`e
 \begin{equation}
-U=\frac{1}{2}\big[q_1\varphi^{(1)}(P_1)+q_2\varphi^{(2)}(P_2)\big]
-\tag{14.50}
+  U=\frac{1}{2}\big[q_1\varphi^{(1)}(P_1)+q_2\varphi^{(2)}(P_2)\big]
+  \tag{14.50}
 \end{equation}
-dove, come nella (1.89), $\varphi^{(1)}$ è il potenziale dovuto alla carica $q_2$ e al dielettrico e analogamente $\varphi^{(2)}$ è il potenziale dovuto alla carica $q_1$ e al dielettrico.\\
-Portiamo la carica $q_1$ nella posizione $P_1$: il lavoro $L_1$ non è nullo, come nel caso del vuoto, perché il dielettrico si polarizza (anzi, $L_1<0$); chiamiamo $\varphi_1$ il potenziale generato dal dielettrico quando c'è solo $q_1$ in $P_1$, allora $L_1$ \underline{non} è \ $q_1\varphi_1(P_1)$ \ perché le cariche di polarizzazione del dielettrico non sono fisse ma nascono mentre $q_1$ viene trasportata dall'infinito, bensì
+dove, come nella (1.89), $\varphi^{(1)}$ \`e il potenziale dovuto alla carica
+$q_2$ e al dielettrico e analogamente $\varphi^{(2)}$ \`e il potenziale dovuto
+alla carica $q_1$ e al dielettrico.\\
+Portiamo la carica $q_1$ nella posizione $P_1$: il lavoro $L_1$ non \`e nullo,
+come nel caso del vuoto, perch\'e il dielettrico si polarizza (anzi, $L_1<0$);
+chiamiamo $\varphi_1$ il potenziale generato dal dielettrico quando c'\`e solo
+$q_1$ in $P_1$, allora $L_1$ \underline{non} \`e \ $q_1\varphi_1(P_1)$
+\ perch\'e le cariche di polarizzazione del dielettrico non sono fisse ma
+nascono mentre $q_1$ viene trasportata dall'infinito, bens\`i
 \fig{fig14_7}{14.7}
 \begin{equation}
-L_1=\frac{1}{2}q_1\varphi_1(P_1)
-\tag{14.51}
+  L_1=\frac{1}{2}q_1\varphi_1(P_1)
+  \tag{14.51}
 \end{equation}
-e tutto sommato il fattore $\frac{1}{2}$ non dovrebbe stupirci, comunque vediamo in dettaglio da dove viene. Ha la stessa origine del fattore $\frac{1}{2}$ nel lavoro per caricare un condensatore, o del fattore $\frac{1}{2}$ nel lavoro per portare una carica davanti ad una lastra conduttrice \big(v.\ (2.36)\big): supponiamo di portare la carica $q_1$ nel punto $P_1$ un pezzettino $dq$ alla volta; per la linearità del mezzo il potenziale generato dal dielettrico quando abbiamo portato in $P_1$ una carica $q$ è proporzionale a $q$, e quindi è \ $\varphi_1^{(q)}=(q/q_1)\varphi_1$ \ e il lavoro per portare l'ulteriore pezzettino $dq$ di carica è $\varphi_1^{(q)}(P_1)\,dq$, quindi
+e tutto sommato il fattore $\frac{1}{2}$ non dovrebbe stupirci, comunque vediamo
+in dettaglio da dove viene. Ha la stessa origine del fattore $\frac{1}{2}$ nel
+lavoro per caricare un condensatore, o del fattore $\frac{1}{2}$ nel lavoro per
+portare una carica davanti ad una lastra conduttrice \big(v.\ (2.36)\big):
+supponiamo di portare la carica $q_1$ nel punto $P_1$ un pezzettino $dq$ alla
+volta; per la linearit\`a del mezzo il potenziale generato dal dielettrico
+quando abbiamo portato in $P_1$ una carica $q$ \`e proporzionale a $q$, e quindi
+\`e \ $\varphi_1^{(q)}=(q/q_1)\varphi_1$ \ e il lavoro per portare l'ulteriore
+pezzettino $dq$ di carica \`e $\varphi_1^{(q)}(P_1)\,dq$, quindi
 \begin{equation}
-L_1=\int_0^{q_1}\varphi_1^{(q)}(P_1)\,dq=\varphi_1(P_1)\int_0^{q_1}\frac{q}{q_1}\,dq=\frac{1}{2}q_1\varphi_1(P_1)\,.
-\tag{14.52}
+  L_1=\int_0^{q_1}\varphi_1^{(q)}(P_1)\,dq
+  =\varphi_1(P_1)\int_0^{q_1}\frac{q}{q_1}\,dq=\frac{1}{2}q_1\varphi_1(P_1)\,.
+  \tag{14.52}
 \end{equation}
-Ora portiamo $q_2$ in $P_2$; il lavoro $L_2$ è quello contro il campo delle cariche fisse $q_1$ e quelle già instaurate da $q_1$ nel dielettrico (quelle che generano $\varphi_1$), più quello contro il campo dovuto alle cariche di polarizzazione prodotte da $q_2$: se chiamiamo $\varphi_2$ il potenziale dovuto alle cariche di polarizzazione del dielettrico generate \underline{solo} da $q_2$ quando si trova in $P_2$ in assenza di $q_1$, allora per la linearità del mezzo, il potenziale generato dal dielettrico quando sia $q_1$ che $q_2$ sono nelle posizioni $P_1$ e $P_2$ è \ $\varphi_1+\varphi_2$ \ e $L_2$ è dato da
+Ora portiamo $q_2$ in $P_2$; il lavoro $L_2$ \`e quello contro il campo delle
+cariche fisse $q_1$ e quelle gi\`a instaurate da $q_1$ nel dielettrico (quelle
+che generano $\varphi_1$), pi\`u quello contro il campo dovuto alle cariche di
+polarizzazione prodotte da $q_2$: se chiamiamo $\varphi_2$ il potenziale dovuto
+alle cariche di polarizzazione del dielettrico generate \underline{solo} da
+$q_2$ quando si trova in $P_2$ in assenza di $q_1$, allora per la linearit\`a
+del mezzo, il potenziale generato dal dielettrico quando sia $q_1$ che $q_2$
+sono nelle posizioni $P_1$ e $P_2$ \`e \ $\varphi_1+\varphi_2$ \ e $L_2$ \`e
+dato da
 \begin{equation}
-L_2=q_2\big(\varphi_{12}(P_2)+\varphi_1(P_2)\big)+\frac{1}{2}q_2\varphi_2(P_2)\qquad\Big(\varphi_{12}=\frac{q_1q_2}{r_{12}}\Big).
-\tag{14.53}
+  L_2=q_2\big(\varphi_{12}(P_2)+\varphi_1(P_2)\big)+\frac{1}{2}q_2\varphi_2(P_2)
+  \qquad\Big(\varphi_{12}=\frac{q_1q_2}{r_{12}}\Big).
+  \tag{14.53}
 \end{equation}
 Quindi
 \begin{equation}
-L=L_1+L_2=\frac{1}{2}q_1\varphi_1(P_1)+q_2\big[\varphi_{12}(P_2)+\varphi_1(P_2)\big]+\frac{1}{2}q_2\varphi_2(P_2)
-\tag{14.54}
+  L=L_1+L_2=\frac{1}{2}q_1\varphi_1(P_1)
+  +q_2\big[\varphi_{12}(P_2)+\varphi_1(P_2)\big]+\frac{1}{2}q_2\varphi_2(P_2)
+  \tag{14.54}
 \end{equation}
-Ma se invece portiamo prima la carica $q_2$ in $P_2$ e poi la carica $q_1$ in $P_1$ il lavoro è ancora $L$ (per la linearità del mezzo la polarizzazione finale dipende solo dalle posizioni delle cariche, e non da come ci sono arrivate), quindi
+Ma se invece portiamo prima la carica $q_2$ in $P_2$ e poi la carica $q_1$ in
+$P_1$ il lavoro \`e ancora $L$ (per la linearit\`a del mezzo la polarizzazione
+finale dipende solo dalle posizioni delle cariche, e non da come ci sono
+arrivate), quindi
 \begin{equation}
-L=\frac{1}{2}q_2\varphi_2(P_2)+q_1\big[\varphi_{12}(P_1)+\varphi_2(P_1)\big]+\frac{1}{2}q_1\varphi_1(P_1)
-\tag{14.55}
+  L=\frac{1}{2}q_2\varphi_2(P_2)
+  +q_1\big[\varphi_{12}(P_1)+\varphi_2(P_1)\big]+\frac{1}{2}q_1\varphi_1(P_1)
+  \tag{14.55}
 \end{equation}
 e sommando membro a membro le (14.54) e (14.55) si ottiene
 \begin{equation}
-\begin{aligned}
-L&=\frac{1}{2}\Big[q_1\big[\varphi_1(P_1)+\varphi_2(P_1)+\varphi_{12}(P_1)\big]+q_2\big[\varphi_2(P_2)+\varphi_1(P_2)+\varphi_{12}(P_2)\big]\Big]\\
-&\equiv\frac{1}{2}\big[q_1\varphi^{(1)}(P_1)+q_2\varphi^{(2)}(P_2)\big].
-\end{aligned}
-\tag{14.56}
+  \begin{aligned}
+    L&=\frac{1}{2}\Big[
+    q_1\big[\varphi_1(P_1)+\varphi_2(P_1)+\varphi_{12}(P_1)\big]
+    +q_2\big[\varphi_2(P_2)+\varphi_1(P_2)+\varphi_{12}(P_2)\big]\Big]\\
+    &\equiv\frac{1}{2}\big[q_1\varphi^{(1)}(P_1)+q_2\varphi^{(2)}(P_2)\big].
+  \end{aligned}
+  \tag{14.56}
 \end{equation}
-A questo punto la generalizzazione al caso di più cariche e alle distribuzioni continue non presenta ulteriori problemi, quindi le (1.89)\,$\div$\,(1.92) valgono anche i presenza di dielettrici.\\
-Invece l'espressione dell'energia in termini del campo è diversa dalla (1.94): per ottenere la (1.94) è stata utilizzata \big(v.\ (1.93)\big) l'equazione valida nel vuoto \ $4\pi\rho=\dive\vec E$, mentre in presenza di dielettrico questa è sostituita dell'equazione \ $4\pi\rho=\dive\vec D$, ed il risultato ora è
+A questo punto la generalizzazione al caso di pi\`u cariche e alle distribuzioni
+continue non presenta ulteriori problemi, quindi le (1.89)\,$\div$\,(1.92)
+valgono anche i presenza di dielettrici.\\
+Invece l'espressione dell'energia in termini del campo \`e diversa dalla (1.94):
+per ottenere la (1.94) \`e stata utilizzata \big(v.\ (1.93)\big) l'equazione
+valida nel vuoto \ $4\pi\rho=\dive\vec E$, mentre in presenza di dielettrico
+questa \`e sostituita dell'equazione \ $4\pi\rho=\dive\vec D$, ed il risultato
+ora \`e
 \begin{equation}
-U=\frac{1}{8\pi}\int\vec E(\vec r\,)\cdot\vec D(\vec r\,)\,dV
-\tag{14.57}
+  U=\frac{1}{8\pi}\int\vec E(\vec r\,)\cdot\vec D(\vec r\,)\,dV
+  \tag{14.57}
 \end{equation}
-valida nell'approssimazione lineare in cui abbiamo svolto tutta la trattazione. In questa approssimazione possiamo equivalentemente scrivere
+valida nell'approssimazione lineare in cui abbiamo svolto tutta la trattazione.
+In questa approssimazione possiamo equivalentemente scrivere
 \begin{equation}
-U=\frac{1}{8\pi}\int\epsilon\vec E^2\,dV=\frac{1}{8\pi}\int\frac{\vec D^2}{\epsilon}\,dV.
-\tag{14.58}
+  U=\frac{1}{8\pi}\int\epsilon\vec E^2\,dV
+  =\frac{1}{8\pi}\int\frac{\vec D^2}{\epsilon}\,dV.
+  \tag{14.58}
 \end{equation}
-Per capire l'origine della differenza fra la (1.94) e le (14.57), (14.58) consideriamo il caso della carica di un condensatore: se $Q$ è la carica che viene portata da un'armatura all'altra e $V$ è la d.d.p.\ finale fra le armature, il lavoro fatto, e quindi l'energia del sistema, è in ogni caso $\frac{1}{2}QV$, sia che fra le armature ci sia il vuoto oppure un dielettrico. Se $C\equiv Q/V$ è la capacità del condensatore, abbiamo le espressioni equivalenti
+Per capire l'origine della differenza fra la (1.94) e le (14.57), (14.58)
+consideriamo il caso della carica di un condensatore: se $Q$ \`e la carica che
+viene portata da un'armatura all'altra e $V$ \`e la d.d.p.\ finale fra le
+armature, il lavoro fatto, e quindi l'energia del sistema, \`e in ogni caso
+$\frac{1}{2}QV$, sia che fra le armature ci sia il vuoto oppure un dielettrico.
+Se $C\equiv Q/V$ \`e la capacit\`a del condensatore, abbiamo le espressioni
+equivalenti
 \begin{equation}
-U=\frac{1}{2}CV^2=\frac{1}{2}\frac{Q^2}{C}\,\cdot
-\tag{14.59}
+  U=\frac{1}{2}CV^2=\frac{1}{2}\frac{Q^2}{C}\,\cdot
+  \tag{14.59}
 \end{equation}
-Se il condensatore è riempito di dielettrico allora $C=\epsilon C_0$ e quindi dalle (14.59) si vede che a parità di d.d.p.\ $V$ l'energia del condensatore con il dielettrico è $\epsilon$ volte maggiore dell'energia del condensatore nel vuoto, mentre a parità di carica trasferita il risultato è opposto: il condensatore con il dielettrico ha meno energia.\\
-La differenza fra questi due casi è dovuta alle cariche di polarizzazione: a parità di potenziale (con il dielettrico e nel vuoto) il campo elettrico è lo stesso quindi è la stessa la carica \underline{totale} $Q_0$ che lo determina, ma nel caso in cui è presente il dielettrico la carica totale è la somma di quella ``vera'' $Q$ trasferita da una armatura all'altra e di quella di polarizzazione $Q'$ sulla superficie del dielettrico, che vale \big(v.\ (14.44), (14.45)\big) \ $Q'=-[(\epsilon-1)/\epsilon]Q$ \ e siccome ha segno opposto a $Q$ ne segue che $Q>Q_0$, precisamente $Q=\epsilon Q_0$, cioè bisogna trasferire una quantità di carica maggiore, e quindi fare un lavoro maggiore.\\
-Invece, a parità di carica trasferita, nel caso del condensatore con il dielettrico la d.d.p.\ finale è minore che nel vuoto (per il solito fattore $\epsilon$) sempre a causa delle cariche di polarizzazione, e quindi è minore il lavoro fatto.\\
-Le (14.58) dicono la stessa cosa: a parità di d.d.p.\ il campo elettrico è lo stesso, quindi $U=\epsilon U_0$, mentre a parità di carica è lo stesso $\vec D$, quindi $U=U_0/\epsilon$.
+Se il condensatore \`e riempito di dielettrico allora $C=\epsilon C_0$ e quindi
+dalle (14.59) si vede che a parit\`a di d.d.p.\ $V$ l'energia del condensatore
+con il dielettrico \`e $\epsilon$ volte maggiore dell'energia del condensatore
+nel vuoto, mentre a parit\`a di carica trasferita il risultato \`e opposto: il
+condensatore con il dielettrico ha meno energia.\\
+La differenza fra questi due casi \`e dovuta alle cariche di polarizzazione: a
+parit\`a di potenziale (con il dielettrico e nel vuoto) il campo elettrico \`e
+lo stesso quindi \`e la stessa la carica \underline{totale} $Q_0$ che lo
+determina, ma nel caso in cui \`e presente il dielettrico la carica totale \`e
+la somma di quella ``vera'' $Q$ trasferita da una armatura all'altra e di quella
+di polarizzazione $Q'$ sulla superficie del dielettrico, che vale
+\big(v.\ (14.44), (14.45)\big) \ $Q'=-[(\epsilon-1)/\epsilon]Q$ \ e siccome ha
+segno opposto a $Q$ ne segue che $Q>Q_0$, precisamente $Q=\epsilon Q_0$, cio\`e
+bisogna trasferire una quantit\`a di carica maggiore, e quindi fare un lavoro
+maggiore.\\
+Invece, a parit\`a di carica trasferita, nel caso del condensatore con il
+dielettrico la d.d.p.\ finale \`e minore che nel vuoto (per il solito fattore
+$\epsilon$) sempre a causa delle cariche di polarizzazione, e quindi \`e minore
+il lavoro fatto.\\
+Le (14.58) dicono la stessa cosa: a parit\`a di d.d.p.\ il campo elettrico \`e
+lo stesso, quindi $U=\epsilon U_0$, mentre a parit\`a di carica \`e lo stesso
+$\vec D$, quindi $U=U_0/\epsilon$.
 
-Ma perché la discussione che abbiamo fatto all'inizio del capitolo 11 ci ha portato a concludere che l'energia del campo, nel caso statico, è data dalla (1.94), e ora invece troviamo l'espressione (14.57)? Eppure gli argomenti del capitolo 11.1 sembravano molto generali e quindi dovrebbero essere validi anche in presenza di dielettrici.\\
-Il motivo, come ora cercheremo di chiarire, sta nel fatto che la (14.57) non rappresenta l'energia del campo, bensì l'energia del sistema campo + dielettrico. Cercheremo anche di spiegare le ragioni che ci inducono ad adottare un punto di vista diverso da quello espresso nel capitolo 11.\\
-Secondo la definizione del capitolo 11 l'energia del campo è data dall'opposto del lavoro fatto dal campo elettrico su tutte le cariche che costituiscono il sistema: quelle di conduzione che finiscono sulle armature del condensatore (le cariche ``vere''), più quelle dentro il dielettrico, mentre quello che noi abbiamo calcolato è solo il lavoro fatto sulle cariche ``vere''. Detto in altri termini, l'energia del campo, sempre secondo la definizione del capitolo 11, è data dal lavoro $L^\mathrm{est}$ fatto dall'esterno sul sistema, meno la variazione dell'energia del sistema meccanico, mentre quello che noi abbiamo calcolato per arrivare alla (14.57) è solo $L^\mathrm{est}$, cioè il lavoro fatto dalla batteria (o da qualunque altro dispositivo esterno) per caricare il condensatore, e non abbiamo sottratto la variazione di energia del dielettrico, dovuta al fatto che si polarizza. Quindi la (14.57) è l'energia totale del sistema campo + materia, e non soltanto l'energia del campo: si noti che questo paragrafo non lo abbiamo intitolato ``energia del campo'', bensì ``energia del dielettrico''.\\
-Perché allora non sottrarre dalla (14.57) l'energia della materia e quindi dire che l'energia del campo è sempre data dalla (1.94)? Per esempio, se le molecole fossero costituite da cariche collegate fra loro da molle che si allungano quando il mezzo si polarizza, potrebbe sembrare ragionevole mantenere una distinzione fra l'energia del campo e l'e-
-nergia meccanica delle molle. Il punto è che questa separazione, qualora (nel caso delle molle) fosse formalmente possibile, non avrebbe molto senso fisico poiché l'energia del dielettrico è intimamente legata a quella del campo: $\vec P$ esiste perché c'è $\vec E$, ed $\vec E$ a sua volta dipende da quanto vale $\vec P$ e non è possibile utilizzare separatamente le due energie (quando il condensatore si scarica, si ``scaricano'' automaticamente anche le molle).
+Ma perch\'e la discussione che abbiamo fatto all'inizio del capitolo 11 ci ha
+portato a concludere che l'energia del campo, nel caso statico, \`e data dalla
+(1.94), e ora invece troviamo l'espressione (14.57)? Eppure gli argomenti del
+capitolo 11.1 sembravano molto generali e quindi dovrebbero essere validi anche
+in presenza di dielettrici.\\
+Il motivo, come ora cercheremo di chiarire, sta nel fatto che la (14.57) non
+rappresenta l'energia del campo, bens\`i l'energia del sistema campo +
+dielettrico. Cercheremo anche di spiegare le ragioni che ci inducono ad adottare
+un punto di vista diverso da quello espresso nel capitolo 11.\\
+Secondo la definizione del capitolo 11 l'energia del campo \`e data dall'opposto
+del lavoro fatto dal campo elettrico su tutte le cariche che costituiscono il
+sistema: quelle di conduzione che finiscono sulle armature del condensatore (le
+cariche ``vere''), pi\`u quelle dentro il dielettrico, mentre quello che noi
+abbiamo calcolato \`e solo il lavoro fatto sulle cariche ``vere''. Detto in
+altri termini, l'energia del campo, sempre secondo la definizione del capitolo
+11, \`e data dal lavoro $L^\mathrm{est}$ fatto dall'esterno sul sistema, meno la
+variazione dell'energia del sistema meccanico, mentre quello che noi abbiamo
+calcolato per arrivare alla (14.57) \`e solo $L^\mathrm{est}$, cio\`e il lavoro
+fatto dalla batteria (o da qualunque altro dispositivo esterno) per caricare il
+condensatore, e non abbiamo sottratto la variazione di energia del dielettrico,
+dovuta al fatto che si polarizza. Quindi la (14.57) \`e l'energia totale del
+sistema campo + materia, e non soltanto l'energia del campo: si noti che questo
+paragrafo non lo abbiamo intitolato ``energia del campo'', bens\`i ``energia del
+dielettrico''.\\
+Perch\'e allora non sottrarre dalla (14.57) l'energia della materia e quindi
+dire che l'energia del campo \`e sempre data dalla (1.94)? Per esempio, se le
+molecole fossero costituite da cariche collegate fra loro da molle che si
+allungano quando il mezzo si polarizza, potrebbe sembrare ragionevole mantenere
+una distinzione fra l'energia del campo e l'e-
+nergia meccanica delle molle. Il punto \`e che questa separazione, qualora (nel
+caso delle molle) fosse formalmente possibile, non avrebbe molto senso fisico
+poich\'e l'energia del dielettrico \`e intimamente legata a quella del campo:
+$\vec P$ esiste perch\'e c'\`e $\vec E$, ed $\vec E$ a sua volta dipende da
+quanto vale $\vec P$ e non \`e possibile utilizzare separatamente le due energie
+(quando il condensatore si scarica, si ``scaricano'' automaticamente anche le
+molle).
 
-La differenza fra il punto di vista adottato nel capitolo 11 e quello attuale è dovuta al fatto che nel capitolo 11 abbiamo adottato un punto di vista in cui si assume una chiara distinzione fra campo e materia: ci sono le particelle (elettroni, protoni, \dots) e c'è il campo (questo è quello che nel capitolo 11 abbiamo chiamato l'``elettromagnetismo nel vuoto''); la trattazione di questo capitolo è invece una trattazione macroscopica in cui la materia è vista, come in termodinamica, attraverso un processo di media: non distinguiamo più la struttura microscopica, per cui è irrilevante che le molecole siano pensate come cariche collegate da molle che si allungano quando il mezzo viene polarizzato, oppure che invece delle molle ci siano dei campi elettrici, e quindi è irrilevante la natura (meccanica o elettrica) dell'energia dovuta alla polarizzazione; il dielettrico è ora una specie di omogeneizzato in cui campo e materia non sono più distinguibili.
+La differenza fra il punto di vista adottato nel capitolo 11 e quello attuale
+\`e dovuta al fatto che nel capitolo 11 abbiamo adottato un punto di vista in
+cui si assume una chiara distinzione fra campo e materia: ci sono le particelle
+(elettroni, protoni, \dots) e c'\`e il campo (questo \`e quello che nel capitolo
+11 abbiamo chiamato l'``elettromagnetismo nel vuoto''); la trattazione di questo
+capitolo \`e invece una trattazione macroscopica in cui la materia \`e vista,
+come in termodinamica, attraverso un processo di media: non distinguiamo pi\`u
+la struttura microscopica, per cui \`e irrilevante che le molecole siano pensate
+come cariche collegate da molle che si allungano quando il mezzo viene
+polarizzato, oppure che invece delle molle ci siano dei campi elettrici, e
+quindi \`e irrilevante la natura (meccanica o elettrica) dell'energia dovuta
+alla polarizzazione; il dielettrico \`e ora una specie di omogeneizzato in cui
+campo e materia non sono pi\`u distinguibili.
 
-Quindi campo + dielettrico costituiscono un unico sistema termodinamico e la (14.57), essendo il lavoro fatto dalle forze esterne sul sistema, rappresenta la variazione della sua energia. Quale energia? Poiché abbiamo a che fare con un sistema termodinamico dobbiamo precisare in quali condizioni realizziamo la ``trasformazione'', cioè la configurazione finale delle cariche. Se il sistema è termicamente isolato il lavoro delle forze esterne rappresenta la variazione dell'energia interna, mentre se durante il processo di ``carica'' la temperatura del sistema viene mantenuta costante, per esempio perché il sistema è a contatto con l'ambiente esterno, (come accade normalmente), e il processo di ``carica'' viene realizzato in maniera reversibile, allora la (14.57) rappresenta la variazione dell'energia libera.\\
-La distinzione è importante solo se la costante dielettrica dipende dalla temperatura, cioè per le sostanze polari, perché solo in questo caso si hanno scambi di calore con l'esterno durante il processo di carica ($Q\le0$). Inoltre, se $\epsilon=\epsilon(T)$ e il sistema è termicamente isolato, siccome la sua temperatura varia man mano che il campo viene instaurato, e poiché la temperatura è funzione del lavoro fatto sul sistema (e quindi del campo), viene meno la presupposta linearità fra campo e polarizzazione.\\
-Quindi, in generale, la (14.57) rappresenta la variazione di energia libera del sistema, in quanto nell'approssimazione lineare le trasformazioni che realizzano la configurazione finale delle cariche sono reversibili o, per essere più precisi, possono essere realizzate in modo reversibile (la carica di un condensatore attraverso una resistenza è, per il sistema costituito dal solo condensatore con o senza il dielettrico, una trasformazione reversibile, purché abbastanza lenta).
+Quindi campo + dielettrico costituiscono un unico sistema termodinamico e la
+(14.57), essendo il lavoro fatto dalle forze esterne sul sistema, rappresenta la
+variazione della sua energia. Quale energia? Poich\'e abbiamo a che fare con un
+sistema termodinamico dobbiamo precisare in quali condizioni realizziamo la
+``trasformazione'', cio\`e la configurazione finale delle cariche. Se il sistema
+\`e termicamente isolato il lavoro delle forze esterne rappresenta la variazione
+dell'energia interna, mentre se durante il processo di ``carica'' la temperatura
+del sistema viene mantenuta costante, per esempio perch\'e il sistema \`e a
+contatto con l'ambiente esterno, (come accade normalmente), e il processo di
+``carica'' viene realizzato in maniera reversibile, allora la (14.57)
+rappresenta la variazione dell'energia libera.\\
+La distinzione \`e importante solo se la costante dielettrica dipende dalla
+temperatura, cio\`e per le sostanze polari, perch\'e solo in questo caso si
+hanno scambi di calore con l'esterno durante il processo di carica ($Q\le0$).
+Inoltre, se $\epsilon=\epsilon(T)$ e il sistema \`e termicamente isolato,
+siccome la sua temperatura varia man mano che il campo viene instaurato, e
+poich\'e la temperatura \`e funzione del lavoro fatto sul sistema (e quindi del
+campo), viene meno la presupposta linearit\`a fra campo e polarizzazione.\\
+Quindi, in generale, la (14.57) rappresenta la variazione di energia libera del
+sistema, in quanto nell'approssimazione lineare le trasformazioni che realizzano
+la configurazione finale delle cariche sono reversibili o, per essere pi\`u
+precisi, possono essere realizzate in modo reversibile (la carica di un
+condensatore attraverso una resistenza \`e, per il sistema costituito dal solo
+condensatore con o senza il dielettrico, una trasformazione reversibile,
+purch\'e abbastanza lenta).
 
-Possiamo vedere dove nasce la difficoltà di separare l'energia della materia da quella totale: consideriamo un dipolo $\vec p$ e chiediamoci quant'è il lavoro che deve fare un campo elettrico esterno $\vec E$ per cambiarne il momento da $\vec p$ a $\vec p+d\vec p$.\\
-Schematizziamo il nostro dipolo come due cariche $-q$ e $q$ a distanza $\vec a$ (ma qualunque altra schematizzazione, come p.es.\ quella adottata nel paragrafo 3 per una molecola
-non polare, andrebbe altrettanto bene). Se \ $\vec a\to\vec a+d\vec a$ \ il campo elettrico compie sulle due cariche il lavoro \ $q\vec E\cdot d\vec a=\vec E\cdot d\vec p$; se il dipolo è indotto dal campo, allora nell'approssimazione lineare \ $\vec p=\alpha_e\vec E$, quindi il lavoro fatto dal campo per indurre il momento di dipolo $\vec p_0$ è
+Possiamo vedere dove nasce la difficolt\`a di separare l'energia della materia
+da quella totale: consideriamo un dipolo $\vec p$ e chiediamoci quant'\`e il
+lavoro che deve fare un campo elettrico esterno $\vec E$ per cambiarne il
+momento da $\vec p$ a $\vec p+d\vec p$.\\
+Schematizziamo il nostro dipolo come due cariche $-q$ e $q$ a distanza $\vec a$
+(ma qualunque altra schematizzazione, come p.es.\ quella adottata nel paragrafo
+3 per una molecola
+non polare, andrebbe altrettanto bene). Se \ $\vec a\to\vec a+d\vec a$ \ il
+campo elettrico compie sulle due cariche il lavoro
+\ $q\vec E\cdot d\vec a=\vec E\cdot d\vec p$; se il dipolo \`e indotto dal
+campo, allora nell'approssimazione lineare \ $\vec p=\alpha_e\vec E$, quindi il
+lavoro fatto dal campo per indurre il momento di dipolo $\vec p_0$ \`e
 \begin{equation}
-L=\int_0^{p_0}\vec E\cdot d\vec p=\int_0^{p_0}\alpha_e\vec E\cdot d\vec E=\frac{1}{2}\alpha_eE^2=\frac{1}{2}\vec E\cdot\vec p.
-\tag{14.60}
+  L=\int_0^{p_0}\vec E\cdot d\vec p=\int_0^{p_0}\alpha_e\vec E\cdot d\vec E
+  =\frac{1}{2}\alpha_eE^2=\frac{1}{2}\vec E\cdot\vec p.
+  \tag{14.60}
 \end{equation}
-Consideriamo ora i dipoli contenuti in un volume $\Delta V$ del dielettrico; il lavoro fatto dal campo per polarizzare il volume $\Delta V$ è
+Consideriamo ora i dipoli contenuti in un volume $\Delta V$ del dielettrico; il
+lavoro fatto dal campo per polarizzare il volume $\Delta V$ \`e
 \begin{equation}
-L=\frac{1}{2}\sum_{i\in\Delta V}\vec E_i\cdot\vec p_i
-\tag{14.61}
+  L=\frac{1}{2}\sum_{i\in\Delta V}\vec E_i\cdot\vec p_i
+  \tag{14.61}
 \end{equation}
-dove, come nella (14.26), $\vec E_i$ è il campo elettrico microscopico che agisce sull'$i$--esimo dipolo. Se fosse lecito nella (14.61) sostituire $\vec p_i$ con il momento di dipolo medio nel volume $\Delta V$ e anche $\vec E_i$ con il suo valor medio, allora sarebbe possibile esprimere il lavoro per polarizzare il dielettrico in termini del campo macroscopico e della densità di polarizzazione $\vec P$, ma ciò equivarrebbe a sostituire il valor medio di un prodotto con il prodotto dei valori medi, e questo non è lecito:
+dove, come nella (14.26), $\vec E_i$ \`e il campo elettrico microscopico che
+agisce sull'$i$--esimo dipolo. Se fosse lecito nella (14.61) sostituire
+$\vec p_i$ con il momento di dipolo medio nel volume $\Delta V$ e anche
+$\vec E_i$ con il suo valor medio, allora sarebbe possibile esprimere il lavoro
+per polarizzare il dielettrico in termini del campo macroscopico e della
+densit\`a di polarizzazione $\vec P$, ma ci\`o equivarrebbe a sostituire il
+valor medio di un prodotto con il prodotto dei valori medi, e questo non \`e
+lecito:
 \[
-L=\frac{1}{2}\sum_{i\in\Delta V}\vec E_i\cdot\vec p_i\equiv n\Delta V\frac{1}{2}\overline{\vec p\cdot\vec E}\ne\ n\Delta V\,\frac{1}{2}\overline{\vec p}\cdot\overline{\vec E}.
+  L=\frac{1}{2}\sum_{i\in\Delta V}\vec E_i\cdot\vec p_i
+  \equiv n\Delta V\frac{1}{2}\overline{\vec p\cdot\vec E}
+  \ne\ n\Delta V\,\frac{1}{2}\overline{\vec p}\cdot\overline{\vec E}.
 \]
 
 \subsection{Forze in presenza di un dielettrico}
 
-Ci limitiamo a discutere solo alcuni problemi semplici perché in generale, siccome il campo elettrico modifica in maniera più o meno significativa la struttura interna dei dielettrici, il problema del calcolo delle forze in presenza di dielettrici è abbastanza complesso.\\
-Cominciamo con il calcolo della forza risultante che si esercita su un dielettrico: il problema è di interesse solo nel caso che si tratti di un dielettrico solido, come ad esempio i pezzettini di carta attirati da una bacchetta elettrizzata, altrimenti -- nel caso di fluidi -- la conoscenza della forza risultante è di scarsa utilità, e ciò che invece interessa è la distribuzione delle forze (e quindi p.es.\ la pressione) all'interno e sulla superficie del mezzo (liquido o gassoso), e questo è un problema molto più delicato da trattare.\\
-Supporremo che le deformazioni prodotte dal campo nel dielettrico, e la conseguente anisotropia, siano trascurabili.\\
-Se un dipolo $\vec p$, al solito schematizzato come due cariche a distanza (infinitesima) $\vec a$, si trova in un campo elettrico, la forza risultante su di esso è
+Ci limitiamo a discutere solo alcuni problemi semplici perch\'e in generale,
+siccome il campo elettrico modifica in maniera pi\`u o meno significativa la
+struttura interna dei dielettrici, il problema del calcolo delle forze in
+presenza di dielettrici \`e abbastanza complesso.\\
+Cominciamo con il calcolo della forza risultante che si esercita su un
+dielettrico: il problema \`e di interesse solo nel caso che si tratti di un
+dielettrico solido, come ad esempio i pezzettini di carta attirati da una
+bacchetta elettrizzata, altrimenti -- nel caso di fluidi -- la conoscenza della
+forza risultante \`e di scarsa utilit\`a, e ci\`o che invece interessa \`e la
+distribuzione delle forze (e quindi p.es.\ la pressione) all'interno e sulla
+superficie del mezzo (liquido o gassoso), e questo \`e un problema molto pi\`u
+delicato da trattare.\\
+Supporremo che le deformazioni prodotte dal campo nel dielettrico, e la
+conseguente anisotropia, siano trascurabili.\\
+Se un dipolo $\vec p$, al solito schematizzato come due cariche a distanza
+(infinitesima) $\vec a$, si trova in un campo elettrico, la forza risultante su
+di esso \`e
 \begin{equation}
-\begin{aligned}
-F_i&=qE_i(\vec r+\vec a\,)-qE_i(\vec r\,)=q\big[E_i(\vec r\,)+\grad E_i\cdot\vec a\,\big]-qE_i(\vec r\,)\\
-&=\vec p\cdot\grad E_i\equiv\textstyle\sum_jp_j\partial_jE_i\quad\ \Rightarrow\quad\ \vec F=(\vec p\cdot\nabla)\vec E
-\end{aligned}
-\tag{14.62}
+  \begin{aligned}
+    F_i&=qE_i(\vec r+\vec a\,)-qE_i(\vec r\,)
+    =q\big[E_i(\vec r\,)+\grad E_i\cdot\vec a\,\big]-qE_i(\vec r\,)\\
+    &=\vec p\cdot\grad E_i\equiv\textstyle\sum_jp_j\partial_jE_i
+    \quad\ \Rightarrow\quad\ \vec F=(\vec p\cdot\nabla)\vec E
+  \end{aligned}
+  \tag{14.62}
 \end{equation}
-\big(abbiamo usato per l'operatore gradiente il simbolo $\nabla$, v.\ (1.64)\big).\\
-A questo punto ci piacerebbe poter dire che la forza che si esercita su un volumetto $\Delta V$ di dielettrico è data da \ $(\vec P\Delta V\cdot\nabla)\vec E$, ma questo purtroppo non è vero: ciò che è
-vero è che la forza risultante che si esercita sui dipoli nel volumetto $\Delta V$ è \ $\sum(\vec p_i\cdot\nabla)\vec E_i$ \ dove, come nella (14.26), $\vec E_i$ è il campo microscopico agente sull'$i$-esima molecola; il punto è che anche in questo caso, come nella (14.61), non è lecito sostituire a $\vec p_i$ e a $\vec E_i$ i loro valori medi perché la media di un prodotto non è il prodotto delle medie.\\
-Ma noi siamo interessati alla forza $\vec F$ che si esercita su \underline{tutto} il dielettrico, e non su ciascun volumetto $\Delta V$, per cui possiamo dimenticarci del campo microscopico generato dalle molecole del mezzo perché l'interazione di questo campo con le molecole stesse sono forze interne, ed il loro risultante è nullo. Quindi, se $\vec E_0$ è il campo prodotto da tutte le sorgenti esterne al dielettrico: cariche fisse, conduttori carichi, altri dielettrici, siccome $\vec E_0$ è un campo macroscopico (e quindi coincide con la sua media in ogni volumetto $\Delta V$),
+\big(abbiamo usato per l'operatore gradiente il simbolo $\nabla$,
+v.\ (1.64)\big).\\
+A questo punto ci piacerebbe poter dire che la forza che si esercita su un
+volumetto $\Delta V$ di dielettrico \`e data da
+\ $(\vec P\Delta V\cdot\nabla)\vec E$, ma questo purtroppo non \`e vero: ci\`o
+che \`e
+vero \`e che la forza risultante che si esercita sui dipoli nel volumetto
+$\Delta V$ \`e \ $\sum(\vec p_i\cdot\nabla)\vec E_i$ \ dove, come nella (14.26),
+$\vec E_i$ \`e il campo microscopico agente sull'$i$-esima molecola; il punto
+\`e che anche in questo caso, come nella (14.61), non \`e lecito sostituire a
+$\vec p_i$ e a $\vec E_i$ i loro valori medi perch\'e la media di un prodotto
+non \`e il prodotto delle medie.\\
+Ma noi siamo interessati alla forza $\vec F$ che si esercita su
+\underline{tutto} il dielettrico, e non su ciascun volumetto $\Delta V$, per cui
+possiamo dimenticarci del campo microscopico generato dalle molecole del mezzo
+perch\'e l'interazione di questo campo con le molecole stesse sono forze
+interne, ed il loro risultante \`e nullo. Quindi, se $\vec E_0$ \`e il campo
+prodotto da tutte le sorgenti esterne al dielettrico: cariche fisse, conduttori
+carichi, altri dielettrici, siccome $\vec E_0$ \`e un campo macroscopico (e
+quindi coincide con la sua media in ogni volumetto $\Delta V$),
 \begin{equation}
-\vec F=\int_V(\vec P\cdot\nabla)\vec E_0\,dV.
-\tag{14.63}
+  \vec F=\int_V(\vec P\cdot\nabla)\vec E_0\,dV.
+  \tag{14.63}
 \end{equation}
-Se le sorgenti esterne sono solo cariche fisse (o sorgenti trascurabilmente influenzabili dalla presenza del nostro dielettrico), allora $\vec E_0$ è il campo preesistente all'inserzione del dielettrico, il cosiddetto ``campo esterno'', ed in tal caso la (14.63) è più significativa dell'espressione che ricaveremo tra poco in termini del campo totale (macroscopico) $\vec E$, perché $\vec E_0$ si determina più facilmente di $\vec E$. Se invece le sorgenti esterne sono influenzate dalla presenza del dielettrico (conduttori, altri dielettrici vicini), allora $\vec E_0$ è il campo che avremmo se dopo aver ``congelato'' le sorgenti esterne rimuovessimo il dielettrico. In questo caso è meglio riscrivere la (14.63) in termini di $\vec E$.\\
-La differenza fra $\vec E$ ed $\vec E_0$ è il campo macroscopico prodotto dalla densità (media) $\vec P$ dei dipoli del nostro dielettrico, cioè dalle cariche $\rho'$ e $\sigma'$, quindi se nella (14.63) sostituiamo $\vec E_0$ con $\vec E$ semplicemente aggiungiamo il risultante delle forze che $\rho'$ e $\sigma'$ esercitano su se stesse, cioè zero. Quindi si ha anche
+Se le sorgenti esterne sono solo cariche fisse (o sorgenti trascurabilmente
+influenzabili dalla presenza del nostro dielettrico), allora $\vec E_0$ \`e il
+campo preesistente all'inserzione del dielettrico, il cosiddetto ``campo
+esterno'', ed in tal caso la (14.63) \`e pi\`u significativa dell'espressione
+che ricaveremo tra poco in termini del campo totale (macroscopico) $\vec E$,
+perch\'e $\vec E_0$ si determina pi\`u facilmente di $\vec E$. Se invece le
+sorgenti esterne sono influenzate dalla presenza del dielettrico (conduttori,
+altri dielettrici vicini), allora $\vec E_0$ \`e il campo che avremmo se dopo
+aver ``congelato'' le sorgenti esterne rimuovessimo il dielettrico. In questo
+caso \`e meglio riscrivere la (14.63) in termini di $\vec E$.\\
+La differenza fra $\vec E$ ed $\vec E_0$ \`e il campo macroscopico prodotto
+dalla densit\`a (media) $\vec P$ dei dipoli del nostro dielettrico, cio\`e dalle
+cariche $\rho'$ e $\sigma'$, quindi se nella (14.63) sostituiamo $\vec E_0$ con
+$\vec E$ semplicemente aggiungiamo il risultante delle forze che $\rho'$ e
+$\sigma'$ esercitano su se stesse, cio\`e zero. Quindi si ha anche
 \begin{equation}
-\vec F=\int_V(\vec P\cdot\nabla)\vec E\,dV.
-\tag{14.64}
+  \vec F=\int_V(\vec P\cdot\nabla)\vec E\,dV.
+  \tag{14.64}
 \end{equation}
-Vale la pena ribadire che sia la (14.63) che la (14.64) possono solo essere utilizzate per calcolare la forza risultante su tutto il nostro dielettrico, e non su una parte di esso, per cui ci guardiamo bene dal dire che \ $(\vec P\cdot\nabla)\vec E$ \ \big(o \ $(\vec P\cdot\nabla)\vec E_0$\big) rappresenta la densità di forza (forza per unità di volume) all'interno del dielettrico.
+Vale la pena ribadire che sia la (14.63) che la (14.64) possono solo essere
+utilizzate per calcolare la forza risultante su tutto il nostro dielettrico, e
+non su una parte di esso, per cui ci guardiamo bene dal dire che
+\ $(\vec P\cdot\nabla)\vec E$ \ \big(o \ $(\vec P\cdot\nabla)\vec E_0$\big)
+rappresenta la densit\`a di forza (forza per unit\`a di volume) all'interno del
+dielettrico.
 
-La (14.64) può essere riscritta in diversi modi. Per esempio, sfruttando il fatto che $\vec E$ è conservativo ($\partial_jE_i=\partial_iE_j$) e che $\vec P=\chi_e\vec E$ si ha (è sottointesa la somma sugli indici ripetuti)
+La (14.64) pu\`o essere riscritta in diversi modi. Per esempio, sfruttando il
+fatto che $\vec E$ \`e conservativo ($\partial_jE_i=\partial_iE_j$) e che
+$\vec P=\chi_e\vec E$ si ha (\`e sottointesa la somma sugli indici ripetuti)
 \begin{equation}
-\begin{aligned}
-&F_i=\int_VP_j\partial_jE_i\,dV=\int_V\chi_eE_j\partial_iE_j\,dV=\int_V\frac{1}{2}\chi_e\partial_i\vec E^2\,dV\quad\ \Rightarrow\\
-&\vec F=\frac{1}{8\pi}\int_V(\epsilon-1)\grad E^2\,dV.
-\end{aligned}
-\tag{14.65}
+  \begin{aligned}
+    &F_i=\int_VP_j\partial_jE_i\,dV=\int_V\chi_eE_j\partial_iE_j\,dV
+    =\int_V\frac{1}{2}\chi_e\partial_i\vec E^2\,dV\quad\ \Rightarrow\\
+    &\vec F=\frac{1}{8\pi}\int_V(\epsilon-1)\grad E^2\,dV.
+  \end{aligned}
+  \tag{14.65}
 \end{equation}
-La (14.65) mostra che i pezzettini di carta si muovono nella direzione in cui aumenta l'intensità del campo, cioè verso la bacchetta elettrizzata, e che la forza è proporzionale al quadrato del campo elettrico, e questo perché il momento di dipolo indotto è esso stesso proporzionale al campo.
+La (14.65) mostra che i pezzettini di carta si muovono nella direzione in cui
+aumenta l'intensit\`a del campo, cio\`e verso la bacchetta elettrizzata, e che
+la forza \`e proporzionale al quadrato del campo elettrico, e questo perch\'e il
+momento di dipolo indotto \`e esso stesso proporzionale al campo.
 
-In effetti se i nostri pezzettini di carta sono piccoli (e quindi non troppo vicini alla bacchetta elettrizzata), conviene utilizzare la (14.63): se $\vec r_0$ è un punto del pezzettino di carta, posto \ $\partial_jE_{0i}(\vec r\,)\approx\partial_jE_{0i}(\vec r_0)$, la (14.63) diventa
+In effetti se i nostri pezzettini di carta sono piccoli (e quindi non troppo
+vicini alla bacchetta elettrizzata), conviene utilizzare la (14.63): se
+$\vec r_0$ \`e un punto del pezzettino di carta, posto
+\ $\partial_jE_{0i}(\vec r\,)\approx\partial_jE_{0i}(\vec r_0)$, la (14.63)
+diventa
 \begin{equation}
-F_i(\vec r_0)=\Big(\int_VP_j(\vec r\,)\,dV\Big)\,\partial_jE_{0i}(\vec r_0)=(\vec P\cdot\nabla)E_{0i}(\vec r_0)
-\tag{14.66}
+  F_i(\vec r_0)=\Big(\int_VP_j(\vec r\,)\,dV\Big)\,\partial_jE_{0i}(\vec r_0)
+  =(\vec P\cdot\nabla)E_{0i}(\vec r_0)
+  \tag{14.66}
 \end{equation}
-dove $\vec P$ è il momento di dipolo totale indotto.\\
-La (14.66) è identica alla (14.62): con l'approssimazione fatta il pezzettino di carta si comporta come un dipolo puntiforme in un campo elettrico, e in entrambi i casi si ha una forza su di esso solo se il campo non è uniforme.
+dove $\vec P$ \`e il momento di dipolo totale indotto.\\
+La (14.66) \`e identica alla (14.62): con l'approssimazione fatta il pezzettino
+di carta si comporta come un dipolo puntiforme in un campo elettrico, e in
+entrambi i casi si ha una forza su di esso solo se il campo non \`e uniforme.
 
-L'energia è un concetto fondamentale per il calcolo delle forze, anzi indispensabile quando si vogliano calcolare le forze di natura elettrica all'interno di un dielettrico. Supponiamo di voler calcolare la forza (risultante) che si esercita su un sistema. Immaginiamo di far compiere al sistema uno spostamento rigido e traslatorio in una certa direzione, p.es.\ in direzione $x$ \big(spostamento ``virtuale'', come quello che nel capitolo 10.1 applicato ad una spira ci ha permesso di ricavare la (10.13)\big); se $\vec F$ è la forza risultante agente su di esso il lavoro che dobbiamo fare dall'esterno è $-F_x\Delta x$, e siccome il lavoro fatto sul sistema eguaglia la variazione della sua energia totale $U$ ne segue che, se $(x,y,z)$ sono le coordinate di un punto qualsiasi del sistema (in un moto rigido traslatorio tutti i punti si spostano nello stesso modo), $F_x=-(\partial U/\partial x)$, quindi
+L'energia \`e un concetto fondamentale per il calcolo delle forze, anzi
+indispensabile quando si vogliano calcolare le forze di natura elettrica
+all'interno di un dielettrico. Supponiamo di voler calcolare la forza
+(risultante) che si esercita su un sistema. Immaginiamo di far compiere al
+sistema uno spostamento rigido e traslatorio in una certa direzione, p.es.\ in
+direzione $x$ \big(spostamento ``virtuale'', come quello che nel capitolo 10.1
+applicato ad una spira ci ha permesso di ricavare la (10.13)\big); se $\vec F$
+\`e la forza risultante agente su di esso il lavoro che dobbiamo fare
+dall'esterno \`e $-F_x\Delta x$, e siccome il lavoro fatto sul sistema eguaglia
+la variazione della sua energia totale $U$ ne segue che, se $(x,y,z)$ sono le
+coordinate di un punto qualsiasi del sistema (in un moto rigido traslatorio
+tutti i punti si spostano nello stesso modo), $F_x=-(\partial U/\partial x)$,
+quindi
 \begin{equation}
-\vec F=-\grad U(x,y,z)
-\tag{14.67}
+  \vec F=-\grad U(x,y,z)
+  \tag{14.67}
 \end{equation}
-cioè la stessa relazione che vale per un punto materiale fra energia potenziale e forza.\\
-In alcuni degli esempi che discuteremo in effetti risulterà molto più semplice calcolare la forza a partire dall'energia, che non in modo diretto.
+cio\`e la stessa relazione che vale per un punto materiale fra energia
+potenziale e forza.\\
+In alcuni degli esempi che discuteremo in effetti risulter\`a molto pi\`u
+semplice calcolare la forza a partire dall'energia, che non in modo diretto.
 
 \paragraph{Esempi}
 \begin{enumerate}
-\item Consideriamo il condensatore dell'esempio 1 del paragrafo 5, con una lastra di dielettrico al suo interno (figura 14.5). Vogliamo calcolare la forza che si esercita su una armatura.\\
-L'armatura è soggetta al campo elettrico delle due distribuzioni superficiali $\sigma'$ e $-\sigma'$ sulle superfici della lastra, e al campo dell'altra armatura. Il campo delle cariche di polarizzazione è nullo fuori della lastra, quindi resta solo il campo dell'altra armatura. Se $Q$ è la carica (vera) e $A$ la superficie delle armature, la forza fra le armature è attrattiva e vale
-\begin{equation}
-F=2\pi\sigma Q=2\pi\frac{Q^2}{A}
-\tag{14.68}
-\end{equation}
-ed è indipendente dalla presenza della lastra di dielettrico, sia che $s<d$, sia che $s=d$ (cioè se la lastra riempie completamente il condensatore).\\
-Vogliamo ritrovare la (14.68) utilizzando la (14.67). L'energia del condensatore è data dalle (14.59): quale delle due espressioni conviene usare? Ovviamente il risultato non deve dipendere da questa scelta, comunque in generale la prima conviene quando il sistema è a potenziale costante, cioè con il condensatore collegato ad una batteria, la seconda, invece, conviene quando il sistema è a carica costante, cioè
-è un sistema isolato. Supponiamo che il condensatore, dopo essere stato caricato, sia stato sconnesso dal generatore, e usiamo la seconda delle (14.59). Allora lo spostamento virtuale dell'armatura è fatto a carica costante e, se $z$ è l'asse ortogonale alle armature (verso l'alto), sull'armatura superiore si ha
-\begin{equation}
-F_z=-\frac{1}{2}Q^2\frac{d(1/C)}{dz},\qquad C^{-1}=\frac{4\pi}{A}\big(z-\frac{\epsilon-1}{\epsilon}s\big)
-\tag{14.69}
-\end{equation}
-e si ritrova la (14.68) ($F_z<0$). A prima vista sembra che se utilizziamo la 1$^\mathrm{a}$ delle (14.59), e quindi se il condensatore è collegato alla batteria, si ottenga un risultato diverso, anzi proprio il risultato opposto a quello dato dalla (14.69) e quindi una forza repulsiva fra le armature. L'errore consiste nel dimenticare che ora il condensatore non è un sistema isolato, quindi la variazione della sua energia per lo spostamento di un'armatura non è solo data da $-F_z\Delta z$, ma anche dal lavoro $V\Delta Q$ fatto dalla batteria per mantenere costante la d.d.p.\ mentre la capacità varia a causa della variazione della distanza fra le armature. Si ha
-\begin{equation}
-\Delta U=-F_z\Delta z+V\Delta Q
-\tag{14.70}
-\end{equation}
-dove $\Delta Q$ è la carica trasferita dalla batteria. Siccome $Q=VC$ e il potenziale resta costante, $\Delta Q=V\Delta C$ e si ha
-\begin{equation}
-F_z=-\frac{dU}{dz}+V^2\frac{dC}{dz}=-\frac{1}{2}V^2\frac{dC}{dz}+V^2\frac{dC}{dz}=+\frac{1}{2}V^2\frac{dC}{dz}
-\tag{14.71}
-\end{equation}
-e ora si ritrova la (14.68), con il segno giusto.
-\item Supponiamo ora che la lastra di dielettrico sia inserita solo parzialmente fra le armature del condensatore (figura 14.8). La capacità del condensatore è una funzione crescente $C(x)$ della posizione $x$ della lastra: se le armature sono rettangolari di lunghezza $l$, $x$ è come nella figura 14.8 e trascuriamo gli effetti di bordo, $C(0)=C_0$, $C(l)=\epsilon C_0$. Supponiamo il condensatore carico, ma isolato. Allora l'energia
-\fig{fig14_8}{14.8}
-\begin{equation}
-U(x)=\frac{1}{2}\frac{Q^2}{C(x)}
-\tag{14.72}
-\end{equation}
-è una funzione decrescente di $x$, quindi sulla lastra di dielettrico si esercita una forza che tende a risucchiarla dentro al condensatore ($F_x>0$). Se trascuriamo gli effetti di bordo nel calcolo di $C(x)$ possiamo facilmente calcolare questa forza grazie alla (14.67); $C(x)$ può essere calcolato come la capacità di due condensatori in parallelo, uno di capacità $(x/l)\epsilon C_0$, e l'altro $\big((l-x)/l\big)C_0$ \ $(0\le x\le l)$ (il campo elettrico è ortogonale alle armature, quindi gli effetti di bordo che trascuriamo sono solo quelli alle estremità delle armature):
-\begin{equation}
-C(x)=\Big(\frac{x}{l}\epsilon+\frac{(l-x)}{l}\Big)C_0\ \Rightarrow\ F_x=-\frac{dU(x)}{dx}=\frac{1}{2}\frac{Q^2}{C^2(x)}(\epsilon-1)\frac{C_0}{l}\,\cdot
-\tag{14.73}
-\end{equation}
-Per confrontare la (14.73) con l'espressione che si ottiene utilizzando la (14.65), riscriviamo la (14.73) tenendo conto che $Q/C(x)=V$ e che $E=V/d$, dove $d$ è la distanza fra le armature (di area $A$):
-\begin{equation}
-F_x=\frac{1}{2}V^2(\epsilon-1)\frac{A}{4\pi dl}=\frac{\epsilon-1}{8\pi}E^2\frac{A}{l}d=\frac{\epsilon-1}{8\pi}E^2S
-\tag{14.74}
-\end{equation}
-dove \ $S=Ad/l$ \ è l'area delle facce perpendicolari all'asse $x$.\\
-Se utilizziamo la (14.65) per calcolare $F_x$, siccome $\epsilon$ è costante si ottiene
-\begin{equation}
-F_x=\frac{\epsilon-1}{8\pi}\int_V\partial_xE^2\,dxdydz=\frac{\epsilon-1}{8\pi}\Big(\int_{S^i}E^2\,dydz-\int_{S^e}E^2\,dydz\Big)
-\tag{14.75}
-\end{equation}
-dove $S^i$ e $S^e$ sono rispettivamente la superficie di area $S$ del dielettrico interna ed esterna al condensatore. Se, come sopra, trascuriamo gli effetti di bordo, $E=0$ su $S^e$ ed è costante su $S^i$ per cui si ritrova la (14.74).
+  \item Consideriamo il condensatore dell'esempio 1 del paragrafo 5, con una
+    lastra di dielettrico al suo interno (figura 14.5). Vogliamo calcolare la
+    forza che si esercita su una armatura.\\
+    L'armatura \`e soggetta al campo elettrico delle due distribuzioni
+    superficiali $\sigma'$ e $-\sigma'$ sulle superfici della lastra, e al campo
+    dell'altra armatura. Il campo delle cariche di polarizzazione \`e nullo
+    fuori della lastra, quindi resta solo il campo dell'altra armatura. Se $Q$
+    \`e la carica (vera) e $A$ la superficie delle armature, la forza fra le
+    armature \`e attrattiva e vale
+    \begin{equation}
+      F=2\pi\sigma Q=2\pi\frac{Q^2}{A}
+      \tag{14.68}
+    \end{equation}
+    ed \`e indipendente dalla presenza della lastra di dielettrico, sia che
+    $s<d$, sia che $s=d$ (cio\`e se la lastra riempie completamente il
+    condensatore).\\
+    Vogliamo ritrovare la (14.68) utilizzando la (14.67). L'energia del
+    condensatore \`e data dalle (14.59): quale delle due espressioni conviene
+    usare? Ovviamente il risultato non deve dipendere da questa scelta, comunque
+    in generale la prima conviene quando il sistema \`e a potenziale costante,
+    cio\`e con il condensatore collegato ad una batteria, la seconda, invece,
+    conviene quando il sistema \`e a carica costante, cio\`e
+    \`e un sistema isolato. Supponiamo che il condensatore, dopo essere stato
+    caricato, sia stato sconnesso dal generatore, e usiamo la seconda delle
+    (14.59). Allora lo spostamento virtuale dell'armatura \`e fatto a carica
+    costante e, se $z$ \`e l'asse ortogonale alle armature (verso l'alto),
+    sull'armatura superiore si ha
+    \begin{equation}
+      F_z=-\frac{1}{2}Q^2\frac{d(1/C)}{dz},
+      \qquad C^{-1}=\frac{4\pi}{A}\big(z-\frac{\epsilon-1}{\epsilon}s\big)
+      \tag{14.69}
+    \end{equation}
+    e si ritrova la (14.68) ($F_z<0$). A prima vista sembra che se utilizziamo
+    la 1$^\mathrm{a}$ delle (14.59), e quindi se il condensatore \`e collegato
+    alla batteria, si ottenga un risultato diverso, anzi proprio il risultato
+    opposto a quello dato dalla (14.69) e quindi una forza repulsiva fra le
+    armature. L'errore consiste nel dimenticare che ora il condensatore non \`e
+    un sistema isolato, quindi la variazione della sua energia per lo
+    spostamento di un'armatura non \`e solo data da $-F_z\Delta z$, ma anche dal
+    lavoro $V\Delta Q$ fatto dalla batteria per mantenere costante la
+    d.d.p.\ mentre la capacit\`a varia a causa della variazione della distanza
+    fra le armature. Si ha
+    \begin{equation}
+      \Delta U=-F_z\Delta z+V\Delta Q
+      \tag{14.70}
+    \end{equation}
+    dove $\Delta Q$ \`e la carica trasferita dalla batteria. Siccome $Q=VC$ e il
+    potenziale resta costante, $\Delta Q=V\Delta C$ e si ha
+    \begin{equation}
+      F_z=-\frac{dU}{dz}+V^2\frac{dC}{dz}=-\frac{1}{2}V^2\frac{dC}{dz}
+      +V^2\frac{dC}{dz}=+\frac{1}{2}V^2\frac{dC}{dz}
+      \tag{14.71}
+    \end{equation}
+    e ora si ritrova la (14.68), con il segno giusto.
+  \item Supponiamo ora che la lastra di dielettrico sia inserita solo
+    parzialmente fra le armature del condensatore (figura 14.8). La capacit\`a
+    del condensatore \`e una funzione crescente $C(x)$ della posizione $x$ della
+    lastra: se le armature sono rettangolari di lunghezza $l$, $x$ \`e come
+    nella figura 14.8 e trascuriamo gli effetti di bordo, $C(0)=C_0$,
+    $C(l)=\epsilon C_0$. Supponiamo il condensatore carico, ma isolato. Allora
+    l'energia
+    \fig{fig14_8}{14.8}
+    \begin{equation}
+      U(x)=\frac{1}{2}\frac{Q^2}{C(x)}
+      \tag{14.72}
+    \end{equation}
+    \`e una funzione decrescente di $x$, quindi sulla lastra di dielettrico si
+    esercita una forza che tende a risucchiarla dentro al condensatore
+    ($F_x>0$). Se trascuriamo gli effetti di bordo nel calcolo di $C(x)$
+    possiamo facilmente calcolare questa forza grazie alla (14.67); $C(x)$ pu\`o
+    essere calcolato come la capacit\`a di due condensatori in parallelo, uno di
+    capacit\`a $(x/l)\epsilon C_0$, e l'altro $\big((l-x)/l\big)C_0$
+    \ $(0\le x\le l)$ (il campo elettrico \`e ortogonale alle armature, quindi
+    gli effetti di bordo che trascuriamo sono solo quelli alle estremit\`a delle
+    armature):
+    \begin{equation}
+      C(x)=\Big(\frac{x}{l}\epsilon+\frac{(l-x)}{l}\Big)C_0
+      \ \Rightarrow\ F_x=-\frac{dU(x)}{dx}
+      =\frac{1}{2}\frac{Q^2}{C^2(x)}(\epsilon-1)\frac{C_0}{l}\,\cdot
+      \tag{14.73}
+    \end{equation}
+    Per confrontare la (14.73) con l'espressione che si ottiene utilizzando la
+    (14.65), riscriviamo la (14.73) tenendo conto che $Q/C(x)=V$ e che $E=V/d$,
+    dove $d$ \`e la distanza fra le armature (di area $A$):
+    \begin{equation}
+      F_x=\frac{1}{2}V^2(\epsilon-1)\frac{A}{4\pi dl}
+      =\frac{\epsilon-1}{8\pi}E^2\frac{A}{l}d=\frac{\epsilon-1}{8\pi}E^2S
+      \tag{14.74}
+    \end{equation}
+    dove \ $S=Ad/l$ \ \`e l'area delle facce perpendicolari all'asse $x$.\\
+    Se utilizziamo la (14.65) per calcolare $F_x$, siccome $\epsilon$ \`e
+    costante si ottiene
+    \begin{equation}
+      F_x=\frac{\epsilon-1}{8\pi}\int_V\partial_xE^2\,dxdydz
+      =\frac{\epsilon-1}{8\pi}\Big(\int_{S^i}E^2\,dydz-\int_{S^e}E^2\,dydz\Big)
+      \tag{14.75}
+    \end{equation}
+    dove $S^i$ e $S^e$ sono rispettivamente la superficie di area $S$ del
+    dielettrico interna ed esterna al condensatore. Se, come sopra, trascuriamo
+    gli effetti di bordo, $E=0$ su $S^e$ ed \`e costante su $S^i$ per cui si
+    ritrova la (14.74).
 
-Ma qual è l'origine delle forze, il cui risultante è $F_x$, che tendono a risucchiare il dielettrico dentro al condensatore? Queste forze nascono dagli effetti di bordo, spesso dimenticati (o trascurati): come abbiamo discusso nel capitolo 2.7, le linee di forza del campo elettrico non sono rigorosamente confinate fra le armature del condensatore, ma si estendono anche all'esterno (a grande distanza dal condensatore sono le linee di forza di un dipolo), e quindi il campo elettrico è presente anche sulla porzione della lastra fuori dalle armature, per cui si hanno cariche di polarizzazione non solo sulla parte di superficie dentro al condensatore, ma anche fuori (figura 14.9). Il campo elettrico (fuori) non è ortogonale alla lastra, ma ha una componente $x$ negativa dove $\sigma'<0$, positiva dove $\sigma'>0$, ed il risultato è una forza diretta verso l'interno del condensatore.
-\fig{fig14_9}{14.9}
-Si noti che ai fini di una soluzione approssimata gli effetti di bordo possono essere trascurati nel calcolo di $C(x)$, ma non possono essere ignorati: se il campo fosse non nullo solo all'interno del condensatore, con le linee di forza perpendicolari alle armature, la forza risultante sul dielettrico sarebbe nulla, in contrasto con la (14.67). In effetti abbiamo già rilevato nel capitolo 2.7 che ignorare gli effetti di bordo porta a conseguenze in contrasto con la conservazione dell'energia.
-\item Infine, consideriamo un condensatore piano completamente immerso in un fluido dielettrico.\\
-La capacità del condensatore è $C=\epsilon C_0$ e la sua energia è $U=U_0/\epsilon$, dove $U_0$ è l'energia del condensatore nel vuoto. Quindi la forza $F$ fra le armature è minore, per il fattore $\epsilon$, della forza $F_0$ fra le armature del condensatore nel vuoto: $F=F_0/\epsilon$. Eppure quando nell'esempio 1 abbiamo considerato il condensatore completamente riempito da una lastra di dielettrico, abbiamo trovato per la forza fra le armature lo stesso valore come nel vuoto. Dal punto di vista energetico la differenza si capisce: se è presente una lastra, quando allontano un'armatura fra questa e la lastra resta il vuoto e l'energia, data in termini del campo elettrico dalla 1$^\mathrm{a}$ delle (14.58), aumenta come se il condensatore fosse nel vuoto, mentre invece se il condensatore è immerso in un fluido questo anche in seguito ad uno spostamento di un'armatura continua a riempire il condensatore.\\
-Ma in termini di forze come si spiega la differenza? Come nel caso del condensatore con la lastra, la forza che il campo elettrico esercita su una armatura è quella
-dovuta soltanto al campo elettrico dell'altra lastra, e le cariche di polarizzazione non hanno nessun effetto. Siccome questa forza è uguale a quella fra le armature del condensatore nel vuoto, deve esistere un'altra forza di natura non elettrica, di verso opposto a quella elettrica, cioè verso l'esterno. Ma le forze che un fluido esercita sulle pareti del contenitore sono solo le forze di pressione, quindi la pressione del fluido all'interno del condensatore deve essere maggiore della pressione all'esterno. Questa differenza di pressione è dovuta al campo elettrico: il fluido, con un meccanismo simile a quello discusso nell'esempio precedente, viene risucchiato verso l'interno con il risultato che la pressione del fluido non è uniforme e tra le armature è maggiore che all'esterno; è questa differenza di pressione che riduce la forza di attrazione fra le armature.\\
-I fenomeni di questo tipo in cui il campo elettrico modifica la forma o le proprietà di un dielettrico sono detti fenomeni di \textit{elettrostrizione}.\\
-La differenza di pressione deve quindi essere data da
-\begin{equation}
-\begin{aligned}
-\Delta p\equiv p^i-p^e&=\frac{F_0-F}{A}=\big(1-\frac{1}{\epsilon}\big)\frac{F_0}{A}=\frac{\epsilon-1}{\epsilon}2\pi\frac{Q^2}{A^2}\\
-&=\frac{1}{8\pi}\frac{\epsilon-1}{\epsilon}E_0^2=\frac{1}{8\pi}\epsilon(1-\epsilon)E^2.
-\end{aligned}
-\tag{14.76}
-\end{equation}
-Non abbiamo gli strumenti per effettuare il calcolo diretto di $\Delta p$, e quindi verificare la (14.76).
+    Ma qual \`e l'origine delle forze, il cui risultante \`e $F_x$, che tendono
+    a risucchiare il dielettrico dentro al condensatore? Queste forze nascono
+    dagli effetti di bordo, spesso dimenticati (o trascurati): come abbiamo
+    discusso nel capitolo 2.7, le linee di forza del campo elettrico non sono
+    rigorosamente confinate fra le armature del condensatore, ma si estendono
+    anche all'esterno (a grande distanza dal condensatore sono le linee di forza
+    di un dipolo), e quindi il campo elettrico \`e presente anche sulla porzione
+    della lastra fuori dalle armature, per cui si hanno cariche di
+    polarizzazione non solo sulla parte di superficie dentro al condensatore, ma
+    anche fuori (figura 14.9). Il campo elettrico (fuori) non \`e ortogonale
+    alla lastra, ma ha una componente $x$ negativa dove $\sigma'<0$, positiva
+    dove $\sigma'>0$, ed il risultato \`e una forza diretta verso l'interno del
+    condensatore.
+    \fig{fig14_9}{14.9}
+    Si noti che ai fini di una soluzione approssimata gli effetti di bordo
+    possono essere trascurati nel calcolo di $C(x)$, ma non possono essere
+    ignorati: se il campo fosse non nullo solo all'interno del condensatore, con
+    le linee di forza perpendicolari alle armature, la forza risultante sul
+    dielettrico sarebbe nulla, in contrasto con la (14.67). In effetti abbiamo
+    gi\`a rilevato nel capitolo 2.7 che ignorare gli effetti di bordo porta a
+    conseguenze in contrasto con la conservazione dell'energia.
+  \item Infine, consideriamo un condensatore piano completamente immerso in un
+    fluido dielettrico.\\
+    La capacit\`a del condensatore \`e $C=\epsilon C_0$ e la sua energia \`e
+    $U=U_0/\epsilon$, dove $U_0$ \`e l'energia del condensatore nel vuoto.
+    Quindi la forza $F$ fra le armature \`e minore, per il fattore $\epsilon$,
+    della forza $F_0$ fra le armature del condensatore nel vuoto:
+    $F=F_0/\epsilon$. Eppure quando nell'esempio 1 abbiamo considerato il
+    condensatore completamente riempito da una lastra di dielettrico, abbiamo
+    trovato per la forza fra le armature lo stesso valore come nel vuoto. Dal
+    punto di vista energetico la differenza si capisce: se \`e presente una
+    lastra, quando allontano un'armatura fra questa e la lastra resta il vuoto e
+    l'energia, data in termini del campo elettrico dalla 1$^\mathrm{a}$ delle
+    (14.58), aumenta come se il condensatore fosse nel vuoto, mentre invece se
+    il condensatore \`e immerso in un fluido questo anche in seguito ad uno
+    spostamento di un'armatura continua a riempire il condensatore.\\
+    Ma in termini di forze come si spiega la differenza? Come nel caso del
+    condensatore con la lastra, la forza che il campo elettrico esercita su una
+    armatura \`e quella
+    dovuta soltanto al campo elettrico dell'altra lastra, e le cariche di
+    polarizzazione non hanno nessun effetto. Siccome questa forza \`e uguale a
+    quella fra le armature del condensatore nel vuoto, deve esistere un'altra
+    forza di natura non elettrica, di verso opposto a quella elettrica, cio\`e
+    verso l'esterno. Ma le forze che un fluido esercita sulle pareti del
+    contenitore sono solo le forze di pressione, quindi la pressione del fluido
+    all'interno del condensatore deve essere maggiore della pressione
+    all'esterno. Questa differenza di pressione \`e dovuta al campo elettrico:
+    il fluido, con un meccanismo simile a quello discusso nell'esempio
+    precedente, viene risucchiato verso l'interno con il risultato che la
+    pressione del fluido non \`e uniforme e tra le armature \`e maggiore che
+    all'esterno; \`e questa differenza di pressione che riduce la forza di
+    attrazione fra le armature.\\
+    I fenomeni di questo tipo in cui il campo elettrico modifica la forma o le
+    propriet\`a di un dielettrico sono detti fenomeni di
+    \textit{elettrostrizione}.\\
+    La differenza di pressione deve quindi essere data da
+    \begin{equation}
+      \begin{aligned}
+        \Delta p\equiv p^i-p^e
+        &=\frac{F_0-F}{A}=\big(1-\frac{1}{\epsilon}\big)\frac{F_0}{A}
+        =\frac{\epsilon-1}{\epsilon}2\pi\frac{Q^2}{A^2}\\
+        &=\frac{1}{8\pi}\frac{\epsilon-1}{\epsilon}E_0^2
+        =\frac{1}{8\pi}\epsilon(1-\epsilon)E^2.
+      \end{aligned}
+      \tag{14.76}
+    \end{equation}
+    Non abbiamo gli strumenti per effettuare il calcolo diretto di $\Delta p$, e
+    quindi verificare la (14.76).
 \end{enumerate}
